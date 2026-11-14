@@ -668,23 +668,4 @@
     syncOnline();
     window.addEventListener('resize', syncNavHeight, { passive: true });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncNavHeight);   // 網路字型載入後行高可能改變
-
-    /* Service Worker：讓整份行程可離線開啟（需 https 或 localhost） */
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-                /* 新版 Service Worker 接手後自動重新整理一次。
-           沒有這段的話，改版當下已開著舊頁面的人會停在
-           「新的 HTML ＋ 舊的 CSS / JS」的半舊狀態，畫面照樣是壞的。
-           hadController：第一次安裝時本來就會換手，那次不需要重載。 */
-        var hadController = !!navigator.serviceWorker.controller;
-        var swReloaded = false;
-        navigator.serviceWorker.addEventListener('controllerchange', function () {
-          if (!hadController || swReloaded) return;
-          swReloaded = true;
-          location.reload();
-        });
-
-navigator.serviceWorker.register('sw.js').catch(function () { /* 離線快取失敗不影響閱讀 */ });
-      });
-    }
   })();

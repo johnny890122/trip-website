@@ -71,7 +71,7 @@
 ```
 docs/<trip>/
 ├── trip.js                 這趟的設定（id、名稱、localStorage key 前綴），每一頁都先載入它
-├── final/                  index.html（這趟的內容）、sw.js、manifest.json、icon.svg
+├── final/                  index.html（這趟的內容）
 ├── map/                    index.html、spot.html（只有殼）、places.json、routes.json、spots/（腳本產生）
 ├── budget/index.html       window.BUDGET = { title, shared, days }，畫面與計算在 assets/budget.js
 └── checklist/index.html    window.CHECKLIST = [ … ]，畫面與勾選在 assets/checklist.js
@@ -82,14 +82,15 @@ docs/<trip>/
 - **localStorage 分趟存**：共用程式的 key 一律經過 `TRIP.key()`，這趟是 `2026-11:budget2.…`、`2026-11:chk.…`、
   `2026-11:mapPlanSel`、`2026-11:mapViews`、`2026-11:lastDay`、`2026-11:who`（分頭行動看誰的行程，行程表與地圖共用）。
   主題 `theme`、日文地名 `showJa` 是使用者偏好，不加前綴
-- **Service Worker 每趟一支**（`docs/<trip>/final/sw.js`，範圍只有那一趟的 `final/`）。快取名稱 `trip-<id>-v<N>`（這趟是 `trip-2026-11-v1`），
-  activate **只清同一趟的舊快取**——同一個網域的快取是共用的，清全部會把另一趟的離線資料刪掉。
-  共用的 `itinerary.css`／`itinerary.js` 與 `../trip.js` 要列在 PRECACHE，離線才排得出版面
+- **Service Worker 全站一支 `docs/sw.js`**（使用者 2026-11-14：整個網站都要能離線、iOS 也要能加到桌面；取代原本每趟一支的 `final/sw.js`）。範圍是整個網站，快取名稱 `site-v<N>`；
+  `PRECACHE` 列出首頁、simple、final、map（含 places.json、routes.json）、checklist、budget、stay 與 `assets/` 的樣式和程式；hero 照片不預先存，看過的才存。
+  每一頁的 `<head>` 都載入 `assets/offline.js`（註冊 sw.js、移除舊的 final/ 範圍註冊、新版接手後自動重新整理一次），並連到根目錄的 `manifest.json` 與 `apple-touch-icon.png`。
+  首頁「📲 存到手機桌面」按鈕：Android Chrome 跳安裝視窗（`beforeinstallprompt`），iOS 只能顯示「分享 → 加入主畫面」的步驟。地圖底圖、Leaflet、Google Maps 離線不能用。隱藏的 rain、simple-rain 不在 PRECACHE
 - 腳本用 `--trip <id>` 指定哪一趟，沒寫就是 `scripts/lib/trip.js` 的 `DEFAULT`（目前 `2026-11`）；
   `data/trips/` 底下有資料夾的才算一趟。`build-places.js` 會把**其他趟的 `places.json` 當座標快取**，同一個地點不必再查
 
 ### 再加一趟時
-複製 `docs/2026-11/` 成 `docs/<新 id>/`，改 `trip.js`（id、名稱、key 前綴）、`final/sw.js` 的 `TRIP_ID`、`final/manifest.json`；
+複製 `docs/2026-11/` 成 `docs/<新 id>/`，改 `trip.js`（id、名稱、key 前綴），把新頁面加進 `docs/sw.js` 的 `PRECACHE`；
 建立 `data/trips/<新 id>/routes.json`；首頁 `docs/index.html` 加一區；`scripts/lib/trip.js` 的 `DEFAULT` 改成新的那趟。
 舊的一趟的 localStorage key 已經有 `2026-11:` 前綴，不用動。
 
@@ -215,7 +216,7 @@ Check List「要先訂、要先查的」也有這些：
 ### 網站入口 docs/
 - `docs/index.html` - 網站首頁（GitHub Pages 根路徑），這趟的入口
 - `docs/<trip>/final/index.html` - **正式行程表**（逐日時間軸）；樣式 `docs/assets/itinerary.css`（含深色模式）、程式 `docs/assets/itinerary.js`
-- `docs/<trip>/final/sw.js` / `manifest.json` / `icon.svg` - PWA，讓行程可離線閱讀（每趟一份）
+- `docs/sw.js` / `docs/manifest.json` / `docs/icon.svg`、`icon-192.png`、`icon-512.png`、`apple-touch-icon.png` / `docs/assets/offline.js` - PWA，整個網站可離線閱讀、可加到手機桌面（2026-11-14 起全站一份）
 - `docs/<trip>/map/index.html` - **行程地圖**（Leaflet + OpenStreetMap；程式 `docs/assets/map.js`）
 - `docs/<trip>/map/places.json` - 地圖資料，**由腳本產生，不要手動編輯**
 - `docs/<trip>/map/spot.html` - 單一景點的建議順路小地圖（`?id=takao`，嵌在行程表卡片裡用 `&embed=1`；程式 `docs/assets/spot.js`）
@@ -505,7 +506,7 @@ Nominatim 對少數地點解析不佳，腳本內 `QUERY_OVERRIDE` 可指定替�
 - **主題**：自動／淺色／深色三段循環，存於 localStorage `theme`
 - **預算追蹤已移出本頁**，改為獨立的 `docs/<trip>/budget/`（依 Day 分開記帳，localStorage `budget2.*`）
 - **離線**：Service Worker 快取行程本體；字體採非阻塞載入，CDN 失效時退回系統中日文字型
-  - `sw.js` 對同源請求一律 **network-first**（見檔案內註解），改版時把 `CACHE` 版本號 +1；每趟一支，activate 只清同一趟的舊快取
+  - `docs/sw.js` 對同源請求一律 **network-first**（見檔案內註解），改版時把 `CACHE` 版本號 +1（目前 `site-v1`）；新增頁面或共用檔時要加進 `PRECACHE`
   - 頁面另外監聽 `controllerchange`，**新版 SW 接手後會自動重新整理一次**。
     沒有這段的話，改版當下已開著舊頁面的人會停在「新 HTML ＋ 舊 CSS／JS」的半舊狀態
 - **地圖連結**：`?q=` 一律使用**明文日文地名**，不要改回 percent-encoding（歷史上曾因編碼轉換導致 17 個連結指向錯誤地點）
