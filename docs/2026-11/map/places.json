@@ -921,7 +921,7 @@
       "icon": "🧳",
       "title": "寄放大行李｜Radical Storage 池袋（東口五差路）",
       "ja": "",
-      "label": "Radical Storage 池袋（南池袋 1-26-9）",
+      "label": "Radical Storage 池袋（第 2 MYT ビル 8 樓）",
       "tag": "主行程",
       "kind": "spot",
       "note": "",
@@ -929,7 +929,7 @@
       "order": 56,
       "lat": 35.729088,
       "lon": 139.713593,
-      "osm": "國土地理院地址檢索（2026-11-13），Radical Storage 池袋 推定地址",
+      "osm": "國土地理院地址檢索（2026-11-13），Radical Storage 池袋（預約確認信：第 2 MYT ビル 8 樓）",
       "geocodedQuery": "GSI 東京都豊島区南池袋1-26-9"
     },
     {
@@ -1380,7 +1380,7 @@
       "icon": "🧳",
       "title": "取回大行李｜Radical Storage 池袋（東口五差路）",
       "ja": "",
-      "label": "Radical Storage 池袋（南池袋 1-26-9）",
+      "label": "Radical Storage 池袋（第 2 MYT ビル 8 樓）",
       "tag": "主行程",
       "kind": "spot",
       "note": "",
@@ -1388,7 +1388,7 @@
       "order": 87,
       "lat": 35.729088,
       "lon": 139.713593,
-      "osm": "國土地理院地址檢索（2026-11-13），Radical Storage 池袋 推定地址",
+      "osm": "國土地理院地址檢索（2026-11-13），Radical Storage 池袋（預約確認信：第 2 MYT ビル 8 樓）",
       "geocodedQuery": "GSI 東京都豊島区南池袋1-26-9"
     },
     {
