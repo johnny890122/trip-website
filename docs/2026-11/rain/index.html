@@ -65,6 +65,11 @@
     <div class="container">
       <p class="scheme-title">先選一個版本</p>
       <div class="scheme-tabs" role="tablist">
+        <button type="button" role="tab" data-scheme="3" aria-selected="false" onclick="showScheme(3)">
+          <span class="st-ico">🏝️</span>
+          <span class="st-name">11/16 先江之島版 <small>草稿</small></span>
+          <span class="st-desc">早上晴先去江之島，下午鎌倉，大船晚餐。確認後再蓋到主行程表。</span>
+        </button>
         <button type="button" role="tab" data-scheme="1" aria-selected="false" onclick="showScheme(1)">
           <span class="st-ico">🍁</span>
           <span class="st-name">高尾山 11/15 版</span>
@@ -74,11 +79,6 @@
           <span class="st-ico">🍁</span>
           <span class="st-name">高尾山 11/21 版 <small>建議</small></span>
           <span class="st-desc">11/17（二）走六義園・上野（下午博物館躲雨）、11/21（六）去高尾山。11/16 晚上看預報再決定。</span>
-        </button>
-        <button type="button" role="tab" data-scheme="3" aria-selected="false" onclick="showScheme(3)">
-          <span class="st-ico">🏝️</span>
-          <span class="st-name">11/16 先江之島版 <small>草稿</small></span>
-          <span class="st-desc">早上晴先去江之島，下午鎌倉，大船晚餐。確認後再蓋到主行程表。</span>
         </button>
       </div>
     </div>
@@ -1508,7 +1508,9 @@
         if (first) window.showDay(first.id.replace('day-', ''), { noScroll: true });
       };
       var act = document.querySelector('.day-section.active');
-      applyScheme(act ? act.getAttribute('data-scheme') : '2');
+      /* 沒指定哪一天時先開 11/16 草稿（使用者 2026-11-15 要先過目） */
+      if (!location.hash) window.showDay(5, { noScroll: true });
+      else applyScheme(act ? act.getAttribute('data-scheme') : '2');
     })();
   </script>
 
