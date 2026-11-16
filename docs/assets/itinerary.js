@@ -645,6 +645,7 @@
     /* ---------- 回到頂部 ---------- */
     window.addEventListener('scroll', function () {
       var btn = document.getElementById('backToTop');
+      if (!btn) return;
       if (window.scrollY > 400) btn.classList.add('visible');
       else btn.classList.remove('visible');
     }, { passive: true });

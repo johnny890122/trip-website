@@ -16,7 +16,7 @@ const OUT = path.join(ROOT, 'v2');
 const V2_ASSETS = path.join(ROOT, 'assets', 'v2');
 
 // 頁面 → 外觀檔（docs/assets/v2/<skin>.css，同名 .js 有才載入）
-const PAGES = { final: 'itinerary', simple: 'itinerary', map: 'map', checklist: 'pages', budget: 'pages', stay: 'pages' };
+const PAGES = { final: 'itinerary', simple: 'itinerary', rain: 'itinerary', 'simple-rain': 'itinerary', map: 'map', checklist: 'pages', budget: 'pages', stay: 'pages' };
 
 const MENU = [
   ['home', '../../index.html', '🏠', '首頁'],
@@ -73,9 +73,9 @@ const flightHtml = flights.map(([who, t1, a1, t2, a2]) => {
 }).join('\n      ');
 
 const oldHome = read(path.join(ROOT, 'index.html'));
-const stay = oldHome.slice(oldHome.indexOf('<h3 class="group">🏠 住宿</h3>'), oldHome.indexOf('<h3 class="group">🎨 新版介面</h3>'))
+const stay = oldHome.slice(oldHome.indexOf('<h3 class="group">🏠 住宿</h3>'), oldHome.indexOf('<h3 class="group">☔ 雨天備案</h3>'))
   .replace(/<h3 class="group">.*?<\/h3>/, '').trim();
-if (!stay.includes('class="card stay') || stay.includes('v2/index.html')) throw new Error('舊首頁抓不到住宿卡片');
+if (!stay.includes('class="card stay') || stay.includes('v2/index.html') || stay.includes('rain/')) throw new Error('舊首頁抓不到住宿卡片');
 
 const home = read(path.join(__dirname, 'v2', 'home.html'))
   .replace('{{MENU}}', menu('home', (h) => h.replace('../../index.html', 'index.html').replace('../', TRIP + '/')))

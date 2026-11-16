@@ -516,3 +516,16 @@ html.v2 body.is-simple .day-nav button { font-size: 15px; }
   html.v2 .lane .plans-nav, html.v2 .lane .plan-dots,
   html.v2 .branch-panel .plans-nav, html.v2 .branch-panel .plan-dots { gap: 4px; }
 }
+
+/* ---- 雨天備案頁：版本分頁 ---- */
+html.v2 .scheme-nav { background: var(--v2-paper); border-bottom: var(--v2-line); }
+html.v2 .scheme-tabs button {
+  background: #fff; color: var(--v2-ink);
+  border: var(--v2-line); border-radius: var(--v2-radius); box-shadow: none;
+  transition: transform .25s var(--v2-bounce);
+}
+html.v2 .scheme-tabs button:active { transform: scale(.97); }
+html.v2 .scheme-tabs button.active { background: var(--v2-yellow); border-color: var(--v2-ink); box-shadow: var(--v2-drop); }
+html.v2 .scheme-tabs button.active .st-name, html.v2 .scheme-tabs .st-desc { color: var(--v2-ink); }
+html.v2 .st-name small { background: var(--v2-coral); color: var(--v2-ink); border: 2px solid var(--v2-ink); }
+html.v2 .scheme-tabs button:focus-visible { outline: 3px solid var(--v2-coral); }

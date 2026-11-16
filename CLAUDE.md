@@ -217,7 +217,7 @@ Check List「要先訂、要先查的」也有這些：
 - `docs/index.html` - 網站首頁（GitHub Pages 根路徑），這趟的入口
 - `docs/<trip>/final/index.html` - **正式行程表**（逐日時間軸）；樣式 `docs/assets/itinerary.css`（含深色模式）、程式 `docs/assets/itinerary.js`
 - `docs/sw.js` / `docs/manifest.json` / `docs/icon.svg`、`icon-192.png`、`icon-512.png`、`apple-touch-icon.png` / `docs/assets/offline.js` - PWA，整個網站可離線閱讀、可加到手機桌面（2026-11-14 起全站一份）
-- `docs/v2/` - **新版介面（日系繪本風，使用者 2026-11-16）**，由 `node scripts/build-v2.js` 產生，**不要手改**。內容和功能與舊版共用一份：子頁是 `docs/2026-11/<頁>/index.html` 的複本，改資源路徑、加頂端固定選單、多載入 `docs/assets/v2/` 的外觀（`core.css` 色票與選單、`itinerary.css`/`itinerary.js`、`pages.css`、`map.css`、`home.css`、`v2.js`）；首頁樣板在 `scripts/v2/home.html`（航班取自行程表、住宿取自舊首頁）。**舊版頁面有任何修改，都要重跑 `node scripts/build-v2.js`**，並把 `docs/sw.js` 的 `CACHE` +1。舊首頁最下方有入口，新首頁最下方可回舊版。新版只用淺色底（`data-theme="light"` 固定）；localStorage 與舊版共用（勾選、記帳同步）。rain、simple-rain 沒有新版。
+- `docs/v2/` - **新版介面（日系繪本風，使用者 2026-11-16）**，由 `node scripts/build-v2.js` 產生，**不要手改**。內容和功能與舊版共用一份：子頁是 `docs/2026-11/<頁>/index.html` 的複本，改資源路徑、加頂端固定選單、多載入 `docs/assets/v2/` 的外觀（`core.css` 色票與選單、`itinerary.css`/`itinerary.js`、`pages.css`、`map.css`、`home.css`、`v2.js`）；首頁樣板在 `scripts/v2/home.html`（航班取自行程表、住宿取自舊首頁）。**舊版頁面有任何修改，都要重跑 `node scripts/build-v2.js`**，並把 `docs/sw.js` 的 `CACHE` +1。舊首頁最下方有入口，新首頁最下方可回舊版。新版只用淺色底（`data-theme="light"` 固定）；localStorage 與舊版共用（勾選、記帳同步）。rain、simple-rain 也有新版。**雨天備案入口 2026-11-16 起重新顯示**（使用者指示）：放在兩個首頁最底下、切換介面那一欄之前；rain 頁的 11/16 草稿分頁已刪除（內容已在主行程表）。
 - `docs/<trip>/map/index.html` - **行程地圖**（Leaflet + OpenStreetMap；程式 `docs/assets/map.js`）
 - `docs/<trip>/map/places.json` - 地圖資料，**由腳本產生，不要手動編輯**
 - `docs/<trip>/map/spot.html` - 單一景點的建議順路小地圖（`?id=takao`，嵌在行程表卡片裡用 `&embed=1`；程式 `docs/assets/spot.js`）

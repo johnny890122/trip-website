@@ -188,7 +188,7 @@
 
   function timeText(p) {
     if (p.start) return p.startTime ? p.startTime + ' 出發' : '出發';
-    return p.time + (p.slot ? '・' + p.plan : '') + (p.who && WHO_MARK[p.who] ? ' ' + WHO_MARK[p.who] : '');
+    return p.time + (p.slot ? '・' + (p.plan || 'A') : '') + (p.who && WHO_MARK[p.who] ? ' ' + WHO_MARK[p.who] : '');
   }
 
   function popupHtml(p) {
@@ -196,7 +196,7 @@
     var parts = [];
     var when = p.start ? '　' + (p.startTime ? p.startTime + ' ' : '') + '從飯店出發' : (p.time ? '　' + p.time : '');
     var lane = p.who && WHO_MARK[p.who] ? '・分頭行動 ' + WHO_LABEL[p.who].replace('看：', '') : '';
-    parts.push('<span class="pop-day">Day ' + p.day + when + (p.slot ? '・彈性 ' + p.plan : '') + lane + '</span>');
+    parts.push('<span class="pop-day">Day ' + p.day + when + (p.slot ? '・彈性 ' + (p.plan || 'A') : '') + lane + '</span>');
     parts.push('<div class="pop-title">' + p.icon + ' ' + esc(p.label) + '</div>');
     if (p.ja) parts.push('<div class="pop-ja">' + esc(p.ja) + '</div>');
     if (p.title && p.title !== p.label) parts.push('<div class="pop-ja">' + esc(p.title) + '</div>');
@@ -735,7 +735,9 @@
       if (want && places.some(function (p) { return String(p.day) === want; })) {
         activeDay = +want;
         $('dayChips').querySelectorAll('.chip').forEach(function (b) {
-          b.setAttribute('aria-pressed', String(b.textContent.indexOf('Day' + want + ' ') === 0));
+          var on = b.textContent.indexOf('Day' + want + ' ') === 0;
+          b.setAttribute('aria-pressed', String(on));
+          if (on) b.scrollIntoView({ block: 'nearest', inline: 'center' });   // 後面幾天的按鈕在畫面外，捲過來
         });
       }
       render();
