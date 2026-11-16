@@ -1,0 +1,220 @@
+/* 新版介面：map 外觀
+ * 只改外框（篩選鈕、圖例、面板、彈窗、狀態列）；路線與標記的顏色代表交通方式與分類，維持舊版。
+ * 版面：舊版 body 是 height:100% 的直向 flex，core.css 加的 padding-top 剛好讓出固定選單的高度，
+ * 篩選鈕的高度寫死（不隨字型變動），地圖建立後大小就不會再變。
+ */
+html.v2-map {
+  --bg: var(--v2-paper);
+  --surface: #fff;
+  --surface-alt: var(--v2-aqua-soft);
+  --text: var(--v2-ink);
+  --border: var(--v2-ink);
+  --chip-border: var(--v2-ink);
+  --font: var(--v2-font);
+  --shadow: 0 3px 0 var(--v2-ink);
+  --map-line: 2px solid var(--v2-ink);
+}
+html.v2-map, html.v2-map body { height: 100%; overflow: hidden; }
+html.v2-map body { line-height: 1.5; }
+
+/* ---- 頂部列：連結和上方選單重複，標題只留給螢幕報讀 ---- */
+html.v2-map .topbar {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%); background: none; white-space: nowrap;
+}
+html.v2-map .tb-link { display: none; }
+
+/* ---- 篩選列 ---- */
+html.v2-map .filters { background: var(--v2-paper); border-bottom: var(--v2-line); }
+html.v2-map .filter-scroll { gap: 8px; padding: 10px 12px 8px; }
+html.v2-map .cat-row { gap: 8px; padding: 0 12px 10px; }
+
+html.v2-map .chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  height: 36px; padding: 0 14px; line-height: 1;
+  background: #fff; border: var(--map-line); border-radius: 999px;
+  color: var(--v2-ink); font-size: 14px; font-weight: 700;
+  transition: transform .25s var(--v2-bounce);
+}
+html.v2-map .chip:hover { border-color: var(--v2-ink); color: var(--v2-ink); }
+html.v2-map .chip:active { transform: scale(.93); }
+html.v2-map .chip:focus-visible,
+html.v2-map .locate-btn:focus-visible,
+html.v2-map .home-btn:focus-visible,
+html.v2-map .flex-toggle:focus-visible,
+html.v2-map .fp-btn:focus-visible,
+html.v2-map .pk:focus-visible,
+html.v2-map .pop-actions a:focus-visible { outline: 3px solid var(--v2-coral); outline-offset: 2px; }
+
+/* 天數：選到的那一天山吹黃 */
+html.v2-map .filter-scroll .chip { border-width: 3px; height: 38px; }
+html.v2-map .filter-scroll .chip[aria-pressed="true"] { background: var(--v2-yellow); border-color: var(--v2-ink); color: var(--v2-ink); }
+
+/* 分類與開關：開＝淡色底，關＝虛線框 */
+html.v2-map .chip.cat { height: 32px; padding: 0 12px; font-size: 13px; }
+html.v2-map .chip.cat[aria-pressed="true"] { background: var(--v2-green-soft); border-color: var(--v2-ink); color: var(--v2-ink); }
+html.v2-map .chip.cat[aria-pressed="false"] { opacity: 1; background: var(--v2-paper); border-style: dashed; color: var(--v2-muted); }
+/* 前五顆是地點分類、第七顆是推薦景點：加一個和地圖標記同色的圓點 */
+html.v2-map .cat-row .chip.cat:nth-child(-n+5)::before,
+html.v2-map .cat-row .chip.cat:nth-child(7)::before {
+  content: ""; flex: 0 0 auto; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--cat-color); border: 1.5px solid var(--v2-ink);
+}
+html.v2-map .cat-row .chip.cat:nth-child(-n+5)[aria-pressed="true"] { background: #fff; }
+html.v2-map .cat-row .chip.cat:nth-child(7)[aria-pressed="true"] { background: var(--v2-aqua-soft); }
+html.v2-map .cat-row .chip.cat[aria-pressed="false"]::before { background: #fff; }
+html.v2-map .cat-row > span { width: 2px !important; margin: 6px 2px !important; border-radius: 2px; }
+
+/* ---- 地圖 ---- */
+html.v2-map #map { min-height: 0; background: var(--v2-aqua-soft); font-family: var(--v2-font); }
+html.v2-map .loading { padding: 48px 24px; color: var(--v2-ink); font-size: 16px; font-weight: 700; }
+
+/* Leaflet 內建的縮放鈕、版權列 */
+html.v2-map .leaflet-bar { border: var(--v2-line); border-radius: var(--v2-radius-sm); box-shadow: none; overflow: hidden; }
+html.v2-map .leaflet-bar a {
+  width: 36px; height: 36px; line-height: 34px;
+  background: #fff; color: var(--v2-ink); border-bottom: var(--map-line); border-radius: 0;
+  font-family: var(--v2-font); font-weight: 700;
+}
+html.v2-map .leaflet-bar a:last-child { border-bottom: 0; }
+html.v2-map .leaflet-bar a:hover { background: var(--v2-yellow-soft); }
+html.v2-map .leaflet-bar a.leaflet-disabled { background: var(--v2-paper); color: #B8B2AE; }
+html.v2-map .leaflet-control-attribution {
+  background: var(--v2-paper); color: var(--v2-muted); font-family: var(--v2-font); font-size: 10px;
+  border-top: var(--map-line); border-left: var(--map-line); border-top-left-radius: 10px; padding: 0 6px;
+}
+html.v2-map .leaflet-control-attribution a { color: var(--v2-ink); }
+
+/* ---- 標記：顏色維持分類色，只把白邊、柔和陰影換成墨灰線框 ---- */
+html.v2-map .pin { border: 2.5px solid var(--v2-ink); box-shadow: none; }
+html.v2-map .pin-seq {
+  top: -8px; right: -8px; min-width: 19px; height: 19px; line-height: 15px;
+  background: #fff; color: var(--v2-ink) !important; border: 2px solid var(--v2-ink);
+  font-family: var(--v2-font); font-style: normal;
+}
+html.v2-map .dot, html.v2-map .dot-star { border: 2px solid var(--v2-ink); box-shadow: none; opacity: 1; }
+html.v2-map .dot-star { color: #fff; }
+html.v2-map .alt-dot { background: #fff; border: 2px dashed var(--v2-ink); color: var(--v2-ink); box-shadow: none; opacity: 1; }
+html.v2-map .me-dot { border: 3px solid #fff; box-shadow: 0 0 0 2.5px var(--v2-ink); }
+
+/* ---- 浮動標籤 ---- */
+html.v2-map .leaflet-tooltip {
+  background: #fff; color: var(--v2-ink); border: var(--map-line); border-radius: 10px;
+  box-shadow: none; font-family: var(--v2-font); font-weight: 700;
+}
+html.v2-map .leaflet-tooltip::before { display: none; }
+html.v2-map .leaflet-tooltip.time-tip {
+  background: var(--v2-yellow); color: var(--v2-ink); border: var(--map-line); border-radius: 999px;
+  box-shadow: none; font-size: 12px; font-weight: 700; padding: 0 7px; line-height: 1.5;
+}
+html.v2-map .leaflet-tooltip.route-tip,
+html.v2-map .leaflet-tooltip.stn-tip,
+html.v2-map .leaflet-tooltip.reco-tip { font-size: 12px; padding: 2px 8px; box-shadow: none; }
+
+/* ---- 圖例、回到全觀、彈性方案 ---- */
+html.v2-map .legend-ctl {
+  gap: 2px 12px; padding: 5px 11px; max-width: calc(100vw - 24px);
+  background: #fff; border: var(--map-line); border-radius: var(--v2-radius-sm); box-shadow: none;
+  font-size: 12px; font-weight: 700;
+}
+html.v2-map .leaflet-bottom .legend-ctl { margin-bottom: 22px; }
+html.v2-map .legend-ctl .lg-stn { border-color: var(--v2-ink); }
+
+html.v2-map .home-btn,
+html.v2-map .flex-toggle {
+  min-height: 40px; padding: 6px 14px;
+  background: #fff; border: var(--v2-line); border-radius: 999px; box-shadow: var(--shadow);
+  color: var(--v2-ink); font-size: 14px; font-weight: 700;
+  transition: transform .25s var(--v2-bounce);
+}
+html.v2-map .home-btn { background: var(--v2-aqua); }
+html.v2-map .flex-toggle { background: var(--v2-yellow); }
+html.v2-map .flex-toggle[aria-expanded="true"] { background: var(--v2-coral); }
+html.v2-map .home-btn:hover, html.v2-map .flex-toggle:hover { border-color: var(--v2-ink); color: var(--v2-ink); }
+html.v2-map .home-btn:active, html.v2-map .flex-toggle:active { transform: translateY(3px); box-shadow: 0 0 0 var(--v2-ink); }
+html.v2-map .flex-toggle b { display: inline-block; min-width: 22px; padding: 0 6px; margin-left: 2px; background: #fff; border: 2px solid var(--v2-ink); border-radius: 999px; color: var(--v2-ink); text-align: center; }
+html.v2-map .flex-ctl { text-align: right; }
+
+html.v2-map .flex-panel {
+  margin-top: 10px; padding: 10px 12px 12px; text-align: left;
+  width: 300px; max-width: calc(100vw - 24px); max-height: min(52vh, 420px);
+  background: var(--v2-paper); border: var(--v2-line); border-radius: var(--v2-radius); box-shadow: var(--v2-drop);
+  font-size: 14px; animation: v2-pop .3s var(--v2-bounce);
+}
+html.v2-map .fp-note { color: var(--v2-muted); font-size: 12px; margin: 0 0 6px; }
+html.v2-map .fp-row { gap: 8px; padding: 7px 0; border-top: 2px dashed var(--v2-ink); }
+html.v2-map .fp-time { color: var(--v2-ink); min-width: 42px; font-weight: 700; }
+html.v2-map .fp-row { flex-wrap: wrap; }
+html.v2-map .fp-btns { flex: 0 0 100%; gap: 6px; }   /* 方案按鈕自己一列，名稱才不會被擠成「…」 */
+html.v2-map .fp-foot { gap: 8px; padding-top: 10px; border-top: 2px dashed var(--v2-ink); }
+
+html.v2-map .pk {
+  width: 34px; height: 34px; border: var(--map-line); border-radius: 12px;
+  background: #fff; color: var(--v2-ink); font-size: 14px; font-weight: 700;
+  transition: transform .25s var(--v2-bounce);
+}
+html.v2-map .pk:hover { border-color: var(--v2-ink); color: var(--v2-ink); }
+html.v2-map .pk:active { transform: scale(.9); }
+html.v2-map .pk.on { background: var(--v2-coral); border-color: var(--v2-ink); color: var(--v2-ink); }
+html.v2-map .pk.alt.on { background: var(--v2-aqua); border-color: var(--v2-ink); }
+html.v2-map .pk.nopt { border-style: dashed; }
+
+html.v2-map .fp-btn {
+  min-height: 34px; padding: 4px 12px;
+  background: #fff; border: var(--map-line); border-radius: 999px;
+  color: var(--v2-ink); font-size: 13px; font-weight: 700;
+}
+html.v2-map .fp-btn[aria-pressed="true"] { background: var(--v2-aqua); border-color: var(--v2-ink); color: var(--v2-ink); }
+
+/* ---- 彈窗 ---- */
+html.v2-map .leaflet-popup-content-wrapper {
+  background: #fff; color: var(--v2-ink);
+  border: var(--v2-line); border-radius: var(--v2-radius); box-shadow: var(--v2-drop);
+}
+html.v2-map .leaflet-popup-content { margin: 14px 16px; font-family: var(--v2-font); line-height: 1.5; }
+html.v2-map .leaflet-popup-tip-container { margin-top: -3px; }
+html.v2-map .leaflet-popup-tip { background: #fff; border: var(--v2-line); box-shadow: none; }
+html.v2-map .leaflet-popup a.leaflet-popup-close-button {
+  top: 8px; right: 8px; width: 28px; height: 28px; line-height: 23px;
+  background: var(--v2-coral-soft); border: var(--map-line); border-radius: 50%;
+  color: var(--v2-ink); font-family: var(--v2-font); font-size: 18px; font-weight: 700;
+}
+html.v2-map .pop-day {
+  padding: 1px 10px; margin: 0 30px 6px 0;
+  background: var(--v2-yellow); border: var(--map-line); border-radius: 999px;
+  color: var(--v2-ink); font-size: 12px;
+}
+html.v2-map .pop-title { font-size: 17px; }
+html.v2-map .pop-ja, html.v2-map .pop-note { color: var(--v2-muted); font-size: 13px; }
+html.v2-map .pop-plans { gap: 5px; color: var(--v2-ink); font-size: 13px; font-weight: 700; }
+html.v2-map .pop-actions { gap: 8px; }
+html.v2-map .pop-actions a {
+  display: inline-flex; align-items: center; min-height: 34px; padding: 4px 13px;
+  background: var(--v2-aqua-soft); border: var(--map-line); border-radius: 999px;
+  color: var(--v2-ink); font-size: 13px; font-weight: 700;
+  transition: transform .25s var(--v2-bounce);
+}
+html.v2-map .pop-actions a:first-child { background: var(--v2-green); }
+html.v2-map .pop-actions a:hover { border-color: var(--v2-ink); }
+html.v2-map .pop-actions a:active { transform: scale(.94); }
+
+/* ---- 底部狀態列 ---- */
+html.v2-map .statusbar {
+  padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+  background: var(--v2-paper); border-top: var(--v2-line);
+  color: var(--v2-ink); font-size: 13px; line-height: 1.35;
+}
+html.v2-map .statusbar a { color: var(--v2-ink); }
+html.v2-map .locate-btn {
+  flex: 0 0 auto; min-height: 38px; padding: 4px 14px;
+  background: var(--v2-coral); border: var(--v2-line); border-radius: 999px;
+  color: var(--v2-ink); font-size: 14px; font-weight: 700;
+  transition: transform .25s var(--v2-bounce);
+}
+html.v2-map .locate-btn:hover { border-color: var(--v2-ink); color: var(--v2-ink); }
+html.v2-map .locate-btn:active { transform: scale(.93); }
+
+@media (min-width: 640px) {
+  html.v2-map .filter-scroll, html.v2-map .cat-row { padding-left: 16px; padding-right: 16px; }
+  html.v2-map .statusbar { padding-left: 16px; padding-right: 16px; }
+}

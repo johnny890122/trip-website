@@ -9,7 +9,7 @@
  * 改版時把 CACHE 的版本號 +1，舊快取會在 activate 時清掉。
  * hero 照片（約 11 MB）不預先快取，看過的才存。
  */
-const CACHE = 'site-v4';
+const CACHE = 'site-v5';
 
 const PRECACHE = [
   './',
@@ -42,6 +42,23 @@ const PRECACHE = [
   './2026-11/checklist/index.html',
   './2026-11/budget/index.html',
   './2026-11/stay/index.html',
+  // 新版介面（scripts/build-v2.js 產生）
+  './v2/index.html',
+  './assets/v2/core.css',
+  './assets/v2/home.css',
+  './assets/v2/itinerary.css',
+  './assets/v2/itinerary.js',
+  './assets/v2/pages.css',
+  './assets/v2/map.css',
+  './assets/v2/v2.js',
+  './v2/2026-11/simple/index.html',
+  './v2/2026-11/final/index.html',
+  './v2/2026-11/map/index.html',
+  './v2/2026-11/map/places.json',
+  './v2/2026-11/map/routes.json',
+  './v2/2026-11/checklist/index.html',
+  './v2/2026-11/budget/index.html',
+  './v2/2026-11/stay/index.html',
 ];
 
 self.addEventListener('install', (event) => {

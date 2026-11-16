@@ -1,0 +1,102 @@
+/* 新版介面：首頁 */
+html.v2-home body { margin: 0; line-height: 1.6; }
+.home { max-width: 560px; margin: 0 auto; padding: 16px 16px 48px; }
+.home * { box-sizing: border-box; }
+
+.hero { text-align: center; }
+.hero-art { display: block; width: 100%; height: auto; }
+.hero h1 { margin: 16px 0 4px; font-size: 30px; line-height: 1.25; letter-spacing: .04em; }
+.hero-sub { margin: 0; font-size: 15px; color: var(--v2-muted); }
+
+/* 插圖輕輕動 */
+.hero-art .a-float, .hero-art .a-sway, .hero-art .a-train, .hero-art .a-drift { transform-box: fill-box; transform-origin: center; }
+.hero-art .a-float { animation: v2-float 5s ease-in-out infinite; }
+.hero-art .a-sway  { animation: v2-sway 3.6s ease-in-out infinite; }
+.hero-art .a-late  { animation-delay: -1.5s; }
+.hero-art .a-drift { animation: v2-drift 9s ease-in-out infinite alternate; }
+.hero-art .a-slow  { animation-duration: 13s; }
+.hero-art .a-train { animation: v2-train 7s ease-in-out infinite alternate; }
+@keyframes v2-train { from { transform: translateX(-14px); } to { transform: translateX(150px); } }
+
+.sec { margin: 30px 0 12px; font-size: 20px; }
+
+/* 出發倒數 */
+.count {
+  margin-top: 20px; padding: 14px 16px 16px; text-align: center;
+  background: var(--v2-yellow); border: var(--v2-line); border-radius: var(--v2-radius); box-shadow: var(--v2-drop);
+}
+.count-label { font-size: 15px; font-weight: 700; }
+.count-nums { display: flex; justify-content: center; gap: 10px; margin-top: 8px; }
+.count-cell {
+  min-width: 78px; padding: 6px 10px; font-size: 14px;
+  background: #fff; border: var(--v2-line); border-radius: var(--v2-radius-sm);
+}
+.count-cell b { display: block; font-size: 26px; line-height: 1.2; }
+.count-go {
+  display: inline-block; margin-top: 12px; padding: 8px 18px;
+  background: var(--v2-coral); border: var(--v2-line); border-radius: 999px;
+  color: var(--v2-ink); font-weight: 700; text-decoration: none;
+  transition: transform .25s var(--v2-bounce);
+}
+.count-go:active { transform: scale(.94); }
+
+/* 航班卡片 */
+.flights { display: grid; gap: 12px; }
+.flight { padding: 12px 16px; background: #fff; border: var(--v2-line); border-radius: var(--v2-radius); box-shadow: var(--v2-drop); }
+.flight.is-out  { background: var(--v2-aqua-soft); }
+.flight.is-back { background: var(--v2-green-soft); }
+.flight-who { font-size: 15px; font-weight: 700; }
+.flight-who b { display: inline-block; margin-right: 8px; padding: 1px 10px; background: #fff; border: 2px solid var(--v2-ink); border-radius: 999px; font-size: 13px; }
+.flight-line { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; font-size: 14px; }
+.flight-line span { display: flex; flex-direction: column; align-items: center; min-width: 76px; }
+.flight-line b { font-size: 26px; line-height: 1.15; }
+.flight-line i { flex: 1; text-align: center; font-style: normal; font-size: 20px; border-bottom: 3px dashed var(--v2-ink); margin: 0 10px 14px; }
+
+/* 頁面入口 */
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.tile {
+  display: flex; flex-direction: column; gap: 2px; padding: 14px;
+  border: var(--v2-line); border-radius: var(--v2-radius); box-shadow: var(--v2-drop);
+  color: var(--v2-ink); text-decoration: none;
+  transition: transform .25s var(--v2-bounce), box-shadow .25s;
+}
+.tile:active { transform: translateY(3px) scale(.98); box-shadow: 0 1px 0 var(--v2-ink); }
+.tile:focus-visible, .count-go:focus-visible, .install-btn:focus-visible { outline: 3px solid var(--v2-coral); outline-offset: 3px; }
+.tile.is-wide { grid-column: 1 / -1; }
+.tile-ico { font-size: 28px; line-height: 1.2; }
+.tile b { font-size: 18px; }
+.tile small { font-size: 13px; line-height: 1.45; }
+.c-coral { background: var(--v2-coral); } .c-yellow { background: var(--v2-yellow); }
+.c-aqua { background: var(--v2-aqua); }   .c-green { background: var(--v2-green); }
+
+/* 存到手機桌面 */
+.install-btn {
+  display: block; width: 100%; margin-top: 16px; padding: 12px 16px;
+  background: #fff; border: var(--v2-line); border-radius: var(--v2-radius); box-shadow: var(--v2-drop);
+  color: var(--v2-ink); font-size: 18px; font-weight: 700; cursor: pointer;
+  transition: transform .25s var(--v2-bounce);
+}
+.install-btn:active { transform: translateY(3px); }
+.install-btn small { display: block; font-size: 13px; font-weight: 400; color: var(--v2-muted); }
+.install-help { max-width: min(440px, calc(100vw - 32px)); padding: 20px; border: var(--v2-line); border-radius: var(--v2-radius); background: var(--v2-paper); color: var(--v2-ink); }
+.install-help::backdrop { background: rgba(62, 58, 57, .45); }
+.install-help[open] { animation: v2-pop .35s var(--v2-bounce); }
+.install-help h2 { margin: 0 0 8px; font-size: 20px; }
+.install-help h3 { margin: 12px 0 4px; font-size: 16px; }
+.install-help ol { margin: 0; padding-left: 22px; }
+.install-help p { font-size: 14px; color: var(--v2-muted); }
+.install-help button { display: block; width: 100%; padding: 10px; background: var(--v2-yellow); border: var(--v2-line); border-radius: 999px; font-size: 16px; font-weight: 700; color: var(--v2-ink); cursor: pointer; }
+
+/* 住宿（卡片內容取自舊首頁） */
+.stays { display: grid; gap: 14px; }
+.stays .card { display: block; padding: 14px 16px; background: #fff; border: var(--v2-line); border-radius: var(--v2-radius); box-shadow: var(--v2-drop); color: var(--v2-ink); text-decoration: none; }
+.stays .stay-when { display: inline-block; padding: 1px 12px; background: var(--v2-green); border: 2px solid var(--v2-ink); border-radius: 999px; font-size: 13px; font-weight: 700; }
+.stays h2 { margin: 8px 0 4px; font-size: 19px; }
+.stays p { margin: 4px 0; font-size: 14px; color: var(--v2-muted); }
+.stays dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 8px 0 0; font-size: 15px; }
+.stays dt { font-weight: 700; white-space: nowrap; }
+.stays dd { margin: 0; overflow-wrap: anywhere; }
+.stays .stay-go { margin-top: 10px; padding: 6px 12px; background: var(--v2-yellow-soft); border: 2px solid var(--v2-ink); border-radius: var(--v2-radius-sm); color: var(--v2-ink); font-weight: 700; }
+
+.switch-ui { margin: 32px 0 0; text-align: center; font-size: 14px; }
+.switch-ui a { color: var(--v2-muted); }
