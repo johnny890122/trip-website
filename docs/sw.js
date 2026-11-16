@@ -9,7 +9,7 @@
  * 改版時把 CACHE 的版本號 +1，舊快取會在 activate 時清掉。
  * hero 照片（約 11 MB）不預先快取，看過的才存。
  */
-const CACHE = 'site-v5';
+const CACHE = 'site-v6';
 
 const PRECACHE = [
   './',
