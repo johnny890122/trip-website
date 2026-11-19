@@ -238,6 +238,23 @@ main { padding: 20px 0 48px; }
 
 .site-footer a { color: var(--muted); }
 
+/* === 景點攻略頁（docs/<trip>/guide/）：純 HTML，卡片的 🧭 連到 #<景點 id> === */
+.toc { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.toc a { font-size: 0.78rem; font-weight: 600; padding: 4px 10px; border-radius: 14px;
+  background: var(--surface); border: 1px solid var(--border); text-decoration: none; }
+.guide { scroll-margin-top: 12px; }
+.guide:target { border-color: var(--primary); }
+.guide h3 { font-size: 0.86rem; margin: 14px 0 6px; }
+.guide h3:first-child { margin-top: 0; }
+.guide p, .guide li { font-size: 0.84rem; line-height: 1.65; }
+.guide p { margin-bottom: 6px; }
+.guide ol, .guide ul { padding-left: 1.3em; }
+.guide li { margin-bottom: 4px; }
+.guide .star { color: var(--accent); font-weight: 700; }
+.guide .one { font-size: 0.68rem; color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; white-space: nowrap; }
+.guide .src { font-size: 0.72rem; color: var(--muted); }
+.guide .src a { color: var(--muted); }
+
 @media print {
   .toolbar, .btn-row, .btn { display: none; }
   .site-header { background: none; color: #000; }

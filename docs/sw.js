@@ -9,7 +9,7 @@
  * 改版時把 CACHE 的版本號 +1，舊快取會在 activate 時清掉。
  * hero 照片（約 11 MB）不預先快取，看過的才存。
  */
-const CACHE = 'site-v56';
+const CACHE = 'site-v59';
 
 const PRECACHE = [
   './',
@@ -42,6 +42,7 @@ const PRECACHE = [
   './2026-12/map/places.json',
   './2026-12/map/routes.json',
   './2026-12/checklist/index.html',
+  './2026-12/guide/index.html',
   './2026-12/budget/index.html',
   './2099-11/index.html',
   './2099-11/hero/hero.js',

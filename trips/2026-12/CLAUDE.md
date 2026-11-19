@@ -88,6 +88,7 @@
 
 ## 這趟的網站細節
 - 〔頁首照片、預算 `fixed`、Check List 分組〕
+- **景點攻略頁 `docs/2026-12/guide/index.html`**（2026-11-19，使用者要求「加到卡片、點了開一頁」）：純 HTML，一個景點一個 `section#<id>`（id 同 `spots/`，另有 `daijiaxiang`、`wuhou`、`yulin`、`cdmuseum`），樣式在 `assets/base.css`「景點攻略頁」。行程表的景點卡在 `.tl-tips` 放一張 `.tip.near`（🧭 一句摘要＋連到 `../guide/#<id>`）。內容來自 `1209_渝中老街攻略`、`1209_洪崖洞鵝嶺攻略`、`1211_磁器口攻略`、`1211_成都市區景點攻略`、`1212_三星堆熊貓玉林攻略`；改店家時兩處一起改
 
 ## 查證筆記 trips/2026-12/reference/
 - 〔還沒有〕
