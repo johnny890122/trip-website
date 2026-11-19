@@ -608,6 +608,9 @@ main {
 .tip .tip-body { min-width: 0; }
 .tip b { color: var(--primary); }
 .tip a { color: var(--secondary); }
+/* 🧭 攻略 tip 連到 ../guide/#<id>：做成按鈕，手機上才看得到、點得到 */
+.tip a[href^="../guide/"] { display: block; margin-top: 6px; padding: 6px 10px; border-radius: 16px; text-align: center;
+  font-weight: 700; text-decoration: none; background: var(--secondary); color: #fff; }
 
 /* 會撲空、會關門 —— 最需要被看到的那種 */
 .tip.warn {
