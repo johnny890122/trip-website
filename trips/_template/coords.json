@@ -2,8 +2,10 @@
   "_說明": [
     "這一趟的地點座標，scripts/build-places.js 讀這份。key 是行程表 map-link 或方案小卡 .pr-map 的 ?q= 內容（+ 換成空白）。",
     "採用順序：fixed → plans → 快取（各趟 places.json）→ Nominatim（override 指定查詢字串）。",
-    "fixed：門牌級座標 { lat, lon, osm（來源說明）, geocodedQuery, note（只給人看） }；plans：彈性方案的地點 { lat, lon, src }；override：查詢字串 → Nominatim 要改查的字串。範例見 trips/2026-11/coords.json。"
+    "fixed：門牌級座標 { lat, lon, osm（來源說明）, geocodedQuery, note（只給人看） }；plans：彈性方案的地點 { lat, lon, src }；override：查詢字串 → Nominatim 要改查的字串。範例見 trips/2026-11/coords.json。",
+    "country：Nominatim 只在這個國家查（ISO 代碼，jp、cn…）；沒寫就是 jp。jp 以外不做日文漢字的查詢變體。"
   ],
+  "country": "jp",
   "fixed": {},
   "override": {},
   "plans": {}

@@ -10,7 +10,7 @@
 | 每一趟都適用的原則 | 本檔 | 每次 |
 | 某一趟的事實與規則 | `trips/<id>/CLAUDE.md` | 碰到 `trips/<id>/` 的檔案時自動；沒讀過就改 `docs/<id>/` 會被 hook 擋下 |
 | 排行程（動線、餐廳、票價）、網站與腳本 | `.claude/rules/*.md` | 碰到相關檔案時自動 |
-| 日本的查證方法 | `reference/regions/japan.md` | 去日本的那幾趟自己讀 |
+| 各地區的查證方法 | `reference/regions/japan.md`、`china.md`（高德地圖、座標偏移） | 去那個地區的那幾趟自己讀 |
 | 固定流程 | `.claude/skills/`：`itinerary-edit`（改行程）、`trip-research`（查證）、`fact-check`（審核）、`forecast`（天氣）、`web-crawler`、`/new-trip` | 呼叫時 |
 | 分工的角色 | `.claude/agents/`：`trip-researcher`（查一個問題）、`fact-checker`（審幾天，只讀）、`itinerary-reviewer`（改完審一天，只讀） | skill 並行派出 |
 | 自動檢查與重建 | `.claude/hooks/trip-hooks.js`（設定在 `.claude/settings.json`）：擋手改產生檔、新個資要確認、行程表格式檢查、停下時自動 `rebuild.js`。**個資與格式檢查只看得到 Edit／Write**：`trips/`、`docs/` 的檔一律用 Edit／Write 改；用 Bash 腳本（python、heredoc、重導向）寫會被擋下 | 每次寫檔、每次停下 |

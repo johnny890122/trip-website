@@ -16,6 +16,8 @@ paths:
 > 程式在 `docs/assets/map.js`；以下提到的 Day 幾、哪家店都是這趟 2026-11 的例子。
 
 - 技術：Leaflet 1.9.4（CDN）+ OpenStreetMap 圖磚，**不需 API key、不需信用卡**
+- 彈窗的地圖連結：預設 Google Maps；`trip.js` 寫 `maps: 'amap'` 的那幾趟（中國）用高德，帶座標與 `coordinate=wgs84`（我們的座標是 WGS84，高德預設 GCJ-02，見 `reference/regions/china.md`）。
+  `build-places.js` 查座標的國家看 `trips/<id>/coords.json` 的 `country`（沒寫是 `jp`）
 - 網址參數 `?day=N` 可直接開啟某一天；彈窗可跳回行程表（`../final/index.html#day-N`）
 - **這趟還沒有任何行程地點時**（規劃初期）：自動打開推薦景點、全觀改看推薦景點的範圍，狀態列寫「這趟還沒排行程」。推薦景點來自 `trips/<id>/attractions.json`
 

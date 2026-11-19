@@ -8,6 +8,15 @@
     /* 這趟旅行的 localStorage key（見 ../trip.js）：兩趟的資料分開存，不會互相覆蓋 */
     var K = (window.TRIP && window.TRIP.key) || function (k) { return k; };
 
+    /* 地圖連結：頁面一律寫 maps.google.com/maps?q=（build-places.js 靠這個格式抓地點），
+       這趟設定 TRIP.maps = 'amap'（中國）時換成高德的關鍵字搜尋，手機上會叫出高德 App */
+    if (window.TRIP && window.TRIP.maps === 'amap') {
+      document.querySelectorAll('a[href^="https://maps.google.com/maps?q="]').forEach(function (a) {
+        var q = decodeURIComponent(a.getAttribute('href').split('?q=')[1].replace(/\+/g, ' '));
+        a.href = 'https://uri.amap.com/search?keyword=' + encodeURIComponent(q) + '&callnative=1&src=trip-website';
+      });
+    }
+
     // localStorage 在無痕視窗／封鎖 cookie 時會丟例外，全部包起來
     var store = {
       get: function (k, d) { try { var v = localStorage.getItem(k); return v === null ? d : v; } catch (e) { return d; } },

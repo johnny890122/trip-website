@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行前 Check List｜成都之旅</title>
+<meta name="description" content="成都之旅 2026 年 12 月 8 日～18 日行前清單">
+<meta name="theme-color" content="#B5451B">
+<link rel="stylesheet" href="../../assets/base.css">
+<link rel="stylesheet" href="../../assets/checklist.css">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="成都之旅">
+<script src="../../assets/offline.js" defer></script>
+</head>
+<body>
+
+<header class="site-header" data-hero>
+  <div class="container">
+    <h1>✅ 行前 Check List</h1>
+    <p class="sub">2026 年 12 月 8 日（二）～18 日（五）｜11 天 10 夜</p>
+    <div class="toolbar">
+      <a class="tb-link" href="../index.html">← 回首頁</a>
+      <a class="tb-link" href="../final/index.html">📅 行程表</a>
+      <a class="tb-link" href="../budget/index.html">💴 預算</a>
+      <button type="button" onclick="window.print()">🖨️ 列印</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="summary">
+      <div class="summary-row">
+        <strong>完成進度</strong>
+        <span><span class="pct" id="pct">0%</span> <span style="font-size:0.78rem;color:var(--muted)" id="count"></span></span>
+      </div>
+      <div class="progress"><span id="bar" style="width:0%"></span></div>
+      <p class="hint" style="margin:10px 0 0">
+        勾選狀態存在這台裝置的瀏覽器裡。已經做完的項目直接打勾就好。
+      </p>
+    </div>
+
+    <div id="groups"></div>
+
+    <div class="btn-row">
+      <button class="btn" type="button" onclick="uncheckAll()">↺ 全部取消勾選</button>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>共 10 組（2026-11-19 查證，出發前請再次確認官方最新規定）</p>
+</footer>
+
+<script src="../hero/hero.js"></script>
+<script>
+/* 這趟的 Check List 項目，畫面與勾選邏輯在 ../../assets/checklist.js */
+/* tag: need=必帶 / must=必辦 / rec=建議 / when=時程提醒 / info=須知 */
+/* 來源見 trips/2026-12/reference/ 的查證筆記（1209_*、1211_*、1212_*、1213_*、0000_入境支付網路） */
+window.CHECKLIST = [
+  {
+    id: 'book',
+    title: '⏰ 要先訂、要先查的',
+    items: [
+      { id: 'g8612', t: '12/11 重慶 → 成都高鐵（G8612 沙坪壩 10:30）', tag: 'when',
+        d: '12/11 的票約 <b>11/27 11:00 開賣</b>（推算，以 12306 顯示為準）。用台胞證在 12306 買，刷證進站；註冊要不要大陸手機號未查到。' },
+      { id: 'panda', t: '熊貓基地 12/13 上午票', tag: 'when',
+        d: '最早提前 14 天預約，12/13 約 <b>11/29</b> 開放（推算）。全員實名，台胞證可；成人 ¥55。' },
+      { id: 'cdmuseum', t: '成都博物館 12/13 預約', tag: 'when',
+        d: '免費、要提前預約（攜程）；週一休館。<b>台胞證能否線上預約未查到</b>，看官方公眾號。杜甫草堂 12/11 也一樣：官方微信服務號預約，或現場窗口憑港澳台通行證購票（摘要）。' },
+      { id: 'sxd', t: '三星堆博物館 12/12 門票', tag: 'when',
+        d: '每晚 20:00 放 5 天後的票，12/12 約 <b>12/7 20:00</b>；¥72。<b>台胞證能否線上預約未查到</b>（中英文官網說法矛盾），要先確認。' },
+      { id: 'gh', t: '12/12 成都東 ⇄ 廣漢北高鐵', tag: 'when',
+        d: '12/12 的票約 11/27～28 開賣；去程 D1920 09:04（11/28 代查），二等座約 ¥18～22。' },
+      { id: 'eling', t: '鵝嶺空中棧橋實名預約（12/10）', tag: 'when',
+        d: '微信公眾號「渝中公園」或小程序「鵝嶺公園」；持台胞證者要到遊客服務點預約，地點與名額未查到。' },
+      { id: 'cable', t: '長江索道 12/7～21 停駛，再確認', tag: 'info',
+        d: '只有攜程轉載公告一個來源；景區電話 023-68816888。本行程不排。' },
+      { id: 'cqhotel', t: '重慶住宿（12/8～12/11，解放碑附近，未訂）', tag: 'must',
+        d: '要能接待台胞證、有健身房（或附近可單次付費）、24 小時櫃檯（約 00:15 入住）。' },
+      { id: 'cdhotel', t: '匯航岷源酒店（12/11～12/18，公司負擔，未訂）', tag: 'must',
+        d: '打店家電話 +86-28-85286888 問：健身室開放時間、14:00 前能否寄放行李、台胞證接待。' },
+      { id: 'br766', t: '12/18 BR766 起飛機場（天府／雙流）', tag: 'when',
+        d: '兩說矛盾（flightmapper 天府、Trip.com 雙流），訂票時看長榮官網。' },
+      { id: 'alipay', t: '支付寶在台灣先綁卡', tag: 'must',
+        d: '在台灣用台胞證實名並綁卡（部落格說法，官方公告未查到）；綁卡簡訊發到發卡行登記的手機，出發前綁好。外卡僅商戶消費，200 元以內免手續費、超過 3%（二手）。' }
+    ]
+  },
+  {
+    id: 'doc',
+    title: '🛂 證件與入境',
+    items: [
+      { id: 'twpass', t: '台胞證（有效期、簽注）', tag: 'must',
+        d: '有效期與簽注規定本次未查到，出發前確認。購票、入園（熊貓基地）都要刷證件原件。' },
+      { id: 'entry', t: '入境手續', tag: 'must',
+        d: '外國人入境卡（2025/11/20 起）名單沒有台灣居民，台胞證是否適用未查到（推測不適用）；健康申報 2026 年資料未提到。出發前看陸委會公告。' },
+      { id: 'copy', t: '證件影本／電子檔備份', tag: 'rec', d: '存雲端一份、印一份紙本分開放。' },
+      { id: 'mac', t: '陸委會旅遊警示與動態登錄', tag: 'info',
+        d: '中國大陸旅遊警示橙色（2026/10 仍維持）；「國人赴陸港澳動態登錄系統」非強制、資料保密。建議出發前備份手機資料（陸委會 2026/2）。' }
+    ]
+  },
+  {
+    id: 'insure',
+    title: '🛡️ 保險與金流',
+    items: [
+      { id: 'travel-ins', t: '旅遊平安險（含海外醫療）', tag: 'must', d: '本次未查，出發前辦。' },
+      { id: 'card', t: '信用卡確認可刷外幣、國外交易', tag: 'rec', d: '支援卡組織：Visa、Mastercard、JCB 等（二手）；成都地鐵 2025/7/28 起全線可刷銀聯與境外 Visa、Mastercard（新華社）。' },
+      { id: 'cash', t: '帶少量人民幣現金', tag: 'rec', d: '小攤販可能只收個人收款碼；皇冠大扶梯只收現金或公交卡。建議，非查證值。' }
+    ]
+  },
+  {
+    id: 'net',
+    title: '📶 網路與 App',
+    items: [
+      { id: 'esim', t: '網路：原號漫遊（建議）', tag: 'must',
+        d: '中華電信中港澳漫遊定量 1GB 15 天 249 元等（2026/11 摘要，要再核官網）；評測稱當地 SIM 易無法翻牆。Google、LINE 在中國被屏蔽，原號漫遊是否免翻牆建議出發前實測。' },
+      { id: 'amap', t: '高德地圖（AMap Global）', tag: 'rec', d: '導航不需大陸號；叫車功能台灣號碼能否註冊有分歧，要實測。' },
+      { id: 'didi', t: '滴滴（從支付寶「出行」進小程式）', tag: 'rec', d: '多篇建議此法；一篇說需大陸號，來源衝突，出發前實測。12/8 深夜到站要靠它。' },
+      { id: 'a12306', t: '12306 App', tag: 'must', d: '支援台胞證線上實名核驗（人臉識別），可綁支付寶付款（二手）。' },
+      { id: 'pwa', t: '把行程表加到手機主畫面', tag: 'info',
+        d: '開<a href=\'../index.html\'>首頁</a>，按「📲 存到手機桌面」照步驟做，即可像 App 一樣開啟並<b>離線閱讀</b>。' }
+    ]
+  },
+  {
+    id: 'booked',
+    title: '📌 已預約項目確認',
+    items: [
+      { id: 'flight-go', t: '去程：國航 CA410 12/8 桃園 19:20 → 重慶 23:05（候選，未訂）', tag: 'info', d: '第三方班表，訂票前到航空公司官網確認；報到時間與行李額度未查到。' },
+      { id: 'flight-back', t: '回程：長榮 BR766 12/18 成都 19:20 → 桃園 22:40（未訂）', tag: 'info', d: '12/19 17:00 台北婚禮，故改 12/18 晚班。12/18 出差要提早結束去機場。' }
+    ]
+  },
+  {
+    id: 'carry',
+    title: '🎒 隨身包（每天出門帶）',
+    items: [
+      { id: 'umbrella', t: '摺疊傘（或輕便雨衣）', tag: 'need', d: '重慶 12 月約 1/3～1/2 的天有雨（模型資料）。' },
+      { id: 'tissue', t: '面紙＋濕紙巾', tag: 'rec', d: '' },
+      { id: 'coins', t: '零錢包', tag: 'rec', d: '' }
+    ]
+  },
+  {
+    id: 'pack',
+    title: '👕 衣物與鞋子',
+    items: [
+      { id: 'clothes', t: '衣物：重慶、成都 12 月偏冷、陰', tag: 'info',
+        d: '重慶近 5 年 12 月平均高 11～13.5℃、低 5.6～9℃、雲量 7～8 成（Open-Meteo 模型資料）；成都未查。出發前用 forecast 看預報。' },
+      { id: 'shoes', t: '好走的鞋（已穿過）', tag: 'need', d: '重慶有大量階梯與爬坡，<b>不要穿新鞋上路</b>。' },
+      { id: 'wedding', t: '12/19 婚禮服裝', tag: 'info', d: '由朋友帶，不用打包。' },
+      { id: 'gym', t: '健身衣物', tag: 'rec', d: '住宿要有健身房是這趟規則。' }
+    ]
+  },
+  {
+    id: 'elec',
+    title: '🔌 電子用品',
+    items: [
+      { id: 'charger', t: '手機充電器與線＋多孔充電頭', tag: 'need', d: '' },
+      { id: 'powerbank', t: '行動電源的搭機規定', tag: 'must', d: '本次未查，出發前看航空公司與民航局規定。' },
+      { id: 'plug', t: '插頭與電壓', tag: 'info', d: '本次未查。' }
+    ]
+  },
+  {
+    id: 'health',
+    title: '💊 藥品與小護理',
+    items: [
+      { id: 'meds', t: '常備藥＋個人處方藥', tag: 'rec', d: '本次未查入境規定。' },
+      { id: 'firstaid', t: 'OK 繃、水泡貼、痠痛貼布', tag: 'rec', d: '階梯多，腳容易痠。' }
+    ]
+  },
+  {
+    id: 'flight',
+    title: '✈️ 搭機與行李',
+    items: [
+      { id: 'liquids', t: '液體分裝＋一個透明夾鏈袋', tag: 'rec', d: '本次未查。' },
+      { id: 'bag', t: '手提與託運行李額度（依票種）', tag: 'rec', d: '航班未訂，未查。' }
+    ]
+  }
+];
+</script>
+<script src="../trip.js"></script>
+<script src="../../assets/checklist.js"></script>
+
+</body>
+</html>

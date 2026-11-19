@@ -1,0 +1,28 @@
+[
+  {
+    "id": "sanxingdui1",
+    "label": "三星堆博物館",
+    "file": "Sanxingdui Museum 20260512-1.jpg",
+    "author": "Suicasmo",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "taken": "2026-05-12",
+    "source": "https://commons.wikimedia.org/wiki/File:Sanxingdui_Museum_20260512-1.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 113448
+  },
+  {
+    "id": "sanxingdui2",
+    "label": "三星堆博物館",
+    "file": "New Sandingdui Museum 02.jpg",
+    "author": "STW932",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-08-24",
+    "source": "https://commons.wikimedia.org/wiki/File:New_Sandingdui_Museum_02.jpg",
+    "width": 960,
+    "height": 720,
+    "bytes": 133270
+  }
+]

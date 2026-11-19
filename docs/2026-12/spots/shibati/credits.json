@@ -1,0 +1,28 @@
+[
+  {
+    "id": "shibati1",
+    "label": "十八梯",
+    "file": "Eighteen Stairs 20260507.jpg",
+    "author": "Suicasmo",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "taken": "2026-05-07",
+    "source": "https://commons.wikimedia.org/wiki/File:Eighteen_Stairs_20260507.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 223431
+  },
+  {
+    "id": "shibati2",
+    "label": "十八梯",
+    "file": "Chongqing, January 22, 2024 (11).jpg",
+    "author": "メイド理世",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2024-01-22",
+    "source": "https://commons.wikimedia.org/wiki/File:Chongqing,_January_22,_2024_(11).jpg",
+    "width": 960,
+    "height": 539,
+    "bytes": 195406
+  }
+]

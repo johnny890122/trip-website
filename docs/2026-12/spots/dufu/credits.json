@@ -1,0 +1,28 @@
+[
+  {
+    "id": "dufu1",
+    "label": "杜甫草堂",
+    "file": "杜甫草堂西门（正门） 01.jpg",
+    "author": "Kcx36",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-04-05",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%9D%9C%E7%94%AB%E8%8D%89%E5%A0%82%E8%A5%BF%E9%97%A8%EF%BC%88%E6%AD%A3%E9%97%A8%EF%BC%89_01.jpg",
+    "width": 960,
+    "height": 721,
+    "bytes": 277333
+  },
+  {
+    "id": "dufu2",
+    "label": "杜甫草堂",
+    "file": "杜甫草堂-柴门.jpg",
+    "author": "Kcx36",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-04-05",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%9D%9C%E7%94%AB%E8%8D%89%E5%A0%82-%E6%9F%B4%E9%97%A8.jpg",
+    "width": 960,
+    "height": 721,
+    "bytes": 258115
+  }
+]

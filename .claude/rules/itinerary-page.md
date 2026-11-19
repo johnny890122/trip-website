@@ -141,7 +141,8 @@ paths:
   - `docs/sw.js` 對同源請求一律 **network-first**（見檔案內註解），`CACHE` 版本號由 Stop hook 跑 `scripts/rebuild.js` 時自動 +1；新增頁面或共用檔時要加進 `PRECACHE`
   - 頁面另外監聽 `controllerchange`，**新版 SW 接手後會自動重新整理一次**。
     沒有這段的話，改版當下已開著舊頁面的人會停在「新 HTML ＋ 舊 CSS／JS」的半舊狀態
-- **地圖連結**：`?q=` 一律使用**明文日文地名**，不要改回 percent-encoding（`.claude/hooks/trip-hooks.js` 寫檔時檢查）（歷史上曾因編碼轉換導致 17 個連結指向錯誤地點）
+- **地圖連結**：中國的那幾趟（`TRIP.maps = 'amap'`）也照樣寫 `maps.google.com/maps?q=`，`itinerary.js` 打開時換成高德，`?q=` 要加城市名（`reference/regions/china.md`）
+  - `?q=` 一律使用**明文的當地地名**（日本用日文），不要改回 percent-encoding（`.claude/hooks/trip-hooks.js` 寫檔時檢查）（歷史上曾因編碼轉換導致 17 個連結指向錯誤地點）
   - 方案小卡的 `.pr-map` 也一樣；店名取查證過的正式名稱（筆記裡只有英文名的就用英文名，見 `.claude/rules/planning.md`「餐廳」），
     不要用「店名＋分類欄位」拼出查不到的字串
 

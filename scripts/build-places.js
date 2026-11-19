@@ -33,6 +33,9 @@ const UA = 'tokyo-trip/1.0 (personal travel itinerary map)';
 const COORDS = fs.existsSync(TRIP.coords) ? JSON.parse(fs.readFileSync(TRIP.coords, 'utf8')) : {};
 const FIXED_COORDS = COORDS.fixed || {};
 const QUERY_OVERRIDE = COORDS.override || {};
+/* 這趟在哪個國家（Nominatim 的 countrycodes）；沒寫就是日本。日本以外不做日文漢字的查詢變體 */
+const COUNTRY = COORDS.country || 'jp';
+const LANG = COUNTRY === 'jp' ? 'ja' : 'zh';
 
 const strip = (s) => s.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 
@@ -201,7 +204,7 @@ const ZH_TO_JA = {
   '劍': '剣', '萬': '万', '歷': '歴', '澀': '渋', '祕': '秘', '眾': '衆',
 };
 
-const toJaKanji = (s) => s.replace(/[一-鿿]/g, (c) => ZH_TO_JA[c] || c);
+const toJaKanji = (s) => COUNTRY === 'jp' ? s.replace(/[一-鿿]/g, (c) => ZH_TO_JA[c] || c) : s;
 
 /* 產生由精確到寬鬆的候選查詢字串 */
 function queryVariants(query) {
@@ -235,7 +238,7 @@ function queryVariants(query) {
 
 async function geocodeOnce(q) {
   const url = 'https://nominatim.openstreetmap.org/search'
-    + '?format=jsonv2&limit=1&countrycodes=jp&accept-language=ja'
+    + '?format=jsonv2&limit=1&countrycodes=' + COUNTRY + '&accept-language=' + LANG
     + '&q=' + encodeURIComponent(q);
 
   const res = await fetch(url, { headers: { 'User-Agent': UA } });

@@ -43,14 +43,17 @@
       var label = (i === 0 || i === last) ? (i === 0 ? '起' : '終') : String(i);
       var icon = L.divIcon({ className: '', iconSize: [26, 26], iconAnchor: [13, 13], popupAnchor: [0, -12],
         html: '<div class="stop-pin' + ((i === 0 || i === last) ? ' is-end' : '') + '">' + label + '</div>' });
-      // Google Maps 查詢用日文名稱；執行時用 encodeURIComponent 產生，和 map/index.html 的彈窗寫法相同
-      var gmaps = 'https://maps.google.com/maps?q=' + encodeURIComponent(s.ja || s.name);
+      // 查詢用當地名稱；TRIP.maps = 'amap'（中國）用高德，座標是 WGS84 要加 coordinate=wgs84（同 map.js）
+      var amap = window.TRIP && window.TRIP.maps === 'amap';
+      var gmaps = amap
+        ? 'https://uri.amap.com/marker?position=' + s.lon + ',' + s.lat + '&name=' + encodeURIComponent(s.ja || s.name) + '&coordinate=wgs84&callnative=1&src=trip-website'
+        : 'https://maps.google.com/maps?q=' + encodeURIComponent(s.ja || s.name);
       L.marker([s.lat, s.lon], { icon: icon, zIndexOffset: 500 }).addTo(map).bindPopup(
         '<div class="pop-time">' + esc(s.time || '') + '</div>'
         + '<div class="pop-name">' + esc(s.name) + '</div>'
         + (s.ja && s.ja !== s.name ? '<div class="pop-ja">' + esc(s.ja) + '</div>' : '')
         + (s.desc ? '<div class="pop-desc">' + esc(s.desc) + '</div>' : '')
-        + '<a class="pop-link" href="' + gmaps + '" target="_blank" rel="noopener">在 Google Maps 開啟</a>');
+        + '<a class="pop-link" href="' + gmaps + '" target="_blank" rel="noopener">在 ' + (amap ? '高德地圖' : 'Google Maps') + ' 開啟</a>');
       bounds.push([s.lat, s.lon]);
     });
     map.fitBounds(bounds, { padding: [24, 24] });

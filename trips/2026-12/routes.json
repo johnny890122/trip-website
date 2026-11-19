@@ -1,0 +1,82 @@
+{
+  "_說明": [
+    "這趟的移動路線定義，由 scripts/build-routes.js --trip <id> 轉成 docs/<id>/map/routes.json；完整說明見 scripts/build-routes.js 檔頭。",
+    "OSM route relation：重慶 1 號線 2336456（璧山 → 朝天门，站名鹅岭、两路口、较场口、大坪、磁器口、沙坪坝）；重慶 2 號線 11665923（较场口 → 天堂堡，站名李子坝、大坪）；成都 1 號線 8297247（倪家桥、火车南站、省体育馆）；成都 7 號線 7913593（成都东客站、火车南站）；成都 3 號线 8297265（省体育馆、春熙路、熊猫大道）。2026-11-19 查。",
+    "Day 1 只有 00:45 入住一個地點（機場與航班卡沒有地圖連結，00:45 排序會在 19:20 之前），所以沒有路線定義。",
+    "高鐵、計程車、滴滴、13 路、408 擺渡車都用 car（OSRM 開車路徑，示意）。"
+  ],
+  "days": {
+    "2": [
+      { "from": "start", "to": "09:15", "legs": [ { "mode": "walk" } ] },
+      { "from": "09:15", "to": "11:00", "legs": [ { "mode": "walk" } ] },
+      { "from": "11:00", "to": "12:30", "legs": [ { "mode": "walk" } ] },
+      { "from": "12:30", "to": "13:30", "legs": [ { "mode": "walk" } ] },
+      { "from": "13:30", "to": "16:00", "legs": [ { "mode": "walk" } ] },
+      { "from": "16:00", "to": "17:30", "legs": [ { "mode": "walk" } ] },
+      { "from": "17:30", "to": "18:30", "legs": [ { "mode": "walk" } ] },
+      { "from": "18:30", "to": "19:45", "legs": [ { "mode": "walk" } ] },
+      { "from": "19:45", "to": "21:00", "legs": [ { "mode": "walk" } ] }
+    ],
+    "3": [
+      { "from": "start", "to": "08:45", "legs": [
+        { "mode": "subway", "relation": 2336456, "board": "较场口", "alight": "两路口", "label": "重慶軌道 1 號線" } ] },
+      { "from": "08:45", "to": "09:15", "legs": [ { "mode": "walk" } ] },
+      { "from": "09:15", "to": "09:40", "legs": [ { "mode": "walk" } ] },
+      { "from": "09:40", "to": "09:55", "legs": [
+        { "mode": "subway", "relation": 2336456, "board": "两路口", "alight": "鹅岭", "label": "重慶軌道 1 號線" } ] },
+      { "from": "09:55", "to": "12:25", "legs": [ { "mode": "walk" } ] },
+      { "from": "12:25", "to": "12:55", "legs": [ { "mode": "walk" } ] },
+      { "from": "12:55", "to": "14:20", "legs": [
+        { "mode": "subway", "relation": 11665923, "board": "李子坝", "alight": "大坪", "label": "重慶軌道 2 號線" },
+        { "mode": "subway", "relation": 2336456, "board": "大坪", "alight": "磁器口", "label": "重慶軌道 1 號線" } ] },
+      { "from": "14:20", "to": "17:30", "legs": [ { "mode": "walk" } ] },
+      { "from": "17:30", "to": "18:45", "legs": [
+        { "mode": "subway", "relation": 2336456, "board": "磁器口", "alight": "较场口", "label": "重慶軌道 1 號線" },
+        { "mode": "walk" } ] }
+    ],
+    "4": [
+      { "from": "start", "to": "07:30", "legs": [ { "mode": "walk" } ] },
+      { "from": "07:30", "to": "08:30", "legs": [ { "mode": "walk" } ] },
+      { "from": "08:30", "to": "10:30", "legs": [
+        { "mode": "subway", "relation": 2336456, "board": "较场口", "alight": "沙坪坝", "label": "重慶軌道 1 號線" } ] },
+      { "from": "10:30", "to": "11:32", "legs": [ { "mode": "car", "label": "高鐵 G8612 沙坪壩 → 成都東（示意）" } ] },
+      { "from": "11:32", "to": "12:45", "legs": [
+        { "mode": "subway", "relation": 7913593, "board": "成都东客站", "alight": "火车南站", "label": "成都地鐵 7 號線" },
+        { "mode": "subway", "relation": 8297247, "board": "火车南站", "alight": "倪家桥", "label": "成都地鐵 1 號線" },
+        { "mode": "walk" } ] },
+      { "from": "12:45", "to": "14:00", "legs": [ { "mode": "walk" } ] },
+      { "from": "14:00", "to": "15:00", "legs": [ { "mode": "car", "label": "計程車 飯店 → 杜甫草堂" } ] },
+      { "from": "15:00", "to": "17:30", "legs": [ { "mode": "car", "label": "計程車 杜甫草堂 → 玉林" } ],
+        "cases": [ { "to": ["B"], "legs": [ { "mode": "car", "label": "計程車 杜甫草堂 → 九眼橋" } ] } ] },
+      { "from": "17:30", "to": "18:30", "legs": [ { "mode": "walk" } ],
+        "cases": [ { "from": ["B"], "legs": [ { "mode": "car", "label": "地鐵或計程車（時間未查到）" } ] } ] }
+    ],
+    "5": [
+      { "from": "start", "to": "09:04", "legs": [
+        { "mode": "subway", "relation": 8297247, "board": "倪家桥", "alight": "火车南站", "label": "成都地鐵 1 號線" },
+        { "mode": "subway", "relation": 7913593, "board": "火车南站", "alight": "成都东客站", "label": "成都地鐵 7 號線" } ] },
+      { "from": "09:04", "to": "09:25", "legs": [ { "mode": "car", "label": "高鐵 D1920 成都東 → 廣漢北（示意）" } ] },
+      { "from": "09:25", "to": "09:45", "legs": [ { "mode": "car", "label": "計程車或 13 路公交" } ] },
+      { "from": "09:45", "to": "13:15", "legs": [ { "mode": "walk" } ] },
+      { "from": "13:15", "to": "16:40", "legs": [ { "mode": "car", "label": "回程：計程車 → 廣漢北 → 高鐵 → 成都東 → 飯店（示意）" } ] },
+      { "from": "16:40", "to": "18:30", "legs": [ { "mode": "walk" } ] }
+    ],
+    "6": [
+      { "from": "start", "to": "08:00", "legs": [
+        { "mode": "subway", "relation": 8297247, "board": "倪家桥", "alight": "省体育馆", "label": "成都地鐵 1 號線" },
+        { "mode": "subway", "relation": 8297265, "board": "省体育馆", "alight": "熊猫大道", "label": "成都地鐵 3 號線" },
+        { "mode": "car", "label": "408 路擺渡車（示意）" } ] },
+      { "from": "08:00", "to": "11:30", "legs": [ { "mode": "car", "label": "408 路擺渡車（示意）" } ] },
+      { "from": "11:30", "to": "12:15", "legs": [
+        { "mode": "subway", "relation": 8297265, "board": "熊猫大道", "alight": "春熙路", "label": "成都地鐵 3 號線" },
+        { "mode": "walk" } ] },
+      { "from": "12:15", "to": "13:45", "legs": [ { "mode": "walk" } ] },
+      { "from": "13:45", "to": "15:45", "legs": [ { "mode": "walk" } ] },
+      { "from": "15:45", "to": "16:30", "legs": [ { "mode": "walk" } ],
+        "cases": [ { "to": ["B"], "legs": [ { "mode": "car", "label": "計程車 小名堂 → 飯店" } ] } ] },
+      { "from": "16:30", "to": "17:45", "legs": [ { "mode": "car", "label": "計程車 人民公園 → 飯店" } ],
+        "cases": [ { "from": ["B"], "legs": [ { "mode": "walk" } ] } ] },
+      { "from": "17:45", "to": "18:30", "legs": [ { "mode": "walk" } ] }
+    ]
+  }
+}

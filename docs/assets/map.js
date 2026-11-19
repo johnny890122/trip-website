@@ -191,8 +191,19 @@
     return p.time + (p.slot ? '・' + (p.plan || 'A') : '') + (p.who && WHO_MARK[p.who] ? ' ' + WHO_MARK[p.who] : '');
   }
 
+  /* 地圖連結：TRIP.maps = 'amap'（中國）用高德。places.json 的座標是 WGS84（Nominatim），
+     高德預設當成它的 GCJ-02，要加 coordinate=wgs84，不然在成都會偏約 360 m */
+  var AMAP = window.TRIP && window.TRIP.maps === 'amap';
+  var MAPS_NAME = AMAP ? '高德地圖' : 'Google Maps';
+  function mapUrl(q, lat, lon) {
+    if (!AMAP) return 'https://maps.google.com/maps?q=' + encodeURIComponent(q);
+    return lat != null
+      ? 'https://uri.amap.com/marker?position=' + lon + ',' + lat + '&name=' + encodeURIComponent(q) + '&coordinate=wgs84&callnative=1&src=trip-website'
+      : 'https://uri.amap.com/search?keyword=' + encodeURIComponent(q) + '&callnative=1&src=trip-website';
+  }
+
   function popupHtml(p) {
-    var gmaps = 'https://maps.google.com/maps?q=' + encodeURIComponent(p.query);
+    var gmaps = mapUrl(p.query, p.lat, p.lon);
     var parts = [];
     var when = p.start ? '　' + (p.startTime ? p.startTime + ' ' : '') + '從飯店出發' : (p.time ? '　' + p.time : '');
     var lane = p.who && WHO_MARK[p.who] ? '・分頭行動 ' + WHO_LABEL[p.who].replace('看：', '') : '';
@@ -204,7 +215,7 @@
     var s = p.slot && slotById(p.slot);
     if (s && s.plans.length > 1) parts.push('<div class="pop-plans">換方案 ' + planBtns(s) + '</div>');
     parts.push('<div class="pop-actions">'
-      + '<a href="' + gmaps + '" target="_blank" rel="noopener">在 Google Maps 開啟</a>'
+      + '<a href="' + gmaps + '" target="_blank" rel="noopener">在 ' + MAPS_NAME + ' 開啟</a>'
       + '<a href="../final/index.html#day-' + p.day + '">看這天的行程</a>'
       + '</div>');
     return parts.join('');
@@ -212,19 +223,19 @@
 
   /* 沒選的方案（小圓點）的彈窗 */
   function altPopupHtml(s, pl, pt) {
-    var gmaps = 'https://maps.google.com/maps?q=' + encodeURIComponent(pt.query);
+    var gmaps = mapUrl(pt.query, pt.lat, pt.lon);
     return '<span class="pop-day">Day ' + s.day + '　' + s.time + '・彈性 ' + pl.k + '（沒有選）</span>'
       + '<div class="pop-title">' + pl.icon + ' ' + esc(pt.label) + '</div>'
       + '<div class="pop-ja">' + esc(pl.title) + '</div>'
       + (pl.head ? '<div class="pop-note">' + esc(pl.head) + '</div>' : '')
       + '<div class="pop-plans">換方案 ' + planBtns(s) + '</div>'
-      + '<div class="pop-actions"><a href="' + gmaps + '" target="_blank" rel="noopener">在 Google Maps 開啟</a>'
+      + '<div class="pop-actions"><a href="' + gmaps + '" target="_blank" rel="noopener">在 ' + MAPS_NAME + ' 開啟</a>'
       + '<a href="../final/index.html#day-' + s.day + '">看這天的行程</a></div>';
   }
 
   /* 推薦景點的彈窗：資料欄位與行程地點不同 */
   function recoPopupHtml(r) {
-    var gmaps = r.link || ('https://maps.google.com/maps?q=' + encodeURIComponent(r.query));
+    var gmaps = r.link || mapUrl(r.query, r.lat, r.lon);
     var parts = [];
     parts.push('<span class="pop-day">💡 推薦景點・' + r.city + '</span>');
     parts.push('<div class="pop-title">' + r.name + '</div>');
@@ -239,9 +250,9 @@
 
     parts.push('<div class="pop-actions">'
       + '<a href="' + gmaps + '" target="_blank" rel="noopener">'
-      + (r.link ? '官方網站' : '在 Google Maps 開啟') + '</a>'
-      + (r.link ? '<a href="https://maps.google.com/maps?q=' + encodeURIComponent(r.query)
-                + '" target="_blank" rel="noopener">Google Maps</a>' : '')
+      + (r.link ? '官方網站' : '在 ' + MAPS_NAME + ' 開啟') + '</a>'
+      + (r.link ? '<a href="' + mapUrl(r.query, r.lat, r.lon)
+                + '" target="_blank" rel="noopener">' + MAPS_NAME + '</a>' : '')
       + '</div>');
     return parts.join('');
   }
