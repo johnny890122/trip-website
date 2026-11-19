@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&display=swap"><link rel="stylesheet" href="../../../assets/v2/core.css"><link rel="stylesheet" href="../../../assets/v2/itinerary.css"><script src="../../../assets/v2/v2.js" defer></script><script src="../../../assets/v2/itinerary.js" defer></script>
 </head>
 <body>
-<nav class="v2-menu" aria-label="主選單"><div class="v2-menu-in"><a href="../../index.html"><span aria-hidden="true">⛩️</span>首頁</a><a href="../final/index.html"><span aria-hidden="true">📅</span>行程</a><a href="../simple/index.html"><span aria-hidden="true">⏰</span>簡化</a><a href="../map/index.html"><span aria-hidden="true">🗺️</span>地圖</a><a href="../checklist/index.html"><span aria-hidden="true">✅</span>清單</a><a href="../budget/index.html"><span aria-hidden="true">💴</span>預算</a><a href="../stay/index.html"><span aria-hidden="true">🏠</span>住宿</a></div></nav>
+<nav class="v2-menu" aria-label="主選單"><div class="v2-menu-in"><a href="../index.html"><span aria-hidden="true">⛩️</span>首頁</a><a href="../final/index.html"><span aria-hidden="true">📅</span>行程</a><a href="../simple/index.html"><span aria-hidden="true">⏰</span>簡化</a><a href="../map/index.html"><span aria-hidden="true">🗺️</span>地圖</a><a href="../checklist/index.html"><span aria-hidden="true">✅</span>清單</a><a href="../budget/index.html"><span aria-hidden="true">💴</span>預算</a><a href="../stay/index.html"><span aria-hidden="true">🏠</span>住宿</a></div></nav>
 
   <!-- ====== HEADER ====== -->
   <header class="site-header" data-hero>
@@ -24,7 +24,7 @@
       <h1>☔ 雨天備案</h1>
       <p class="trip-dates">兩個版本：高尾山 11/15 版・高尾山 11/21 版（建議）｜預報下雨就照這一版走</p>
       <div class="toolbar">
-        <a class="tb-link" href="../../index.html">← 回首頁</a>
+        <a class="tb-link" href="../index.html">← 回首頁</a>
         <a class="tb-link" href="../final/index.html#day-4">📅 主行程表</a>
         <a class="tb-link" href="../map/index.html?day=5">🗺️ 地圖</a>
         <button id="jaToggle" type="button" aria-pressed="false" onclick="toggleJa()">🇯🇵 顯示日文地名</button>
@@ -1239,10 +1239,10 @@
   <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
 
   <!-- ====== JAVASCRIPT ====== -->
-  <script src="../../../assets/hero/hero.js"></script>
+  <script src="../../../2026-11/hero/hero.js"></script>
   <script>
     // 隨機挑一張風景照當頁首底圖
-    if (window.applyHero) window.applyHero('../../../assets/hero/');
+    if (window.applyHero) window.applyHero();
   </script>
   <script src="../../../2026-11/trip.js"></script>
   <script>/* 雨天備案頁：記住的日期、建議收合狀態和主行程表分開存 */ window.TRIP.key = function (k) { return '2026-11-rain:' + k; };</script>

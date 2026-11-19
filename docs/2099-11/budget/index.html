@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>預算追蹤｜東京秋季家族之旅E2E</title>
+<meta name="description" content="東京秋季家族之旅E2E 11/14～11/22">
+<meta name="theme-color" content="#B5451B">
+<link rel="stylesheet" href="../../assets/base.css">
+<link rel="stylesheet" href="../../assets/budget.css">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="東京秋季旅行">
+<script src="../../assets/offline.js" defer></script>
+</head>
+<body>
+
+<header class="site-header" data-hero>
+  <div class="container">
+    <h1>💴 預算追蹤</h1>
+    <p class="sub">2026 年 11 月 14 日～22 日｜9 天 8 夜｜每人</p>
+    <div class="toolbar">
+      <a class="tb-link" href="../index.html">← 回首頁</a>
+      <a class="tb-link" href="../final/index.html">📅 行程表</a>
+      <a class="tb-link" href="../map/index.html">🗺️ 地圖</a>
+      <button type="button" id="expandBtn" onclick="toggleAll()">展開全部</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <p class="hint">
+      填入實際花費，資料只存在這台裝置的瀏覽器裡，重開頁面不會消失。
+      標示「已確認」的門票金額取自行程表中已查證的票價，會自動計入。
+    </p>
+
+    <h3 class="section-title">共同支出（不分日）</h3>
+    <div class="panel">
+      <div class="panel-body" id="sharedBody"></div>
+    </div>
+
+    <h3 class="section-title">每日花費</h3>
+    <div id="days"></div>
+
+    <div class="total-card">
+      <div class="total-row">
+        <span class="t-label">整趟總計</span>
+        <span>
+          <span class="t-jpy" id="grandJpy">¥0</span>
+          <span class="t-twd" id="grandTwd"></span>
+        </span>
+      </div>
+      <div class="breakdown" id="breakdown"></div>
+      <div class="rate-row">
+        <span>匯率 1 JPY =</span>
+        <input type="number" id="rate" min="0" step="0.001" placeholder="0.21">
+        <span>TWD</span>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn" type="button" onclick="copySummary()" id="copyBtn">📋 複製明細</button>
+      <button class="btn" type="button" onclick="resetAll()">🗑️ 清空重填</button>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>2026 年 11 月 14 日～22 日｜每人｜目前填到 Day 1～9 已查證的門票與車票</p>
+</footer>
+
+<script src="../hero/hero.js"></script>
+<script>
+/* 這趟的預算設定，畫面與計算在 ../../assets/budget.js */
+window.BUDGET = {
+  title: '東京秋季家族之旅E2E',
+  shared: [
+    { key: 'flight',   label: '✈️ 機票' },
+    { key: 'hotel',    label: '🏨 住宿' },
+    { key: 'pass',     label: '🎟️ 交通票券' },
+    { key: 'insure',   label: '🛡️ 旅遊平安險' },
+    { key: 'esim',     label: '📶 網路（eSIM／WiFi 機）' },
+  ],
+  /* 每天一筆；行程排定後，把主行程已查證的門票與車票（每人・當地貨幣）填進 fixed，例：
+     { name: '〇〇 入場', amount: 500 }。彈性方案不算 */
+  days: [
+    /* 兒童價不寫、敬老票價不同的以大人價計；IC 卡扣款的車資（山手線、小田急、江ノ電、湘南モノレール、JR 池袋⇄大船、日比谷線）不算；Day 6 下吉田 → 河口湖的特急料金未查到，沒列；河口湖周遊バス 1 回 ¥180 起、1 Day ¥1,500（官方）不列 fixed，這天是否買 Day Pass 出發前決定；河口湖的計程車車資未查到，沒列 */
+    { n: 1, date: '11/14（六）', title: '兩組飛成田、Skyliner 進市區、池袋拉麵', fixed: [
+      { name: 'Skyliner 成田空港 → 日暮里（大人單程，兩組各自搭，第三方價）', amount: 2580 } ] },
+    { n: 2, date: '11/15（日）', title: '豪徳寺・明治神宮・新宿御苑', fixed: [
+      { name: '新宿御苑 入園（一般；65 歲以上 250）', amount: 500 } ] },
+    { n: 3, date: '11/16（一）', title: '江之島・鎌倉', fixed: [
+      { name: '高徳院 拝観（一般）', amount: 300 } ] },
+    { n: 4, date: '11/17（二）', title: '六義園・上野・池袋晚餐・寄大行李', fixed: [
+      { name: '六義園 入園（一般；65 歲以上 150）', amount: 300 } ] },
+    { n: 5, date: '11/18（三）', title: '富士回遊 7 号・河口湖', fixed: [
+      { name: '富士回遊 7 号 新宿 → 河口湖（大人單程，指定席；ekitan 第三方價 2,580＋1,620，官方未查到，另有 4,130、4,100 兩說）', amount: 4200 } ] },
+    { n: 6, date: '11/19（四）', title: '新倉山・大石公園・高速巴士回池袋', fixed: [
+      { name: '高速バス 河口湖駅 17:50 → 池袋（已訂，大人）', amount: 2200 } ] },
+    { n: 7, date: '11/20（五）', title: '浅草寺・仲見世・牛かつ午餐・晴空塔', fixed: [] },
+    /* Day 7 晴空塔天望デッキ 11/20 當天票價未查到（變動價制），沒列；東武 IC 扣款不算 */
+    { n: 8, date: '11/21（六）', title: '高尾山・上野燒肉', fixed: [
+      { name: '高尾山ケーブルカー 往復（大人，官方 /timeprice/）', amount: 980 } ] },
+    { n: 9, date: '11/22（日）', title: '分頭回成田：邱家組早、林葉組晚', fixed: [
+      { name: 'Skyliner 京成上野 → 成田空港（大人單程，兩組各自搭，第三方價）', amount: 2580 } ] },
+  ],
+};
+</script>
+<script src="../trip.js"></script>
+<script src="../../assets/budget.js"></script>
+
+</body>
+</html>

@@ -22,7 +22,7 @@
       <h1>☔ 雨天備案</h1>
       <p class="trip-dates">兩個版本：高尾山 11/15 版・高尾山 11/21 版（建議）｜預報下雨就照這一版走</p>
       <div class="toolbar">
-        <a class="tb-link" href="../../index.html">← 回首頁</a>
+        <a class="tb-link" href="../index.html">← 回首頁</a>
         <a class="tb-link" href="../final/index.html#day-4">📅 主行程表</a>
         <a class="tb-link" href="../map/index.html?day=5">🗺️ 地圖</a>
         <button id="jaToggle" type="button" aria-pressed="false" onclick="toggleJa()">🇯🇵 顯示日文地名</button>
@@ -1237,10 +1237,10 @@
   <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
 
   <!-- ====== JAVASCRIPT ====== -->
-  <script src="../../assets/hero/hero.js"></script>
+  <script src="../hero/hero.js"></script>
   <script>
     // 隨機挑一張風景照當頁首底圖
-    if (window.applyHero) window.applyHero('../../assets/hero/');
+    if (window.applyHero) window.applyHero();
   </script>
   <script src="../trip.js"></script>
   <script>/* 雨天備案頁：記住的日期、建議收合狀態和主行程表分開存 */ window.TRIP.key = function (k) { return '2026-11-rain:' + k; };</script>

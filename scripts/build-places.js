@@ -20,56 +20,19 @@ const path = require('path');
 const TRIPS = require('./lib/trip');
 const TRIP = TRIPS.resolve();
 const SRC = TRIP.itinerary;
-const RECO_SRC = path.join(TRIP.root, 'data', 'attractions.json');
+const RECO_SRC = TRIP.attractions;
 const OUT = path.join(TRIP.mapDir, 'places.json');
 const rel = (p) => path.relative(TRIP.root, p).replace(/\\/g, '/');
 const REFRESH = process.argv.includes('--refresh');
 const UA = 'tokyo-trip/1.0 (personal travel itinerary map)';
 
-/* Nominatim 對少數地點解析不佳，這裡指定更精確的查法 */
-/* 門牌級座標：Nominatim 對日本地址只查得到「丁目」的中心，步行路線會差一兩百公尺。
- * 這裡的座標來自國土地理院「地址檢索」（https://msearch.gsi.go.jp/address-search/AddressSearch?q=地址），
- * 優先於 QUERY_OVERRIDE 與快取 */
-// 2026-11-07 東京這趟的門牌座標（來源：國土地理院地址檢索，key 是 map-link ?q= 的內容）
-const FIXED_COORDS = {
-  // 豪徳寺（寺）：Nominatim 查「豪徳寺」會落到小田急豪徳寺駅旁的「豪徳寺一丁目」，離寺 15 分；寺的地址 世田谷区豪徳寺2-24-7，用國土地理院門牌座標（2026-11-09）
-  '豪徳寺': {
-    lat: 35.647671, lon: 139.647202,
-    osm: '東京都世田谷区豪徳寺二丁目２４番７号（國土地理院 地址檢索）',
-    geocodedQuery: 'GSI 東京都世田谷区豪徳寺2-24-7',
-  },
-  // 小田急 豪徳寺駅：用小田急線 relation 9483158 的停靠點 node 6793703209
-  '豪徳寺駅': {
-    lat: 35.6534875, lon: 139.6468687,
-    osm: '小田急小田原線 豪徳寺（OpenStreetMap node 6793703209）',
-    geocodedQuery: 'OSM 小田急線 豪徳寺',
-  },
-  // 東池袋民宿（使用者 2026-11-09 提供地址），國土地理院地址檢索
-  '東京都豊島区東池袋3-11-3': {
-    lat: 35.731876, lon: 139.718689,
-    osm: '東京都豊島区東池袋三丁目１１番３号（國土地理院 地址檢索）',
-    geocodedQuery: 'GSI 東京都豊島区東池袋3-11-3',
-  },
-  '東横INN富士河口湖大橋': { lat: 35.504341, lon: 138.760208, osm: '國土地理院地址檢索 船津294（2026-11-07）', geocodedQuery: 'GSI 山梨県南都留郡富士河口湖町船津294' },
-  '富士五湖汽船 船津浜乗り場': { lat: 35.503071, lon: 138.767746, osm: '國土地理院地址檢索 船津4034（2026-11-07）', geocodedQuery: 'GSI 山梨県南都留郡富士河口湖町船津4034' },
-  '河口湖 音楽と森の美術館': { lat: 35.522194, lon: 138.768906, osm: '國土地理院地址檢索（2026-11-13）河口 3077 番地（官方地址 河口 3077-20，山梨縣觀光網）', geocodedQuery: 'GSI 山梨県南都留郡富士河口湖町河口3077-20' },
-  '富士吉田市下吉田3-6-12': { lat: 35.492943, lon: 138.804031, osm: '國土地理院地址檢索（2026-11-13），本町通 本町 2 丁目拍照點', geocodedQuery: 'GSI 山梨県富士吉田市下吉田3-6-12' },
-  '東京都豊島区南池袋1-26-9': { lat: 35.729088, lon: 139.713593, osm: '國土地理院地址檢索（2026-11-13），Radical Storage 池袋（預約確認信：第 2 MYT ビル 8 樓）', geocodedQuery: 'GSI 東京都豊島区南池袋1-26-9' },
-  '東京都台東区千束3-17-4': { lat: 35.721958, lon: 139.791306, osm: '國土地理院地址檢索（2026-11-07）', geocodedQuery: 'GSI 東京都台東区千束3-17-4' },
-  '牛たんの檸檬 新宿総本店': { lat: 35.696178, lon: 139.697968, osm: '國土地理院地址檢索 西新宿7-16-12（2026-11-07）', geocodedQuery: 'GSI 東京都新宿区西新宿7-16-12' },
-  '浅草 牛かつ': { lat: 35.710827, lon: 139.795898, osm: '國土地理院地址檢索 雷門2-17-10（2026-11-07）', geocodedQuery: 'GSI 東京都台東区雷門2-17-10' },
-  '浅草牛かつ 分店': { lat: 35.710716, lon: 139.796432, osm: '國土地理院地址檢索 雷門2-18-9 ザ・シティ浅草雷門（2026-11-07）', geocodedQuery: 'GSI 東京都台東区雷門2-18-9' },
-};
-
-/* 彈性行程各方案（B～E，以及沒有 map-link 的方案 A）的地點座標。
- * 店家座標取食べログ地圖頁，景點與車站用 Nominatim 查過再逐一核對；見 data/plan-coords.json */
-const PLAN_COORDS = path.join(TRIP.root, 'data', 'plan-coords.json');
-
-/* 2026-11-07 東京這趟：Nominatim 查名稱會落到別處的地點 */
-const QUERY_OVERRIDE = {
-  '今戸神社': '今戸神社 台東区', // 不加台東区會落到群馬
-  '高尾山 山頂': '高尾山',
-};
+/* 這一趟的座標設定：trips/<id>/coords.json（格式見檔案裡的 _說明）
+ *   fixed    門牌級座標，優先於一切（Nominatim 對日本地址只到「丁目」中心，步行路線會差一兩百公尺）
+ *   plans    彈性方案的地點（店家取食べログ地圖頁，景點用 Nominatim 查過再核對）
+ *   override Nominatim 查名稱會落到別處的地點，改用指定的查詢字串 */
+const COORDS = fs.existsSync(TRIP.coords) ? JSON.parse(fs.readFileSync(TRIP.coords, 'utf8')) : {};
+const FIXED_COORDS = COORDS.fixed || {};
+const QUERY_OVERRIDE = COORDS.override || {};
 
 const strip = (s) => s.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 
@@ -82,7 +45,8 @@ const toQuery = (q) => decodeURIComponent(q).replace(/\+/g, ' ');
 function extractSlot(item, base) {
   const itemLinks = [...item.matchAll(MAP_LINK)].map((m) => ({ label: strip(m[2]), query: toQuery(m[1]) }));
   const track = item.split('<div class="plans-track">')[1] || '';
-  const blocks = track.split(/(?=<div class="plan[ "][^>]*data-i=")/).slice(1);
+  // 用 filter 而不是 slice(1)：plans-track 後面緊接方案 A（沒有換行）時，split 不會產生空的第一段，slice(1) 會把 A 丟掉
+  const blocks = track.split(/(?=<div class="plan[ "][^>]*data-i=")/).filter((b) => /^<div class="plan[ "]/.test(b));
   const plans = blocks.map((b) => {
     const k = 'ABCDE'[+((b.match(/data-i="(\d)"/) || [])[1] || 0)];
     const titleRaw = (b.match(/<span class="plan-title" hidden>([\s\S]*?)<\/span><div class="plan-head">/) || [])[1] || '';
@@ -139,7 +103,7 @@ function extract() {
 
     /* 分頭行動（2026-11-05 起）：.lane（data-who="family"／"solo"）裡的項目屬於那一條線，
        地點帶上 who，地圖與 build-routes.js 才分得出兩條線。.lane 的結尾一定要有 <!-- /lane --> 標記
-       （見 templates/itinerary-snippets.html），字串解析分不出巢狀的 </div> */
+       （見 trips/_template/itinerary-snippets.html），字串解析分不出巢狀的 </div> */
     const lanes = [];
     for (const m of sec.matchAll(/<div class="lane" data-who="(\w+)"/g)) {
       const end = sec.indexOf('<!-- /lane -->', m.index);
@@ -299,7 +263,7 @@ async function geocode(query) {
   return null;
 }
 
-/* 推薦景點：來自 data/attractions.json，與行程表地點分開呈現 */
+/* 推薦景點：來自 trips/<id>/attractions.json，與行程表地點分開呈現 */
 function extractRecommended() {
   if (!fs.existsSync(RECO_SRC)) return [];
   const json = JSON.parse(fs.readFileSync(RECO_SRC, 'utf8'));
@@ -324,7 +288,7 @@ function extractRecommended() {
   const { places, slots } = extract();
   const recommended = extractRecommended();
   const planPts = [].concat(...slots.map((s) => [].concat(...s.plans.map((p) => p.pts))));
-  const planCoords = fs.existsSync(PLAN_COORDS) ? JSON.parse(fs.readFileSync(PLAN_COORDS, 'utf8')).coords || {} : {};
+  const planCoords = COORDS.plans || {};
   console.log('行程表地點 ' + places.length + ' 個，彈性行程 ' + slots.length + ' 組（方案地點 ' + planPts.length
     + ' 個），推薦景點 ' + recommended.length + ' 個\n');
 
@@ -349,10 +313,10 @@ function extractRecommended() {
   let hit = 0, miss = 0, cached = 0;
 
   for (const q of uniq) {
-    if (FIXED_COORDS[q]) { coords[q] = FIXED_COORDS[q]; cached++; continue; }
+    if (FIXED_COORDS[q]) { const { note, ...c } = FIXED_COORDS[q]; coords[q] = c; cached++; continue; }
     if (planCoords[q]) {
       const c = planCoords[q];
-      coords[q] = { lat: c.lat, lon: c.lon, osm: c.src, geocodedQuery: 'data/plan-coords.json' };
+      coords[q] = { lat: c.lat, lon: c.lon, osm: c.src, geocodedQuery: rel(TRIP.coords) };
       cached++;
       continue;
     }
@@ -371,7 +335,7 @@ function extractRecommended() {
         coords[q] = c; hit++; console.log('  ✓ ' + q + '  →  ' + c.lat + ', ' + c.lon);
         // 方案地點多半是店家；Nominatim 查店名常常查錯，提醒改填食べログ座標
         if (planPts.some((p) => p.query === q) && !places.some((p) => p.query === q)) {
-          console.log('    ⚠ 這是彈性方案的地點，請確認座標；店家請改填 data/plan-coords.json（食べログ地圖頁）');
+          console.log('    ⚠ 這是彈性方案的地點，請確認座標；店家請改填 ' + rel(TRIP.coords) + ' 的 plans（食べログ地圖頁）');
         }
       }
       else { miss++; unresolved.push(q); console.log('  ✗ 查無座標  ' + q); }

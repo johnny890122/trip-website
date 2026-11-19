@@ -1526,7 +1526,7 @@ body.is-offline .spot-offline { display: block; }
 }
 
 
-/* === 分頭行動：家人／獨旅兩條線（2026-11-05 起；寫法見 templates/itinerary-snippets.html） ===
+/* === 分頭行動：家人／獨旅兩條線（2026-11-05 起；寫法見 trips/_template/itinerary-snippets.html） ===
    .split 包住分開的那一段，裡面兩個 .lane（data-who="family"／"solo"），各自是一條小時間軸。
    一次只顯示 .is-current 那一條（手機用分頁切；工具列「看：家人／獨旅」只留那一條）；
    寬螢幕又是「看：全部」時兩條線並排。body[data-who] 由 itinerary.js 在頁面有 .split 時才設定 */

@@ -5,7 +5,7 @@
  *   Day 1 關西機場 → 新今宮的直線還會橫跨大阪灣。2026-09-24 起**八天全部**改畫實際路線，
  *   不再有「隨意連線」（使用者要求）。
  *
- * 哪一段搭什麼車、在哪站上下車，寫在 data/trips/<trip>/routes.json；本腳本負責把它變成座標：
+ * 哪一段搭什麼車、在哪站上下車，寫在 trips/<trip>/routes.json；本腳本負責把它變成座標：
  *   - 鐵路／地鐵／公車：抓 OpenStreetMap 上該路線的 route relation，用它的軌道（公車是道路）建圖，
  *     在上下車站之間找最短路 —— 畫出來就是列車、公車實際走的路
  *   - 步行：OSRM 步行路徑（routing.openstreetmap.de）
@@ -531,7 +531,7 @@ function pickLegs(def, fromK, toK) {
     const pointCount = items.length;
     if (pointCount < 2) continue;
     const gaps = def.days[String(day)];
-    if (!gaps) { errors.push('Day ' + day + ' 沒有路線定義（八天都要定義，地圖不再畫直線）'); continue; }
+    if (!gaps) { errors.push('Day ' + day + ' 沒有路線定義（有地點的每一天都要定義，地圖不再畫直線）'); continue; }
     days[day] = [];
     const seen = new Map();
     process.stdout.write('Day ' + day + ' ');

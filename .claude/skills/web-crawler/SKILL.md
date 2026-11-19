@@ -9,7 +9,7 @@ description: |
   - "抓這個網頁下來", "幫我存這個頁面"
 
   The skill requires a Python virtual environment with dependencies installed.
-  All crawled content saves to `reference/` directory as markdown files.
+  All crawled content saves to the trip's `trips/<id>/reference/` directory as markdown files.
 ---
 
 # Web Crawler Skill
@@ -43,7 +43,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path('.claude/skills/web-crawler/scripts')))
 from crawl import WebCrawler
-crawler = WebCrawler(output_dir='reference', delay=2)
+crawler = WebCrawler(output_dir='trips/<id>/reference', delay=2)
 crawler.crawl_and_save('https://example.com/page')
 "
 ```
@@ -56,15 +56,15 @@ urls = [
     'https://example.com/page1',
     'https://example.com/page2',
 ]
-crawler = WebCrawler(output_dir='reference', delay=2)
+crawler = WebCrawler(output_dir='trips/<id>/reference', delay=2)
 results = crawler.crawl_batch(urls)
 ```
 
 ### Step 3: Verify Results
 
-Check that files were created in `reference/`:
+Check that files were created in `trips/<id>/reference/`:
 ```bash
-ls -la reference/
+ls -la trips/<id>/reference/
 ```
 
 ## Crawler Configuration
@@ -73,7 +73,7 @@ The `WebCrawler` class is in `.claude/skills/web-crawler/scripts/crawl.py`.
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `output_dir` | `reference` | Where to save markdown files |
+| `output_dir` | `reference`（這個 repo 一律傳 `trips/<id>/reference`） | Where to save markdown files |
 | `delay` | `2` | Seconds between requests (avoid 403) |
 
 ### User-Agent Configuration
@@ -146,6 +146,16 @@ User: 幫我爬這個頁面 https://example.com/article
 Claude:
 1. Checks .venv exists
 2. Runs crawler with the URL
-3. Saves to reference/article.md
-4. Reports: ✅ Saved 15KB to reference/article.md
+3. Saves to trips/<id>/reference/article.md
+4. Reports: ✅ Saved 15KB to trips/<id>/reference/article.md
 ```
+## 這個 repo 踩過的坑（存完一定要檢查檔案內容）
+
+- **檔名**：「網域_路徑」或「主題_查證筆記」，避免不同網站的首頁都變成 `index.md` 互相覆蓋
+- 預設的內文擷取會挑第一個 class 含 `content` 的 div，有些網站（例：食べログ）只會存到頁首選單（幾百 bytes）。
+  檔案太小時，覆寫 `extract_content()` 直接回傳 `soup.body`
+- 網頁可能內嵌**第三方的存取權杖**（例：地圖頁裡的 Mapbox token），GitHub 的推送保護會把整批 push 擋下。
+  **commit 前先把權杖遮蔽掉**，不要到 GitHub 上按「允許這個 secret」
+- 明文**禁止複製、轉載**的網站（例：Yahoo!路線情報）不存整頁副本，改寫 `網域_查證筆記.md`，只記查證事實與網址；這個 repo 之後可能公開
+- 伺服器沒送中繼憑證的網站（Python／Node 報 `UNABLE_TO_VERIFY_LEAF_SIGNATURE`），**不要關掉 TLS 驗證**，改用瀏覽器開頁面讀取
+- `.venv/` 不進版控（Linux 版無法跨平台），每台機器自己建

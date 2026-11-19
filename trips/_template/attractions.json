@@ -1,0 +1,7 @@
+{
+  "_說明": [
+    "推薦景點資料庫（地圖「💡 推薦景點」圖層的來源）。",
+    "每筆：id、name、city、area、category、features、price、duration、address、hours、transport、link、tags、mapq；票價、營業時間都要有查證來源，記在 trips/<id>/reference/。"
+  ],
+  "attractions": []
+}

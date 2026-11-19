@@ -1,0 +1,2860 @@
+{
+  "generatedAt": "2026-11-19",
+  "source": "docs/2099-11/final/index.html",
+  "recommendedSource": "trips/2099-11/attractions.json",
+  "attribution": "© OpenStreetMap contributors — 座標由 Nominatim 查詢",
+  "places": [
+    {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "16:35",
+      "icon": "🛬",
+      "title": "抵達｜CI104 桃園 12:35 → 成田 16:35",
+      "ja": "",
+      "label": "成田空港 第2ターミナル",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "成田空港第2ターミナル",
+      "order": 0,
+      "who": "family",
+      "lat": 35.7732538,
+      "lon": 140.3872202,
+      "osm": "OSM route relation 3120358 的「空港第2ビル」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "17:42",
+      "icon": "🚄",
+      "title": "Skyliner｜成田空港 第2・3ターミナル 17:42 → 日暮里 18:20",
+      "ja": "",
+      "label": "京成 空港第2ビル駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "京成空港第2ビル駅",
+      "order": 1,
+      "who": "family",
+      "lat": 35.7732538,
+      "lon": 140.3872202,
+      "osm": "OSM route relation 3120358 的「空港第2ビル」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "18:25",
+      "icon": "🚃",
+      "title": "山手線 內回り｜日暮里 → 池袋 約 18:37",
+      "ja": "",
+      "label": "日暮里駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "日暮里駅",
+      "order": 2,
+      "who": "family",
+      "lat": 35.7279696,
+      "lon": 139.7704038,
+      "osm": "OSM route relation 1972960 的「日暮里」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "18:50",
+      "icon": "🍜",
+      "title": "晚餐｜一蘭 池袋店",
+      "ja": "",
+      "label": "一蘭 池袋店",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "一蘭 池袋店",
+      "order": 3,
+      "slot": "d1-1850",
+      "who": "family",
+      "lat": 35.732574,
+      "lon": 139.714111,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東池袋1-39-11（食べログ「池袋店」地址；官網另一間 1-42-8 為 35.731949,139.712708）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "20:00",
+      "icon": "🏨",
+      "title": "入住｜東池袋民宿 IKEBUKURO VILLA",
+      "ja": "",
+      "label": "東池袋民宿 IKEBUKURO VILLA",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "東池袋民宿 IKEBUKURO VILLA",
+      "order": 4,
+      "who": "family",
+      "lat": 35.731876,
+      "lon": 139.718689,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東京都豊島区東池袋3-11-3",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "18:40",
+      "icon": "🛬",
+      "title": "抵達｜IT202 桃園 14:40 → 成田 18:40",
+      "ja": "",
+      "label": "成田空港 第2ターミナル",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "成田空港第2ターミナル",
+      "order": 5,
+      "who": "solo",
+      "lat": 35.7732538,
+      "lon": 140.3872202,
+      "osm": "OSM route relation 3120358 的「空港第2ビル」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "19:22",
+      "icon": "🚄",
+      "title": "Skyliner｜成田空港 第2・3ターミナル 19:22 → 日暮里 19:58",
+      "ja": "",
+      "label": "京成 空港第2ビル駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "京成空港第2ビル駅",
+      "order": 6,
+      "who": "solo",
+      "lat": 35.7732538,
+      "lon": 140.3872202,
+      "osm": "OSM route relation 3120358 的「空港第2ビル」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "20:05",
+      "icon": "🚃",
+      "title": "山手線 內回り｜日暮里 → 池袋 約 20:17",
+      "ja": "",
+      "label": "日暮里駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "日暮里駅",
+      "order": 7,
+      "who": "solo",
+      "lat": 35.7279696,
+      "lon": 139.7704038,
+      "osm": "OSM route relation 1972960 的「日暮里」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "20:30",
+      "icon": "🍜",
+      "title": "晚餐｜一蘭 池袋店",
+      "ja": "",
+      "label": "一蘭 池袋店",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "一蘭 池袋店",
+      "order": 8,
+      "slot": "d1-2030",
+      "who": "solo",
+      "lat": 35.732574,
+      "lon": 139.714111,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東池袋1-39-11（食べログ「池袋店」地址；官網另一間 1-42-8 為 35.731949,139.712708）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "21:45",
+      "icon": "🏨",
+      "title": "入住｜東池袋民宿 IKEBUKURO VILLA",
+      "ja": "",
+      "label": "東池袋民宿 IKEBUKURO VILLA",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "東池袋民宿 IKEBUKURO VILLA",
+      "order": 9,
+      "who": "solo",
+      "lat": 35.731876,
+      "lon": 139.718689,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東京都豊島区東池袋3-11-3",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "08:50",
+      "start": true,
+      "startTime": "08:50",
+      "icon": "🏨",
+      "title": "出發｜東池袋民宿 IKEBUKURO VILLA",
+      "ja": "",
+      "label": "東池袋民宿 IKEBUKURO VILLA",
+      "tag": "",
+      "kind": "start",
+      "note": "前一晚住的飯店",
+      "query": "東池袋民宿 IKEBUKURO VILLA",
+      "order": 10,
+      "lat": 35.731876,
+      "lon": 139.718689,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東京都豊島区東池袋3-11-3",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "08:50",
+      "icon": "🚃",
+      "title": "山手線 內回り＋小田急｜池袋 09:07 → 新宿 → 豪徳寺 09:40",
+      "ja": "",
+      "label": "池袋駅東口",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "池袋駅東口",
+      "order": 11,
+      "lat": 35.729531,
+      "lon": 139.713151,
+      "osm": "OSM 池袋駅東口公車站點（見 reference/1115 筆記第 1 節）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "09:50",
+      "icon": "⛩️",
+      "title": "豪徳寺",
+      "ja": "豪徳寺",
+      "label": "豪徳寺",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "豪徳寺",
+      "order": 12,
+      "lat": 35.6504114,
+      "lon": 139.647322,
+      "osm": "Nominatim 查「豪徳寺」第 2 筆（世田谷区豪徳寺 154-0021，2026/11/18）；第 1 筆是豪徳寺駅一帶",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "10:40",
+      "icon": "🚃",
+      "title": "小田急＋千代田線｜豪徳寺 → 代々木上原 → 明治神宮前〈原宿〉 約 11:00",
+      "ja": "",
+      "label": "豪徳寺駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "豪徳寺駅",
+      "order": 13,
+      "lat": 35.6534875,
+      "lon": 139.6468687,
+      "osm": "OSM route relation 9483158 的「豪徳寺」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "11:15",
+      "icon": "⛩️",
+      "title": "明治神宮",
+      "ja": "明治神宮",
+      "label": "明治神宮",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "明治神宮",
+      "order": 14,
+      "lat": 35.6748417,
+      "lon": 139.6996266,
+      "osm": "Nominatim 查「明治神宮」（渋谷区代々木神園町，2026/11/18）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "12:05",
+      "icon": "🚇",
+      "title": "副都心線｜明治神宮前〈原宿〉 → 新宿三丁目",
+      "ja": "",
+      "label": "明治神宮前〈原宿〉駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "明治神宮前駅",
+      "order": 15,
+      "lat": 35.668396,
+      "lon": 139.7053934,
+      "osm": "OSM route relation 5375678 的「明治神宮前〈原宿〉」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "12:45",
+      "icon": "🥩",
+      "title": "午餐｜人形町今半 新宿高島屋店",
+      "ja": "",
+      "label": "人形町今半 新宿高島屋店",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "人形町今半 新宿高島屋店",
+      "order": 16,
+      "slot": "d2-1245",
+      "lat": 35.684647,
+      "lon": 139.703354,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：千駄ヶ谷5-24-2",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "14:30",
+      "icon": "🍂",
+      "title": "新宿御苑（菊花壇展）",
+      "ja": "新宿御苑",
+      "label": "新宿御苑",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "新宿御苑",
+      "order": 17,
+      "lat": 35.6850716,
+      "lon": 139.7095466,
+      "osm": "Nominatim 查「新宿御苑」（新宿区 160-0014，2026/11/18；園區中心點，非入口門）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "16:30",
+      "icon": "🛍️",
+      "title": "自由時間｜新宿駅周邊",
+      "ja": "",
+      "label": "新宿駅",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "新宿駅",
+      "order": 18,
+      "slot": "d2-1630",
+      "lat": 35.688969,
+      "lon": 139.7003309,
+      "osm": "OSM route relation 1972960 的「新宿」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "19:00",
+      "icon": "🥩",
+      "title": "晚餐｜牛たんの檸檬 新宿総本店",
+      "ja": "新宿焼肉 牛たんの檸檬 総本店",
+      "label": "牛たんの檸檬 新宿総本店",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "牛たんの檸檬 新宿総本店",
+      "order": 19,
+      "lat": 35.696178,
+      "lon": 139.697968,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：西新宿7-16-12",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "20:40",
+      "icon": "🚃",
+      "title": "山手線 外回り｜新宿 → 池袋 → 步行回民宿",
+      "ja": "",
+      "label": "新宿駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "新宿駅",
+      "order": 20,
+      "lat": 35.688969,
+      "lon": 139.7003309,
+      "osm": "OSM route relation 1972960 的「新宿」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "21:00",
+      "icon": "🏨",
+      "title": "回民宿｜東池袋民宿 IKEBUKURO VILLA",
+      "ja": "",
+      "label": "東池袋民宿 IKEBUKURO VILLA",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "東池袋民宿 IKEBUKURO VILLA",
+      "order": 21,
+      "lat": 35.731876,
+      "lon": 139.718689,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東京都豊島区東池袋3-11-3",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "08:00",
+      "start": true,
+      "startTime": "08:00",
+      "icon": "🏨",
+      "title": "出發｜東池袋民宿 IKEBUKURO VILLA",
+      "ja": "",
+      "label": "東池袋民宿 IKEBUKURO VILLA",
+      "tag": "",
+      "kind": "start",
+      "note": "前一晚住的飯店",
+      "query": "東池袋民宿 IKEBUKURO VILLA",
+      "order": 22,
+      "lat": 35.731876,
+      "lon": 139.718689,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東京都豊島区東池袋3-11-3",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "08:00",
+      "icon": "🚃",
+      "title": "湘南新宿ライン 快速｜池袋 08:20 → 大船 09:18",
+      "ja": "",
+      "label": "池袋駅東口",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "池袋駅東口",
+      "order": 23,
+      "lat": 35.729531,
+      "lon": 139.713151,
+      "osm": "OSM 池袋駅東口公車站點（見 reference/1115 筆記第 1 節）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "09:22",
+      "icon": "🚝",
+      "title": "湘南モノレール｜大船 09:22 → 湘南江の島 09:36",
+      "ja": "",
+      "label": "大船駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "大船駅",
+      "order": 24,
+      "lat": 35.3521222,
+      "lon": 139.5312711,
+      "osm": "OSM route relation 9499966 的「大船」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "09:56",
+      "icon": "🌊",
+      "title": "江の島",
+      "ja": "江の島",
+      "label": "江島神社",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "江島神社",
+      "order": 25,
+      "lat": 35.3003396,
+      "lon": 139.4798445,
+      "osm": "Nominatim 查「江島神社」第 1 筆（藤沢市江の島 251-0036，2026/11/18）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "11:45",
+      "icon": "🍚",
+      "title": "午餐｜忠兵衛（吻仔魚丼）",
+      "ja": "",
+      "label": "忠兵衛",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "忠兵衛",
+      "order": 26,
+      "slot": "d3-1145",
+      "lat": 35.308617,
+      "lon": 139.485703,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：片瀬海岸1-11-25",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "13:03",
+      "icon": "🚃",
+      "title": "江ノ電｜江ノ島 13:03 → 長谷 13:23",
+      "ja": "",
+      "label": "江ノ島駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "江ノ島駅",
+      "order": 27,
+      "lat": 35.3110329,
+      "lon": 139.4875308,
+      "osm": "OSM route relation 1943301 的「江ノ島」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "13:35",
+      "icon": "🗿",
+      "title": "高徳院（鎌倉大佛）",
+      "ja": "高徳院",
+      "label": "高徳院",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "高徳院",
+      "order": 28,
+      "lat": 35.3164986,
+      "lon": 139.5357293,
+      "osm": "Nominatim 查「高徳院 鎌倉」（鎌倉市長谷 248-0016，2026/11/18）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "14:47",
+      "icon": "🚃",
+      "title": "江ノ電｜長谷 14:47 → 鎌倉 14:51",
+      "ja": "",
+      "label": "長谷駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "長谷駅",
+      "order": 29,
+      "lat": 35.3112368,
+      "lon": 139.536049,
+      "osm": "OSM route relation 1943301 的「長谷」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "15:10",
+      "icon": "⛩️",
+      "title": "鶴岡八幡宮",
+      "ja": "鶴岡八幡宮",
+      "label": "鶴岡八幡宮",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "鶴岡八幡宮",
+      "order": 30,
+      "lat": 35.3251836,
+      "lon": 139.5561787,
+      "osm": "Nominatim 查「鶴岡八幡宮 鎌倉」（雪ノ下二丁目，2026/11/18）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "15:50",
+      "icon": "🍡",
+      "title": "小町通り｜回程邊走邊吃點心",
+      "ja": "",
+      "label": "小町通り",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "小町通り",
+      "order": 31,
+      "slot": "d3-1550",
+      "lat": 35.3207763,
+      "lon": 139.5519605,
+      "osm": "Nominatim 查「小町通り 鎌倉」第 1 筆（小町二丁目，2026/11/18；通りの南端側）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "16:25",
+      "icon": "🚃",
+      "title": "湘南新宿ライン｜鎌倉 16:39 → 池袋 17:45",
+      "ja": "",
+      "label": "鎌倉駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "鎌倉駅",
+      "order": 32,
+      "lat": 35.3182913,
+      "lon": 139.5501448,
+      "osm": "OSM route relation 1943301 的「鎌倉」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "17:45",
+      "icon": "🍽️",
+      "title": "抵達池袋｜晚餐各自處理",
+      "ja": "",
+      "label": "池袋駅東口",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "池袋駅東口",
+      "order": 33,
+      "slot": "d3-1745",
+      "lat": 35.729531,
+      "lon": 139.713151,
+      "osm": "OSM 池袋駅東口公車站點（見 reference/1115 筆記第 1 節）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "08:20",
+      "start": true,
+      "startTime": "08:20",
+      "icon": "🏨",
+      "title": "出發｜東池袋民宿 IKEBUKURO VILLA",
+      "ja": "",
+      "label": "東池袋民宿 IKEBUKURO VILLA",
+      "tag": "",
+      "kind": "start",
+      "note": "前一晚住的飯店",
+      "query": "東池袋民宿 IKEBUKURO VILLA",
+      "order": 34,
+      "lat": 35.731876,
+      "lon": 139.718689,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東京都豊島区東池袋3-11-3",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "08:20",
+      "icon": "🚃",
+      "title": "山手線 外回り｜池袋 → 駒込 約 08:47",
+      "ja": "",
+      "label": "池袋駅東口",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "池袋駅東口",
+      "order": 35,
+      "lat": 35.729531,
+      "lon": 139.713151,
+      "osm": "OSM 池袋駅東口公車站點（見 reference/1115 筆記第 1 節）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "09:00",
+      "icon": "🍁",
+      "title": "六義園",
+      "ja": "六義園",
+      "label": "六義園",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "六義園",
+      "order": 36,
+      "lat": 35.7333998,
+      "lon": 139.7463046,
+      "osm": "Nominatim 查「六義園」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "10:30",
+      "icon": "🚃",
+      "title": "山手線 外回り｜駒込 約 10:40 → 上野 約 10:55",
+      "ja": "",
+      "label": "駒込駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "駒込駅",
+      "order": 37,
+      "lat": 35.7365848,
+      "lon": 139.7472412,
+      "osm": "Nominatim 查「駒込駅」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "11:20",
+      "icon": "🦁",
+      "title": "上野的上午｜上野動物園",
+      "ja": "",
+      "label": "上野動物園",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "上野動物園",
+      "order": 38,
+      "slot": "d4-1120",
+      "lat": 35.7153426,
+      "lon": 139.768896,
+      "osm": "Nominatim 查「上野動物園」（2026/11/19；中心點，非入口）（恩賜上野動物園）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "13:30",
+      "icon": "🍢",
+      "title": "午餐｜阿美橫町",
+      "ja": "",
+      "label": "アメ横",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "アメ横",
+      "order": 39,
+      "slot": "d4-1330",
+      "lat": 35.7100241,
+      "lon": 139.7745414,
+      "osm": "Nominatim 查「アメ横」（2026/11/19；中心點，非入口）（アメヤ横丁）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "15:00",
+      "icon": "🚃",
+      "title": "山手線 內回り｜上野 約 15:15 → 池袋 約 15:35",
+      "ja": "",
+      "label": "上野駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "上野駅",
+      "order": 40,
+      "lat": 35.7140413,
+      "lon": 139.7771164,
+      "osm": "Nominatim 查「上野駅」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "15:40",
+      "icon": "🛍️",
+      "title": "自由時間｜池袋駅東口周邊",
+      "ja": "",
+      "label": "池袋駅東口",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "池袋駅東口",
+      "order": 41,
+      "slot": "d4-1540",
+      "lat": 35.729531,
+      "lon": 139.713151,
+      "osm": "OSM 池袋駅東口公車站點（見 reference/1115 筆記第 1 節）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "18:00",
+      "icon": "🍱",
+      "title": "晚餐｜うなぎ屋吉川 池袋店",
+      "ja": "",
+      "label": "うなぎ屋吉川 池袋店",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "うなぎ屋吉川 池袋店",
+      "order": 42,
+      "slot": "d4-1800",
+      "lat": 35.732155,
+      "lon": 139.713181,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：東池袋1-42-4（ぐるなび英文站地址）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "19:30",
+      "icon": "🧳",
+      "title": "步行｜晚餐 → 東池袋民宿取行李 → 池袋駅東口寄放",
+      "ja": "",
+      "label": "東池袋民宿 IKEBUKURO VILLA",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "東池袋民宿 IKEBUKURO VILLA",
+      "order": 43,
+      "lat": 35.731876,
+      "lon": 139.718689,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東京都豊島区東池袋3-11-3",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "20:30",
+      "icon": "🧳",
+      "title": "寄放 8 件大行李｜Radical Storage（池袋駅東口附近）",
+      "ja": "",
+      "label": "Radical Storage（池袋駅東口附近）",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "Radical Storage 池袋駅東口附近",
+      "order": 44,
+      "lat": 35.729531,
+      "lon": 139.713151,
+      "osm": "借用池袋駅東口座標（店家地址須預約後在 App 才顯示，未查到）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "20:38",
+      "icon": "🏨",
+      "title": "回民宿｜東池袋民宿 IKEBUKURO VILLA",
+      "ja": "",
+      "label": "東池袋民宿 IKEBUKURO VILLA",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "東池袋民宿 IKEBUKURO VILLA",
+      "order": 45,
+      "lat": 35.731876,
+      "lon": 139.718689,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東京都豊島区東池袋3-11-3",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "07:35",
+      "start": true,
+      "startTime": "07:35",
+      "icon": "🏨",
+      "title": "出發｜東池袋民宿 IKEBUKURO VILLA",
+      "ja": "",
+      "label": "東池袋民宿 IKEBUKURO VILLA",
+      "tag": "",
+      "kind": "start",
+      "note": "前一晚住的飯店",
+      "query": "東池袋民宿 IKEBUKURO VILLA",
+      "order": 46,
+      "lat": 35.731876,
+      "lon": 139.718689,
+      "osm": "國土地理院 地址檢索（2026/11/18 查）：東京都豊島区東池袋3-11-3",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "07:35",
+      "icon": "🚃",
+      "title": "山手線 內回り｜池袋 約 07:52 → 新宿 約 08:02",
+      "ja": "",
+      "label": "池袋駅東口",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "池袋駅東口",
+      "order": 47,
+      "lat": 35.729531,
+      "lon": 139.713151,
+      "osm": "OSM 池袋駅東口公車站點（見 reference/1115 筆記第 1 節）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "08:30",
+      "icon": "🚄",
+      "title": "富士回遊 7 号｜新宿 08:30 → 河口湖 10:26",
+      "ja": "",
+      "label": "新宿駅",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "新宿駅",
+      "order": 48,
+      "lat": 35.688969,
+      "lon": 139.7003309,
+      "osm": "OSM route relation 1972960 的「新宿」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "10:26",
+      "icon": "🚶",
+      "title": "步行或計程車｜河口湖駅 → 東横INN 富士河口湖大橋",
+      "ja": "",
+      "label": "河口湖駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "河口湖駅",
+      "order": 49,
+      "lat": 35.4986398,
+      "lon": 138.7685581,
+      "osm": "Nominatim 查「河口湖駅」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "10:45",
+      "icon": "🧳",
+      "title": "寄放手提行李｜東横INN 富士河口湖大橋",
+      "ja": "東横INN 富士河口湖大橋",
+      "label": "東横INN 富士河口湖大橋",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "東横INN 富士河口湖大橋",
+      "order": 50,
+      "lat": 35.504341,
+      "lon": 138.760208,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：船津294-1",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "11:15",
+      "icon": "🍲",
+      "title": "午餐｜ほうとう不動 河口湖駅前店",
+      "ja": "",
+      "label": "ほうとう不動 河口湖駅前店",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "ほうとう不動 河口湖駅前店",
+      "order": 51,
+      "slot": "d5-1115",
+      "lat": 35.49791,
+      "lon": 138.768845,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：船津3631-2",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "12:50",
+      "icon": "🚠",
+      "title": "下午①｜富士山パノラマロープウェイ（陰天）",
+      "ja": "",
+      "label": "富士山パノラマロープウェイ",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "富士山パノラマロープウェイ",
+      "order": 52,
+      "slot": "d5-1250",
+      "lat": 35.50378,
+      "lon": 138.7744071,
+      "osm": "Nominatim 查「富士山パノラマロープウェイ」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "14:40",
+      "icon": "🖼️",
+      "title": "下午②｜河口湖美術館",
+      "ja": "",
+      "label": "河口湖美術館",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "河口湖美術館",
+      "order": 53,
+      "slot": "d5-1440",
+      "lat": 35.5192979,
+      "lon": 138.7706672,
+      "osm": "Nominatim 查「河口湖美術館」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "15:15",
+      "icon": "🍲",
+      "title": "晚餐｜もみじ亭",
+      "ja": "",
+      "label": "もみじ亭",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "もみじ亭",
+      "order": 54,
+      "slot": "d5-1515",
+      "lat": 35.52557,
+      "lon": 138.763504,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：河口3067-1",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "17:00",
+      "icon": "🍁",
+      "title": "紅葉まつり｜もみじ回廊 夜楓",
+      "ja": "",
+      "label": "もみじ回廊",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "もみじ回廊",
+      "order": 55,
+      "lat": 35.5255857,
+      "lon": 138.7624404,
+      "osm": "Nominatim 查「河口湖 もみじ回廊」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "18:50",
+      "icon": "🏨",
+      "title": "入住｜東横INN 富士河口湖大橋",
+      "ja": "東横INN 富士河口湖大橋",
+      "label": "東横INN 富士河口湖大橋",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "東横INN 富士河口湖大橋",
+      "order": 56,
+      "lat": 35.504341,
+      "lon": 138.760208,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：船津294-1",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "09:50",
+      "start": true,
+      "startTime": "09:50",
+      "icon": "🏨",
+      "title": "出發｜東横INN 富士河口湖大橋",
+      "ja": "",
+      "label": "東横INN 富士河口湖大橋",
+      "tag": "",
+      "kind": "start",
+      "note": "前一晚住的飯店",
+      "query": "東横INN 富士河口湖大橋",
+      "order": 57,
+      "lat": 35.504341,
+      "lon": 138.760208,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：船津294-1",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "09:50",
+      "icon": "🚃",
+      "title": "富士急行線 普通｜河口湖 10:32 → 下吉田 10:45",
+      "ja": "",
+      "label": "河口湖駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "河口湖駅",
+      "order": 58,
+      "lat": 35.4986398,
+      "lon": 138.7685581,
+      "osm": "Nominatim 查「河口湖駅」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "10:55",
+      "icon": "🗻",
+      "title": "新倉山浅間公園",
+      "ja": "新倉山浅間公園",
+      "label": "新倉山浅間公園",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "新倉山浅間公園",
+      "order": 59,
+      "lat": 35.5004871,
+      "lon": 138.80082,
+      "osm": "Nominatim 查「新倉山浅間公園」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "11:25",
+      "icon": "🚃",
+      "title": "富士急行線 特急 富士回遊15号｜下吉田 12:12 → 河口湖 12:24",
+      "ja": "",
+      "label": "下吉田駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "下吉田駅",
+      "order": 60,
+      "lat": 35.4977295,
+      "lon": 138.8035253,
+      "osm": "Nominatim 查「下吉田駅」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "12:40",
+      "icon": "🚌",
+      "title": "周遊バス レッドライン｜河口湖駅 → 大石公園（約 12:40，班次未查到）",
+      "ja": "",
+      "label": "河口湖駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "河口湖駅",
+      "order": 61,
+      "lat": 35.4986398,
+      "lon": 138.7685581,
+      "osm": "Nominatim 查「河口湖駅」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "13:15",
+      "icon": "☕",
+      "title": "午餐｜BRAND NEW DAY COFFEE",
+      "ja": "",
+      "label": "BRAND NEW DAY COFFEE",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "BRAND NEW DAY COFFEE",
+      "order": 62,
+      "slot": "d6-1315",
+      "lat": 35.522839,
+      "lon": 138.74501,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：大石1477-1",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "14:20",
+      "icon": "🚌",
+      "title": "周遊バス レッドライン｜大石公園 → 遊覧船・ロープウェイ入口（約 14:20，班次未查到）",
+      "ja": "",
+      "label": "大石公園",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "大石公園",
+      "order": 63,
+      "lat": 35.522839,
+      "lon": 138.74501,
+      "osm": "1117-1119 筆記：GSI 地址檢索座標（BRAND NEW DAY 旁）；Nominatim 會查到沖繩的同名地點，不採用",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "15:00",
+      "icon": "⛴️",
+      "title": "下午｜河口湖遊覧船「天晴」",
+      "ja": "",
+      "label": "河口湖遊覧船「天晴」",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "河口湖遊覧船 天晴",
+      "order": 64,
+      "slot": "d6-1500",
+      "lat": 35.503071,
+      "lon": 138.767746,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：船津4034（乗船処住所は二手：rurubu／nap-camp 搜尋摘要，官網未核對）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "15:40",
+      "icon": "🧳",
+      "title": "步行｜船津浜 15:40 出發 → 東横INN 取手提行李 → 河口湖駅",
+      "ja": "",
+      "label": "東横INN 富士河口湖大橋",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "東横INN 富士河口湖大橋",
+      "order": 65,
+      "lat": 35.504341,
+      "lon": 138.760208,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：船津294-1",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "17:50",
+      "icon": "🚌",
+      "title": "高速バス｜河口湖駅 17:50 → 池袋駅東口 19:49",
+      "ja": "",
+      "label": "河口湖駅",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "河口湖駅",
+      "order": 66,
+      "lat": 35.4986398,
+      "lon": 138.7685581,
+      "osm": "Nominatim 查「河口湖駅」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "20:00",
+      "icon": "🧳",
+      "title": "取回 8 件大行李｜Radical Storage（池袋駅東口附近）",
+      "ja": "",
+      "label": "Radical Storage（池袋駅東口附近）",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "Radical Storage 池袋駅東口附近",
+      "order": 67,
+      "lat": 35.729531,
+      "lon": 139.713151,
+      "osm": "借用池袋駅東口座標（店家地址須預約後在 App 才顯示，未查到）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "20:15",
+      "icon": "🚃",
+      "title": "山手線 外回り＋日比谷線｜池袋 → 上野 → 入谷 → 步行到淺草民宿",
+      "ja": "",
+      "label": "池袋駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "池袋駅",
+      "order": 68,
+      "lat": 35.730257,
+      "lon": 139.710949,
+      "osm": "OSM route relation 1972920 的「池袋」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "21:05",
+      "icon": "🏨",
+      "title": "入住｜淺草民宿",
+      "ja": "",
+      "label": "淺草民宿",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "淺草民宿",
+      "order": 69,
+      "lat": 35.721958,
+      "lon": 139.791306,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：千束3-17-4",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "10:00",
+      "start": true,
+      "startTime": "",
+      "icon": "🏨",
+      "title": "出發｜淺草民宿",
+      "ja": "",
+      "label": "淺草民宿",
+      "tag": "",
+      "kind": "start",
+      "note": "前一晚住的飯店",
+      "query": "淺草民宿",
+      "order": 70,
+      "lat": 35.721958,
+      "lon": 139.791306,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：千束3-17-4",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "10:00",
+      "icon": "⛩️",
+      "title": "浅草寺",
+      "ja": "浅草寺",
+      "label": "浅草寺",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "浅草寺",
+      "order": 71,
+      "lat": 35.71472,
+      "lon": 139.79675,
+      "osm": "維基百科 浅草寺 座標（1120_淺草晴空塔_查證筆記）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "10:50",
+      "icon": "🏮",
+      "title": "仲見世（往雷門方向逛）",
+      "ja": "仲見世",
+      "label": "仲見世",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "仲見世",
+      "order": 72,
+      "lat": 35.712856,
+      "lon": 139.796585,
+      "osm": "借用 GSI 浅草2-3-1 地址點（仲見世通り沒有單獨座標；1120_淺草晴空塔_查證筆記）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "12:00",
+      "icon": "🍱",
+      "title": "午餐｜浅草牛かつ 分店",
+      "ja": "浅草牛かつ 分店（ザ・シティ浅草雷門 2F）",
+      "label": "浅草牛かつ 分店",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "浅草牛かつ 分店",
+      "order": 73,
+      "lat": 35.710255,
+      "lon": 139.796799,
+      "osm": "GSI 地址檢索：雷門2-18-16（版本 A，使用者原文 ザ・シティ浅草雷門 2F；另一版本 2-17-10 差約 90 m，見 1120 筆記）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "13:15",
+      "icon": "🎄",
+      "title": "下午｜晴空塔聖誕市集",
+      "ja": "",
+      "label": "東京ソラマチ 聖誕市集",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "東京ソラマチ 聖誕市集",
+      "order": 74,
+      "slot": "d7-1315",
+      "lat": 35.7102358,
+      "lon": 139.8119453,
+      "osm": "Nominatim「東京ソラマチ」第 1 筆（2026/11/19）；市集在 4F スカイアリーナ，館內位置沒有另外量",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "17:45",
+      "icon": "🍽️",
+      "title": "晚餐｜各自處理（聖誕市集一帶）",
+      "ja": "",
+      "label": "東京ソラマチ",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "東京ソラマチ",
+      "order": 75,
+      "slot": "d7-1745",
+      "lat": 35.7102358,
+      "lon": 139.8119453,
+      "osm": "Nominatim「東京ソラマチ」第 1 筆（2026/11/19）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "19:30",
+      "icon": "🚃",
+      "title": "東武スカイツリーライン｜とうきょうスカイツリー → 浅草 → 步行回民宿｜約 20:00～20:07 到（估算）",
+      "ja": "",
+      "label": "とうきょうスカイツリー駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "とうきょうスカイツリー駅",
+      "order": 76,
+      "lat": 35.710361,
+      "lon": 139.809028,
+      "osm": "維基百科 とうきょうスカイツリー駅 座標（1120_淺草晴空塔_查證筆記）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "20:05",
+      "icon": "🏨",
+      "title": "回民宿｜淺草民宿",
+      "ja": "",
+      "label": "淺草民宿",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "淺草民宿",
+      "order": 77,
+      "lat": 35.721958,
+      "lon": 139.791306,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：千束3-17-4",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "09:00",
+      "start": true,
+      "startTime": "09:00",
+      "icon": "🏨",
+      "title": "出發｜淺草民宿",
+      "ja": "",
+      "label": "淺草民宿",
+      "tag": "",
+      "kind": "start",
+      "note": "前一晚住的飯店",
+      "query": "淺草民宿",
+      "order": 78,
+      "lat": 35.721958,
+      "lon": 139.791306,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：千束3-17-4",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "09:00",
+      "icon": "🚇",
+      "title": "日比谷線＋都営新宿線｜入谷 09:00 → 笹塚 09:38",
+      "ja": "",
+      "label": "入谷駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "入谷駅",
+      "order": 79,
+      "lat": 35.720722,
+      "lon": 139.784583,
+      "osm": "維基百科 入谷駅 座標（1120_淺草晴空塔_查證筆記）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "09:42",
+      "icon": "🚃",
+      "title": "京王線特急＋京王高尾線｜笹塚 09:42 → 北野 10:21 → 高尾山口 10:35",
+      "ja": "",
+      "label": "笹塚駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "笹塚駅",
+      "order": 80,
+      "lat": 35.6737288,
+      "lon": 139.6673643,
+      "osm": "Nominatim「笹塚駅」第 1 筆（2026/11/19）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "10:35",
+      "icon": "🚶",
+      "title": "步行｜高尾山口駅 → 清滝駅（纜車乘場）約 4 分",
+      "ja": "",
+      "label": "高尾山口駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "高尾山口駅",
+      "order": 81,
+      "lat": 35.6322938,
+      "lon": 139.2699798,
+      "osm": "Nominatim「高尾山口駅」第 1 筆（2026/11/19）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "10:50",
+      "icon": "🚡",
+      "title": "高尾山ケーブルカー｜清滝 約 10:50 → 高尾山駅 約 10:56",
+      "ja": "",
+      "label": "清滝駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "清滝駅",
+      "order": 82,
+      "lat": 35.6311026,
+      "lon": 139.2668989,
+      "osm": "Nominatim「清滝」第 1 筆（稲荷山コース附近，2026/11/19），不是站體精確點",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "11:16",
+      "icon": "🛕",
+      "title": "高尾山薬王院",
+      "ja": "高尾山薬王院",
+      "label": "高尾山薬王院",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "高尾山薬王院",
+      "order": 83,
+      "lat": 35.6259997,
+      "lon": 139.2504407,
+      "osm": "Nominatim「高尾山薬王院」（2026/11/19）；GSI 高尾町2177 為 35.62561,139.247253，差約 300 m",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "12:25",
+      "icon": "⛰️",
+      "title": "高尾山山頂",
+      "ja": "高尾山山頂",
+      "label": "高尾山山頂",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "高尾山山頂",
+      "order": 84,
+      "lat": 35.6252267,
+      "lon": 139.2436878,
+      "osm": "Nominatim「高尾山」第 2 筆（2026/11/19）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "12:40",
+      "icon": "🍜",
+      "title": "午餐｜山上各自處理",
+      "ja": "",
+      "label": "高尾山山頂（山上午餐）",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "高尾山山頂 山上午餐",
+      "order": 85,
+      "slot": "d8-1240",
+      "lat": 35.6252267,
+      "lon": 139.2436878,
+      "osm": "借用山頂座標（山上各自處理，不排店）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "13:15",
+      "icon": "🥾",
+      "title": "步行下山｜高尾山山頂 → 高尾山駅（經薬王院）約 14:15（時間未查到）",
+      "ja": "",
+      "label": "高尾山山頂",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "高尾山山頂",
+      "order": 86,
+      "lat": 35.6252267,
+      "lon": 139.2436878,
+      "osm": "Nominatim「高尾山」第 2 筆（2026/11/19）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "14:15",
+      "icon": "🚡",
+      "title": "高尾山ケーブルカー｜高尾山駅 約 14:20 → 清滝 約 14:26 → 步行到高尾山口駅",
+      "ja": "",
+      "label": "高尾山駅（纜車上站）",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "高尾山駅",
+      "order": 87,
+      "lat": 35.6259997,
+      "lon": 139.2504407,
+      "osm": "借用薬王院座標（高尾山駅（ケーブルカー上站）座標未查到）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "14:47",
+      "icon": "🚃",
+      "title": "京王高尾線特急｜高尾山口 14:47 → 笹塚 15:37",
+      "ja": "",
+      "label": "高尾山口駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "高尾山口駅",
+      "order": 88,
+      "lat": 35.6322938,
+      "lon": 139.2699798,
+      "osm": "Nominatim「高尾山口駅」第 1 筆（2026/11/19）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "15:38",
+      "icon": "🚇",
+      "title": "京王新線快速＋日比谷線｜笹塚 15:38 → 岩本町 15:57 → 秋葉原 → 入谷 16:17",
+      "ja": "",
+      "label": "笹塚駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "笹塚駅",
+      "order": 89,
+      "lat": 35.6737288,
+      "lon": 139.6673643,
+      "osm": "Nominatim「笹塚駅」第 1 筆（2026/11/19）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "16:26",
+      "icon": "🧳",
+      "title": "回民宿休息｜淺草民宿（整理行李）",
+      "ja": "",
+      "label": "淺草民宿",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "淺草民宿",
+      "order": 90,
+      "lat": 35.721958,
+      "lon": 139.791306,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：千束3-17-4",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "17:15",
+      "icon": "🚇",
+      "title": "日比谷線｜入谷 → 上野 → 步行到餐廳",
+      "ja": "",
+      "label": "入谷駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "入谷駅",
+      "order": 91,
+      "lat": 35.720722,
+      "lon": 139.784583,
+      "osm": "維基百科 入谷駅 座標（1120_淺草晴空塔_查證筆記）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "18:00",
+      "icon": "🥩",
+      "title": "晚餐｜房家ホルモン館 上野六丁目店",
+      "ja": "",
+      "label": "房家ホルモン館 上野六丁目店",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "房家ホルモン館 上野六丁目店",
+      "order": 92,
+      "slot": "d8-1800",
+      "lat": 35.708847,
+      "lon": 139.776062,
+      "osm": "GSI 地址檢索（2026/11/19 查）：上野6-6-6",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "19:45",
+      "icon": "🚇",
+      "title": "日比谷線｜上野 → 入谷 → 步行回民宿",
+      "ja": "",
+      "label": "上野駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "上野駅",
+      "order": 93,
+      "lat": 35.7140413,
+      "lon": 139.7771164,
+      "osm": "Nominatim 查「上野駅」（2026/11/19；中心點，非入口）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "20:10",
+      "icon": "🏨",
+      "title": "回民宿｜淺草民宿",
+      "ja": "",
+      "label": "淺草民宿",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "淺草民宿",
+      "order": 94,
+      "lat": 35.721958,
+      "lon": 139.791306,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：千束3-17-4",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 9,
+      "date": "2026-11-22",
+      "time": "10:25",
+      "start": true,
+      "startTime": "10:25",
+      "icon": "🏨",
+      "title": "出發｜淺草民宿",
+      "ja": "",
+      "label": "淺草民宿",
+      "tag": "",
+      "kind": "start",
+      "note": "前一晚住的飯店",
+      "query": "淺草民宿",
+      "order": 95,
+      "lat": 35.721958,
+      "lon": 139.791306,
+      "osm": "國土地理院 地址檢索（2026/11/19 查）：千束3-17-4",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 9,
+      "date": "2026-11-22",
+      "time": "10:25",
+      "icon": "🚇",
+      "title": "步行＋日比谷線｜淺草民宿 → 入谷 → 上野 → 京成上野",
+      "ja": "入谷 → 上野 → 京成上野",
+      "label": "入谷駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "入谷駅",
+      "order": 96,
+      "who": "family",
+      "lat": 35.720722,
+      "lon": 139.784583,
+      "osm": "維基百科 入谷駅 座標（1120_淺草晴空塔_查證筆記）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 9,
+      "date": "2026-11-22",
+      "time": "11:20",
+      "icon": "🚄",
+      "title": "Skyliner｜京成上野 11:20 → 成田空港 第2・3ターミナル 12:01",
+      "ja": "スカイライナー",
+      "label": "京成上野駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "京成上野駅",
+      "order": 97,
+      "who": "family",
+      "lat": 35.7109406,
+      "lon": 139.7735044,
+      "osm": "OSM 站點 KS01（1122_回程到京成上野_查證筆記）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 9,
+      "date": "2026-11-22",
+      "time": "14:35",
+      "icon": "🛫",
+      "title": "CI101｜成田 14:35 → 桃園 17:45",
+      "ja": "中華航空",
+      "label": "成田空港 第2ターミナル",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "成田空港第2ターミナル",
+      "order": 98,
+      "who": "family",
+      "lat": 35.7732538,
+      "lon": 140.3872202,
+      "osm": "OSM route relation 3120358 的「空港第2ビル」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 9,
+      "date": "2026-11-22",
+      "time": "08:35",
+      "icon": "🚇",
+      "title": "步行＋日比谷線｜淺草民宿 → 入谷 → 上野 → 京成上野",
+      "ja": "入谷 → 上野 → 京成上野",
+      "label": "入谷駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "入谷駅",
+      "order": 99,
+      "who": "solo",
+      "lat": 35.720722,
+      "lon": 139.784583,
+      "osm": "維基百科 入谷駅 座標（1120_淺草晴空塔_查證筆記）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 9,
+      "date": "2026-11-22",
+      "time": "09:40",
+      "icon": "🚄",
+      "title": "Skyliner｜京成上野 09:40 → 成田空港 第2・3ターミナル 10:21",
+      "ja": "スカイライナー",
+      "label": "京成上野駅",
+      "tag": "交通",
+      "kind": "transport",
+      "note": "",
+      "query": "京成上野駅",
+      "order": 100,
+      "who": "solo",
+      "lat": 35.7109406,
+      "lon": 139.7735044,
+      "osm": "OSM 站點 KS01（1122_回程到京成上野_查證筆記）",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    },
+    {
+      "day": 9,
+      "date": "2026-11-22",
+      "time": "11:25",
+      "icon": "🛫",
+      "title": "IT201｜成田 11:25 → 桃園 14:45",
+      "ja": "台灣虎航",
+      "label": "成田空港 第2ターミナル",
+      "tag": "主行程",
+      "kind": "spot",
+      "note": "",
+      "query": "成田空港第2ターミナル",
+      "order": 101,
+      "who": "solo",
+      "lat": 35.7732538,
+      "lon": 140.3872202,
+      "osm": "OSM route relation 3120358 的「空港第2ビル」站點座標",
+      "geocodedQuery": "trips/2099-11/coords.json"
+    }
+  ],
+  "slots": [
+    {
+      "id": "d1-1850",
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "18:50",
+      "order": 3,
+      "who": "family",
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍜",
+          "title": "晚餐｜一蘭 池袋店",
+          "head": "使用者清單第一家",
+          "pts": [
+            {
+              "label": "一蘭 池袋店",
+              "query": "一蘭 池袋店",
+              "lat": 35.732574,
+              "lon": 139.714111,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：東池袋1-39-11（食べログ「池袋店」地址；官網另一間 1-42-8 為 35.731949,139.712708）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🍗",
+          "title": "晚餐｜鶏の穴",
+          "head": "使用者清單第二家",
+          "pts": [
+            {
+              "label": "鶏の穴",
+              "query": "鶏の穴",
+              "lat": 35.732437,
+              "lon": 139.714325,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：東池袋1-39-20",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "C",
+          "icon": "🍥",
+          "title": "晚餐｜麺創房 無敵家 池袋店",
+          "head": "使用者清單第三家",
+          "pts": [
+            {
+              "label": "麺創房 無敵家 池袋店",
+              "query": "麺創房無敵家 池袋店",
+              "lat": 35.726894,
+              "lon": 139.711578,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：南池袋1-17-1",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d1-2030",
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "20:30",
+      "order": 8,
+      "who": "solo",
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍜",
+          "title": "晚餐｜一蘭 池袋店",
+          "head": "使用者清單第一家",
+          "pts": [
+            {
+              "label": "一蘭 池袋店",
+              "query": "一蘭 池袋店",
+              "lat": 35.732574,
+              "lon": 139.714111,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：東池袋1-39-11（食べログ「池袋店」地址；官網另一間 1-42-8 為 35.731949,139.712708）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🍗",
+          "title": "晚餐｜鶏の穴",
+          "head": "使用者清單第二家",
+          "pts": [
+            {
+              "label": "鶏の穴",
+              "query": "鶏の穴",
+              "lat": 35.732437,
+              "lon": 139.714325,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：東池袋1-39-20",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "C",
+          "icon": "🍥",
+          "title": "晚餐｜麺創房 無敵家 池袋店",
+          "head": "使用者清單第三家",
+          "pts": [
+            {
+              "label": "麺創房 無敵家 池袋店",
+              "query": "麺創房無敵家 池袋店",
+              "lat": 35.726894,
+              "lon": 139.711578,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：南池袋1-17-1",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d2-1245",
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "12:45",
+      "order": 16,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🥩",
+          "title": "午餐｜人形町今半 新宿高島屋店",
+          "head": "使用者清單第一家",
+          "pts": [
+            {
+              "label": "人形町今半 新宿高島屋店",
+              "query": "人形町今半 新宿高島屋店",
+              "lat": 35.684647,
+              "lon": 139.703354,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：千駄ヶ谷5-24-2",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🍲",
+          "title": "午餐｜ごまいち 新宿御苑店",
+          "head": "使用者清單第二家",
+          "pts": [
+            {
+              "label": "ごまいち 新宿御苑店",
+              "query": "ごまいち 新宿御苑店",
+              "lat": 35.688908,
+              "lon": 139.708923,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：新宿2-2-8",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d2-1630",
+      "day": 2,
+      "date": "2026-11-15",
+      "time": "16:30",
+      "order": 18,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🛍️",
+          "title": "自由時間｜新宿駅周邊",
+          "head": "使用者指定的自由時間",
+          "pts": [
+            {
+              "label": "新宿駅",
+              "query": "新宿駅",
+              "lat": 35.688969,
+              "lon": 139.7003309,
+              "osm": "OSM route relation 1972960 的「新宿」站點座標",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🛍️",
+          "title": "自由時間｜新宿高島屋",
+          "head": "新宿高島屋逛逛",
+          "pts": [
+            {
+              "label": "新宿高島屋",
+              "query": "新宿タカシマヤ",
+              "lat": 35.684647,
+              "lon": 139.703354,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：千駄ヶ谷5-24-2（食べログ記的新宿タカシマヤ地址，同今半）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d3-1145",
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "11:45",
+      "order": 26,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍚",
+          "title": "午餐｜忠兵衛（吻仔魚丼）",
+          "head": "使用者清單第一家",
+          "pts": [
+            {
+              "label": "忠兵衛",
+              "query": "忠兵衛",
+              "lat": 35.308617,
+              "lon": 139.485703,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：片瀬海岸1-11-25",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🐟",
+          "title": "午餐｜湘南しらす食堂 八八",
+          "head": "使用者清單第二家",
+          "pts": [
+            {
+              "label": "湘南しらす食堂 八八",
+              "query": "湘南しらす食堂 八八",
+              "lat": 35.310692,
+              "lon": 139.487,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：片瀬海岸1-9-6",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "C",
+          "icon": "🐠",
+          "title": "午餐｜とびっちょ 本店",
+          "head": "使用者清單第三家（本店）",
+          "pts": [
+            {
+              "label": "とびっちょ 本店",
+              "query": "とびっちょ 本店",
+              "lat": 35.301357,
+              "lon": 139.482269,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：江の島1-6-7",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "D",
+          "icon": "🐠",
+          "title": "午餐｜とびっちょ 弁財天仲見世通り店",
+          "head": "使用者清單第三家（仲見世通り店）",
+          "pts": [
+            {
+              "label": "とびっちょ 弁財天仲見世通り店",
+              "query": "とびっちょ 弁財天仲見世通り店",
+              "lat": 35.301792,
+              "lon": 139.48085,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：江の島2-1-9",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d3-1550",
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "15:50",
+      "order": 31,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍡",
+          "title": "小町通り｜回程邊走邊吃點心",
+          "head": "使用者指定：只吃點心",
+          "pts": [
+            {
+              "label": "小町通り",
+              "query": "小町通り",
+              "lat": 35.3207763,
+              "lon": 139.5519605,
+              "osm": "Nominatim 查「小町通り 鎌倉」第 1 筆（小町二丁目，2026/11/18；通りの南端側）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🍡",
+          "title": "小町通り｜鎌倉てづくり屋",
+          "head": "同一條小町通的點心店",
+          "pts": [
+            {
+              "label": "鎌倉てづくり屋 小町通り店",
+              "query": "鎌倉てづくり屋 小町通り店",
+              "lat": 35.3207763,
+              "lon": 139.5519605,
+              "osm": "店家座標未查到（Nominatim 查無結果），暫用小町通り 座標（coords.json fixed）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "C",
+          "icon": "🍡",
+          "title": "小町通り｜豊島屋 瀬戸小路",
+          "head": "同一條小町通的點心店",
+          "pts": [
+            {
+              "label": "豊島屋 瀬戸小路（わっふる店）",
+              "query": "豊島屋 瀬戸小路",
+              "lat": 35.3207763,
+              "lon": 139.5519605,
+              "osm": "店家座標未查到（Nominatim 查無結果），暫用小町通り 座標（coords.json fixed）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d3-1745",
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "17:45",
+      "order": 33,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍽️",
+          "title": "抵達池袋｜晚餐各自處理",
+          "head": "使用者指定：晚餐各自處理，不排店",
+          "pts": [
+            {
+              "label": "池袋駅東口",
+              "query": "池袋駅東口",
+              "lat": 35.729531,
+              "lon": 139.713151,
+              "osm": "OSM 池袋駅東口公車站點（見 reference/1115 筆記第 1 節）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4-1120",
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "11:20",
+      "order": 38,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🦁",
+          "title": "上野的上午｜上野動物園",
+          "head": "動物園（有小孩）",
+          "pts": [
+            {
+              "label": "上野動物園",
+              "query": "上野動物園",
+              "lat": 35.7153426,
+              "lon": 139.768896,
+              "osm": "Nominatim 查「上野動物園」（2026/11/19；中心點，非入口）（恩賜上野動物園）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🏛️",
+          "title": "上野的上午｜東京國立博物館",
+          "head": "博物館（下雨或不想走太多）",
+          "pts": [
+            {
+              "label": "東京国立博物館",
+              "query": "東京国立博物館",
+              "lat": 35.7190448,
+              "lon": 139.7759676,
+              "osm": "Nominatim 查「東京国立博物館」（2026/11/19；中心點，非入口）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4-1330",
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "13:30",
+      "order": 39,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍢",
+          "title": "午餐｜阿美橫町",
+          "head": "市場邊走邊吃（店家現場選）",
+          "pts": [
+            {
+              "label": "アメ横",
+              "query": "アメ横",
+              "lat": 35.7100241,
+              "lon": 139.7745414,
+              "osm": "Nominatim 查「アメ横」（2026/11/19；中心點，非入口）（アメヤ横丁）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4-1540",
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "15:40",
+      "order": 41,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🛍️",
+          "title": "自由時間｜池袋駅東口周邊",
+          "head": "首選：在池袋逛逛、休息",
+          "pts": [
+            {
+              "label": "池袋駅東口",
+              "query": "池袋駅東口",
+              "lat": 35.729531,
+              "lon": 139.713151,
+              "osm": "OSM 池袋駅東口公車站點（見 reference/1115 筆記第 1 節）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🏨",
+          "title": "自由時間｜回民宿休息",
+          "head": "回民宿休息（長輩、小孩累了）",
+          "pts": [
+            {
+              "label": "東池袋民宿 IKEBUKURO VILLA",
+              "query": "東池袋民宿 IKEBUKURO VILLA",
+              "lat": 35.731876,
+              "lon": 139.718689,
+              "osm": "國土地理院 地址檢索（2026/11/18 查）：東京都豊島区東池袋3-11-3",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4-1800",
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "18:00",
+      "order": 42,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍱",
+          "title": "晚餐｜うなぎ屋吉川 池袋店",
+          "head": "使用者清單第一家",
+          "pts": [
+            {
+              "label": "うなぎ屋吉川 池袋店",
+              "query": "うなぎ屋吉川 池袋店",
+              "lat": 35.732155,
+              "lon": 139.713181,
+              "osm": "國土地理院 地址檢索（2026/11/19 查）：東池袋1-42-4（ぐるなび英文站地址）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🍗",
+          "title": "晚餐｜鳥貴族 池袋東口店",
+          "head": "使用者清單第二家（居酒屋型態）",
+          "pts": [
+            {
+              "label": "鳥貴族 池袋東口店（ぐるなび條目名稱：焼鳥屋 鳥貴族 池袋東口店）",
+              "query": "鳥貴族 池袋東口店",
+              "lat": 35.729531,
+              "lon": 139.713151,
+              "osm": "借用池袋駅東口座標（店家住所未查到）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d5-1115",
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "11:15",
+      "order": 51,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍲",
+          "title": "午餐｜ほうとう不動 河口湖駅前店",
+          "head": "使用者清單：ほうとう不動",
+          "pts": [
+            {
+              "label": "ほうとう不動 河口湖駅前店",
+              "query": "ほうとう不動 河口湖駅前店",
+              "lat": 35.49791,
+              "lon": 138.768845,
+              "osm": "國土地理院 地址檢索（2026/11/19 查）：船津3631-2",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🍲",
+          "title": "午餐｜ほうとう不動 河口湖南店",
+          "head": "同品牌，食べログ資料最完整",
+          "pts": [
+            {
+              "label": "ほうとう不動 河口湖南店",
+              "query": "ほうとう不動 河口湖南店",
+              "lat": 35.497009,
+              "lon": 138.754791,
+              "osm": "國土地理院 地址檢索（2026/11/19 查）：船津1672-2（食べログ英文站地址）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "C",
+          "icon": "🍽️",
+          "title": "午餐｜HAO STAY KITCHEN",
+          "head": "使用者清單：HAO STAY KITCHEN（資料全未查到）",
+          "pts": [
+            {
+              "label": "HAO STAY KITCHEN",
+              "query": "HAO STAY KITCHEN",
+              "lat": 35.5192979,
+              "lon": 138.7706672,
+              "osm": "借用河口湖美術館座標（店家座標未查到；搜尋只找到「HAOSTAY 河口湖美術館前」飯店）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d5-1250",
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "12:50",
+      "order": 52,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🚠",
+          "title": "下午①｜富士山パノラマロープウェイ（陰天）",
+          "head": "使用者：陰天＝纜車＋美術館",
+          "pts": [
+            {
+              "label": "富士山パノラマロープウェイ",
+              "query": "富士山パノラマロープウェイ",
+              "lat": 35.50378,
+              "lon": 138.7744071,
+              "osm": "Nominatim 查「富士山パノラマロープウェイ」（2026/11/19；中心點，非入口）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🖼️",
+          "title": "下午①｜河口湖美術館（下雨）",
+          "head": "下雨：室內美術館",
+          "pts": [
+            {
+              "label": "河口湖美術館",
+              "query": "河口湖美術館",
+              "lat": 35.5192979,
+              "lon": 138.7706672,
+              "osm": "Nominatim 查「河口湖美術館」（2026/11/19；中心點，非入口）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d5-1440",
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "14:40",
+      "order": 53,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🖼️",
+          "title": "下午②｜河口湖美術館",
+          "head": "使用者：陰天＝纜車＋美術館",
+          "pts": [
+            {
+              "label": "河口湖美術館",
+              "query": "河口湖美術館",
+              "lat": 35.5192979,
+              "lon": 138.7706672,
+              "osm": "Nominatim 查「河口湖美術館」（2026/11/19；中心點，非入口）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🏨",
+          "title": "下午②｜下雨或長輩累了",
+          "head": "下雨：走去もみじ亭；長輩累了：回飯店",
+          "pts": [
+            {
+              "label": "河口湖美術館（下雨時留在這裡）",
+              "query": "河口湖美術館",
+              "lat": 35.5192979,
+              "lon": 138.7706672,
+              "osm": "Nominatim 查「河口湖美術館」（2026/11/19；中心點，非入口）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d5-1515",
+      "day": 5,
+      "date": "2026-11-18",
+      "time": "15:15",
+      "order": 54,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍲",
+          "title": "晚餐｜もみじ亭",
+          "head": "使用者指定：もみじ亭",
+          "pts": [
+            {
+              "label": "もみじ亭",
+              "query": "もみじ亭",
+              "lat": 35.52557,
+              "lon": 138.763504,
+              "osm": "國土地理院 地址檢索（2026/11/19 查）：河口3067-1",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d6-1315",
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "13:15",
+      "order": 62,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "☕",
+          "title": "午餐｜BRAND NEW DAY COFFEE",
+          "head": "使用者清單第一家（大石公園隔壁）",
+          "pts": [
+            {
+              "label": "BRAND NEW DAY COFFEE",
+              "query": "BRAND NEW DAY COFFEE",
+              "lat": 35.522839,
+              "lon": 138.74501,
+              "osm": "國土地理院 地址檢索（2026/11/19 查）：大石1477-1",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🍲",
+          "title": "午餐｜紅梅や 河口湖大石公園店",
+          "head": "使用者清單第二家（ほうとう）",
+          "pts": [
+            {
+              "label": "紅梅や 河口湖大石公園店",
+              "query": "紅梅や 河口湖大石公園店",
+              "lat": 35.519413,
+              "lon": 138.742065,
+              "osm": "國土地理院 地址檢索（2026/11/19 查）：大石2585-115",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "C",
+          "icon": "🥐",
+          "title": "午餐｜Lake Bake Cafe",
+          "head": "使用者清單第三家（麵包為主）",
+          "pts": [
+            {
+              "label": "Lake Bake Cafe（レイクベイク）",
+              "query": "Lake Bake Cafe",
+              "lat": 35.519413,
+              "lon": 138.742065,
+              "osm": "借用大石2585番地座標（GSI 只回到同一點；店址大石2585-85）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d6-1500",
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "15:00",
+      "order": 64,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "⛴️",
+          "title": "下午｜河口湖遊覧船「天晴」",
+          "head": "和 11/18 的纜車不重複",
+          "pts": [
+            {
+              "label": "河口湖遊覧船「天晴」",
+              "query": "河口湖遊覧船 天晴",
+              "lat": 35.503071,
+              "lon": 138.767746,
+              "osm": "國土地理院 地址檢索（2026/11/19 查）：船津4034（乗船処住所は二手：rurubu／nap-camp 搜尋摘要，官網未核對）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🚠",
+          "title": "下午｜富士山パノラマロープウェイ",
+          "head": "11/18 沒上纜車才選",
+          "pts": [
+            {
+              "label": "富士山パノラマロープウェイ",
+              "query": "富士山パノラマロープウェイ",
+              "lat": 35.50378,
+              "lon": 138.7744071,
+              "osm": "Nominatim 查「富士山パノラマロープウェイ」（2026/11/19；中心點，非入口）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d7-1315",
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "13:15",
+      "order": 74,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🎄",
+          "title": "下午｜晴空塔聖誕市集",
+          "head": "使用者清單第一個",
+          "pts": [
+            {
+              "label": "東京ソラマチ 聖誕市集",
+              "query": "東京ソラマチ 聖誕市集",
+              "lat": 35.7102358,
+              "lon": 139.8119453,
+              "osm": "Nominatim「東京ソラマチ」第 1 筆（2026/11/19）；市集在 4F スカイアリーナ，館內位置沒有另外量",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🗼",
+          "title": "下午｜晴空塔天望デッキ",
+          "head": "使用者清單第二個（展望台）",
+          "pts": [
+            {
+              "label": "東京スカイツリー 天望デッキ",
+              "query": "東京スカイツリー",
+              "lat": 35.7100543,
+              "lon": 139.8107141,
+              "osm": "Nominatim「東京スカイツリー」第 1 筆（2026/11/19）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "C",
+          "icon": "🛍️",
+          "title": "下午｜淺草逛街（雷門周邊）",
+          "head": "使用者清單第三個",
+          "pts": [
+            {
+              "label": "雷門周邊",
+              "query": "雷門",
+              "lat": 35.710938,
+              "lon": 139.79664,
+              "osm": "雷門門口近似點（OSRM 吸附點，1120_淺草晴空塔_查證筆記，非官方）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "D",
+          "icon": "🌳",
+          "title": "下午｜隅田公園",
+          "head": "使用者清單第四個",
+          "pts": [
+            {
+              "label": "隅田公園（台東區側）",
+              "query": "隅田公園",
+              "lat": 35.71528,
+              "lon": 139.802917,
+              "osm": "維基百科 隅田公園 台東區側座標（1120_淺草晴空塔_查證筆記）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "E",
+          "icon": "🛏️",
+          "title": "下午｜回民宿休息",
+          "head": "使用者清單第五個",
+          "pts": [
+            {
+              "label": "淺草民宿",
+              "query": "淺草民宿",
+              "lat": 35.721958,
+              "lon": 139.791306,
+              "osm": "國土地理院 地址檢索（2026/11/19 查）：千束3-17-4",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d7-1745",
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "17:45",
+      "order": 75,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍽️",
+          "title": "晚餐｜各自處理（聖誕市集一帶）",
+          "head": "使用者指定：晚餐各自處理，不排店",
+          "pts": [
+            {
+              "label": "東京ソラマチ",
+              "query": "東京ソラマチ",
+              "lat": 35.7102358,
+              "lon": 139.8119453,
+              "osm": "Nominatim「東京ソラマチ」第 1 筆（2026/11/19）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d8-1240",
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "12:40",
+      "order": 85,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍜",
+          "title": "午餐｜山上各自處理",
+          "head": "使用者指定：山上各自處理，不排店",
+          "pts": [
+            {
+              "label": "高尾山山頂（山上午餐）",
+              "query": "高尾山山頂 山上午餐",
+              "lat": 35.6252267,
+              "lon": 139.2436878,
+              "osm": "借用山頂座標（山上各自處理，不排店）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d8-1800",
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "18:00",
+      "order": 92,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🥩",
+          "title": "晚餐｜房家ホルモン館 上野六丁目店",
+          "head": "使用者清單第一家",
+          "pts": [
+            {
+              "label": "房家ホルモン館 上野六丁目店",
+              "query": "房家ホルモン館 上野六丁目店",
+              "lat": 35.708847,
+              "lon": 139.776062,
+              "osm": "GSI 地址檢索（2026/11/19 查）：上野6-6-6",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🔥",
+          "title": "晚餐｜焼肉ここから 上野店",
+          "head": "使用者清單第二家",
+          "pts": [
+            {
+              "label": "焼肉ここから 上野店（食べログ英文站名稱 Yakiniku Kokokara Ueno ten）",
+              "query": "焼肉ここから 上野店",
+              "lat": 35.70880354,
+              "lon": 139.77233738,
+              "osm": "食べログ英文站地圖頁 center=（2026/11/19 查）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        },
+        {
+          "k": "C",
+          "icon": "🍖",
+          "title": "晚餐｜叙々苑 上野不忍口店",
+          "head": "使用者清單第三家（分店由 AI 挑）",
+          "pts": [
+            {
+              "label": "叙々苑 上野不忍口店",
+              "query": "叙々苑 上野不忍口店",
+              "lat": 35.711739,
+              "lon": 139.77449,
+              "osm": "國土地理院 地址檢索（2026/11/19 查）：上野公園1-57（地址來自搜尋摘要，二手）",
+              "geocodedQuery": "trips/2099-11/coords.json"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "recommended": [],
+  "unresolved": []
+}

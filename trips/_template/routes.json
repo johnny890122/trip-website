@@ -1,0 +1,10 @@
+{
+  "_說明": [
+    "這趟的移動路線定義，由 scripts/build-routes.js --trip <id> 轉成 docs/<id>/map/routes.json；完整說明見 scripts/build-routes.js 檔頭。",
+    "每一天是一串「區段」：from／to 是行程表卡片的時間（有 map-link 的卡片），當天從住宿出發是 \"start\"；行程表有地點以後，每一天、每一段都要定義。",
+    "legs 的寫法：步行 { \"mode\": \"walk\" }；鐵路 { \"mode\": \"rail\", \"relation\": <OSM route relation id>, \"board\": \"上車站\", \"alight\": \"下車站\", \"label\": \"顯示名稱\" }（站名照 OSM）；地鐵 \"mode\": \"subway\"、公車 \"mode\": \"bus\" 同樣寫法；OSM 沒有 relation 的 { \"mode\": \"car\", \"label\": \"…\" }（car 會從目前位置直接開到這一段的終點，所以**放在 legs 最後**；後面還有搭車的話，拆成兩段）；只有一條 way 的用 \"way\": <id> 取代 relation；relation 缺站時加 \"stations\": { \"站名\": [緯度, 經度] }。",
+    "例：{ \"from\": \"09:00\", \"to\": \"09:50\", \"legs\": [ { \"mode\": \"rail\", \"relation\": 1972960, \"board\": \"池袋\", \"alight\": \"新宿\", \"label\": \"山手線\" } ] }；彈性方案走法不同時加 \"cases\": [ { \"from\": [\"B\"], \"to\": [\"A\"], \"legs\": [...] } ]；分頭行動同一時間兩條線時加 \"who\": \"family\"／\"solo\"。",
+    "直通運轉（例：都営新宿線 → 京王新線 直通到笹塚）：OSM 的 relation 各自只到自己的終點站，所以寫成**接續的兩段**（都営新宿線 岩本町 → 新線新宿、京王線 新線新宿 → 笹塚），卡片照樣寫一班直通；站不在 relation 裡時 rebuild 會報「沒有這一站」。"
+  ],
+  "days": {}
+}

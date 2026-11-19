@@ -1,0 +1,843 @@
+{
+  "_說明": [
+    "這趟的移動路線定義，由 scripts/build-routes.js --trip <id> 轉成 docs/<id>/map/routes.json；寫法見 scripts/build-routes.js 檔頭，完整範例是 trips/2026-11/routes.json。",
+    "每一天是一串「區段」：from／to 是行程表卡片的時間（有 map-link 的卡片），當天從住宿出發是 \"start\"；行程表有地點以後，每一天、每一段都要定義。"
+  ],
+  "days": {
+    "1": [
+      {
+        "from": "16:35",
+        "to": "17:42",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "17:42",
+        "to": "18:25",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 3120358,
+            "board": "空港第2ビル",
+            "alight": "日暮里",
+            "label": "京成スカイライナー"
+          }
+        ]
+      },
+      {
+        "from": "18:25",
+        "to": "18:50",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972960,
+            "board": "日暮里",
+            "alight": "池袋"
+          }
+        ]
+      },
+      {
+        "from": "18:50",
+        "to": "20:00",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "18:40",
+        "to": "19:22",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "19:22",
+        "to": "20:05",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 3120358,
+            "board": "空港第2ビル",
+            "alight": "日暮里",
+            "label": "京成スカイライナー"
+          }
+        ]
+      },
+      {
+        "from": "20:05",
+        "to": "20:30",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972960,
+            "board": "日暮里",
+            "alight": "池袋"
+          }
+        ]
+      },
+      {
+        "from": "20:30",
+        "to": "21:45",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      }
+    ],
+    "2": [
+      {
+        "from": "start",
+        "to": "08:50",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "08:50",
+        "to": "09:50",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972960,
+            "board": "池袋",
+            "alight": "新宿"
+          },
+          {
+            "mode": "rail",
+            "relation": 9483158,
+            "board": "新宿",
+            "alight": "豪徳寺",
+            "label": "小田急小田原線"
+          }
+        ]
+      },
+      {
+        "from": "09:50",
+        "to": "10:40",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "10:40",
+        "to": "11:15",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 9483158,
+            "board": "豪徳寺",
+            "alight": "代々木上原",
+            "label": "小田急小田原線"
+          },
+          {
+            "mode": "subway",
+            "relation": 443284,
+            "board": "代々木上原",
+            "alight": "明治神宮前〈原宿〉"
+          }
+        ]
+      },
+      {
+        "from": "11:15",
+        "to": "12:05",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "12:05",
+        "to": "12:45",
+        "legs": [
+          {
+            "mode": "subway",
+            "relation": 5375678,
+            "board": "明治神宮前〈原宿〉",
+            "alight": "新宿三丁目"
+          }
+        ]
+      },
+      {
+        "from": "12:45",
+        "to": "14:30",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "14:30",
+        "to": "16:30",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "16:30",
+        "to": "19:00",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "19:00",
+        "to": "20:40",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "20:40",
+        "to": "21:00",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972920,
+            "board": "新宿",
+            "alight": "池袋",
+            "label": "山手線 外回り"
+          }
+        ]
+      }
+    ],
+    "3": [
+      {
+        "from": "start",
+        "to": "08:00",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "08:00",
+        "to": "09:22",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 4684034,
+            "board": "池袋",
+            "alight": "大船"
+          }
+        ]
+      },
+      {
+        "from": "09:22",
+        "to": "09:56",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 9499966,
+            "board": "大船",
+            "alight": "湘南江の島",
+            "label": "湘南モノレール"
+          },
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "09:56",
+        "to": "11:45",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "11:45",
+        "to": "13:03",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "13:03",
+        "to": "13:35",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1943301,
+            "board": "江ノ島",
+            "alight": "長谷"
+          }
+        ]
+      },
+      {
+        "from": "13:35",
+        "to": "14:47",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "14:47",
+        "to": "15:10",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1943301,
+            "board": "長谷",
+            "alight": "鎌倉"
+          }
+        ]
+      },
+      {
+        "from": "15:10",
+        "to": "15:50",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "15:50",
+        "to": "16:25",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "16:25",
+        "to": "17:45",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 4684034,
+            "board": "鎌倉",
+            "alight": "池袋",
+            "label": "湘南新宿ライン"
+          }
+        ]
+      }
+    ],
+    "4": [
+      {
+        "from": "start",
+        "to": "08:20",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "08:20",
+        "to": "09:00",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972920,
+            "board": "池袋",
+            "alight": "駒込",
+            "label": "山手線 外回り"
+          }
+        ]
+      },
+      {
+        "from": "09:00",
+        "to": "10:30",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "10:30",
+        "to": "11:20",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972920,
+            "board": "駒込",
+            "alight": "上野",
+            "label": "山手線 外回り"
+          }
+        ]
+      },
+      {
+        "from": "11:20",
+        "to": "13:30",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "13:30",
+        "to": "15:00",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "15:00",
+        "to": "15:40",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972960,
+            "board": "上野",
+            "alight": "池袋",
+            "label": "山手線 內回り"
+          }
+        ]
+      },
+      {
+        "from": "15:40",
+        "to": "18:00",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "18:00",
+        "to": "19:30",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "19:30",
+        "to": "20:30",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "20:30",
+        "to": "20:38",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      }
+    ],
+    "5": [
+      {
+        "from": "start",
+        "to": "07:35",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "07:35",
+        "to": "08:30",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972960,
+            "board": "池袋",
+            "alight": "新宿",
+            "label": "山手線 內回り"
+          }
+        ]
+      },
+      {
+        "from": "08:30",
+        "to": "10:26",
+        "legs": [
+          {
+            "mode": "car",
+            "label": "富士回遊 7号（特急；以道路近似，不是軌道）"
+          }
+        ]
+      },
+      {
+        "from": "10:26",
+        "to": "10:45",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "10:45",
+        "to": "11:15",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ],
+        "cases": [
+          {
+            "to": [
+              "C"
+            ],
+            "legs": [
+              {
+                "mode": "car",
+                "label": "計程車（車資未查到）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "from": "11:15",
+        "to": "12:50",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ],
+        "cases": [
+          {
+            "from": [
+              "B"
+            ],
+            "to": [
+              "A"
+            ],
+            "legs": [
+              {
+                "mode": "walk"
+              }
+            ]
+          },
+          {
+            "from": [
+              "C"
+            ],
+            "to": [
+              "A"
+            ],
+            "legs": [
+              {
+                "mode": "car",
+                "label": "周遊バス或計程車（未查到）"
+              }
+            ]
+          },
+          {
+            "from": [
+              "A",
+              "B",
+              "C"
+            ],
+            "to": [
+              "B"
+            ],
+            "legs": [
+              {
+                "mode": "car",
+                "label": "周遊バス或計程車（未查到）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "from": "12:50",
+        "to": "14:40",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ],
+        "cases": [
+          {
+            "from": [
+              "A"
+            ],
+            "to": [
+              "A"
+            ],
+            "legs": [
+              {
+                "mode": "walk"
+              }
+            ]
+          },
+          {
+            "from": [
+              "B"
+            ],
+            "to": [
+              "B"
+            ],
+            "legs": [
+              {
+                "mode": "walk"
+              }
+            ]
+          },
+          {
+            "from": [
+              "B"
+            ],
+            "to": [
+              "A"
+            ],
+            "legs": [
+              {
+                "mode": "walk"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "from": "14:40",
+        "to": "15:15",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "15:15",
+        "to": "17:00",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "17:00",
+        "to": "18:50",
+        "legs": [
+          {
+            "mode": "car",
+            "label": "計程車（車程未查到；估算 OSRM 開車 4,080 m）"
+          }
+        ]
+      }
+    ],
+    "6": [
+      {
+        "from": "start",
+        "to": "09:50",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "09:50",
+        "to": "10:55",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 12036163,
+            "board": "河口湖",
+            "alight": "下吉田",
+            "label": "富士急行線"
+          }
+        ]
+      },
+      {
+        "from": "10:55",
+        "to": "11:25",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "11:25",
+        "to": "12:40",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1982965,
+            "board": "下吉田",
+            "alight": "河口湖",
+            "label": "富士急行線 特急 富士回遊15号"
+          }
+        ]
+      },
+      {
+        "from": "12:40",
+        "to": "13:15",
+        "legs": [
+          {
+            "mode": "car",
+            "label": "河口湖周遊バス レッドライン（時刻未查到）"
+          }
+        ]
+      },
+      {
+        "from": "13:15",
+        "to": "14:20",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "14:20",
+        "to": "15:00",
+        "legs": [
+          {
+            "mode": "car",
+            "label": "河口湖周遊バス（約 14:20，班次未查到，估算）"
+          }
+        ]
+      },
+      {
+        "from": "15:00",
+        "to": "15:40",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "15:40",
+        "to": "17:50",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "17:50",
+        "to": "20:00",
+        "legs": [
+          {
+            "mode": "car",
+            "label": "高速バス（西武観光バス）"
+          }
+        ]
+      },
+      {
+        "from": "20:00",
+        "to": "20:15",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "20:15",
+        "to": "21:05",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972920,
+            "board": "池袋",
+            "alight": "上野",
+            "label": "山手線 外回り"
+          },
+          {
+            "mode": "subway",
+            "relation": 443272,
+            "board": "上野",
+            "alight": "入谷",
+            "label": "日比谷線"
+          }
+        ]
+      }
+    ],
+    "7": [
+      { "from": "start", "to": "10:00", "legs": [ { "mode": "walk" } ] },
+      { "from": "10:00", "to": "10:50", "legs": [ { "mode": "walk" } ] },
+      { "from": "10:50", "to": "12:00", "legs": [ { "mode": "walk" } ] },
+      {
+        "from": "12:00", "to": "13:15",
+        "legs": [ { "mode": "walk" } ],
+        "cases": [
+          { "to": ["A", "B"], "legs": [ { "mode": "rail", "relation": 5392090, "board": "浅草", "alight": "とうきょうスカイツリー", "label": "東武スカイツリーライン" } ] }
+        ]
+      },
+      {
+        "from": "13:15", "to": "17:45",
+        "legs": [ { "mode": "walk" } ],
+        "cases": [
+          { "from": ["C", "D", "E"], "legs": [ { "mode": "rail", "relation": 5392090, "board": "浅草", "alight": "とうきょうスカイツリー", "label": "東武スカイツリーライン" } ] }
+        ]
+      },
+      { "from": "17:45", "to": "19:30", "legs": [ { "mode": "walk" } ] },
+      { "from": "19:30", "to": "20:05", "legs": [ { "mode": "rail", "relation": 5392090, "board": "とうきょうスカイツリー", "alight": "浅草", "label": "東武スカイツリーライン" } ] }
+    ],
+    "8": [
+      { "from": "start", "to": "09:00", "legs": [ { "mode": "walk" } ] },
+      { "from": "09:00", "to": "09:42", "legs": [
+          { "mode": "subway", "relation": 8026155, "board": "入谷", "alight": "秋葉原", "label": "日比谷線" },
+          { "mode": "subway", "relation": 443259, "board": "岩本町", "alight": "新線新宿", "label": "都営新宿線" },
+          { "mode": "rail", "relation": 11271039, "board": "新宿", "alight": "笹塚", "label": "京王線" } ] },
+      { "from": "09:42", "to": "10:35", "legs": [
+          { "mode": "rail", "relation": 11271039, "board": "笹塚", "alight": "北野", "label": "京王線" },
+          { "mode": "car", "label": "京王高尾線（無 route relation，以道路示意）" } ] },
+      { "from": "10:35", "to": "10:50", "legs": [ { "mode": "walk" } ] },
+      { "from": "10:50", "to": "11:16", "legs": [ { "mode": "car", "label": "高尾山ケーブルカー（OSM 無資料，以道路示意）" } ] },
+      { "from": "11:16", "to": "12:25", "legs": [ { "mode": "walk" } ] },
+      { "from": "12:25", "to": "12:40", "legs": [ { "mode": "walk" } ] },
+      { "from": "12:40", "to": "13:15", "legs": [ { "mode": "walk" } ] },
+      { "from": "13:15", "to": "14:15", "legs": [ { "mode": "walk" } ] },
+      { "from": "14:15", "to": "14:47", "legs": [ { "mode": "car", "label": "高尾山ケーブルカー（OSM 無資料，以道路示意）" } ] },
+      { "from": "14:47", "to": "15:38", "legs": [
+          { "mode": "car", "label": "京王高尾線特急＋京王線（無 route relation，以道路示意）" } ] },
+      { "from": "15:38", "to": "16:26", "legs": [
+          { "mode": "rail", "relation": 11271039, "board": "笹塚", "alight": "新宿", "label": "京王新線" },
+          { "mode": "subway", "relation": 443259, "board": "新線新宿", "alight": "岩本町", "label": "都営新宿線" },
+          { "mode": "subway", "relation": 8026155, "board": "秋葉原", "alight": "入谷", "label": "日比谷線" } ] },
+      { "from": "16:26", "to": "17:15", "legs": [ { "mode": "walk" } ] },
+      { "from": "17:15", "to": "18:00", "legs": [ { "mode": "subway", "relation": 8026155, "board": "入谷", "alight": "上野", "label": "日比谷線" } ] },
+      { "from": "18:00", "to": "19:45", "legs": [ { "mode": "walk" } ] },
+      { "from": "19:45", "to": "20:10", "legs": [ { "mode": "subway", "relation": 443272, "board": "上野", "alight": "入谷", "label": "日比谷線" } ] }
+    ],
+    "9": [
+      { "from": "start", "to": "10:25", "legs": [ { "mode": "walk" } ] },
+      { "from": "10:25", "to": "11:20", "legs": [ { "mode": "subway", "relation": 8026155, "board": "入谷", "alight": "上野", "label": "日比谷線" } ] },
+      { "from": "11:20", "to": "14:35", "legs": [ { "mode": "rail", "relation": 3120358, "board": "京成上野", "alight": "空港第2ビル", "label": "京成スカイライナー" } ] },
+      { "from": "start", "to": "08:35", "legs": [ { "mode": "walk" } ] },
+      { "from": "08:35", "to": "09:40", "legs": [ { "mode": "subway", "relation": 8026155, "board": "入谷", "alight": "上野", "label": "日比谷線" } ] },
+      { "from": "09:40", "to": "11:25", "legs": [ { "mode": "rail", "relation": 3120358, "board": "京成上野", "alight": "空港第2ビル", "label": "京成スカイライナー" } ] }
+    ]
+  }
+}

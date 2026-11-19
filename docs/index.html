@@ -3,329 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>東京秋季家族之旅 2026</title>
-<meta name="description" content="東京秋季家族之旅：2026 年 11 月 14 日～22 日的行程表、地圖、Check List、預算">
+<title>旅行行程表</title>
+<meta name="description" content="每一趟旅行的行程表、地圖、Check List、預算">
 <meta name="theme-color" content="#B5451B">
-<style>
-:root {
-  --primary: #B5451B;
-  --primary-dark: #8C2E0A;
-  --primary-light: #D4652F;
-  --secondary: #4A6FA5;
-  --accent: #C49A3C;
-  --bg: #FAF8F5;
-  --surface: #FFFFFF;
-  --text: #2C2416;
-  --muted: #7A6E5D;
-  --border: #E0D8CC;
-  --shadow: 0 2px 8px rgba(44,36,22,0.08);
-  --font: 'Noto Sans TC', 'PingFang TC', 'Hiragino Sans', 'Microsoft JhengHei',
-          'Yu Gothic UI', system-ui, -apple-system, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --primary: #E8825A;
-    --primary-dark: #C4603A;
-    --primary-light: #F0A181;
-    --secondary: #8FB3DE;
-    --accent: #D9B463;
-    --bg: #17140F;
-    --surface: #221E17;
-    --text: #EDE6DA;
-    --muted: #A69A88;
-    --border: #3A332A;
-    --shadow: 0 2px 8px rgba(0,0,0,0.5);
-  }
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-  font-family: var(--font);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-header {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  /* 照片未載入／離線時的備援底色 */
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary) 55%, var(--primary-light));
-  color: #fff;
-  text-align: center;
-  padding: 52px 16px 40px;
-}
-
-header .hero-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 38%;
-  z-index: -2;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-header .hero-img.is-loaded { opacity: 1; }
-
-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(180deg,
-    rgba(90, 30, 10, 0.70) 0%,
-    rgba(90, 30, 10, 0.52) 45%,
-    rgba(60, 20, 8, 0.78) 100%);
-}
-
-header h1 { font-size: 1.55rem; font-weight: 800; letter-spacing: 0.5px; }
-header p  { font-size: 0.9rem; opacity: 0.92; margin-top: 6px; }
-
-header .hero-credit {
-  display: block;
-  margin-top: 14px;
-  font-size: 0.62rem;
-  color: rgba(255,255,255,0.62);
-  text-decoration: none;
-}
-
-header .hero-credit:hover { color: rgba(255,255,255,0.92); text-decoration: underline; }
-
-main { max-width: 680px; margin: 0 auto; padding: 28px 16px 48px; }
-
-.card {
-  display: block;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--primary);
-  border-radius: 12px;
-  padding: 18px 20px;
-  margin-bottom: 14px;
-  box-shadow: var(--shadow);
-  color: inherit;
-  text-decoration: none;
-  transition: transform 0.15s, border-left-color 0.15s;
-}
-
-.card:hover { transform: translateY(-2px); border-left-color: var(--accent); }
-.card.is-check  { border-left-color: #3F8F5E; }
-.card.is-budget { border-left-color: var(--accent); }
-.card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 5px; }
-.card p  { font-size: 0.84rem; color: var(--muted); }
-.card.is-wide { padding: 24px 22px; }
-.card.is-wide h2 { font-size: 1.3rem; }
-.card.is-wide p  { font-size: 0.92rem; }
-.stay { display: block; }
-.stay:not(.is-link):hover { transform: none; border-left-color: var(--primary); }
-.stay .stay-go { margin-top: 8px; font-size: 0.84rem; font-weight: 700; color: var(--secondary); }
-.stay .stay-when { font-size: 0.8rem; font-weight: 700; color: var(--primary); }
-.stay h2 { margin-top: 2px; }
-.stay dl { display: grid; grid-template-columns: 4.5em 1fr; gap: 3px 8px; font-size: 0.84rem; margin-top: 6px; }
-.stay dt { color: var(--muted); }
-.stay dd { min-width: 0; overflow-wrap: anywhere; }
-.stay .todo { color: var(--muted); }
-.card-row { display: flex; gap: 10px; margin-bottom: 14px; }
-.card-row .card { margin-bottom: 0; }
-.card-row .card.is-main-col { flex: 4 1 0; min-width: 0; }
-.card.is-side { flex: 1 1 0; min-width: 0; display: flex; align-items: center; justify-content: center;
-  text-align: center; padding: 12px 6px; border-left-color: var(--secondary);
-  font-size: 0.86rem; font-weight: 700; line-height: 1.45; }
-.divider { border: 0; border-top: 1px solid var(--border); opacity: 0.5; margin: 22px 0 20px; }
-
-.badge {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 600;
-  padding: 2px 9px;
-  border-radius: 20px;
-  background: var(--primary);
-  color: #fff;
-  margin-left: 7px;
-  vertical-align: 2px;
-}
-
-.badge.budget { background: var(--accent); color: #2C2416; }
-
-h3.group {
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--muted);
-  margin: 26px 0 10px;
-}
-
-.badge.plan { background: var(--secondary); }
-
-footer {
-  text-align: center;
-  font-size: 0.76rem;
-  color: var(--muted);
-  padding: 0 16px 36px;
-}
-.install-btn { display: block; width: 100%; margin-bottom: 14px; padding: 14px 20px; border: 1px dashed var(--primary); border-radius: 12px; background: var(--surface); color: var(--primary); font: inherit; font-size: 1rem; font-weight: 700; cursor: pointer; }
-.install-btn small { display: block; margin-top: 3px; font-size: 0.8rem; font-weight: 400; color: var(--muted); }
-.install-help { max-width: min(92vw, 420px); padding: 20px 22px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); color: inherit; }
-.install-help::backdrop { background: rgba(0, 0, 0, 0.45); }
-.install-help h2 { font-size: 1.1rem; margin-bottom: 10px; }
-.install-help h3 { font-size: 0.92rem; margin: 12px 0 4px; color: var(--primary); }
-.install-help ol { padding-left: 1.3em; font-size: 0.9rem; line-height: 1.7; }
-.install-help p { font-size: 0.84rem; color: var(--muted); margin-top: 12px; }
-.install-help button { margin-top: 14px; width: 100%; padding: 10px; border: 0; border-radius: 10px; background: var(--primary); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
-</style>
+<link rel="stylesheet" href="assets/home.css">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="東京 2026">
+<meta name="apple-mobile-web-app-title" content="旅行">
 <script src="assets/offline.js" defer></script>
 </head>
 <body>
 
-<header data-hero>
-  <h1>🇯🇵 東京秋季家族之旅</h1>
-  <p>2026 年 11 月 14 日～22 日・東京・鎌倉・高尾山・富士河口湖</p>
+<header>
+  <h1>🧳 旅行行程表</h1>
+  <p>每一趟一張卡，最新的在最上面</p>
 </header>
 
 <main>
-  <h3 class="group">2026 年 11 月｜11/14（六）→ 11/22（日）・9 天 8 夜</h3>
+  <!-- 加一趟：在這裡最上面加一張卡，連到 <id>/index.html -->
 
-  <a class="card is-wide" href="2026-11/simple/index.html">
-    <h2>⏰ 簡化行程表</h2>
-    <p>只寫每天幾點去哪裡和一兩句介紹，不寫交通和備選方案；字比較大，手機好讀。</p>
+  <a class="card is-wide" href="2099-11/index.html">
+    <h2>🇯🇵 東京秋季家族之旅E2E</h2>
+    <p>2026 年 11 月 14 日～22 日・9 天 8 夜｜東京・鎌倉・高尾山・富士河口湖</p>
   </a>
 
-  <hr class="divider">
-
-  <a class="card" href="2026-11/final/index.html">
-    <h2>📅 行程表</h2>
-    <p>東池袋 4 晚 → 河口湖 1 晚 → 淺草 3 晚：豪徳寺・新宿御苑、鎌倉・江之島夕陽、高尾山、富士回遊・新倉山・紅葉迴廊、遊覽船・大石公園、淺草、六義園・上野。每天從住宿出發，有交通指引、餐廳方案與分頭行動的兩條線。8 位大人＋1 位小孩。</p>
+  <a class="card is-wide" href="2026-11/index.html">
+    <h2>🇯🇵 東京秋季家族之旅</h2>
+    <p>2026 年 11 月 14 日～22 日・9 天 8 夜｜東京・鎌倉・高尾山・富士河口湖</p>
   </a>
-
-  <a class="card" href="2026-11/map/index.html">
-    <h2>🗺️ 行程地圖<span class="badge">互動</span></h2>
-    <p>每天的地點與實際移動路線（電車、纜車、巴士、計程車、步行），可以切換餐廳方案；分頭行動的日子兩條線都畫。</p>
-  </a>
-
-  <a class="card is-check" href="2026-11/checklist/index.html">
-    <h2>✅ 行前 Check List</h2>
-    <p>14 組 73 項：證件、保險、網路、已預約項目、要先訂要先查的、交通票券、長輩與小孩、打包清單、兩家航空公司的行李規定、秋季加帶。逐項勾選，勾選狀態存在這台裝置。</p>
-  </a>
-
-  <a class="card is-budget" href="2026-11/budget/index.html">
-    <h2>💴 預算追蹤<span class="badge budget">每日</span></h2>
-    <p>9 天的每日記帳，已查證的門票與車票自動計入；機票、三段住宿、Suica 儲值記在共同支出。</p>
-  </a>
-
-  <button class="install-btn" type="button" id="installBtn">📲 存到手機桌面<small>存好後沒有網路也能看行程</small></button>
-
-  <dialog class="install-help" id="installHelp">
-    <h2>📲 存到手機桌面</h2>
-    <h3 data-os="ios">iPhone／iPad（要用 Safari 開）</h3>
-    <ol data-os="ios">
-      <li>按畫面下方的分享鈕（方框加向上箭頭）。</li>
-      <li>往下滑，選「加入主畫面」。</li>
-      <li>按右上角的「加入」。</li>
-    </ol>
-    <h3 data-os="android">Android（要用 Chrome 開）</h3>
-    <ol data-os="android">
-      <li>按右上角的「⋮」選單。</li>
-      <li>選「加到主畫面」或「安裝應用程式」。</li>
-      <li>按「安裝」。</li>
-    </ol>
-    <p>加好以後，在有網路的地方從桌面圖示開一次，行程就會存進手機。地圖底圖和 Google Maps 還是需要網路。</p>
-    <button type="button" id="installClose">知道了</button>
-  </dialog>
-
-  <h3 class="group">🏠 住宿</h3>
-
-  <a class="card stay is-link" href="2026-11/stay/index.html">
-    <div class="stay-when">11/14（六）～11/18（三）・4 晚</div>
-    <h2>東池袋民宿 IKEBUKURO VILLA</h2>
-    <p>訂房名稱「IKEBUKURO VILLA IKEBUKURO 5 MINUTES 2-11 PEOPLE」；Visit Japan Web 的「日本的連絡處」填這間。</p>
-    <dl>
-      <dt>地址</dt><dd>〒170-0013 東京都豊島区東池袋 3-11-3</dd>
-      <dt>電話</dt><dd>080-4587-6688</dd>
-      <dt>入住</dt><dd>看訂房訊息（不放在公開網站）</dd>
-      <dt>交通</dt><dd>池袋站東口步行約 14 分</dd>
-    </dl>
-    <p class="stay-go">📝 點這裡看 Visit Japan Web 填寫格式 →</p>
-  </a>
-
-  <div class="card stay">
-    <div class="stay-when">11/18（三）～11/19（四）・1 晚</div>
-    <h2>東横INN 富士河口湖大橋</h2>
-    <dl>
-      <dt>地址</dt><dd>〒401-0301 山梨県南都留郡富士河口湖町船津 294-1</dd>
-      <dt>電話</dt><dd>0555-68-3045</dd>
-      <dt>入住／退房</dt><dd>15:00／10:00</dd>
-      <dt>早餐</dt><dd>免費 6:30～9:00</dd>
-    </dl>
-  </div>
-
-  <div class="card stay">
-    <div class="stay-when">11/19（四）～11/22（日）・3 晚</div>
-    <h2>淺草民宿（千束）</h2>
-    <dl>
-      <dt>地址</dt><dd>〒111-0031 東京都台東区千束 3-17-4</dd>
-      <dt>入住</dt><dd>看訂房訊息（不放在公開網站）</dd>
-      <dt>退房</dt><dd>看訂房訊息</dd>
-      <dt>交通</dt><dd>日比谷線 入谷駅步行約 15 分</dd>
-    </dl>
-  </div>
-
-  <h3 class="group">☔ 雨天備案</h3>
-
-  <div class="card-row">
-  <a class="card is-main-col" href="2026-11/rain/index.html">
-    <h2>☔ 雨天備案</h2>
-    <p>高尾山改期的兩個版本（11/15 版、11/21 版）。11/18、11/19 河口湖的雨天安排已經放進行程表。</p>
-  </a>
-  <a class="card is-side" href="2026-11/simple-rain/index.html">考慮天氣的<br>簡化行程表</a>
-  </div>
-
-  <h3 class="group">🎨 新版介面</h3>
-
-  <a class="card is-wide" href="v2/index.html">
-    <h2>🎨 新版介面（繪本風）</h2>
-    <p>內容和功能與這裡相同，換成日系繪本風的外觀；勾選和記帳的紀錄兩邊共用。</p>
-  </a>
-
 </main>
-
-<footer>
-  <p>行程資料查證於 2026-11-07～</p>
-</footer>
-
-<script src="assets/hero/hero.js"></script>
-<script>
-  // 隨機挑一張風景照當頁首底圖
-  if (window.applyHero) window.applyHero('assets/hero/');
-
-  // 存到手機桌面：Android Chrome 直接跳安裝視窗；iOS 不開放網頁安裝，只能顯示步驟
-  (function () {
-    var btn = document.getElementById('installBtn'), dlg = document.getElementById('installHelp'), deferred = null;
-    if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) { btn.hidden = true; return; }
-    window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); deferred = e; });
-    window.addEventListener('appinstalled', function () { btn.hidden = true; });
-    btn.addEventListener('click', function () {
-      if (deferred) { deferred.prompt(); deferred = null; return; }
-      var ua = navigator.userAgent;
-      var os = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? 'ios' : /Android/.test(ua) ? 'android' : '';
-      dlg.querySelectorAll('[data-os]').forEach(function (el) { el.hidden = !!os && el.dataset.os !== os; });
-      dlg.showModal();
-    });
-    document.getElementById('installClose').addEventListener('click', function () { dlg.close(); });
-  })();
-</script>
 
 </body>
 </html>

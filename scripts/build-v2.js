@@ -2,16 +2,20 @@
 /* 產生新版介面（日系繪本風）：docs/v2/
  *
  * 新版和舊版共用同一份內容與程式，只多套一層外觀：
- *   - 子頁：把 docs/2026-11/<頁>/index.html 複製到 docs/v2/2026-11/<頁>/，改資源路徑、加上固定選單與 docs/assets/v2/ 的樣式
- *   - 首頁：scripts/v2/home.html 樣板，航班取自行程表、住宿取自舊首頁
+ *   - 子頁：把 docs/<trip>/<頁>/index.html 複製到 docs/v2/<trip>/<頁>/，改資源路徑、加上固定選單與 docs/assets/v2/ 的樣式
+ *   - 首頁：trips/<trip>/v2-home.html 樣板（這趟專屬），航班取自行程表、住宿取自這趟的首頁 docs/<trip>/index.html，寫到 docs/v2/<trip>/index.html
  *   - 地圖資料 places.json、routes.json 直接複製
- * 舊版頁面有任何修改，都要重跑一次：node scripts/build-v2.js
+ * 舊版頁面有任何修改，都要重跑一次：node scripts/build-v2.js --trip <trip>
+ * 只有放了 trips/<trip>/v2-home.html 的那一趟才有新版介面。
  */
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..', 'docs');
-const TRIP = '2026-11';
+const T = require('./lib/trip').resolve();
+const TRIP = T.id;
+const HOME_TPL = path.join(T.data, 'v2-home.html');
+if (!fs.existsSync(HOME_TPL)) { console.error('✗ ' + TRIP + ' 沒有 v2 首頁樣板（trips/' + TRIP + '/v2-home.html），這趟不產生新版介面'); process.exit(1); }
 const OUT = path.join(ROOT, 'v2');
 const V2_ASSETS = path.join(ROOT, 'assets', 'v2');
 
@@ -19,7 +23,7 @@ const V2_ASSETS = path.join(ROOT, 'assets', 'v2');
 const PAGES = { final: 'itinerary', simple: 'itinerary', rain: 'itinerary', 'simple-rain': 'itinerary', map: 'map', checklist: 'pages', budget: 'pages', stay: 'pages' };
 
 const MENU = [
-  ['home', '../../index.html', '🏠', '首頁'],
+  ['home', '../index.html', '🏠', '首頁'],
   ['final', '../final/index.html', '📅', '行程'],
   ['simple', '../simple/index.html', '⏰', '簡化'],
   ['map', '../map/index.html', '🗺️', '地圖'],
@@ -42,12 +46,15 @@ const FONT = '<link rel="preconnect" href="https://fonts.googleapis.com"><link r
   + '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&display=swap">';
 
 for (const [page, skin] of Object.entries(PAGES)) {
-  let html = read(path.join(ROOT, TRIP, page, 'index.html'));
+  const src = path.join(ROOT, TRIP, page, 'index.html');
+  if (!fs.existsSync(src)) continue;   // 這趟沒有這一頁
+  let html = read(src);
   html = html
     .split('../../assets/').join('../../../assets/')
     .split('../../manifest.json').join('../../../manifest.json')
     .split('../../icon.svg').join('../../../icon.svg')
     .split('../../apple-touch-icon.png').join('../../../apple-touch-icon.png')
+    .split('"../hero/').join(`"../../../${TRIP}/hero/`)
     .split('"../trip.js"').join(`"../../../${TRIP}/trip.js"`)
     .replace(/<meta name="theme-color" content="[^"]*">/, '<meta name="theme-color" content="#FFFCF6">')
     .replace('<html lang="zh-TW">', `<html lang="zh-TW" class="v2 v2-${page}" data-theme="light">`);
@@ -65,21 +72,23 @@ const flights = [];
 const re = /<strong>(.+?)<\/strong> (\d\d:\d\d)<span class="fb-ap"> (\w+)<\/span> → (\d\d:\d\d)<span class="fb-ap"> (\w+)<\/span>/g;
 const finalHtml = read(path.join(ROOT, TRIP, 'final', 'index.html'));
 for (let m; (m = re.exec(finalHtml));) flights.push(m.slice(1));
-if (flights.length !== 4) throw new Error('航班應該有 4 筆，抓到 ' + flights.length);
+if (!flights.length) throw new Error('行程表的航班列抓不到航班');
+/* 去程、回程的日期寫在樣板裡：<!-- flight-dates: 11/14（六）|11/22（日） --> */
+const [outDate, backDate] = ((read(HOME_TPL).match(/<!-- flight-dates: (.*?) -->/) || [])[1] || '|').split('|');
 const flightHtml = flights.map(([who, t1, a1, t2, a2]) => {
   const out = who.startsWith('去程');
-  return `<div class="flight ${out ? 'is-out' : 'is-back'}"><div class="flight-who"><b>${out ? '11/14（六）' : '11/22（日）'}</b>${who}</div>`
+  return `<div class="flight ${out ? 'is-out' : 'is-back'}"><div class="flight-who"><b>${out ? outDate : backDate}</b>${who}</div>`
     + `<div class="flight-line"><span><b>${t1}</b>${a1}</span><i aria-hidden="true">✈</i><span><b>${t2}</b>${a2}</span></div></div>`;
 }).join('\n      ');
 
-const oldHome = read(path.join(ROOT, 'index.html'));
+const oldHome = read(path.join(ROOT, TRIP, 'index.html'));
 const stay = oldHome.slice(oldHome.indexOf('<h3 class="group">🏠 住宿</h3>'), oldHome.indexOf('<h3 class="group">☔ 雨天備案</h3>'))
   .replace(/<h3 class="group">.*?<\/h3>/, '').trim();
 if (!stay.includes('class="card stay') || stay.includes('v2/index.html') || stay.includes('rain/')) throw new Error('舊首頁抓不到住宿卡片');
 
-const home = read(path.join(__dirname, 'v2', 'home.html'))
-  .replace('{{MENU}}', menu('home', (h) => h.replace('../../index.html', 'index.html').replace('../', TRIP + '/')))
+const home = read(HOME_TPL)
+  .replace('{{MENU}}', menu('home', (h) => h.replace('../', '')))
   .replace('{{FLIGHTS}}', flightHtml)
   .replace('{{STAY}}', stay);
-write(path.join(OUT, 'index.html'), home);
+write(path.join(OUT, TRIP, 'index.html'), home);
 console.log('v2：首頁 + ' + Object.keys(PAGES).length + ' 個子頁已產生');

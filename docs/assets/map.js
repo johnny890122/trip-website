@@ -37,7 +37,7 @@
   var homeBounds = null; // 這一天（目前選的方案）全部地點與路線的範圍，「回到全觀」就是回到這裡
   var places = [];       // 行程表上的地點（彈性行程只含方案 A）
   var slots = [];        // 彈性行程的全部方案（places.json 的 slots）
-  var recos = [];        // data/attractions.json 的推薦景點
+  var recos = [];        // trips/<id>/attractions.json 的推薦景點
   var activeDay = 'all';
   var activeCats = new Set(Object.keys(CATS));
   var showReco = false;  // 推薦景點預設關閉，避免一開始就太雜
@@ -724,7 +724,12 @@
       places = (data.places || []).filter(function (p) { return p.lat != null; });
       slots = data.slots || [];
       recos = (data.recommended || []).filter(function (r) { return r.lat != null; });
-      if (!places.length && !recos.length) throw new Error('places.json 沒有任何含座標的地點');
+      // 剛建立的一趟：行程表和推薦景點都還沒有地點
+      if (!places.length && !recos.length) {
+        $('map').innerHTML = '<p class="loading">這趟還沒排行程：行程表加了地點、跑過 scripts/build-places.js 之後，地圖就會出現。</p>';
+        $('status').textContent = '這趟還沒排行程';
+        return;
+      }
       // 行程還沒排（例如剛開始規劃的下一趟）：先把推薦景點打開，地圖才不是空的
       if (!places.length) showReco = true;
       initMap();

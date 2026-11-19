@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行前 Check List｜〔旅行名稱〕</title>
+<meta name="description" content="〔旅行名稱〕〔日期〕">
+<meta name="theme-color" content="#B5451B">
+<link rel="stylesheet" href="../../assets/base.css">
+<link rel="stylesheet" href="../../assets/checklist.css">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="〔短名稱〕">
+<script src="../../assets/offline.js" defer></script>
+</head>
+<body>
+
+<header class="site-header" data-hero>
+  <div class="container">
+    <h1>✅ 行前 Check List</h1>
+    <p class="sub">〔YYYY 年 M 月 D 日（○）～D 日（○）〕｜〔N 天 N 夜〕</p>
+    <div class="toolbar">
+      <a class="tb-link" href="../index.html">← 回首頁</a>
+      <a class="tb-link" href="../final/index.html">📅 行程表</a>
+      <a class="tb-link" href="../budget/index.html">💴 預算</a>
+      <button type="button" onclick="window.print()">🖨️ 列印</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="summary">
+      <div class="summary-row">
+        <strong>完成進度</strong>
+        <span><span class="pct" id="pct">0%</span> <span style="font-size:0.78rem;color:var(--muted)" id="count"></span></span>
+      </div>
+      <div class="progress"><span id="bar" style="width:0%"></span></div>
+      <p class="hint" style="margin:10px 0 0">
+        勾選狀態存在這台裝置的瀏覽器裡。已經做完的項目直接打勾就好。
+      </p>
+    </div>
+
+    <div id="groups"></div>
+
+    <div class="btn-row">
+      <button class="btn" type="button" onclick="uncheckAll()">↺ 全部取消勾選</button>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>〔共 N 組、N 項（YYYY-MM-DD 查證）〕．出發前請再次確認官方最新規定</p>
+</footer>
+
+<script src="../hero/hero.js"></script>
+<script>
+/* 這趟的 Check List 項目，畫面與勾選邏輯在 ../../assets/checklist.js */
+/* tag: need=必帶 / must=必辦 / rec=建議 / when=時程提醒 / info=須知 */
+/* 這趟的 Check List。d 寫「〔查證後填〕」的：規定、數字要寫來源與生效日，筆記放 trips/<id>/reference/checklist_查證筆記.md；範例見 docs/2026-11/checklist。 */
+window.CHECKLIST = [
+  {
+    id: 'doc',
+    title: '🛂 證件與入境',
+    items: [
+      {
+        id: 'passport',
+        t: '護照效期確認',
+        tag: 'must',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'entry',
+        t: '入境手續（簽證、電子入境登錄）',
+        tag: 'must',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'copy',
+        t: '護照影本／電子檔備份',
+        tag: 'rec',
+        d: '存雲端一份、印一份紙本分開放。'
+      },
+      {
+        id: 'sos',
+        t: '緊急聯絡電話：存手機＋抄一張紙本',
+        tag: 'rec',
+        d: '〔查證後填〕'
+      }
+    ]
+  },
+  {
+    id: 'insure',
+    title: '🛡️ 保險與金流',
+    items: [
+      {
+        id: 'travel-ins',
+        t: '旅遊平安險（含海外醫療）',
+        tag: 'must',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'delay-ins',
+        t: '旅遊不便險（班機延誤／行李延誤）',
+        tag: 'rec',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'card',
+        t: '信用卡開通海外交易、確認回饋',
+        tag: 'rec',
+        d: ''
+      },
+      {
+        id: 'cash',
+        t: '換當地現金',
+        tag: 'rec',
+        d: '〔查證後填〕'
+      }
+    ]
+  },
+  {
+    id: 'net',
+    title: '📶 網路與 App',
+    items: [
+      {
+        id: 'esim',
+        t: 'eSIM 或 WiFi 分享器',
+        tag: 'must',
+        d: ''
+      },
+      {
+        id: 'offline-map',
+        t: 'Google Maps 下載離線地圖',
+        tag: 'rec',
+        d: ''
+      },
+      {
+        id: 'apps',
+        t: '當地交通 App',
+        tag: 'rec',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'pwa',
+        t: '把行程表加到手機主畫面',
+        tag: 'info',
+        d: '開<a href=\'../index.html\'>首頁</a>，按「📲 存到手機桌面」照步驟做，即可像 App 一樣開啟並<b>離線閱讀</b>。'
+      }
+    ]
+  },
+  {
+    id: 'booked',
+    title: '📌 已預約項目確認',
+    items: [
+      {
+        id: 'flight',
+        t: '航班：〔航空公司 班號〕',
+        tag: 'info',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'hotel1',
+        t: '住宿①：〔名稱〕（〔日期〕）',
+        tag: 'info',
+        d: '〔查證後填〕'
+      }
+    ]
+  },
+  {
+    id: 'carry',
+    title: '🎒 隨身包（每天出門帶）',
+    items: [
+      {
+        id: 'umbrella',
+        t: '摺疊傘（或輕便雨衣）',
+        tag: 'need',
+        d: ''
+      },
+      {
+        id: 'tissue',
+        t: '面紙＋濕紙巾',
+        tag: 'rec',
+        d: ''
+      },
+      {
+        id: 'coins',
+        t: '零錢包',
+        tag: 'rec',
+        d: ''
+      }
+    ]
+  },
+  {
+    id: 'pack',
+    title: '👕 衣物與鞋子',
+    items: [
+      {
+        id: 'clothes',
+        t: '衣物：依當地氣溫',
+        tag: 'info',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'shoes',
+        t: '好走的鞋（已穿過）',
+        tag: 'need',
+        d: '<b>不要穿新鞋上路</b>，出發前先穿著走過幾次。'
+      },
+      {
+        id: 'laundry',
+        t: '換洗衣物、睡衣、髒衣袋',
+        tag: 'rec',
+        d: ''
+      }
+    ]
+  },
+  {
+    id: 'wash',
+    title: '🪥 盥洗與保養',
+    items: [
+      {
+        id: 'toiletry',
+        t: '牙刷牙膏、刮鬍刀、梳子',
+        tag: 'rec',
+        d: ''
+      },
+      {
+        id: 'skincare',
+        t: '保養品、卸妝、防曬（分裝）',
+        tag: 'rec',
+        d: ''
+      }
+    ]
+  },
+  {
+    id: 'elec',
+    title: '🔌 電子用品',
+    items: [
+      {
+        id: 'charger',
+        t: '手機充電器與線＋多孔充電頭',
+        tag: 'need',
+        d: ''
+      },
+      {
+        id: 'powerbank',
+        t: '行動電源的搭機規定',
+        tag: 'must',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'plug',
+        t: '插頭與電壓',
+        tag: 'info',
+        d: '〔查證後填〕'
+      }
+    ]
+  },
+  {
+    id: 'health',
+    title: '💊 藥品與小護理',
+    items: [
+      {
+        id: 'meds',
+        t: '常備藥＋個人處方藥',
+        tag: 'rec',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'firstaid',
+        t: 'OK 繃、水泡貼、痠痛貼布',
+        tag: 'rec',
+        d: ''
+      }
+    ]
+  },
+  {
+    id: 'flight',
+    title: '✈️ 搭機與行李',
+    items: [
+      {
+        id: 'liquids',
+        t: '液體分裝＋一個透明夾鏈袋',
+        tag: 'rec',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'bag',
+        t: '手提與託運行李額度（依票種）',
+        tag: 'rec',
+        d: '〔查證後填〕'
+      },
+      {
+        id: 'taxfree',
+        t: '當地退稅規定',
+        tag: 'info',
+        d: '〔查證後填〕'
+      }
+    ]
+  }
+];
+</script>
+<script src="../trip.js"></script>
+<script src="../../assets/checklist.js"></script>
+
+</body>
+</html>

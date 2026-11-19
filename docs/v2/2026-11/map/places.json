@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-15",
+  "generatedAt": "2026-11-18",
   "source": "docs/2026-11/final/index.html",
-  "recommendedSource": "data/attractions.json",
+  "recommendedSource": "trips/2026-11/attractions.json",
   "attribution": "© OpenStreetMap contributors — 座標由 Nominatim 查詢",
   "places": [
     {
@@ -117,7 +117,7 @@
       "lat": 35.73251982866681,
       "lon": 139.71420350493912,
       "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13019994/dtlmap/（2026-11-13，家人餐廳清單）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 1,
@@ -251,7 +251,7 @@
       "lat": 35.73251982866681,
       "lon": 139.71420350493912,
       "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13019994/dtlmap/（2026-11-13，家人餐廳清單）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 1,
@@ -399,7 +399,7 @@
       "lat": 35.687625,
       "lon": 139.702351,
       "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1304/A130401/13004274/dtlmap/（2026-11-13，家人餐廳清單）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 2,
@@ -454,7 +454,7 @@
       "lat": 35.6897391,
       "lon": 139.6929973,
       "osm": "Nominatim 查過並核對回傳地址（2026-11-07）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 2,
@@ -801,7 +801,7 @@
       "lat": 35.7153426,
       "lon": 139.768896,
       "osm": "Nominatim 查過並核對回傳地址（2026-11-07）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 4,
@@ -856,7 +856,7 @@
       "lat": 35.732196,
       "lon": 139.713124,
       "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13310864/dtlmap/（2026-11-13，家人餐廳清單）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 4,
@@ -985,7 +985,7 @@
       "lat": 35.49886967851409,
       "lon": 138.7686629632418,
       "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19004308/dtlmap/",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 5,
@@ -1058,7 +1058,7 @@
       "lat": 35.5255857,
       "lon": 138.7624404,
       "osm": "Nominatim 查過並核對回傳地址（2026-11-07）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 5,
@@ -1077,7 +1077,7 @@
       "lat": 35.52515798849574,
       "lon": 138.763482753511,
       "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19000183/dtlmap/（2026-11-13，家人餐廳清單）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 5,
@@ -1242,7 +1242,7 @@
       "lat": 35.52306,
       "lon": 138.744703,
       "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19010432/dtlmap/（2026-11-13，家人餐廳清單）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 6,
@@ -1352,7 +1352,7 @@
       "lat": 35.724745,
       "lon": 139.714767,
       "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13288929/dtlmap/（2026-11-13，家人餐廳清單）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 6,
@@ -1628,7 +1628,7 @@
       "lat": 35.62548919858498,
       "lon": 139.24379974418775,
       "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1329/A132905/13042679/dtlmap/",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 8,
@@ -1701,7 +1701,7 @@
       "lat": 35.708820737896204,
       "lon": 139.77614218349453,
       "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13186440/dtlmap/（2026-11-13，家人餐廳清單）",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 8,
@@ -1778,7 +1778,7 @@
       "lat": 35.710035868700736,
       "lon": 139.77586745466877,
       "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13016735/dtlmap/",
-      "geocodedQuery": "data/plan-coords.json"
+      "geocodedQuery": "trips/2026-11/coords.json"
     },
     {
       "day": 9,
@@ -1897,7 +1897,7 @@
               "lat": 35.73251982866681,
               "lon": 139.71420350493912,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13019994/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -1913,7 +1913,7 @@
               "lat": 35.7269132378642,
               "lon": 139.71166458372247,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13003927/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -1929,7 +1929,7 @@
               "lat": 35.732601237861545,
               "lon": 139.7147324837778,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13050789/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -1955,7 +1955,7 @@
               "lat": 35.73251982866681,
               "lon": 139.71420350493912,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13019994/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -1971,7 +1971,7 @@
               "lat": 35.7269132378642,
               "lon": 139.71166458372247,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13003927/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -1996,7 +1996,7 @@
               "lat": 35.687625,
               "lon": 139.702351,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1304/A130401/13004274/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2012,7 +2012,7 @@
               "lat": 35.688888,
               "lon": 139.708901,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1304/A130402/13288675/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -2037,7 +2037,7 @@
               "lat": 35.6897391,
               "lon": 139.6929973,
               "osm": "Nominatim 查過並核對回傳地址（2026-11-07）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2053,7 +2053,7 @@
               "lat": 35.691074,
               "lon": 139.704651,
               "osm": "國土地理院地址檢索 https://msearch.gsi.go.jp/address-search/AddressSearch?q=東京都新宿区新宿3-14-1（2026-11-07）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2085,7 +2085,7 @@
               "lat": 35.7153426,
               "lon": 139.768896,
               "osm": "Nominatim 查過並核對回傳地址（2026-11-07）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2101,7 +2101,7 @@
               "lat": 35.7190448,
               "lon": 139.7759676,
               "osm": "Nominatim 查過並核對回傳地址（2026-11-07）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2117,7 +2117,7 @@
               "lat": 35.7158995,
               "lon": 139.7766878,
               "osm": "Nominatim 查過並核對回傳地址（2026-11-07）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -2142,7 +2142,7 @@
               "lat": 35.732196,
               "lon": 139.713124,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13310864/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2158,7 +2158,7 @@
               "lat": 35.7290919,
               "lon": 139.7127468,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13138912/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2174,7 +2174,7 @@
               "lat": 35.732601237861545,
               "lon": 139.7147324837778,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13050789/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -2199,7 +2199,7 @@
               "lat": 35.49886967851409,
               "lon": 138.7686629632418,
               "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19004308/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2215,7 +2215,7 @@
               "lat": 35.50014631593675,
               "lon": 138.7687130039588,
               "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19012994/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -2329,7 +2329,7 @@
               "lat": 35.52515798849574,
               "lon": 138.763482753511,
               "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19000183/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -2354,7 +2354,7 @@
               "lat": 35.52306,
               "lon": 138.744703,
               "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19010432/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2370,7 +2370,7 @@
               "lat": 35.523584,
               "lon": 138.745597,
               "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19013700/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2386,7 +2386,7 @@
               "lat": 35.523953458491405,
               "lon": 138.74746452351005,
               "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19004468/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -2452,7 +2452,7 @@
               "lat": 35.724745,
               "lon": 139.714767,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13288929/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2468,7 +2468,7 @@
               "lat": 35.726157,
               "lon": 139.712664,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13003889/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2484,7 +2484,7 @@
               "lat": 35.73251982866681,
               "lon": 139.71420350493912,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13019994/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -2598,7 +2598,7 @@
               "lat": 35.62548919858498,
               "lon": 139.24379974418775,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1329/A132905/13042679/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2614,7 +2614,7 @@
               "lat": 35.6302400285857,
               "lon": 139.25552054422752,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1329/A132905/13030891/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2630,7 +2630,7 @@
               "lat": 35.6314215285889,
               "lon": 139.2679566842307,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1329/A132905/13016415/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -2655,7 +2655,7 @@
               "lat": 35.708820737896204,
               "lon": 139.77614218349453,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13186440/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2671,7 +2671,7 @@
               "lat": 35.70880353789502,
               "lon": 139.77233738349702,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13227583/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2687,7 +2687,7 @@
               "lat": 35.71124715869998,
               "lon": 139.77592504468097,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13030661/dtlmap/（2026-11-13，家人餐廳清單）",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }
@@ -2713,7 +2713,7 @@
               "lat": 35.710035868700736,
               "lon": 139.77586745466877,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13016735/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         },
@@ -2729,7 +2729,7 @@
               "lat": 35.71119163789443,
               "lon": 139.7752640835191,
               "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13039759/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
+              "geocodedQuery": "trips/2026-11/coords.json"
             }
           ]
         }

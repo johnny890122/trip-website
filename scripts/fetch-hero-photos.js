@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /*
- * 從 Wikimedia Commons 抓取行程相關地標的照片，存到 docs/assets/hero/
- * 並產生 docs/assets/hero/credits.json（含作者與授權，供頁面標示出處）與 hero.js。
+ * 從 Wikimedia Commons 抓取行程相關地標的照片，存到 docs/<trip>/hero/
+ * 並產生 docs/<trip>/hero/credits.json（含作者與授權，供頁面標示出處）與 hero.js。
+ * 要抓哪些地標寫在 trips/<trip>/hero.json（--trip 指定哪一趟，見 scripts/lib/trip.js）。
  *
  *   node scripts/fetch-hero-photos.js --candidates   依條件搜尋候選照片，產生預覽頁供挑選
- *   node scripts/fetch-hero-photos.js                下載 WANTED 裡 pick 指定的照片
+ *   node scripts/fetch-hero-photos.js                下載 hero.json 裡 pick 指定的照片
  *
  * 選圖標準（2026-09-21 起，不要放寬）：
  *   1. 授權：只收明確標示自由授權的圖（CC0 / PD / CC-BY / CC-BY-SA）
@@ -14,92 +15,31 @@
  *      頁首是滿版但只有約 200～250px 高的橫幅，直式照片會被裁成一條細縫
  *
  * 流程：先跑 --candidates，開 scripts/.cache/hero-candidates.html 用眼睛挑，
- * 把選中的檔名填進 WANTED 的 pick，再跑一次不帶參數的版本下載。
+ * 把選中的檔名填進 hero.json 的 pick，再跑一次不帶參數的版本下載。
  */
 
 const fs = require('fs');
 const path = require('path');
 
-const OUT_DIR = path.join('docs', 'assets', 'hero');
+const TRIP = require('./lib/trip').resolve();
+const OUT_DIR = TRIP.heroDir;
+const LIST = JSON.parse(fs.readFileSync(TRIP.heroList, 'utf8'));
 const CACHE_DIR = path.join('scripts', '.cache');
-const UA = 'osaka-kyoto-trip/1.0 (personal travel itinerary; https://github.com/threshadow98171314/osaka-kyoto-trip)';
+const UA = 'trip-website/1.0 (personal travel itinerary)';
 
 /* Wikimedia 只對一組標準寬度產生縮圖（非標準寬度會被限流），1920 是其中之一。
    頁首在桌機是滿版寬度，1920 在 1080p 螢幕上不必放大；手機多下載一點但畫面銳利 */
 const WIDTH = 1920;
 const MIN_WIDTH = 3000;
-const TAKEN_AFTER = '2021-11-07';   // 2026-11-07 往前推五年
+/* 近五年：hero.json 的 takenAfter（規劃那趟時往前推五年）；沒寫就從今天往前推五年 */
+const TAKEN_AFTER = LIST.takenAfter || new Date(Date.now() - 5 * 365.25 * 864e5).toISOString().slice(0, 10);
 
-/* 24 個地標（東京行程 2026/11/14～22），全部是行程會經過的地方。
-   q：Commons 搜尋字串（Commons 的索引以英文為主，用中文幾乎搜不到）
-   pick：在預覽頁挑定的檔名；下載時只用這個，確保每次重跑結果一致 */
-const WANTED = [
-  /* ---- 東京市區 ---- */
-  { slug: 'tokyo-station',  caption: '東京駅 丸の内',        q: ['Tokyo Station Marunouchi', 'Tokyo Station red brick'],
-    pick: 'File:KITTE Garden, Tokyo; September 2022 (09).jpg' },
-  // 搜不到池袋 Sunshine 60 的合格照片，改用站前的西武百貨
-  { slug: 'ikebukuro',      caption: '池袋站 西武百貨',      q: ['Ikebukuro Sunshine 60', 'Ikebukuro station'],
-    pick: 'File:Ikebukuro-STA East.jpg' },
-  { slug: 'meiji-jingu',    caption: '明治神宮 大鳥居',      q: ['Meiji Jingu', 'Meiji Shrine torii'],
-    pick: 'File:Courtyard of Meiji Shrine 20220814a.jpg' },
-  { slug: 'gaien-ginkgo',   caption: '神宮外苑 銀杏並木',     q: ['Meiji Jingu Gaien ginkgo', 'Icho Namiki Tokyo'],
-    pick: 'File:Meiji Jingu Gaien Ginkgo Festival (53442107390).jpg' },
-  // 近五年沒有秋天的新宿御苑照片，挑夏天的池畔景色
-  { slug: 'shinjuku-gyoen', caption: '新宿御苑',             q: ['Shinjuku Gyoen autumn', 'Shinjuku Gyoen'],
-    pick: 'File:Upper Pond, Shinjuku Gyoen National Garden, Tokyo, 20240822 1512 5467.jpg' },
-  { slug: 'gotokuji',       caption: '豪德寺 招財貓',        q: ['Gotokuji maneki-neko', 'Gotokuji temple'],
-    pick: 'File:ManekiNekoGotokuji2.jpg' },
-  /* ---- 鎌倉・江之島 ---- */
-  // 小町通的其他照片多是單一店面或招牌特寫，裁成橫幅看不出街景；挑一張能看到整條商店街延伸的
-  { slug: 'komachi-dori',   caption: '鎌倉 小町通',          q: ['Komachi-dori Kamakura', 'Komachi Street Kamakura'],
-    pick: 'File:Komachi-dori Street - Kamakura - 2026 Oct 1 various 1.jpg' },
-  { slug: 'tsurugaoka',     caption: '鶴岡八幡宮 太鼓橋',     q: ['Tsurugaoka Hachimangu', 'Tsurugaoka Hachiman-gu Kamakura'],
-    pick: 'File:Tsurugaoka-Hachimangu Taiko-bashi-East-side 20261018.jpg' },
-  { slug: 'kamakura-daibutsu', caption: '鎌倉大佛（高德院）', q: ['Kotoku-in Kamakura Daibutsu', 'Great Buddha of Kamakura'],
-    pick: 'File:20260420 Großer Buddha von Kamakura 03, Kanagawa, Japan anagoria.jpg' },
-  { slug: 'enoden',         caption: '鎌倉駅 江之電',        q: ['Enoden Kamakura', 'Enoshima Electric Railway'],
-    pick: 'File:Estación Kamakura JR East - 2026 - 03.jpg' },
-  { slug: 'enoshima',       caption: '江之島 海之燈塔眺望',   q: ['Enoshima Sea Candle', 'Enoshima Island'],
-    pick: 'File:Enoshima Samuel Cocking Garden from the Enoshima Sea Candle (Feb 2022).jpg' },
-  // 近五年的湘南海岸照片幾乎都看不到富士山，挑七里濱遠眺江之島的一張
-  { slug: 'shonan-fuji',    caption: '七里濱 遠眺江之島',     q: ['Shonan coast Mount Fuji sunset', 'Enoshima Mount Fuji'],
-    pick: 'File:230128 At Shichirigahama Kamakura Kanagawa pref Japan04s3.jpg' },
-  /* ---- 高尾山 ---- */
-  // 近五年的高尾山紅葉照片只有纜車內部，改用山上的藥王院一帶（高尾山 紅葉、藥王院 合併為此張）
-  { slug: 'takao-yakuoin',  caption: '高尾山 藥王院一帶',     q: ['Mount Takao', 'Takao-san Hachioji'],
-    pick: 'File:Takao-san hike during winter 6.jpg' },
-  { slug: 'takao-cablecar', caption: '高尾山纜車',           q: ['Takao Tozan Railway', 'Takaosanguchi'],
-    pick: 'File:Around Takaosanguchi (11236).jpg' },
-  /* ---- 河口湖 ---- */
-  { slug: 'kawaguchiko',    caption: '河口湖 富士山',        q: ['Lake Kawaguchi Mount Fuji', 'Kawaguchiko Fuji'],
-    pick: 'File:Kawaguchiko, Part II - Kawaguchiko6805.jpg' },
-  { slug: 'arakura',        caption: '新倉山淺間公園 忠靈塔', q: ['Arakurayama Sengen Park', 'Chureito Pagoda'],
-    pick: 'File:Chureito Pagoda and Mount Fuji 20241022.jpg' },
-  // 紅葉迴廊搜不到合格照片；改挑同一帶湖畔的楓葉與銀杏（大石公園的合格照片都是陰天，也不採用）
-  { slug: 'kawaguchiko-momiji', caption: '河口湖 湖畔楓葉',  q: ['Kawaguchiko autumn leaves', 'Kawaguchiko Maple Corridor Fuji'],
-    pick: 'File:Kawaguchiko, Part I - Kawaguchiko6815.jpg' },
-  /* ---- 淺草・下町 ---- */
-  { slug: 'kaminarimon',    caption: '淺草寺 雷門',          q: ['Kaminarimon Asakusa', 'Senso-ji Kaminarimon'],
-    pick: 'File:Kaminarimon- Asakusa - Nov 8 2021 various 18 23 04 718000.jpeg' },
-  { slug: 'nakamise',       caption: '仲見世通',             q: ['Nakamise-dori Asakusa', 'Nakamise Street'],
-    pick: 'File:Nakamise-Straße.jpg' },
-  { slug: 'skytree',        caption: '東京晴空塔',           q: ['Tokyo Skytree', 'Tokyo Skytree Sumida'],
-    pick: 'File:Aerial view of tokyo skytree.jpg' },
-  { slug: 'rikugien',       caption: '六義園 紅葉',          q: ['Rikugien autumn', 'Rikugien garden'],
-    pick: 'File:Bunkyo Rikugien Panoramic View In Early Autumn.jpg' },
-  // 上野公園本體的合格照片都是陰天冬景，改挑不忍池（同在上野公園內）
-  { slug: 'ueno-park',      caption: '上野公園 不忍池',      q: ['Shinobazu Pond', 'Ueno Park'],
-    pick: 'File:Shinobazu Pond (Hasu Pond Area) 20211126 02.jpg' },
-  { slug: 'ameyoko',        caption: '阿美橫町',             q: ['Ameyoko', 'Ameya-Yokocho Ueno'],
-    pick: 'File:Ameya Yokocho Shopping Street (53150237663).jpg' },
-  { slug: 'sumida-river',   caption: '隅田川',               q: ['Sumida River Tokyo', 'Sumida River Asakusa'],
-    pick: 'File:Sumida River and Asakusa Architecture (53417021554).jpg' },
-  // 已刪除：昭和記念公園 銀杏並木（近五年沒有合格照片，且與同日的其他地點重複性高）
-];
+/* 每一筆：slug、caption、q（Commons 搜尋字串，索引以英文為主）、pick（在預覽頁挑定的檔名；下載時只用這個，確保每次重跑結果一致） */
+const WANTED = LIST.wanted;
 
 /* 可接受的自由授權；注意要能同時對到 "CC BY-SA 4.0" 與 "Public domain" */
-/* 有些 Commons 作者欄位塞了整段授權聲明（新倉山那張），頁首只顯示人名 */
-const AUTHOR_OVERRIDE = { 'arakura': 'Supanut Arunoprayote' };
+/* 有些 Commons 作者欄位塞了整段授權聲明，頁首只顯示人名：hero.json 的 authorOverride（slug → 人名） */
+const AUTHOR_OVERRIDE = LIST.authorOverride || {};
 
 const FREE = /^(cc0|cc[ -]by|pd|public[ -]domain|no restrictions)/i;
 const isFree = (lic) => FREE.test(String(lic || '').trim());
@@ -306,8 +246,11 @@ async function download() {
 
   var PHOTOS = ${JSON.stringify(list, null, 2).split('\n').join('\n  ')};
 
-  /* base 是 hero 圖片資料夾相對於目前頁面的路徑，例如 '../assets/hero/' */
-  global.applyHero = function (base) {
+  /* 照片和本檔在同一個資料夾（docs/<trip>/hero/），頁面只要載入本檔再呼叫 applyHero() */
+  var BASE = ((document.currentScript && document.currentScript.src) || '').replace(/[^/]*$/, '');
+
+  global.applyHero = function () {
+    var base = BASE;
     var host = document.querySelector('[data-hero]');
     if (!host || !PHOTOS.length) return;
 

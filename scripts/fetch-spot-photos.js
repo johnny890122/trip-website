@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /*
- * 景點卡片的照片：從 Wikimedia Commons 抓取，存到 docs/assets/spots/<id>/（兩趟共用），並產生 credits.json。
- * 要抓哪幾張寫在 data/trips/<trip>/spots/<id>.json 的 photos（--trip 指定哪一趟，見 scripts/lib/trip.js）：
+ * 景點卡片的照片：從 Wikimedia Commons 抓取，存到 docs/<trip>/spots/<id>/，並產生 credits.json。
+ * 要抓哪幾張寫在 trips/<trip>/spots/<id>.json 的 photos（--trip 指定哪一趟，見 scripts/lib/trip.js）：
  *   [{ "id": "檔名", "label": "照片說明", "cat": ["Category:…"], "q": ["Commons 搜尋字串", …], "pick": "File:…" }]
  *   cat（Commons 分類）比 q（全文搜尋）準，兩者可以並用
  *
@@ -165,7 +165,7 @@ async function candidates(id) {
 
 async function download(id) {
   const spot = loadSpot(id);
-  const outDir = path.join(ROOT, 'docs', 'assets', 'spots', id);
+  const outDir = path.join(TRIP.docs, 'spots', id);
   fs.mkdirSync(outDir, { recursive: true });
   const credits = [];
   for (const p of spot.photos) {

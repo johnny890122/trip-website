@@ -1,4 +1,4 @@
-/* 景點小地圖：依 data/trips/<trip>/spots/<id>.json 的停留點，算出步行路線，寫入 docs/<trip>/map/spots/<id>.json。
+/* 景點小地圖：依 trips/<trip>/spots/<id>.json 的停留點，算出步行路線，寫入 docs/<trip>/map/spots/<id>.json。
  * 行程表的卡片用 iframe 嵌入 docs/<trip>/map/spot.html?id=<id> 顯示。
  *
  *   node scripts/build-spots.js                 # 正在規劃的那一趟，沿用快取

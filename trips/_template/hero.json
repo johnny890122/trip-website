@@ -1,0 +1,10 @@
+{
+  "_說明": [
+    "頁首背景照片清單，scripts/fetch-hero-photos.js --trip <id> 讀這份，照片寫到 docs/<id>/hero/。",
+    "takenAfter：EXIF 拍攝日期要在這天之後（規劃這趟當天往前推五年，寫死，之後重跑結果才一致）。",
+    "wanted 每一筆：{ slug, caption, q: [Commons 搜尋字串，英文], pick: 'File:…'（先跑 --candidates 用眼睛挑）, group, note }。範例見 trips/2026-11/hero.json。"
+  ],
+  "takenAfter": "",
+  "authorOverride": {},
+  "wanted": []
+}

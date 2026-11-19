@@ -8,7 +8,6 @@
   /* 這趟旅行的 localStorage key（見 ../trip.js）：兩趟的資料分開存，不會互相覆蓋 */
   var K = (window.TRIP && window.TRIP.key) || function (k) { return k; };
   /* 共用檔所在的資料夾（docs/assets/），頁首照片從這裡找 */
-  var ASSETS = ((document.currentScript && document.currentScript.src) || '../../assets/x').replace(/[^/]*$/, '');
 
   /* localStorage 在無痕視窗／封鎖 cookie 時會丟例外，全部包起來；key 一律經過 K() 加上這趟的前綴 */
   var store = {
@@ -242,5 +241,5 @@
   });
 
   recalc();
-  if (window.applyHero) window.applyHero(ASSETS + 'hero/');
+  if (window.applyHero) window.applyHero();
 })();

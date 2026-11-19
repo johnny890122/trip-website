@@ -7,7 +7,6 @@
   /* 這趟旅行的 localStorage key（見 ../trip.js）：兩趟的資料分開存，不會互相覆蓋 */
   var K = (window.TRIP && window.TRIP.key) || function (k) { return k; };
   /* 共用檔所在的資料夾（docs/assets/），頁首照片從這裡找 */
-  var ASSETS = ((document.currentScript && document.currentScript.src) || '../../assets/x').replace(/[^/]*$/, '');
 
   /* key 一律經過 K() 加上這趟的前綴 */
   var store = {
@@ -108,5 +107,5 @@
   build();
   bind();
   refresh();
-  if (window.applyHero) window.applyHero(ASSETS + 'hero/');
+  if (window.applyHero) window.applyHero();
 })();
