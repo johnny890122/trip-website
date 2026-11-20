@@ -24,5 +24,18 @@
     "width": 960,
     "height": 720,
     "bytes": 186013
+  },
+  {
+    "id": "panda-red",
+    "label": "小熊貓",
+    "file": "20260906 Red Panda at Chengdu Research Base of Giant Panda Breeding image 11.jpg",
+    "author": "TarnishedPath",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2026-09-06",
+    "source": "https://commons.wikimedia.org/wiki/File:20260906_Red_Panda_at_Chengdu_Research_Base_of_Giant_Panda_Breeding_image_11.jpg",
+    "width": 960,
+    "height": 720,
+    "bytes": 192347
   }
 ]

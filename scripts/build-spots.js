@@ -1,4 +1,4 @@
-/* 景點小地圖：依 trips/<trip>/spots/<id>.json 的停留點，算出步行路線，寫入 docs/<trip>/map/spots/<id>.json。
+/* 景點小地圖：依 trips/<trip>/spots/<id>.json 的停留點，算出步行路線，寫入 docs/<trip>/map/spots/<id>.js（window.SPOT）。
  * 行程表的卡片用 iframe 嵌入 docs/<trip>/map/spot.html?id=<id> 顯示。
  *
  *   node scripts/build-spots.js                 # 正在規劃的那一趟，沿用快取
@@ -59,7 +59,8 @@ async function walk(a, b) {
   if (r.distance > straight * DETOUR_MAX && straight > 50) {
     leg = { meters: Math.round(straight), minutes: Math.round(straight / 1.25 / 60), coords: [a, b], straight: true };
   } else {
-    leg = { meters: Math.round(r.distance), minutes: Math.round(r.duration / 60),
+    // 分鐘照 planning.md 的規則：距離 ÷ 80 m／分（不用 OSRM 的 duration，兩者會差 1～2 分）
+    leg = { meters: Math.round(r.distance), minutes: Math.round(r.distance / 80),
       coords: thin(r.geometry.coordinates.map((c) => [c[1], c[0]])) };
   }
   fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -74,7 +75,8 @@ async function walk(a, b) {
   const files = fs.readdirSync(SRC_DIR).filter((f) => f.endsWith('.json'));
   for (const f of files) {
     const spot = JSON.parse(fs.readFileSync(path.join(SRC_DIR, f), 'utf8'));
-    const stops = spot.stops;
+    const stops = spot.stops || [];
+    if (stops.length < 2) continue;   // 只有照片、還沒做小地圖的景點
     stops.forEach((s, i) => {
       if (typeof s.lat !== 'number' || typeof s.lon !== 'number') throw new Error(f + ' 第 ' + (i + 1) + ' 個停留點沒有座標');
     });
@@ -91,7 +93,9 @@ async function walk(a, b) {
       stops: stops.map((s, i) => Object.assign({ n: i }, s)),
       legs,
     };
-    fs.writeFileSync(path.join(OUT_DIR, spot.id + '.json'), JSON.stringify(out) + '\n');
+    // 寫成 .js（<script> 載入）而不是 .json：file:// 開網站時 fetch() 會被瀏覽器擋，地圖就顯示「找不到」
+    fs.writeFileSync(path.join(OUT_DIR, spot.id + '.js'), 'window.SPOT = ' + JSON.stringify(out) + ';\n');
+    fs.rmSync(path.join(OUT_DIR, spot.id + '.json'), { force: true });
     const total = legs.reduce((s, l) => s + l.meters, 0);
     console.log('✓ ' + spot.id + '：' + stops.length + ' 個停留點，步行共約 ' + (total / 1000).toFixed(1) + ' km');
   }

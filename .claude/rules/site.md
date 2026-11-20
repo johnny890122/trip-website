@@ -65,6 +65,7 @@ docs/<id>/
     區段的 `"who": "family"／"solo"`（分頭行動的兩條線各自相連，見 `.claude/rules/itinerary-page.md`）
   - HTTP 回應要收齊 Buffer 再解碼：一塊一塊轉字串，切在中日文字中間會變亂碼（曾讓 relation 的站名壞掉），快取裡壞掉的 relation 要刪掉重抓
 - `scripts/build-spots.js` - 依 `trips/<trip>/spots/*.json` 產生景點小地圖的步行路線（`docs/<trip>/map/spots/`）
+- `scripts/build-guide.js` - 把 `docs/<trip>/guide/index.html` 的每個 `section.guide` 拆成單頁 `guide/<id>.html`（產生檔，不要手改；rebuild 自動跑）
 - `scripts/fetch-spot-photos.js` - 抓景點卡片的照片（`.claude/rules/itinerary-page.md`「景點卡片的照片與小地圖」）
 - `scripts/fetch-hero-photos.js` - 重新抓取頁首背景照片，並用 Pillow 壓縮到每張 500 KB 以下（`.claude/rules/hero-photos.md`）
 - `scripts/build-v2.js` - 產生 `docs/v2/<id>/`（見「網站入口」）；只有放了 `trips/<id>/v2-home.html` 的那一趟才能跑

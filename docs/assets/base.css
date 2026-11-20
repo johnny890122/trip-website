@@ -254,6 +254,17 @@ main { padding: 20px 0 48px; }
 .guide .one { font-size: 0.68rem; color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; white-space: nowrap; }
 .guide .src { font-size: 0.72rem; color: var(--muted); }
 .guide .src a { color: var(--muted); }
+/* spot-guide skill 的園內路線：小地圖（../map/spot.html 的 iframe）＋停留點清單，號碼對應地圖上的圖釘 */
+.g-map { height: 300px; margin: 4px 0 6px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.g-map iframe { display: block; width: 100%; height: 100%; border: 0; }
+.guide .g-stops { list-style: none; padding-left: 0; }
+.g-stops li { position: relative; padding-left: 30px; }
+.g-n { position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 50%; background: var(--primary); color: #fff;
+  font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.g-photo { margin: 6px 0 2px; max-width: 320px; }
+.g-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
+.g-photo figcaption, .g-nophoto { display: block; font-size: 0.68rem; color: var(--muted); }
+.g-photo figcaption a, .g-nophoto a { color: var(--muted); }
 
 @media print {
   .toolbar, .btn-row, .btn { display: none; }

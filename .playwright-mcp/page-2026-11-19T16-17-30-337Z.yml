@@ -1,0 +1,307 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - heading "成都之旅" [level=1] [ref=e4]
+      - paragraph [ref=e5]: 2026年 12月8日（二）→ 12月18日（五）｜11天10夜・1 人
+      - generic [ref=e6]:
+        - link "← 回首頁" [ref=e7] [cursor=pointer]:
+          - /url: ../index.html
+        - link "🗺️ 地圖" [ref=e8] [cursor=pointer]:
+          - /url: ../map/index.html
+        - button "🇯🇵 顯示日文地名" [ref=e9] [cursor=pointer]
+        - button "🌗 主題：自動" [ref=e10] [cursor=pointer]
+        - button "💡 展開建議" [ref=e11] [cursor=pointer]
+        - button "📋 複製這天行程" [ref=e12] [cursor=pointer]
+  - generic [ref=e13]:
+    - generic [ref=e15]:
+      - generic [ref=e16]: 🛫
+      - generic [ref=e17]:
+        - strong [ref=e18]: 去程 12/8 國航 CA410（候選，未訂）
+        - text: 19:20 → 23:05
+    - generic [ref=e20]:
+      - generic [ref=e21]: 🛬
+      - generic [ref=e22]:
+        - strong [ref=e23]: 回程 12/18 長榮 BR766（未訂；起飛機場天府／雙流兩說）
+        - text: 19:20 → 22:40
+  - navigation "日期切換" [ref=e24]:
+    - tablist [ref=e25]:
+      - tab "DAY 1 12/8 (二)" [ref=e26] [cursor=pointer]: DAY 112/8 (二)
+      - tab "DAY 2 12/9 (三)" [ref=e27] [cursor=pointer]: DAY 212/9 (三)
+      - tab "DAY 3 12/10 (四)" [ref=e28] [cursor=pointer]: DAY 312/10 (四)
+      - tab "DAY 4 12/11 (五)" [ref=e29] [cursor=pointer]: DAY 412/11 (五)
+      - tab "DAY 5 12/12 (六)" [ref=e30] [cursor=pointer]: DAY 512/12 (六)
+      - tab "DAY 6 12/13 (日)" [selected] [ref=e31] [cursor=pointer]: DAY 612/13 (日)
+  - main [ref=e32]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]: "6"
+          - generic [ref=e38]: DAY
+        - generic [ref=e39]:
+          - heading "Day 6｜12月13日（日）" [level=2] [ref=e40]
+          - paragraph [ref=e41]: 熊貓基地（上午）＋市區（成都日落 18:03）
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: ▌
+          - text: 主行程＝已訂或非去不可
+        - generic [ref=e45]:
+          - generic [ref=e46]: ┆
+          - text: 交通＝移動，不算在行程裡
+        - generic [ref=e47]:
+          - generic [ref=e48]: ┊
+          - text: 彈性＝可左右滑動換方案
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: 06:50
+            - generic [ref=e53]: 🚇
+            - generic [ref=e54]: 成都地鐵 1 號線 → 3 號線｜飯店 → 倪家橋 → 省體育館 → 熊貓大道
+            - generic [ref=e55]: 交通
+          - generic [ref=e56]:
+            - paragraph [ref=e57]: 導遊型交通指引：
+            - list [ref=e58]:
+              - listitem [ref=e59]: 飯店步行約 8 分到倪家橋站（OSRM，座標待高德核對）。
+              - listitem [ref=e60]: 1 號線往北 1 站到省體育館，換 3 號線往北 11 站到熊貓大道（共 12 站，站序見 OSM 站表）；首班與每站分鐘未查到，全程約 40 分（估算，wanderinchina 寫市區出發約 40 分，起點不明）。06:50 出發約 07:38 到熊貓大道，目標約 08:00 到南門。
+              - listitem [ref=e61]: 熊貓大道站 A 口出站，換 408 路擺渡車到南門（官網；wanderinchina 寫 D025，以官網為準）；首末班、班距、票價未查到（wanderinchina 摘要 ¥2），錯過或等太久就改計程車（OSRM 約 27 分）。
+              - listitem [ref=e62]: 備案：計程車飯店 → 基地 OSRM 20.4 km、約 27 分（無路況），車資未查到（官網：春熙路 → 基地約 ¥40、25～35 分）。
+        - generic [ref=e63]:
+          - generic [ref=e64]:
+            - generic [ref=e65]: 08:00
+            - generic [ref=e66]: 🐼
+            - generic [ref=e67]: 成都大熊貓繁育研究基地
+            - generic [ref=e68]: 主行程
+          - generic [ref=e69]:
+            - generic [ref=e71]:
+              - figure "成都大熊貓繁育研究基地 TarnishedPath・CC BY-SA 4.0・Wikimedia Commons" [ref=e72]:
+                - img "成都大熊貓繁育研究基地" [ref=e73]
+                - generic [ref=e74]:
+                  - text: 成都大熊貓繁育研究基地
+                  - generic [ref=e75]:
+                    - text: TarnishedPath・
+                    - link "CC BY-SA 4.0" [ref=e76] [cursor=pointer]:
+                      - /url: https://creativecommons.org/licenses/by-sa/4.0
+                    - text: ・
+                    - link "Wikimedia Commons" [ref=e77] [cursor=pointer]:
+                      - /url: https://commons.wikimedia.org/wiki/File:20260906_Giant_Panda_at_Chengdu_Research_Base_of_Giant_Panda_Breeding_image_4.jpg
+              - figure "成都大熊貓繁育研究基地 TarnishedPath・CC BY-SA 4.0・Wikimedia Commons" [ref=e78]:
+                - img "成都大熊貓繁育研究基地" [ref=e79]
+                - generic [ref=e80]:
+                  - text: 成都大熊貓繁育研究基地
+                  - generic [ref=e81]:
+                    - text: TarnishedPath・
+                    - link "CC BY-SA 4.0" [ref=e82] [cursor=pointer]:
+                      - /url: https://creativecommons.org/licenses/by-sa/4.0
+                    - text: ・
+                    - link "Wikimedia Commons" [ref=e83] [cursor=pointer]:
+                      - /url: https://commons.wikimedia.org/wiki/File:20260906_Red_Panda_at_Chengdu_Research_Base_of_Giant_Panda_Breeding_image_10.jpg
+            - paragraph [ref=e84]: 11～2 月：上午票入園 8:00～12:00、下午票 12:00～16:30，17:30 開始清園（官網）。成人 ¥55；全員線上實名預約，最早提前 14 天（12/13 約 11/29 開放，推算），當日額度賣完為止；台胞證可（官網列「台湾居民来往大陆通行证」原件刷證入園）。園內觀光車 ¥30／人、當日不限次（官網，預算不計；wanderinchina 寫 ¥10，以官網為準）。
+            - paragraph [ref=e85]: 熊貓最活躍約 07:30～09:30（二手），冬季 8:00 才開園；建議先搭觀光車到山頂別墅區再往下逛，快線約 2 小時，一般 3～4 小時，12:00 前離園（研判）；11:15 前走到南門（趕 11:30 離開的交通）。12/13 週日，全園無公休（局部週一閉館不受影響）。
+            - paragraph [ref=e86]:
+              - text: 來源：
+              - link "基地官網票務" [ref=e87] [cursor=pointer]:
+                - /url: https://www.panda.org.cn/cn/service/ticket
+              - text: 、
+              - link "開放時間" [ref=e88] [cursor=pointer]:
+                - /url: https://www.panda.org.cn/cn/service/opentime
+              - text: 。
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - generic [ref=e91]: 🎫
+              - generic [ref=e92]: 約 11/29 開放預約開放後就訂上午票（研判，週日）。
+            - generic [ref=e93]:
+              - generic [ref=e94]: 🧭
+              - generic [ref=e95]:
+                - text: 攻略：花花要走南門花花在南門旁的幼年大熊貓別墅；上面寫的「先上山頂」會把她排到最後，想先看就 08:00 進南門先走。西門新區人少。
+                - link "看完整路線與園內吃的 →" [ref=e96] [cursor=pointer]:
+                  - /url: ../guide/#panda
+          - link "成都大熊貓繁育研究基地" [ref=e97] [cursor=pointer]:
+            - /url: https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E5%A4%A7%E7%86%8A%E8%B2%93%E7%B9%81%E8%82%B2%E7%A0%94%E7%A9%B6%E5%9F%BA%E5%9C%B0%20%E6%88%90%E9%83%BD&callnative=1&src=trip-website
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]: 11:30
+            - generic [ref=e103]: 🚇
+            - generic [ref=e104]: 408 路擺渡車 → 3 號線｜熊貓大道 → 春熙路（8 站）
+            - generic [ref=e105]: 交通
+          - generic [ref=e106]:
+            - paragraph [ref=e107]: 導遊型交通指引：
+            - list [ref=e108]:
+              - listitem [ref=e109]: 南門搭 408 路擺渡車回熊貓大道站。
+              - listitem [ref=e110]: 3 號線往南 8 站到春熙路（動物園、昭覺寺南路、駟馬橋、李家沱、前鋒路、紅星橋、市二醫院、春熙路）；分鐘未查到，估算約 27 分：用 12 站約 40 分（每站約 3.3 分）× 8 站，再加擺渡車與走到站的時間，12:15 前後到春熙路。
+          - link "熊貓大道站" [ref=e111] [cursor=pointer]:
+            - /url: https://uri.amap.com/search?keyword=%E7%86%8A%E8%B2%93%E5%A4%A7%E9%81%93%E7%AB%99%20%E6%88%90%E9%83%BD&callnative=1&src=trip-website
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - generic [ref=e116]: 12:15
+            - generic [ref=e117]: 🥢
+            - generic [ref=e118]: 午餐｜夫妻肺片·老字號
+            - generic [ref=e119]: 彈性
+            - generic [aria-hidden] [ref=e120]: A
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e123]: 方案
+              - button "上一個方案" [disabled] [ref=e124]: ‹
+              - button "方案 A" [ref=e126] [cursor=pointer]: A
+              - button "下一個方案" [disabled] [ref=e127]: ›
+            - tabpanel "原訂行程" [ref=e130]:
+              - generic [ref=e131]:
+                - generic [ref=e132]: A
+                - text: 使用者想吃的夫妻肺片
+              - generic [ref=e134]:
+                - paragraph [ref=e135]: 川菜老字號冷盤。攜程 4.1（192 則，2026/11 查）；10:30～21:30；人均 ¥55；總府路 23 號 1～2 層。12/13（日）公休未查到。
+                - paragraph [ref=e136]: 春熙路站走到店約 3 分（OSRM foot 239 m；起點是 Nominatim 的春熙路點，不是出口）。13:15 前離開。
+                - paragraph [ref=e137]:
+                  - link "查證來源（攜程）" [ref=e138] [cursor=pointer]:
+                    - /url: https://gs.ctrip.com/html5/you/foods/fooddetail/104/4926096.html
+          - link "夫妻肺片·老字號" [ref=e139] [cursor=pointer]:
+            - /url: https://uri.amap.com/search?keyword=%E5%A4%AB%E5%A6%BB%E8%82%BA%E7%89%87%C2%B7%E8%80%81%E5%AD%97%E8%99%9F%20%E6%88%90%E9%83%BD&callnative=1&src=trip-website
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - generic [ref=e144]: 13:15
+            - generic [ref=e145]: 🚶
+            - generic [ref=e146]: 步行｜夫妻肺片 → 成都博物館
+            - generic [ref=e147]: 交通
+          - generic [ref=e148]:
+            - paragraph [ref=e149]: 導遊型交通指引：
+            - list [ref=e150]:
+              - listitem [ref=e151]: 往西步行約 25 分（OSRM foot 2035 m）。
+              - listitem [ref=e152]: 不想走：計程車約 1.7 km、約 2 分（OSRM 開車，無路況）；地鐵走法未查到。
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - generic [ref=e155]: 13:45
+            - generic [ref=e156]: 🏛️
+            - generic [ref=e157]: 成都博物館
+            - generic [ref=e158]: 主行程
+          - paragraph [ref=e160]: 成都的城市歷史，藏品近 20 萬件（使用者指定想去）。週日 09:00～17:00、16:30 停止入館（官網；到 20:30 只有週五、六）；免費、要提前預約；攜程 4.8（5,479 則，2026/11 查）。地址：青羊區小河街 1 號。這裡排約 2 小時（建議停留未查到）。
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - generic [ref=e163]: 🎫
+              - generic [ref=e164]: 要預約台胞證能不能線上預約未查到，出發前看官方公眾號。
+            - generic [ref=e165]:
+              - generic [ref=e166]: ⚠️
+              - generic [ref=e167]: 週一休館2026 暑期公告寫週一固定閉館（冬季常規未取得）；12/13 是週日，有開。
+            - generic [ref=e168]:
+              - generic [ref=e169]: 🧭
+              - generic [ref=e170]:
+                - text: 攻略：先看 2～3 樓古代篇有鎮館之寶石犀、經穴漆人；14:30 免費講解約 1.5 小時（單一來源），參加會接不上 15:45 的小名堂，可改聽公眾號免費語音。附近酥小蒙牛肉餅（¥9）。
+                - link "看樓層與店家 →" [ref=e171] [cursor=pointer]:
+                  - /url: ../guide/#cdmuseum
+          - link "成都博物館" [ref=e172] [cursor=pointer]:
+            - /url: https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E6%88%90%E9%83%BD&callnative=1&src=trip-website
+        - generic [ref=e175]:
+          - generic [ref=e176]:
+            - generic [ref=e177]: 15:45
+            - generic [ref=e178]: 🍜
+            - generic [ref=e179]: 點心｜小名堂擔擔甜水麵
+            - generic [ref=e180]: 彈性
+            - generic [aria-hidden] [ref=e181]: A
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - generic [ref=e184]: 方案
+              - button "上一個方案" [disabled] [ref=e185]: ‹
+              - button "方案 A" [ref=e187] [cursor=pointer]: A
+              - button "下一個方案" [disabled] [ref=e188]: ›
+            - tabpanel "原訂行程" [ref=e191]:
+              - generic [ref=e192]:
+                - generic [ref=e193]: A
+                - text: 甜水麵＋擔擔麵（使用者想吃）
+              - generic [ref=e195]:
+                - paragraph [ref=e196]: 甜水麵（粗麵拌甜辣醬汁）、擔擔麵這家都有。攜程 4.5（295 則，2026/11 查）；09:00～20:00；人均 ¥21；東城根上街 13 號。
+                - paragraph [ref=e197]: 成都博物館走過來約 6 分（OSRM foot 440 m）。
+                - paragraph [ref=e198]:
+                  - link "查證來源（攜程）" [ref=e199] [cursor=pointer]:
+                    - /url: https://gs.ctrip.com/html5/you/foods/fooddetail/104/352677.html
+          - link "小名堂擔擔甜水麵" [ref=e200] [cursor=pointer]:
+            - /url: https://uri.amap.com/search?keyword=%E5%B0%8F%E5%90%8D%E5%A0%82%E6%93%94%E6%93%94%E7%94%9C%E6%B0%B4%E9%BA%B5%20%E6%88%90%E9%83%BD&callnative=1&src=trip-website
+        - generic [ref=e203]:
+          - generic [ref=e204]:
+            - generic [ref=e205]: 16:30
+            - generic [ref=e206]: 🍵
+            - generic [ref=e207]: 傍晚｜人民公園 鶴鳴茶社
+            - generic [ref=e208]: 彈性
+            - generic [aria-hidden] [ref=e209]: A
+          - generic [ref=e210]:
+            - generic [ref=e211]:
+              - generic [ref=e212]: 方案
+              - button "上一個方案" [disabled] [ref=e213]: ‹
+              - generic [ref=e214]:
+                - button "方案 A" [ref=e215] [cursor=pointer]: A
+                - button "方案 B" [ref=e216] [cursor=pointer]: B
+              - button "下一個方案" [ref=e217] [cursor=pointer]: ›
+            - tabpanel "原訂行程" [ref=e220]:
+              - generic [ref=e221]:
+                - generic [ref=e222]: A
+                - text: 坐茶館
+              - generic [ref=e223]:
+                - paragraph [ref=e224]: 小名堂走過去約 6 分（OSRM foot 471 m）。遊記說下午約 16:00 後常沒座位，現場看。
+                - generic [ref=e225]:
+                  - generic [ref=e226]: 人民公園 鶴鳴茶社
+                  - generic [ref=e227]: 老成都茶館
+                  - generic [ref=e228]: 🎫 最低消費 ¥16 起、18:00 後 ¥18（攜程點評 2026-04）🕐 07:00～22:00（遊記）／9am～9pm（英文介紹），兩說不一致⚠️ 公園營業時間、票價未查到
+                  - generic [ref=e229]:
+                    - link "在地圖開啟" [ref=e230] [cursor=pointer]:
+                      - /url: https://uri.amap.com/search?keyword=%E4%BA%BA%E6%B0%91%E5%85%AC%E5%9C%92%20%E6%88%90%E9%83%BD&callnative=1&src=trip-website
+                    - link "查證來源" [ref=e231] [cursor=pointer]:
+                      - /url: https://touch.travel.qunar.com/youji/7791863
+          - generic [ref=e233]:
+            - generic [ref=e234]: ⚠️
+            - generic [ref=e235]: 金沙遺址博物館閉館，不排官網：2025/12/5～2027/4/30 閉館。
+          - link "人民公園" [ref=e236] [cursor=pointer]:
+            - /url: https://uri.amap.com/search?keyword=%E4%BA%BA%E6%B0%91%E5%85%AC%E5%9C%92%20%E6%88%90%E9%83%BD&callnative=1&src=trip-website
+        - generic [ref=e239]:
+          - generic [ref=e240]:
+            - generic [ref=e241]: 17:45
+            - generic [ref=e242]: 🚕
+            - generic [ref=e243]: 計程車｜人民公園 → 飯店
+            - generic [ref=e244]: 交通
+          - paragraph [ref=e246]: 計程車約 7 分（OSRM 5.3 km，無路況）；步行要 62 分（OSRM foot 4929 m），不建議；地鐵走法未查到。選 B 已在飯店就略過。日落 18:02～18:03。
+          - link "匯航岷源酒店（終點）" [ref=e247] [cursor=pointer]:
+            - /url: https://uri.amap.com/search?keyword=%E5%8C%AF%E8%88%AA%E5%B2%B7%E6%BA%90%E9%85%92%E5%BA%97%20%E6%88%90%E9%83%BD&callnative=1&src=trip-website
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - generic [ref=e252]: 18:30
+            - generic [ref=e253]: 🍢
+            - generic [ref=e254]: 晚餐｜馬路邊邊串串香（玉林店）
+            - generic [ref=e255]: 彈性
+            - generic [aria-hidden] [ref=e256]: A
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - generic [ref=e259]: 方案
+              - button "上一個方案" [disabled] [ref=e260]: ‹
+              - button "方案 A" [ref=e262] [cursor=pointer]: A
+              - button "下一個方案" [disabled] [ref=e263]: ›
+            - tabpanel "原訂行程" [ref=e266]:
+              - generic [ref=e267]:
+                - generic [ref=e268]: A
+                - text: 使用者想吃的串串
+              - generic [ref=e270]:
+                - paragraph [ref=e271]: 串串是小份的火鍋，竹籤串回桌燙，一個人好點。大眾點評 4.2（11,708 則，2026/11 查）；口味 4.1、環境 4.1、服務 4.2；玉林／芳草街串串香回頭客榜第 2 名；11:00～次日 01:00；人均 ¥71；玉洁西街 2 號附 2 號（7天優品酒店樓下）。12/13 公休、微辣鍋底未查到。
+                - paragraph [ref=e272]: 從飯店的步行時間未算（店家座標未查到；借用玉林四巷座標約 20 分，OSRM 1573 m）。
+                - paragraph [ref=e273]:
+                  - link "查證來源（大眾點評）" [ref=e274] [cursor=pointer]:
+                    - /url: https://www.dianping.com/shop/G5V49WBzzqauy6Uq
+          - link "馬路邊邊串串香（玉林店）" [ref=e275] [cursor=pointer]:
+            - /url: https://uri.amap.com/search?keyword=%E9%A9%AC%E8%B7%AF%E8%BE%B9%E8%BE%B9%E4%B8%B2%E4%B8%B2%E9%A6%99%E7%81%AB%E9%94%85(%E7%8E%89%E6%9E%97%E5%BA%97)%20%E6%88%90%E9%83%BD&callnative=1&src=trip-website
+      - generic [ref=e278]:
+        - heading "📍 今日相關地圖" [level=4] [ref=e279]
+        - link "🗺️ 在地圖上看這天" [ref=e281] [cursor=pointer]:
+          - /url: ../map/index.html?day=6
+  - generic [ref=e283]:
+    - link "💴 預算追蹤 依每日記帳（人民幣）" [ref=e284] [cursor=pointer]:
+      - /url: ../budget/index.html
+      - text: 💴 預算追蹤
+      - generic [ref=e285]: 依每日記帳（人民幣）
+    - link "✅ 行前 Check List 出發前逐項確認" [ref=e286] [cursor=pointer]:
+      - /url: ../checklist/index.html
+      - text: ✅ 行前 Check List
+      - generic [ref=e287]: 出發前逐項確認
+    - link "🗺️ 行程地圖 看整趟移動路線" [ref=e288] [cursor=pointer]:
+      - /url: ../map/index.html
+      - text: 🗺️ 行程地圖
+      - generic [ref=e289]: 看整趟移動路線
+  - contentinfo [ref=e290]:
+    - generic [ref=e291]:
+      - paragraph [ref=e292]: 成都之旅｜12/8 - 12/18
+      - paragraph [ref=e293]:
+        - link "高德地圖" [ref=e294] [cursor=pointer]:
+          - /url: https://www.amap.com/
+  - button "回到頂部" [ref=e295] [cursor=pointer]: ↑

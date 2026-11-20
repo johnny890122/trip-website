@@ -1,0 +1,42 @@
+<!-- spot-guide 範本：貼進 docs/<id>/guide/index.html，<id>、〔…〕換掉。樣式在 docs/assets/base.css「景點攻略頁」。
+     .g-n 號碼＝小地圖的圖釘：第一站「起」、最後一站「終」、中間照 spots/<id>.json 的 stops index（兩站合寫成「4·5」）。 -->
+    <section class="panel guide" id="〔景點 id〕">
+      <div class="panel-head"><h2>〔emoji〕 〔景點名〕</h2><span class="meta">Day 〔N〕 〔M/D〕 〔HH:MM〕</span></div>
+      <div class="panel-body">
+        <h3>目標</h3>
+        <p>① <b>〔必看點〕</b>：〔為什麼先去〕 <span class="star">★</span>　② 〔…〕。〔哪個門進、哪個門出〕。</p>
+
+        <h3>路線（〔HH:MM〕～〔HH:MM〕，步行共約 〔N〕 km、約 〔N〕 分）</h3>
+        <div class="g-map"><iframe src="../map/spot.html?id=〔景點 id〕&amp;embed=1" title="〔景點名〕路線" loading="lazy"></iframe></div>
+        <p class="src">官方園區地圖：<a href="〔網址〕" target="_blank" rel="noopener">〔頁面名〕</a>〔，圖檔不能下載，只放連結〕</p>
+        <ul class="g-stops">
+          <li><span class="g-n">起</span><b>〔HH:MM〕 〔入口〕</b>：〔怎麼走〕</li>
+          <li><span class="g-n">1</span><b>〔HH:MM〕 〔必看點〕</b> <span class="star">★</span>：〔看什麼〕（步行約 〔N〕 分）
+            <figure class="g-photo"><img src="../spots/〔景點 id〕/〔照片 id〕.jpg" alt="〔說明〕" loading="lazy"><figcaption>〔作者〕・<a href="〔授權網址〕" target="_blank" rel="noopener">〔授權〕</a>・<a href="〔Commons 網址〕" target="_blank" rel="noopener">Wikimedia Commons</a>（〔拍攝年月〕）</figcaption></figure></li>
+          <li><span class="g-n">2</span><b>〔HH:MM〕 〔必看點〕</b> <span class="star">★</span>：〔…〕
+            <span class="g-nophoto">沒有合格照片：<a href="〔有照片的攻略或圖片搜尋〕" target="_blank" rel="noopener">看照片 →</a></span></li>
+          <li><span class="g-n">終</span><b>〔HH:MM〕 〔出口〕</b>：〔接下一段交通〕</li>
+        </ul>
+        <p class="src">時刻是估算（步行用 OSRM，停留時間自己分配）；座標取自 OpenStreetMap。</p>
+
+        <h3>時間</h3>
+        <ul><li>〔最佳時段、場次、人潮；說法不同兩個都列〕</li></ul>
+
+        <!-- 只有行程卡還沒同步時才留這段 -->
+        <p>⚠️ <b>和行程卡不同</b>：〔…〕</p>
+
+        <h3>實用</h3>
+        <ul>
+          <li>〔門票、預約、園內交通要不要買〕</li>
+          <li>廁所：〔…〕；寄物：〔未查到〕</li>
+          <li>〔休館、局部閉館〕</li>
+        </ul>
+
+        <h3>吃的、文創</h3>
+        <ul>
+          <li>順路：〔…〕</li>
+          <li>不順路：〔…〕</li>
+        </ul>
+        <p class="src">來源：<a href="〔網址〕" target="_blank" rel="noopener">〔名稱〕</a>。筆記：〔檔名〕</p>
+      </div>
+    </section>

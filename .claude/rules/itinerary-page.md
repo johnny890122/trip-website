@@ -107,7 +107,8 @@ paths:
   - 作者與授權寫在每張照片下方，來源記在 `credits.json`；`loading="lazy"`
   - 小地圖：`<iframe src="../map/spot.html?id=<id>&embed=1" loading="lazy">`。Leaflet 只在 spot.html 載入，
     行程表本身不載入。停留點的**座標要自己查證**（Nominatim 對寺社的細部名稱常給同名的別處），
-    `node scripts/build-spots.js --trip <trip>` 用 OSRM 算步行路線寫入 `docs/<trip>/map/spots/<id>.json`（**不要手動編輯**）
+    `node scripts/build-spots.js --trip <trip>` 用 OSRM 算步行路線寫入 `docs/<trip>/map/spots/<id>.js`（**不要手動編輯**；分鐘＝距離 ÷ 80，`rebuild.js` 也會跑）
+  - 大景點的園內路線＋必看點照片＋詳細說明：用 `spot-guide` skill，寫在這趟的攻略頁 `docs/<trip>/guide/index.html`，`build-guide.js` 拆成單頁 `guide/<id>.html`（卡片連到單頁）
   - iframe 在那一天還沒顯示時尺寸是 0，spot.html 會在尺寸改變時重新 `fitBounds`；離線時隱藏地圖、顯示提示
   - 禁止轉載的官網**不存整頁副本**，只存 `網域_查證筆記.md`（見 `web-crawler` skill）
 - **複製這天行程**：`copyDay()` 匯出純文字（含日文地名）貼給旅伴；Clipboard API 失敗時退回 `execCommand`

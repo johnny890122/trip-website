@@ -1,4 +1,22 @@
-{"stops":[],"photos":[
+{"id":"panda","title":"成都大熊貓繁育研究基地","day":6,"date":"2026-12-13","sunset":"18:03",
+"gate":"南大門進、南大門出",
+"parkMap":{"url":"https://www.panda.org.cn/cn/service/sightseeingbus/","label":"官網 觀光車頁（附園區地圖）","note":"圖檔伺服器擋直接下載，不存副本、只放連結"},
+"stops":[
+{"name":"南大門","ja":"成都大熊猫繁育研究基地南大门","time":"08:00","lat":30.73509,"lon":104.14368,"desc":"開園就進；直走，金熊貓標識右轉下坡","photo":"panda-gate"},
+{"name":"天鵝湖","ja":"天鹅湖","time":"08:10","lat":30.73834,"lon":104.14468,"desc":"經過湖邊左轉，找「五號別墅」標識右轉進小路"},
+{"name":"大熊貓6號別墅（花花）","ja":"大熊猫6号别墅","time":"08:20","lat":30.73922,"lon":104.14096,"desc":"花花、和葉；小路盡頭左轉就是排隊處","must":true,"photo":"panda-hehua"},
+{"name":"大熊貓太陽產房","ja":"大熊猫太阳产房","time":"09:10","lat":30.74001,"lon":104.14092,"desc":"幼年熊貓；旁邊有礼品店、廁所","must":true,"photo":"panda-sun"},
+{"name":"小熊貓1號活動場","ja":"小熊猫1号活动场","time":"09:40","lat":30.73851,"lon":104.13962,"desc":"小熊貓放養區","photo":"panda-red"},
+{"name":"小熊貓2號活動場","ja":"小熊猫2号活动场","time":"10:05","lat":30.73961,"lon":104.13857,"desc":"小熊貓放養區"},
+{"name":"大熊貓1號別墅","ja":"大熊猫1号别墅","time":"10:20","lat":30.73970,"lon":104.13619,"desc":"成年熊貓（攻略寫蛋烘糕、熱乾麵，12 月住客未查到）"},
+{"name":"大熊貓7號別墅","ja":"大熊猫7号别墅","time":"10:45","lat":30.73729,"lon":104.14067,"desc":"往回走，順路"},
+{"name":"南大門","ja":"成都大熊猫繁育研究基地南大门","time":"11:15","lat":30.73509,"lon":104.14368,"desc":"11:15 前到，搭 408 路擺渡車"}
+],
+"photos":[
 {"id":"panda1","pick":"File:20260906 Giant Panda at Chengdu Research Base of Giant Panda Breeding image 4.jpg","label":"成都大熊貓繁育研究基地","cat":["Category:Chengdu Research Base of Giant Panda Breeding"],"q":["Chengdu Research Base of Giant Panda Breeding"]},
-{"id":"panda2","pick":"File:20260906 Red Panda at Chengdu Research Base of Giant Panda Breeding image 10.jpg","label":"成都大熊貓繁育研究基地","cat":["Category:Chengdu Research Base of Giant Panda Breeding"],"q":["Chengdu Research Base of Giant Panda Breeding"]}
+{"id":"panda2","pick":"File:20260906 Red Panda at Chengdu Research Base of Giant Panda Breeding image 10.jpg","label":"成都大熊貓繁育研究基地","cat":["Category:Chengdu Research Base of Giant Panda Breeding"],"q":["Chengdu Research Base of Giant Panda Breeding"]},
+{"id":"panda-gate","label":"南大門","cat":["Category:Entrances of Chengdu Research Base of Giant Panda Breeding"],"q":["Chengdu panda base south gate"],"photoNote":"Commons 只有西大門的照片，南大門沒有合格照片"},
+{"id":"panda-hehua","label":"花花（和花）","q":["He Hua giant panda","Hehua panda","和花 大熊猫"],"photoNote":"沒有合格照片（自由授權、2021-09 之後拍）"},
+{"id":"panda-sun","label":"大熊貓太陽產房","q":["Sun Nursery House Chengdu panda","panda nursery Chengdu Research Base"],"photoNote":"沒有合格照片"},
+{"id":"panda-red","pick":"File:20260906 Red Panda at Chengdu Research Base of Giant Panda Breeding image 11.jpg","label":"小熊貓","cat":["Category:Ailurus styani in Chengdu Research Base of Giant Panda Breeding"],"q":["red panda Chengdu Research Base"]}
 ]}

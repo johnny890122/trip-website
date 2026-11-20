@@ -12,10 +12,12 @@
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
-  fetch('spots/' + id + '.json', { cache: 'no-cache' })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(draw)
-    .catch(function () { fail('找不到這個景點的地圖資料'); });
+  // 用 <script> 載入 spots/<id>.js（build-spots.js 產生）：fetch() 在 file:// 會被擋
+  var s = document.createElement('script');
+  s.src = 'spots/' + id + '.js';
+  s.onload = function () { if (window.SPOT) draw(window.SPOT); else fail('找不到這個景點的地圖資料'); };
+  s.onerror = function () { fail('找不到這個景點的地圖資料'); };
+  document.head.appendChild(s);
 
   function draw(spot) {
     document.title = spot.title + '｜' + ((window.TRIP && window.TRIP.name) || '大阪・京都之旅');
