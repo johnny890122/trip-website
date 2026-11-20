@@ -1,4 +1,17 @@
-{"stops":[],"photos":[
+{"id":"sanxingdui","title":"三星堆博物館","day":5,"date":"2026-12-12","sunset":"18:03",
+"gate":"遊客中心進、遊客中心出（研判）",
+"stops":[
+{"name":"遊客中心","ja":"三星堆博物馆游客中心","time":"09:45","lat":31.00315,"lon":104.21993,"desc":"換票、刷證入館；免費寄存（單一來源）；搭 13 路約 10:10 才到"},
+{"name":"一號館（陳列館，新館）","ja":"三星堆博物馆陈列馆","time":"09:55","lat":31.00484,"lon":104.21768,"desc":"1 樓世紀逐夢 → 巍然王都 → 2 樓天地人神；約 2 小時 20 分（估算）","must":true,"photo":"sxd-mask"},
+{"name":"三號館（文物保護修復館）","ja":"三星堆文物保护与修复馆","time":"12:20","lat":31.00298,"lon":104.21614,"desc":"隔著玻璃看修復師工作；09:00～17:00"},
+{"name":"綜合館（文創、快遞站）","ja":"三星堆博物馆综合馆","time":"12:45","lat":31.00294,"lon":104.21731,"desc":"文創售賣區，買的東西可在館內快遞站寄走"},
+{"name":"遊客中心","ja":"三星堆博物馆游客中心","time":"13:15","lat":31.00315,"lon":104.21993,"desc":"出館；門口 13 路公交站、計程車"}
+],
+"photos":[
 {"id":"sanxingdui1","pick":"File:Sanxingdui Museum 20260512-1.jpg","label":"三星堆博物館","cat":["Category:Sanxingdui Museum"],"q":["Sanxingdui Museum"]},
-{"id":"sanxingdui2","pick":"File:New Sandingdui Museum 02.jpg","label":"三星堆博物館","cat":["Category:Sanxingdui Museum"],"q":["Sanxingdui Museum"]}
+{"id":"sanxingdui2","pick":"File:New Sandingdui Museum 02.jpg","label":"三星堆博物館","cat":["Category:Sanxingdui Museum"],"q":["Sanxingdui Museum"]},
+{"id":"sxd-figure","label":"青銅大立人像","cat":["Category:Large bronze standing figure of Sanxingdui"],"q":["Sanxingdui bronze standing figure","Sanxingdui standing figure"],"photoNote":"合格候選都是三星堆火車站前的複製雕像（別處），館內原件沒有合格照片"},
+{"id":"sxd-goldmask","pick":"File:Sanxingdui Gold Mask.jpg","label":"黃金面具","cat":["Category:Bronze heads in Sanxingdui"],"q":["Sanxingdui gold mask","Sanxingdui bronze head gold foil mask"]},
+{"id":"sxd-tree","label":"青銅神樹","cat":["Category:Bronze trees in Sanxingdui"],"q":["Sanxingdui bronze tree","Sanxingdui sacred tree"],"photoNote":"沒有合格照片（近五年、自由授權、橫式、寬 1920 以上）"},
+{"id":"sxd-mask","pick":"File:三星堆出土文物6.png","label":"青銅縱目面具","cat":["Category:Bronze masks in Sanxingdui"],"q":["Sanxingdui bronze mask protruding eyes","Sanxingdui bronze mask"]}
 ]}

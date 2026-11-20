@@ -1,0 +1,52 @@
+/* 地區簡介頁 docs/<id>/intro/index.html（scripts/build-intro.js 產生）。色票沿用 base.css 的 token。 */
+.in-filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 14px; }
+.in-filter {
+  font-family: var(--font); font-size: 0.78rem; font-weight: 600; cursor: pointer;
+  background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  border-radius: 999px; padding: 4px 12px;
+}
+.in-filter small { color: var(--muted); font-weight: 500; }
+.in-filter.is-on { background: var(--primary); border-color: var(--primary); color: #fff; }
+.in-filter.is-on small { color: inherit; }
+.in-filter:focus-visible { outline: 2px solid var(--secondary); outline-offset: 2px; }
+
+.in-days { font-weight: 500; letter-spacing: 0; text-transform: none; }
+.in-about ul { margin: 0; padding-left: 1.2em; font-size: 0.9rem; line-height: 1.7; }
+.in-cat { font-size: 0.95rem; margin: 18px 0 8px; }
+
+.in-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+.in-card, .in-slot {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; min-width: 0;
+}
+.in-slot { border-left: 4px solid var(--primary); }
+.in-hd { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; }
+.in-card h4, .in-slot h4 { margin: 0; font-size: 0.95rem; }
+.in-card p, .in-slot p { margin: 0; font-size: 0.86rem; line-height: 1.6; }
+.in-facts, .in-src { font-size: 0.78rem; color: var(--muted); line-height: 1.55; }
+.in-fit { font-size: 0.8rem; border-top: 1px dashed var(--border); padding-top: 6px; }
+.in-fit b { color: var(--primary); }
+
+.in-tag { font-size: 0.7rem; font-weight: 700; padding: 1px 7px; border-radius: 4px; white-space: nowrap; }
+.t-done { background: var(--surface-alt); color: var(--secondary); }
+.t-new { background: var(--surface-alt); color: var(--accent); }
+.t-want { background: var(--surface-alt); color: var(--ok); }
+.t-skip, .t-visited { background: var(--surface-alt); color: var(--muted); }
+.in-card[data-st="skip"], .in-card[data-st="visited"] { opacity: 0.72; }
+
+.in-pics { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 0.74rem; margin-top: auto; padding-top: 4px; }
+.in-pics span { color: var(--muted); }
+.in-pics a { text-decoration: none; border: 1px solid var(--border); border-radius: 999px; padding: 1px 9px; }
+
+.in-tbl { overflow-x: auto; }
+.in-tbl table { width: 100%; border-collapse: collapse; font-size: 0.82rem; background: var(--surface); border: 1px solid var(--border); }
+.in-tbl th, .in-tbl td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.in-tbl th { background: var(--surface-alt); color: var(--muted); font-weight: 600; }
+.in-tbl td:first-child { font-weight: 700; white-space: nowrap; }
+
+/* 篩選：body 上的 data-f 決定顯示哪一種狀態（intro.js 切換，不存設定） */
+body[data-f="done"] [data-st]:not([data-st="done"]),
+body[data-f="visited"] [data-st]:not([data-st="visited"]),
+body[data-f="skip"] [data-st]:not([data-st="skip"]),
+body[data-f="want"] [data-st]:not([data-st="want"]),
+body[data-f="new"] [data-st]:not([data-st="new"]) { display: none; }

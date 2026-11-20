@@ -181,7 +181,13 @@ async function download(id) {
 
     const res = await fetch(d.thumburl, { headers: { 'User-Agent': UA } });
     if (!res.ok) { console.log('✗ ' + p.id + '  下載失敗 HTTP ' + res.status); continue; }
-    const buf = Buffer.from(await res.arrayBuffer());
+    let buf = Buffer.from(await res.arrayBuffer());
+    // PNG 原檔的縮圖也是 PNG（文物照常見，約 1 MB）：存成 .jpg 前用 Pillow 轉成真的 JPEG（同 fetch-hero-photos.js）
+    if (buf.subarray(0, 4).toString('hex') === '89504e47') {
+      buf = require('child_process').execFileSync('python3', ['-c',
+        'import sys,io\nfrom PIL import Image\nim=Image.open(io.BytesIO(sys.stdin.buffer.read())).convert("RGB")\n'
+        + 'o=io.BytesIO();im.save(o,"JPEG",quality=85,progressive=True);sys.stdout.buffer.write(o.getvalue())'], { input: buf });
+    }
     fs.writeFileSync(path.join(outDir, p.id + '.jpg'), buf);
     credits.push({
       id: p.id, label: p.label, file: d.title.replace(/^File:/, ''),

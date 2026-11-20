@@ -24,8 +24,9 @@ const ROOT = process.env.CLAUDE_PROJECT_DIR || path.resolve(__dirname, '..', '..
 const STATE_DIR = path.join(ROOT, 'scripts', '.cache');   // 已在 .gitignore
 const TRIP = /^(?:docs\/(?:v2\/)?|trips\/)(\d{4}-\d{2})\//;
 const GENERATED = [/^docs\/v2\//, /^docs\/[^/]+\/map\/(places|routes)\.json$/, /^docs\/[^/]+\/map\/spots\//, /^docs\/[^/]+\/hero\//,
-  /^docs\/[^/]+\/guide\/(?!index\.html$)[^/]+\.html$/];   // 攻略單頁由 build-guide.js 從 guide/index.html 產生
-const REBUILD_INPUT = /^docs\/\d{4}-\d{2}\/|^trips\/\d{4}-\d{2}\/((routes|coords|attractions)\.json|spots\/)/;
+  /^docs\/[^/]+\/guide\/(?!index\.html$)[^/]+\.html$/,   // 攻略單頁由 build-guide.js 從 guide/index.html 產生
+  /^docs\/[^/]+\/intro\/index\.html$/];                    // 地區簡介由 build-intro.js 從 trips/<id>/intro/*.json 產生
+const REBUILD_INPUT = /^docs\/\d{4}-\d{2}\/|^trips\/\d{4}-\d{2}\/((routes|coords|attractions)\.json|spots\/|intro\/|CLAUDE\.md$)/;
 
 const PII = [
   ['電話', /(?:\+81|\+886)[-\s]?\d[\d\s-]{7,}\d|(?<![\d.])0\d{1,4}-\d{1,4}-\d{3,4}(?!\d)|(?<!\d)09\d{2}-?\d{3}-?\d{3}(?!\d)/g],
@@ -65,7 +66,7 @@ function deny(reason) { out({ hookSpecificOutput: { hookEventName: 'PreToolUse',
 function pre(ev) {
   const f = rel(ev.tool_input.file_path);
   if (GENERATED.some((re) => re.test(f))) {
-    return deny(f + ' 是腳本產生的（build-v2.js／build-places.js／build-routes.js／build-spots.js／build-guide.js／fetch-hero-photos.js），不要手改：改來源檔再跑 node scripts/rebuild.js');
+    return deny(f + ' 是腳本產生的（build-v2.js／build-places.js／build-routes.js／build-spots.js／build-guide.js／build-intro.js／fetch-hero-photos.js），不要手改：改來源檔再跑 node scripts/rebuild.js');
   }
   const m = f.match(TRIP);
   if (m && f.startsWith('docs/') && !(loadState(ev.session_id).loaded || []).includes(m[1])) {
@@ -144,6 +145,8 @@ function test() {
   assert.ok(!GENERATED.some((re) => re.test('docs/2026-11/final/index.html')));
   assert.ok(GENERATED.some((re) => re.test('docs/2026-12/guide/panda.html')));
   assert.ok(!GENERATED.some((re) => re.test('docs/2026-12/guide/index.html')));
+  assert.ok(GENERATED.some((re) => re.test('docs/2026-12/intro/index.html')));
+  assert.ok(REBUILD_INPUT.test('trips/2026-12/intro/chengdu.json') && REBUILD_INPUT.test('trips/2026-12/CLAUDE.md'));
   assert.strictEqual('trips/2026-11/coords.json'.match(TRIP)[1], '2026-11');
   assert.ok(!TRIP.test('trips/_template/site/final/index.html'));
   const blocked = (c) => /(?:docs|trips)\/\d{4}-\d{2}\//.test(c) && BASH_WRITE.test(c);

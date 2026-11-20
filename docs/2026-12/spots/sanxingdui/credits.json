@@ -24,5 +24,31 @@
     "width": 960,
     "height": 720,
     "bytes": 133270
+  },
+  {
+    "id": "sxd-goldmask",
+    "label": "黃金面具",
+    "file": "Sanxingdui Gold Mask.jpg",
+    "author": "Thoslee",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-09-29",
+    "source": "https://commons.wikimedia.org/wiki/File:Sanxingdui_Gold_Mask.jpg",
+    "width": 960,
+    "height": 720,
+    "bytes": 197841
+  },
+  {
+    "id": "sxd-mask",
+    "label": "青銅縱目面具",
+    "file": "三星堆出土文物6.png",
+    "author": "陳寅恪",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-07-30",
+    "source": "https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E6%96%87%E7%89%A96.png",
+    "width": 960,
+    "height": 720,
+    "bytes": 94579
   }
 ]

@@ -9,7 +9,7 @@
  * 改版時把 CACHE 的版本號 +1，舊快取會在 activate 時清掉。
  * hero 照片（約 11 MB）不預先快取，看過的才存。
  */
-const CACHE = 'site-v70';
+const CACHE = 'site-v79';
 
 const PRECACHE = [
   './',
@@ -32,6 +32,8 @@ const PRECACHE = [
   './assets/budget.css',
   './assets/budget.js',
   './assets/home.css',
+  './assets/intro.css',
+  './assets/intro.js',
   // 每一趟：首頁、各頁、地圖資料、頁首照片清單（加一趟時照這一段複製一份）
   './2026-12/index.html',
   './2026-12/hero/hero.js',
@@ -43,6 +45,7 @@ const PRECACHE = [
   './2026-12/map/routes.json',
   './2026-12/checklist/index.html',
   './2026-12/guide/index.html',
+  './2026-12/intro/index.html',
   // 攻略單頁（build-guide.js 產生；景點增減時這裡跟著改）
   ...['shibati', 'shanchengxiang', 'huguang', 'daijiaxiang', 'hongyadong', 'escalator', 'eling', 'liziba',
     'ciqikou', 'dufu', 'wuhou', 'yulin', 'sanxingdui', 'panda', 'cdmuseum'].map((id) => './2026-12/guide/' + id + '.html'),
