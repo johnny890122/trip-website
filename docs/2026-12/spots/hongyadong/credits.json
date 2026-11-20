@@ -24,5 +24,31 @@
     "width": 960,
     "height": 540,
     "bytes": 232346
+  },
+  {
+    "id": "hyd-bridge",
+    "label": "千廝門大橋人行道（夜）",
+    "file": "Qiansimen Bridge 20260507-2.jpg",
+    "author": "Suicasmo",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "taken": "2026-05-07",
+    "source": "https://commons.wikimedia.org/wiki/File:Qiansimen_Bridge_20260507-2.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 169166
+  },
+  {
+    "id": "hyd-1f",
+    "label": "從嘉陵江濱江路看洪崖洞（夜）",
+    "file": "Hongya Cave at night 20251027 (1).jpg",
+    "author": "DvTor8303",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "taken": "2025-10-27",
+    "source": "https://commons.wikimedia.org/wiki/File:Hongya_Cave_at_night_20251027_(1).jpg",
+    "width": 960,
+    "height": 638,
+    "bytes": 307985
   }
 ]

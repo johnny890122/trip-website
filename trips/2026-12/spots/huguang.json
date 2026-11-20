@@ -1,4 +1,13 @@
-{"stops":[],"photos":[
+{"id":"huguang","title":"湖廣會館＋東水門大橋","day":2,"date":"2026-12-09","sunset":"17:55",
+"gate":"入口位置未查到；出口搭電梯上東水門大橋，從北橋頭往小什字",
+"stops":[
+{"name":"湖廣會館","ja":"湖广会馆","time":"13:30","lat":29.56052,"lon":106.58272,"desc":"館內：移民博物館 → 禹王宮 → 渝州書院 → 廣東公所 → 齊安公所 → 雕刻博物館（點位用 OSM 範圍中心，入口位置未查到）","must":true,"photo":"huguang-in"},
+{"name":"東水門大橋（橋上看會館全景）","ja":"东水门大桥","time":"14:40","lat":29.56157,"lon":106.58308,"desc":"出口搭電梯上橋，從橋上往下拍會館全景","must":true,"photo":"huguang-bridge"},
+{"name":"東水門大橋北橋頭","ja":"东水门大桥北桥头扶梯","time":"15:00","lat":29.56222,"lon":106.58253,"desc":"15:00 從這裡步行往小什字"}
+],
+"photos":[
 {"id":"huguang1","pick":"File:2023-06-23 重慶湖廣會館 01.jpg","label":"湖廣會館","cat":["Category:Huguang Guild Hall (Chongqing)"],"q":["Huguang Guild Hall Chongqing"]},
-{"id":"dongshuimen1","pick":"File:Dongshuimen Bridge 20251028 (1).jpg","label":"東水門大橋","cat":["Category:Dongshuimen Bridge"],"q":["Dongshuimen Bridge Chongqing"]}
+{"id":"dongshuimen1","pick":"File:Dongshuimen Bridge 20251028 (1).jpg","label":"東水門大橋","cat":["Category:Dongshuimen Bridge"],"q":["Dongshuimen Bridge Chongqing"]},
+{"id":"huguang-in","pick":"File:Guangdong Association, Chongqing.jpg","label":"廣東公所","cat":["Category:Huguang Guild Hall (Chongqing)"],"q":["Huguang Guild Hall Chongqing","重庆湖广会馆","湖廣會館 重慶","禹王宫 重庆","齐安公所"]},
+{"id":"huguang-bridge","pick":"File:Dongshuimen Yangtze River Bridge with Huguang Huiguan.jpg","label":"東水門大橋與湖廣會館","photoNote":"沒有從橋上往下拍會館全景的合格照片；改用從會館內看大橋與會館黃牆的照片","cat":["Category:Dongshuimen Bridge","Category:Huguang Guild Hall (Chongqing)"],"q":["Huguang Guild Hall Dongshuimen Bridge","湖广会馆 东水门大桥"]}
 ]}

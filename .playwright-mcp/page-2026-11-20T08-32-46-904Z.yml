@@ -1,0 +1,202 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - img [ref=e4] [cursor=pointer]
+    - text:  
+    - generic [ref=e5]:
+      - textbox "搜索位置、公交站、地铁站" [ref=e6]
+      - generic [ref=e7]: 
+    - generic [ref=e9]: 
+  - generic [ref=e15]: 
+  - generic [ref=e19]:
+    - generic [ref=e20]:
+      - list [ref=e21]:
+        - listitem [ref=e22]:
+          - link [ref=e23] [cursor=pointer]:
+            - /url: javascript:void(0)
+        - listitem [ref=e24]:
+          - link [ref=e25] [cursor=pointer]:
+            - /url: javascript:void(0)
+        - listitem [ref=e26]:
+          - link [ref=e27] [cursor=pointer]:
+            - /url: javascript:void(0)
+      - generic [ref=e28] [cursor=pointer]: 
+      - generic [ref=e29]:
+        - generic [ref=e30] [cursor=pointer]: 
+        - generic [ref=e32]:
+          - paragraph [ref=e33]:
+            - text: 起
+            - textbox "请输入起点" [ref=e34]: 解放碑
+            - generic [ref=e35] [cursor=pointer]
+          - paragraph [ref=e36]:
+            - text: 终
+            - textbox "请输入终点" [ref=e37]: 洪崖洞
+            - generic [ref=e38] [cursor=pointer]
+          - paragraph [ref=e39]:
+            - link "清除路线" [ref=e40] [cursor=pointer]:
+              - /url: javascript:void(0)
+            - link "坐公交" [ref=e41] [cursor=pointer]:
+              - /url: javascript:void(0)
+    - generic [ref=e42]:
+      - text: 
+      - generic [ref=e44]:
+        - heading [level=4] [ref=e45]:
+          - text: 距离较短建议
+          - link "步行" [ref=e46] [cursor=pointer]:
+            - /url: javascript:void(0)
+        - paragraph [ref=e47]: 如果您在使用的过程中遇到问题，欢迎您的反馈
+        - paragraph [ref=e48]:
+          - link "意见和建议" [ref=e49] [cursor=pointer]:
+            - /url: http://map.amap.com/help/index.html?
+  - generic [ref=e54]:
+    - generic [ref=e55] [cursor=pointer]
+    - text:         
+  - generic [ref=e56]:
+    - iframe [ref=e57]
+    - generic: 50 公里
+    - generic [ref=e71]:
+      - text: ©2026 高德 - GS(2025)5996号 - 甲测资字11112528 -
+      - link "京ICP备2023020281号-12" [ref=e72] [cursor=pointer]:
+        - /url: https://beian.miit.gov.cn
+      - text: "-"
+      - link "京公网安备 11010502056787号" [ref=e74] [cursor=pointer]:
+        - /url: //beian.mps.gov.cn/#/query/webSearch?code=11010502056787
+      - text: "|"
+      - link "资质证照" [ref=e76] [cursor=pointer]:
+        - /url: https://a.amap.com/pc/static/page/info.html
+      - text: "|"
+      - link "协议与声明" [ref=e77] [cursor=pointer]:
+        - /url: https://map.amap.com/doc/serviceitem.html
+      - text: "|"
+      - link "开放平台" [ref=e78] [cursor=pointer]:
+        - /url: https://lbs.amap.com/
+      - text: "|"
+      - link "新增地点" [ref=e79] [cursor=pointer]:
+        - /url: https://map.amap.com/help/index.html?type=addpoi
+      - text: "|"
+      - link "意见反馈" [ref=e80] [cursor=pointer]:
+        - /url: https://map.amap.com/help/index.html
+      - text: "|"
+      - link "商户免费标注" [ref=e81] [cursor=pointer]:
+        - /url: http://bgc.amap.com?src=pcbottom
+      - text: "|"
+      - link "车机版" [ref=e82] [cursor=pointer]:
+        - /url: https://www.amapauto.com?src=pc_openapi
+      - text: "|"
+      - link "高德社会责任" [ref=e83] [cursor=pointer]:
+        - /url: https://cache.amap.com/activity/gaode_social_responsibility/index.html
+      - text: "|"
+      - link "网上有害信息举报" [ref=e84] [cursor=pointer]:
+        - /url: https://www.12377.cn/
+      - text: "|"
+      - link "涉未成年人举报" [ref=e85] [cursor=pointer]:
+        - /url: https://a.amap.com/pc/static/page/report.html
+      - text: "|"
+      - link "算法推荐举报" [ref=e86] [cursor=pointer]:
+        - /url: https://a.amap.com/pc/static/page/report.html
+      - text: "|"
+      - link "生活服务专项举报" [ref=e87] [cursor=pointer]:
+        - /url: https://a.amap.com/pc/static/page/report.html
+      - text: "|"
+      - link "廉正举报" [ref=e88] [cursor=pointer]:
+        - /url: https://a.amap.com/pc/static/page/report.html
+  - generic [ref=e89]:
+    - generic [ref=e94] [cursor=pointer]
+    - generic [ref=e98]:
+      - generic [ref=e99] [cursor=pointer]
+      - generic [ref=e100] [cursor=pointer]
+  - generic [ref=e106]:
+    - generic:
+      - link " 卫星" [ref=e107] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e108]: 
+        - generic [ref=e110]: 卫星
+      - link " 路况" [ref=e111] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e112]: 
+        - generic [ref=e114]: 路况
+      - link " 测距" [ref=e115] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e116]: 
+        - generic [ref=e118]: 测距
+      - link " 地铁" [ref=e119] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e120]: 
+        - generic [ref=e122]: 地铁
+      - link " 全屏" [ref=e123] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e124]: 
+        - generic [ref=e126]: 全屏
+      - link " 更多" [ref=e127] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e128]: 
+        - generic [ref=e130]: 更多
+  - generic [ref=e131]: 同步路线到手机
+  - generic [ref=e137]:
+    - generic [ref=e142] [cursor=pointer]: 体验新版
+    - generic [ref=e146]:
+      - generic [ref=e147] [cursor=pointer]
+      - generic [ref=e149]:
+        - generic [ref=e150]: 新版上线，骑行路线来了
+        - generic [ref=e151]: 界面焕新，等你体验～
+        - button "立即体验" [ref=e152] [cursor=pointer]
+  - generic [ref=e153]:
+    - generic [ref=e158] [cursor=pointer]: 下载APP
+    - generic [ref=e162]:
+      - generic [ref=e163] [cursor=pointer]
+      - generic [ref=e164]:
+        - generic [ref=e165]: 移动端
+        - generic [ref=e170]:
+          - paragraph [ref=e171]: 扫码下载 高德地图
+          - paragraph [ref=e172]: 高德地图 哪儿都熟
+  - generic [ref=e173]:
+    - generic [ref=e178] [cursor=pointer]:
+      - text: 台湾
+      - generic [ref=e179]: 
+    - generic [ref=e180]: 阴13/16℃
+    - text:  
+  - generic [ref=e185]:
+    - iframe [ref=e186]:
+      - generic [ref=f2e5]:
+        - generic [ref=f2e6]: 滑动下方滑块，通过后即可正常访问
+        - generic [ref=f2e7]:
+          - generic [ref=f2e11]:
+            - button "滑块" [ref=f2e12]: 
+            - generic [ref=f2e13] [cursor=pointer]: 請按住滑塊，拖動到最右邊
+          - paragraph
+          - generic [ref=f2e15]:
+            - generic "2171Z2YDujIYvsfUw9d-rQ|awAFrA|5P7Lzg_0|BpUnwg|0" [ref=f2e16]
+            - link "點我回饋 >" [ref=f2e18] [cursor=pointer]:
+              - /url: https://ditu.amap.com//service/nav/bus/_____tmd_____/page/feedback?rand=S3WxGHAgAt756EpznwfNzJq2AFA2qBNla3j6EINUS8We9dazM_iKElp8DwVSHZUevpC41Bx7RzivXIj9RnZgdg&x5secdata=xg276659672dacebdbjadb5ef5676603ba3218bec7d4c3d77ead1795163564a241885973a-453063730abaac2daa33b79a874de4e137c23dbc897aba2aad6b2__bx__ditu.amap.com%3A443%2Fservice%2Fnav%2Fbus&type=1&language=tw&ncInitSuccess=true
+            - paragraph
+    - generic [ref=e187] [cursor=pointer]: X
+  - generic [ref=e191]:
+    - button "关闭" [ref=e192] [cursor=pointer]
+    - generic [ref=e195]:
+      - generic [ref=e199]:
+        - heading "扫码登录" [level=2] [ref=e200]
+        - img "登录二维码" [ref=e204]
+        - generic [ref=e206]:
+          - paragraph [ref=e207]: 打开 高德APP 扫码登录
+          - paragraph [ref=e208]: 点击右上角「更多」进行「扫一扫」
+      - generic [ref=e209]:
+        - generic [ref=e210]: 短信登录
+        - generic [ref=e215]:
+          - generic [ref=e217]:
+            - generic [ref=e218]:
+              - generic [ref=e219]: "+86"
+              - textbox "请输入手机号" [ref=e224]
+            - generic [ref=e225]:
+              - textbox "请输入验证码" [ref=e226]
+              - button "获取验证码" [ref=e227] [cursor=pointer]
+          - button "立即登录" [disabled] [ref=e231]
+          - generic [ref=e232]:
+            - checkbox [ref=e233] [cursor=pointer]
+            - generic [ref=e234]:
+              - text: 我已阅读并同意
+              - link "《高德服务条款》" [ref=e235] [cursor=pointer]:
+                - /url: https://terms.alicdn.com/legal-agreement/terms/c_platform_service_agreement/20250314165704167/20250314165704167.html
+              - link "《高德地图隐私政策》" [ref=e236] [cursor=pointer]:
+                - /url: https://terms.alicdn.com/legal-agreement/terms/privacy_policy_full/20250314145608599/20250314145608599.html
+              - link "《高德账号服务个人信息处理规则》" [ref=e237] [cursor=pointer]:
+                - /url: https://terms.alicdn.com/legal-agreement/terms/privacy_other/20250313232240407/20250313232240407.html
+              - text: ，未注册的手机号将自动注册

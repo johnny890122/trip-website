@@ -53,7 +53,7 @@
 
   function build() {
     $('#sharedBody').innerHTML = SHARED.map(function (s) {
-      return amountRow('s-' + s.key, s.label);
+      return amountRow('s-' + s.key, s.label, s.sub);
     }).join('');
 
     $('#days').innerHTML = DAYS.map(function (d) {

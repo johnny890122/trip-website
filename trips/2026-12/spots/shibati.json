@@ -1,4 +1,15 @@
-{"stops":[],"photos":[
+{"id":"shibati","title":"十八梯傳統風貌區","day":2,"date":"2026-12-09","sunset":"17:55",
+"gate":"北入口（較場口側）進、厚慈街出（往山城巷）",
+"stops":[
+{"name":"十八梯北入口","ja":"十八梯北入口","time":"09:15","lat":29.55562,"lon":106.56926,"desc":"從上往下逛的起點；旁邊是山城記憶館"},
+{"name":"十八梯大隧道遺址","ja":"十八梯大隧道遗址","time":"09:25","lat":29.55534,"lon":106.56969,"desc":"重慶大轟炸的防空洞，裡面有展覽","must":true,"photo":"shibati-tunnel"},
+{"name":"古井春","ja":"古井春","time":"09:50","lat":29.55480,"lon":106.56938,"desc":"往下走經過的古井"},
+{"name":"十八梯主街","ja":"十八梯","time":"10:05","lat":29.55414,"lon":106.56892,"desc":"一路下石階，兩側是餐館、小店、茶館","must":true,"photo":"shibati-steps"},
+{"name":"厚慈街","ja":"厚慈街","time":"10:50","lat":29.55332,"lon":106.56865,"desc":"10:50 從這裡出，往山城巷"}
+],
+"photos":[
 {"id":"shibati1","pick":"File:Eighteen Stairs 20260507.jpg","label":"十八梯","cat":["Category:Shibati"],"q":["Shibati Chongqing","十八梯 重庆"]},
-{"id":"shibati2","pick":"File:Chongqing, January 22, 2024 (11).jpg","label":"十八梯","cat":["Category:Shibati"],"q":["Shibati Chongqing"]}
+{"id":"shibati2","pick":"File:Chongqing, January 22, 2024 (11).jpg","label":"十八梯","cat":["Category:Shibati"],"q":["Shibati Chongqing"]},
+{"id":"shibati-tunnel","label":"十八梯大隧道遺址","cat":["Category:Shibati"],"q":["Shibati air raid shelter","十八梯 防空洞","Chongqing tunnel massacre site Shibati"],"photoNote":"Commons 沒有大隧道遺址的合格照片（候選只有街景、觀音岩、館內地圖）"},
+{"id":"shibati-steps","label":"十八梯主街","cat":["Category:Shibati"],"q":["Shibati Chongqing","Eighteen Stairs Chongqing","十八梯 重庆"],"photoNote":"合格的主街照片只有 shibati1、shibati2，已經用在行程卡，不重複"}
 ]}

@@ -1,4 +1,11 @@
-{"stops":[],"photos":[
+{"id":"shanchengxiang","title":"山城巷","day":2,"date":"2026-12-09","sunset":"17:55",
+"gate":"領事巷（上端起點）進、中興路（下端終點）出",
+"stops":[
+{"name":"山城步道（起點・領事巷）","ja":"山城步道（起点）","time":"11:00","lat":29.555303,"lon":106.562056,"desc":"上端入口；從這裡往下走，全程以下坡為主"},
+{"name":"仁愛堂","ja":"仁爱堂（法国仁爱堂旧址）","time":"11:10","lat":29.553534,"lon":106.562919,"desc":"1900 年法國人建的教堂遺址；西北邊是仁愛堂荒野公園","must":true},
+{"name":"山城步道（終點・中興路）","ja":"山城步道（终点）","time":"11:50","lat":29.552897,"lon":106.565342,"desc":"下端出口在中興路；接步行去午餐"}
+],
+"photos":[
 {"id":"shanchengxiang1","pick":"File:Shancheng Alley, Chongqing.jpg","label":"山城巷","cat":["Category:Shanchengxiang"],"q":["Shancheng Alley Chongqing","山城巷 重庆"]},
-{"id":"shanchengxiang2","label":"山城巷","cat":["Category:Shanchengxiang"],"q":["Shancheng Alley Chongqing"]}
+{"id":"shanchengxiang-renai","label":"仁愛堂","cat":["Category:Former site of Ren'ai Church"],"q":["Ren'ai Church Chongqing","仁爱堂 重庆"],"photoNote":"Commons 分類只有 4 張 2023-06 的直式照片，不符合橫式標準，沒有合格照片"}
 ]}

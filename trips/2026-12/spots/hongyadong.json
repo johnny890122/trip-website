@@ -1,4 +1,15 @@
-{"stops":[],"photos":[
+{"id":"hongyadong","title":"洪崖洞夜景","day":2,"date":"2026-12-09","sunset":"17:55",
+"gate":"11 樓滄白路進、11 樓滄白路出（樓內往下走到 1 樓，搭樓內電梯回 11 樓）",
+"stops":[
+{"name":"11 樓滄白路入口","ja":"洪崖洞 11楼 沧白路入口","time":"19:45","lat":29.564918,"lon":106.575415,"desc":"晚餐後從臨江支路走過來；從這裡逐層往下逛"},
+{"name":"1 樓嘉濱路（濱江路）","ja":"嘉滨路洪崖洞","time":"20:20","lat":29.564811,"lon":106.573151,"desc":"樓內走到 1 樓出來，回頭看整棟亮燈","photo":"hyd-1f"},
+{"name":"11 樓城市陽台","ja":"嘉陵江观景点","time":"20:30","lat":29.565045,"lon":106.575578,"desc":"搭樓內電梯回 11 樓；看嘉陵江與千廝門大橋"},
+{"name":"千廝門大橋人行道","ja":"千厮门大桥","time":"20:40","lat":29.567326,"lon":106.575681,"desc":"走上橋，回頭俯看洪崖洞全景","must":true,"photo":"hyd-bridge"},
+{"name":"11 樓滄白路入口","ja":"洪崖洞 11楼 沧白路入口","time":"21:00","lat":29.564918,"lon":106.575415,"desc":"走回橋頭，接步行回解放碑住宿"}
+],
+"photos":[
 {"id":"hongyadong1","pick":"File:20250521 Hongyadong (223429).jpg","label":"洪崖洞","cat":["Category:Hongyadong"],"q":["Hongyadong Chongqing"]},
-{"id":"hongyadong2","pick":"File:202308 Hongya Cave at night from Qiansimen Bridge.jpg","label":"洪崖洞","cat":["Category:Hongyadong"],"q":["Hongyadong Chongqing"]}
+{"id":"hongyadong2","pick":"File:202308 Hongya Cave at night from Qiansimen Bridge.jpg","label":"洪崖洞","cat":["Category:Hongyadong"],"q":["Hongyadong Chongqing"]},
+{"id":"hyd-bridge","pick":"File:Qiansimen Bridge 20260507-2.jpg","label":"千廝門大橋人行道（夜）","cat":["Category:Hongya Cave","Category:Qiansimen Bridge"],"q":["Hongya Cave night","Hongyadong night Qiansimen"]},
+{"id":"hyd-1f","pick":"File:Hongya Cave at night 20251027 (1).jpg","label":"從嘉陵江濱江路看洪崖洞（夜）","cat":["Category:Hongya Cave at night"],"q":["Hongya Cave at night"]}
 ]}

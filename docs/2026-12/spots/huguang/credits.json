@@ -24,5 +24,31 @@
     "width": 960,
     "height": 659,
     "bytes": 285747
+  },
+  {
+    "id": "huguang-in",
+    "label": "廣東公所",
+    "file": "Guangdong Association, Chongqing.jpg",
+    "author": "HoweyYuan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2024-07-20",
+    "source": "https://commons.wikimedia.org/wiki/File:Guangdong_Association,_Chongqing.jpg",
+    "width": 960,
+    "height": 720,
+    "bytes": 169077
+  },
+  {
+    "id": "huguang-bridge",
+    "label": "東水門大橋與湖廣會館",
+    "file": "Dongshuimen Yangtze River Bridge with Huguang Huiguan.jpg",
+    "author": "HoweyYuan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2024-07-20",
+    "source": "https://commons.wikimedia.org/wiki/File:Dongshuimen_Yangtze_River_Bridge_with_Huguang_Huiguan.jpg",
+    "width": 960,
+    "height": 720,
+    "bytes": 194511
   }
 ]
