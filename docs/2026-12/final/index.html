@@ -31,7 +31,6 @@
         <a class="tb-link" href="../index.html">← 回首頁</a>
         <a class="tb-link" href="../map/index.html">🗺️ 地圖</a>
         <a class="tb-link" href="../intro/index.html">🗺️ 簡介</a>
-        <button id="jaToggle" type="button" aria-pressed="false" onclick="toggleJa()">🇯🇵 顯示日文地名</button>
         <button id="themeToggle" type="button" onclick="cycleTheme()">🌗 主題</button>
         <button id="copyDayBtn" type="button" onclick="copyDay()">📋 複製這天行程</button>
       </div>
@@ -41,10 +40,10 @@
   <!-- ====== FLIGHT BANNER ====== -->
   <div class="flight-banner">
     <div class="flight-row">
-      <div class="flight-item"><span>🛫</span><span><strong>去程 12/8 國航直飛（暫定，未訂）</strong> 19:25<span class="fb-ap"> TPE</span> → 23:00<span class="fb-ap"> CKG</span></span></div>
+      <div class="flight-item"><span>🛫</span><span><strong>去程 12/8 國航 CA410 直飛</strong> 19:25<span class="fb-ap"> TPE T2</span> → 23:00<span class="fb-ap"> CKG T3</span></span></div>
     </div>
     <div class="flight-row">
-      <div class="flight-item"><span>🛬</span><span><strong>回程 12/19 東航（暫定，未訂；浦東轉機）</strong> 08:00<span class="fb-ap"> TFU</span> → 14:00<span class="fb-ap"> TPE</span></span></div>
+      <div class="flight-item"><span>🛬</span><span><strong>回程 12/19 東航 MU5442＋MU5007（浦東轉機，行李直掛）</strong> 07:00<span class="fb-ap"> TFU T2</span> → 14:00<span class="fb-ap"> TPE T2</span></span></div>
     </div>
   </div>
 
@@ -57,6 +56,12 @@
       <button role="tab" aria-selected="false" aria-controls="day-4" onclick="showDay(4)" id="nav-4">DAY 4<br><small>12/11 (五)</small></button>
       <button role="tab" aria-selected="false" aria-controls="day-5" onclick="showDay(5)" id="nav-5">DAY 5<br><small>12/12 (六)</small></button>
       <button role="tab" aria-selected="false" aria-controls="day-6" onclick="showDay(6)" id="nav-6">DAY 6<br><small>12/13 (日)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-7" onclick="showDay(7)" id="nav-7">DAY 7<br><small>12/14 (一)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-8" onclick="showDay(8)" id="nav-8">DAY 8<br><small>12/15 (二)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-9" onclick="showDay(9)" id="nav-9">DAY 9<br><small>12/16 (三)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-10" onclick="showDay(10)" id="nav-10">DAY 10<br><small>12/17 (四)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-11" onclick="showDay(11)" id="nav-11">DAY 11<br><small>12/18 (五)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-12" onclick="showDay(12)" id="nav-12">DAY 12<br><small>12/19 (六)</small></button>
     </div>
   </nav>
 
@@ -84,11 +89,11 @@
             <div class="tl-header">
               <span class="tl-time">17:25</span>
               <span class="tl-icon">🚌</span>
-              <span class="tl-title">到桃園機場</span>
+              <span class="tl-title">到桃園機場 T2</span>
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
-              <p>起飛前約 2 小時到機場。託運行李 1 件 23 kg（國航 CA410，使用者提供）；報到櫃檯開放時間未查到，出發前看航空公司通知。</p>
+              <p>起飛前約 2 小時到機場。託運行李 1 件 23 kg（國航 CA410）；報到櫃檯開放時間未查到，出發前看航空公司通知。</p>
             </div>
           </div>
 
@@ -96,14 +101,11 @@
             <div class="tl-header">
               <span class="tl-time">19:25</span>
               <span class="tl-icon">✈️</span>
-              <span class="tl-title">國航 桃園 → 重慶江北 23:00 直飛（暫定，未訂）</span>
+              <span class="tl-title">國航 CA410｜桃園 T2 → 重慶江北 T3 23:00 直飛</span>
               <span class="tl-kind main">主行程</span>
             </div>
             <div class="tl-detail">
-              <p>訂票網站搜尋結果：國航直飛 TPE 19:25 → CKG 23:00，3 小時 35 分（2026-11-20 截圖；票價記在預算頁）。截圖沒寫班號，週二桃園 → 重慶的直飛只查到 CA410（flightmapper 寫 19:20 → 23:05，落地 T3），應是同一班，訂票時看班號與航廈。</p>
-            </div>
-            <div class="tl-tips">
-              <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>錯過這班</b><br>週二沒有別的直飛；12/9（三）有國航 CA410 或川航 3U3784（1209_航班 查證筆記，第三方班表），要重訂，12/9 的行程整天順延。</span></div>
+              <p>CA410 桃園 T2 19:25 → 重慶江北 T3 23:00，3 小時 35 分。</p>
             </div>
           </div>
 
@@ -111,21 +113,21 @@
             <div class="tl-header">
               <span class="tl-time">23:40</span>
               <span class="tl-icon">🚕</span>
-              <span class="tl-title">滴滴／計程車｜江北機場 T3 約 23:40（估算）→ 解放碑</span>
+              <span class="tl-title">滴滴／計程車｜江北機場 T3 約 23:40（估算）→ 國貿格蘭大酒店</span>
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>23:00 落地後，入境、領行李的時間未查到（估算至少 23:40 才出得來）。地鐵 10 號線末班約 22:30～23:00，搭不到。</li>
+                <li>23:00 落地後先開網路：行動數據選 eSIM、打開「數據漫遊」（叫滴滴要用）。入境、領行李的時間未查到（估算至少 23:40 才出得來）。地鐵 10 號線末班約 22:30～23:00，搭不到。</li>
                 <li>T3 的網約車在抵達廳對面的地下專屬停車區上車（wanderinchina）。</li>
-                <li>機場 → 解放碑約 28 km；OSRM 開車 27 分（無車流），wanderinchina 寫 40～60 分（視交通）。</li>
-                <li>車資兩說：舊指南計程車約 ¥50、30 分；2026 指南計程車 ¥60～120（深夜另加）、滴滴 ¥70～110；自己用去哪兒夜間費率估約 ¥69（估算）。</li>
+                <li>機場 → 飯店（渝中區青年路 66 號）：高德計程車約 ¥71、約 44 分（2026-11-25 週三 19:12 查）；機場 → 解放碑開車約 43～46 分（30.9～35.5 km，11-20 週五 21:47 查）；wanderinchina 寫 40～60 分（視交通）。</li>
+                <li>車資兩說：舊指南計程車約 ¥50、30 分；2026 指南計程車 ¥60～120（深夜另加）、滴滴 ¥70～110；自己用去哪兒夜間費率估約 ¥69（估算）。高德估計程車約 ¥73：週五傍晚尖峰約 1 小時 13 分、週五 21:47 約 44 分（2026-11-20 查、起點是機場範圍中心）。</li>
                 <li>備案：機場快線 K01 ¥15 到解放碑（國泰廣場），運行至末班航班到達後 30 分；官方時刻未查到，要現場確認。</li>
               </ol>
             </div>
             <div class="tl-tips">
-              <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>深夜到站</b><br>23:40 出來，車程 27～60 分，預計約 00:30～00:45 入住（估算），住宿要有 24 小時櫃檯。</span></div>
+              <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>深夜到站</b><br>23:40 出來，車程約 44 分（高德晚上 21:47 查），預計約 00:25～00:45 入住（估算）；若像高德傍晚尖峰估的 73 分，約 00:55 才到。飯店櫃檯 24 小時。</span></div>
             </div>
           </div>
 
@@ -133,15 +135,15 @@
             <div class="tl-header">
               <span class="tl-time">00:45</span>
               <span class="tl-icon">🏨</span>
-              <span class="tl-title">入住｜重慶住宿（解放碑附近，未定）</span>
+              <span class="tl-title">入住｜重慶國貿格蘭大酒店</span>
               <span class="tl-kind main">主行程</span>
             </div>
             <div class="tl-detail">
-              <p>約 00:30～00:45 入住（跨日，時間為估算）。住宿還沒訂，排行程先以解放碑為起點；要能接待台胞證、有健身房（或附近可單次付費）、24 小時櫃檯。候選與房價見查證筆記。</p>
+              <p>約 00:30～00:45 入住（跨日，時間為估算；路況差最晚約 00:55）。12/8～11 住 3 晚（Booking 預訂）。渝中區青年路 66 號，解放碑旁；臨江門站步行約 260 m、較場口站約 350 m（攜程）。五星；免費健身室、恆溫泳池、免費行李寄存（攜程設施）；攜程 <b>4.7</b>（5,149 則，2026/11 查）。櫃檯 24 小時；退房時間未查到，看訂房訊息。</p>
             </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=解放碑 重慶" target="_blank" rel="noopener">
+            <a class="map-link" href="https://maps.google.com/maps?q=重庆国贸格兰大酒店 重慶" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              重慶住宿（解放碑附近）
+              重慶國貿格蘭大酒店
             </a>
           </div>
 
@@ -177,13 +179,13 @@
             <div class="tl-header">
               <span class="tl-time">08:50</span>
               <span class="tl-icon">🚶</span>
-              <span class="tl-title">步行｜重慶住宿（解放碑）→ 十八梯</span>
+              <span class="tl-title">步行｜飯店 → 十八梯</span>
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>從解放碑一帶步行約 13 分（OSRM 1041 m；OSRM 不算爬坡，重慶高低差大，<b>實際更久</b>）。</li>
+                <li>從飯店步行約 17 分（高德 808 m，含坡；08:50 出發約 09:07 到）。</li>
               </ol>
             </div>
           </div>
@@ -200,7 +202,7 @@
                 <figure><img src="../spots/shibati/shibati1.jpg" alt="十八梯" loading="lazy"><figcaption>十八梯<small>Suicasmo・<a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>・<a href="https://commons.wikimedia.org/wiki/File:Eighteen_Stairs_20260507.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
                 <figure><img src="../spots/shibati/shibati2.jpg" alt="十八梯" loading="lazy"><figcaption>十八梯<small>メイド理世・<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>・<a href="https://commons.wikimedia.org/wiki/File:Chongqing,_January_22,_2024_(11).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
               </div></div>
-              <p>傳統風貌區，渝中區中興路 1 號，較場口站有十八梯出口，出來就在上方（兩篇遊記）。全年全天開放、免費（攜程）；晚上亮燈較好看（遊記）。遊記建議 2～3 小時含爬坡（年份不明），<b>這裡排約 1.5 小時</b>（09:15～10:50），厚慈街出來往山城巷要往上走（研判）。</p>
+              <p>傳統風貌區，渝中區中興路 1 號，較場口站有十八梯出口，出來就在上方（兩篇遊記）。全年全天開放、免費（攜程）；晚上亮燈較好看（遊記）。遊記建議 2～3 小時含爬坡（年份不明），<b>這裡排約 1.5 小時</b>（09:15～10:45），厚慈街出來往山城巷要往上走（研判）。</p>
               <p>來源：<a href="https://gs.ctrip.com/html5/you/sight/chongqing158/5717709.html" target="_blank" rel="noopener">攜程十八梯</a>（二手）。</p>
             </div>
             <div class="tl-tips">
@@ -223,11 +225,11 @@
               <div class="spot-media"><div class="spot-photos">
                 <figure><img src="../spots/shanchengxiang/shanchengxiang1.jpg" alt="山城巷" loading="lazy"><figcaption>山城巷<small>HoweyYuan・<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>・<a href="https://commons.wikimedia.org/wiki/File:Shancheng_Alley,_Chongqing.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
               </div></div>
-              <p>十八梯 → 山城巷步行 10 分（OSRM 806 m）。渝中南紀門，中興路至領事巷，幾乎全為梯步；攜程標全年全天開放，整條巷免費未查到明文；建議停留未查到。</p>
+              <p>十八梯（厚慈街）→ 山城巷上端（領事巷）步行約 22 分（高德 988 m，含上坡；10:45 出發約 11:07 到，山城巷少逛幾分鐘，11:50 照樣出來）。渝中南紀門，中興路至領事巷，幾乎全為梯步；攜程標全年全天開放，整條巷免費未查到明文；建議停留未查到。</p>
               <p>來源：<a href="https://gs.ctrip.com/html5/you/sight/chongqing158/112649984.html" target="_blank" rel="noopener">攜程山城巷</a>（二手）。</p>
             </div>
             <div class="tl-tips">
-              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>攻略：從領事巷往下走</b><br>仁愛堂 → 坝坝茶 → 懸崖棧道 → 中興路出口；仁愛堂旁白铁MAKER 有江景露台（單一來源）。<a href="../guide/shanchengxiang.html">看完整路線與店家 →</a></span></div>
+              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>從領事巷往下走，在中興路出來；必看仁愛堂、懸空棧道 ★</b><a href="../guide/shanchengxiang.html">看路線地圖與店家 →</a></span></div>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=山城巷 重慶" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -239,21 +241,21 @@
             <div class="tl-header">
               <span class="tl-time">11:50</span>
               <span class="tl-icon">🚶</span>
-              <span class="tl-title">步行｜山城巷 → 午餐（A 尘香約 19 分；B 饭江湖約 35 分）</span>
+              <span class="tl-title">步行｜山城巷 → 午餐（A 尘香約 22 分；B 饭江湖約 40 分）</span>
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>方案 A 尘香（解放碑新華路）：山城巷 → 尘香步行 1492 m ÷ 80 = 19 分（OSRM，不算爬坡，實際更久）。午餐後尘香 → 湖廣會館步行 1470 m = 18 分（OSRM），13:10 前後出發。</li>
-                <li>方案 B 饭江湖（湖廣會館旁）：山城巷 → 饭江湖步行 2781 m = 35 分；山城巷 → 湖廣會館 2956 m = 37 分（OSRM，坡路實際更久）。</li>
+                <li>方案 A 尘香（解放碑新華路）：山城巷中興路出口 → 尘香步行約 22 分（高德 1.1 km，含坡），11:50 出發約 12:12 到。午餐後尘香 → 湖廣會館步行約 31 分（高德 1.6 km），<b>12:58 前出發</b>才能 13:30 到；不想走可叫車（高德估約 ¥17）。</li>
+                <li>方案 B 饭江湖（湖廣會館旁）：山城巷中興路出口 → 饭江湖步行約 40 分（高德 2.3 km），約 12:30 到；→ 湖廣會館約 45 分（高德 2.5 km）。</li>
               </ol>
             </div>
           </div>
 
           <div class="timeline-item is-flex is-suggest">
             <div class="tl-header">
-              <span class="tl-time">12:30</span>
+              <span class="tl-time">12:15</span>
               <span class="tl-icon">🍲</span>
               <span class="tl-title">午餐｜尘香(创汇首座店)</span>
               <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
@@ -262,11 +264,11 @@
               <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
               <div class="plans-viewport">
                 <div class="plans-track">
-                  <div class="plan is-active" data-i="0" data-icon="🍲" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>午餐｜尘香(创汇首座店)</span><div class="plan-head"><span class="plan-tag">A</span>川菜，山城巷步行約 19 分</div><div class="plan-body"><div class="tl-detail">
-              <p>川菜。⭐ 攜程 <b>4.7</b>（438 則，2026/11 查）；🕐 11:30-14:30、17:30-22:00（午餐最晚 14:30）；🎫 人均約 ¥104；📍 新华路388号创汇首座LG层。山城巷 → 此店步行約 19 分（OSRM 1492 m），此店 → 湖廣會館約 18 分（OSRM 1470 m）。⚠️ 微辣、單人份量未查到。</p>
+                  <div class="plan is-active" data-i="0" data-icon="🍲" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>午餐｜尘香(创汇首座店)</span><div class="plan-head"><span class="plan-tag">A</span>川菜，山城巷步行約 15 分</div><div class="plan-body"><div class="tl-detail">
+              <p>川菜。⭐ 攜程 <b>4.7</b>（438 則，2026/11 查）；🕐 11:30-14:30、17:30-22:00（午餐最晚 14:30）；🎫 人均約 ¥104；📍 新华路388号创汇首座LG层。山城巷中興路出口 → 此店步行約 22 分（高德 1.1 km），此店 → 湖廣會館約 31 分（高德 1.6 km），12:58 前吃完出發。⚠️ 微辣、單人份量未查到。</p>
               <p><a href="https://gs.ctrip.com/html5/you/foods/158/5425543.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
             </div></div></div>
-                  <div class="plan" data-i="1" data-icon="🥘" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>午餐｜饭江湖·江湖菜(湖广会馆店)</span><div class="plan-head"><span class="plan-tag">B</span>江湖菜，在湖廣會館旁</div><div class="plan-body"><p>直接走到湖廣會館旁吃，午餐後不用再走。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">不走上一張交通卡的 A 路線：山城巷 → 湖廣會館一帶步行約 37 分（OSRM 2956 m，坡路實際更久）；飯江湖在湖廣會館旁（約 2 分，OSRM 175 m）。</p></div><div class="plan-ref"><div class="pr-name">饭江湖·江湖菜(湖广会馆店)</div><div class="pr-feat">江湖菜</div><div class="pr-facts">⭐ 攜程 <b>4.4</b>（78 則，2026/11 查）<br>🕐 11:00-15:00、17:00-21:00<br>🎫 人均約 ¥64<br>📍 朝天门街道长江滨江路芭蕉园6号<br>⚠️ 第三方旅遊站說冬天店內無暖氣、菜單無圖（摘要）；微辣、單人份量未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=饭江湖·江湖菜(湖广会馆店) 重慶" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/158/5417794.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🥘" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>午餐｜饭江湖·江湖菜(湖广会馆店)</span><div class="plan-head"><span class="plan-tag">B</span>江湖菜，在湖廣會館旁</div><div class="plan-body"><p>直接走到湖廣會館旁吃，午餐後不用再走。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">不走上一張交通卡的 A 路線：山城巷中興路出口 → 饭江湖步行約 40 分（高德 2.3 km，含坡）；吃完走到湖廣會館約 6 分（高德 271 m）。</p></div><div class="plan-ref"><div class="pr-name">饭江湖·江湖菜(湖广会馆店)</div><div class="pr-feat">江湖菜</div><div class="pr-facts">⭐ 攜程 <b>4.4</b>（78 則，2026/11 查）<br>🕐 11:00-15:00、17:00-21:00<br>🎫 人均約 ¥64<br>📍 朝天门街道长江滨江路芭蕉园6号<br>⚠️ 第三方旅遊站說冬天店內無暖氣、菜單無圖（摘要）；微辣、單人份量未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=饭江湖·江湖菜(湖广会馆店) 重慶" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/158/5417794.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
                 </div>
               </div>
             </div>
@@ -305,14 +307,14 @@
             <div class="tl-header">
               <span class="tl-time">15:00</span>
               <span class="tl-icon">🚶</span>
-              <span class="tl-title">步行｜湖廣會館 → 小什字 → 回解放碑住宿</span>
+              <span class="tl-title">步行｜湖廣會館 → 小什字 → 回飯店</span>
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>東水門大橋北橋頭 → 小什字步行約 7 分（OSRM 537 m）。</li>
-                <li>小什字 → 解放碑住宿步行 11 分（OSRM 878 m）；也可在小什字搭 1 號線到較場口（1 站），再步行 10 分。</li>
+                <li>東水門大橋北橋頭 → 小什字步行約 8 分（高德 483 m）。</li>
+                <li>小什字 → 飯店步行約 22 分（高德 1.2 km），約 15:32 到飯店。</li>
               </ol>
             </div>
           </div>
@@ -329,14 +331,14 @@
               <div class="plans-viewport">
                 <div class="plans-track">
                   <div class="plan is-active" data-i="0" data-icon="🛋️" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>自由時間｜回住宿休息／健身房</span><div class="plan-head"><span class="plan-tag">A</span>休息，傍晚再出門</div><div class="plan-body"><div class="tl-detail">
-              <p>回住宿休息、泡腳，或用住宿的健身房（住宿要有健身房是這趟規則；住宿未定）。17:30 前出門去戴家巷，日落 17:55。</p>
+              <p>回飯店休息，或用飯店的免費健身室、恆溫泳池（攜程設施；開放時間未查到）。17:20 前出門去戴家巷，日落 17:55。</p>
             </div></div></div>
                 </div>
               </div>
             </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=解放碑 重慶" target="_blank" rel="noopener">
+            <a class="map-link" href="https://maps.google.com/maps?q=重庆国贸格兰大酒店 重慶" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              重慶住宿（解放碑附近）
+              重慶國貿格蘭大酒店
             </a>
           </div>
 
@@ -348,7 +350,7 @@
               <span class="tl-kind main">主行程</span>
             </div>
             <div class="tl-detail">
-              <p>從住宿步行約 7 分（OSRM 557 m）。全長約 750 m、高差約 60 m 的 Z 字形崖壁步道，24 小時開放、免費（遊記兩篇）。從上端臨江路的戴家巷口進，日落前到中段吊腳樓觀景台，再往東上臨江支路接晚餐（東側出口是研判，走不通就原路回老街）。日落 17:55，民用暮光結束 18:21（api.sunrise-sunset.org）。</p>
+              <p>從飯店步行約 12 分（高德 701 m）。全長約 750 m、高差約 60 m 的 Z 字形崖壁步道，24 小時開放、免費（遊記兩篇）。從上端臨江路的戴家巷口進，日落前到中段吊腳樓觀景台，再往東上臨江支路接晚餐（東側出口是研判，走不通就原路回老街）。日落 17:55，民用暮光結束 18:21（api.sunrise-sunset.org）。</p>
             </div>
             <div class="tl-tips">
               <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>從上往下到中段吊腳樓台看日落，往東出臨江支路接晚餐 ★</b><a href="../guide/daijiaxiang.html">看路線地圖與店家 →</a></span></div>
@@ -371,11 +373,11 @@
               <div class="plans-viewport">
                 <div class="plans-track">
                   <div class="plan is-active" data-i="0" data-icon="🍲" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>晚餐｜杨记隆府·江湖菜(重庆总店)</span><div class="plan-head"><span class="plan-tag">A</span>江湖菜，離戴家巷步行約 4 分</div><div class="plan-body"><div class="tl-detail">
-              <p>江湖菜。⭐ 攜程 <b>4.9</b>（1177 則，2026/11 查，留言 2024-12～2026-07）；🏅 攜程「2027全球100美食必打卡」；🕐 11:00-22:00；🎫 人均約 ¥80；📍 临江支路32号附7号。戴家巷 → 此店步行約 4 分（OSRM 355 m）。⚠️ 有等位（留言 2 則提排隊）；微辣、單人點法未查到。</p>
+              <p>江湖菜。⭐ 攜程 <b>4.9</b>（1177 則，2026/11 查，留言 2024-12～2026-07）；🏅 攜程「2027全球100美食必打卡」；🕐 11:00-22:00；🎫 人均約 ¥80；📍 临江支路32号附7号。戴家巷 → 此店步行約 8 分（高德 368 m）。⚠️ 有等位（留言 2 則提排隊）；微辣、單人點法未查到。</p>
               <p><a href="https://gs.ctrip.com/html5/you/foods/158/11896102.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
             </div></div></div>
                   <div class="plan" data-i="1" data-icon="🍲" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜古木枫老火锅(洪崖洞店)</span><div class="plan-head"><span class="plan-tag">B</span>火鍋，洪崖洞對面</div><div class="plan-body"><p>順路才排的火鍋；洪崖洞夜景就在對面。</p><div class="plan-ref"><div class="pr-name">古木枫老火锅(洪崖洞店)</div><div class="pr-feat">老火鍋</div><div class="pr-facts">⭐ 攜程 <b>5.0</b>（520 則，2026/11 查；攜程留言只有 2019～2020，評分不可靠）<br>🕐 10:00-次日00:00<br>🎫 人均約 ¥77<br>📍 临江支路66号泰安大厦负2楼（洪崖洞對面、铁板巷內50米）<br>⚠️ 單人小鍋、微辣：未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=古木枫老火锅(洪崖洞店) 重慶" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/158/20415312.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
-                  <div class="plan" data-i="2" data-icon="🍲" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>晚餐｜黄家码头老火锅(解放碑旗舰店)</span><div class="plan-head"><span class="plan-tag">C</span>火鍋，解放碑</div><div class="plan-body"><p>在解放碑五四路。<b>選此店會往回走約 10 分</b>：戴家巷 → 此店約 4 分（OSRM 297 m），吃完 → 洪崖洞約 7 分（OSRM 517 m）。</p><div class="plan-ref"><div class="pr-name">黄家码头老火锅(解放碑旗舰店)</div><div class="pr-feat">老火鍋</div><div class="pr-facts">⭐ 攜程 87 則、無評分數字（2026/11 查）<br>🕐 10:30-次日00:00<br>🎫 人均約 ¥96<br>📍 解放碑五四路28号赛格尔大厦第二层<br>⚠️ 鴛鴦鍋底可選（2025-05 點評，摘要）；單人小鍋、微辣未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=黄家码头老火锅(解放碑旗舰店) 重慶" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/158/21430001.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🍲" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>晚餐｜黄家码头老火锅(解放碑旗舰店)</span><div class="plan-head"><span class="plan-tag">C</span>火鍋，解放碑</div><div class="plan-body"><p>在解放碑五四路。<b>選此店會往回走</b>：戴家巷 → 此店約 5 分（高德 294 m），吃完 → 洪崖洞約 14 分（高德 550 m）。</p><div class="plan-ref"><div class="pr-name">黄家码头老火锅(解放碑旗舰店)</div><div class="pr-feat">老火鍋</div><div class="pr-facts">⭐ 攜程 87 則、無評分數字（2026/11 查）<br>🕐 10:30-次日00:00<br>🎫 人均約 ¥96<br>📍 解放碑五四路28号赛格尔大厦第二层<br>⚠️ 鴛鴦鍋底可選（2025-05 點評，摘要）；單人小鍋、微辣未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=黄家码头老火锅(解放碑旗舰店) 重慶" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/158/21430001.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
                 </div>
               </div>
             </div>
@@ -413,18 +415,18 @@
             <div class="tl-header">
               <span class="tl-time">21:00</span>
               <span class="tl-icon">🚶</span>
-              <span class="tl-title">步行｜洪崖洞 → 重慶住宿</span>
+              <span class="tl-title">步行｜洪崖洞 → 飯店</span>
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>洪崖洞 → 解放碑住宿步行約 10 分（OSRM 764 m）。</li>
+                <li>洪崖洞 → 飯店步行約 22 分（高德 998 m），約 21:22 到。</li>
               </ol>
             </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=解放碑 重慶" target="_blank" rel="noopener">
+            <a class="map-link" href="https://maps.google.com/maps?q=重庆国贸格兰大酒店 重慶" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              重慶住宿（終點）
+              重慶國貿格蘭大酒店（終點）
             </a>
           </div>
 
@@ -458,17 +460,17 @@
 
           <div class="timeline-item is-move transport">
             <div class="tl-header">
-              <span class="tl-time">08:15</span>
+              <span class="tl-time">08:10</span>
               <span class="tl-icon">🚇</span>
-              <span class="tl-title">重慶軌道 1 號線｜住宿 → 較場口 → 兩路口</span>
+              <span class="tl-title">重慶軌道 1 號線｜飯店 → 較場口 → 兩路口</span>
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>從解放碑住宿步行約 10 分到較場口站（OSRM 814 m，不算爬坡）。</li>
-                <li>搭 1 號線往沙坪壩／璧山方向 2 站（七星崗、兩路口），約 6 分（估算，2.9 分／站）。隨到隨搭，日常班距未查到。</li>
-                <li>兩路口站 → 高胖妹小面步行約 3 分（OSRM 252 m）。</li>
+                <li>從飯店走到較場口站 1 號口進站（攜程寫飯店離較場口站約 350 m）。</li>
+                <li>搭 1 號線往璧山方向 2 站（七星崗、兩路口），¥2（高德）。隨到隨搭，班距未查到。</li>
+                <li>兩路口站 → 高胖妹小面步行約 4 分（高德 246 m）。高德門到門約 31 分（步行合計約 1 km），08:10 出發約 08:41 到店。計程車約 ¥12、約 13 分（高德 2026-11-25 週三晚上查）。</li>
               </ol>
             </div>
           </div>
@@ -501,15 +503,15 @@
             <div class="tl-header">
               <span class="tl-time">09:15</span>
               <span class="tl-icon">🛗</span>
-              <span class="tl-title">皇冠大扶梯（順路，約 5 分）</span>
+              <span class="tl-title">皇冠大扶梯（下去再上來，約 20 分）</span>
               <span class="tl-kind main">主行程</span>
             </div>
             <div class="tl-detail">
-              <p>高胖妹 → 扶梯步行約 4 分（OSRM 355 m；去哪兒說 3～5 分）。全長 112 m、約 2 分 30 秒（搜尋摘要）。票價約 ¥2／趟（遊客點評，舊；有人說上下各 ¥2），只收現金或公交卡；官方現價未查到。營業時間三說：8:00–20:00（光明網 2026-09，華龍網轉載）、06:45–22:00（去哪兒）；保守用 8:00–20:00。預算不計。</p>
+              <p>高胖妹 → 扶梯上端步行約 3～11 分（OSRM 271 m；高德 590 m、11 分，扶梯上端在地下，兩邊算到的入口可能不同）；從上端搭下到菜園壩、再搭上來，回兩路口站 3／4 號口（出口兩說）。全長 112 m、單程約 2 分 30 秒（澎湃 2022-05）。票價兩說：¥2／趟（2026 英文指南兩篇）、免費（一篇）；官方現價未查到。付款：一篇寫乘車碼或現金（單一來源），備零錢。營業時間：官方日常 8:00–20:00（交通開投，華龍網 2026-09-23，原文核對）；另有 06:45–22:00、06:10–22:30 兩說。預算不計。</p>
               <p>來源：<a href="https://touch.travel.qunar.com/poi/7565502" target="_blank" rel="noopener">去哪兒</a>、<a href="https://m.gmw.cn/2026-09/23/content_1304567349.htm" target="_blank" rel="noopener">光明網</a>（二手）。</p>
             </div>
             <div class="tl-tips">
-              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>攻略</b><br>全程 2 分 30 秒；能不能掃碼付款未查到，備零錢或交通卡。<a href="../guide/escalator.html">看完整攻略 →</a></span></div>
+              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>從上端搭下到菜園壩、再搭上來，單程約 2 分 30 秒；備零錢</b><a href="../guide/escalator.html">看路線地圖 →</a></span></div>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=皇冠大扶梯 重慶" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -527,8 +529,10 @@
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>1 號線往沙坪壩方向 1 站到鵝嶺，約 3 分（估算）。</li>
-                <li>鵝嶺站 1 號口出，佛圖關公園南門（棧橋入口旁）約 100 m（去哪兒點評，舊）。</li>
+                <li>扶梯路線 09:35 結束時已在兩路口站 4 號口，不用另外走到站；站內走到月台的時間未查到。</li>
+                <li>1 號線往璧山方向 1 站到鵝嶺，約 3 分（估算）、¥2（高德）。</li>
+                <li>鵝嶺站 1 號口出，佛圖關公園南門（棧橋入口旁）約 100 m（去哪兒點評，舊）；約 09:50 到。高德的門到門 29 分是算到鵝嶺公園，不是這個入口。</li>
+                <li>09:55 開始要先排隊、到遊客服務點用台胞證預約，時間很緊；晚了就把扶梯縮成只搭一趟下去。</li>
               </ol>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=兩路口 重慶" target="_blank" rel="noopener">
@@ -545,12 +549,12 @@
               <span class="tl-kind main">主行程</span>
             </div>
             <div class="tl-detail">
-              <p><b>抵達先去遊客服務點預約，排不到就走計畫B。</b>棧橋 9:00–18:00、免費（新華網 2025-11-12，本地寶 2026-10-28）；全長 460 m。<b>實名預約</b>：微信公眾號「渝中公園」或小程序「鵝嶺公園」，持台胞證者要到遊客服務點預約，成功後憑 QR 進入；<b>服務點位置與當天名額未查到</b>。全線（棧橋＋鵝嶺公園＋二廠＋三層馬路＋李子壩）約 2.5 小時（本地寶，二手）。週一停運只有摘要，12/10 是週四不受影響。出口在鵝嶺公園爬山廊旁。</p>
+              <p><b>抵達先在入口排隊、現場掃碼登記（台胞證要到遊客服務點預約），排不到就走計畫B。</b>棧橋 9:00–18:00、免費（新華網 2025-11-12，本地寶 2026-10-28）；全長 460 m。<b>實名預約</b>：微信公眾號「渝中公園」或小程序「鵝嶺公園」，持台胞證者要到遊客服務點預約，成功後憑 QR 進入；<b>服務點位置與當天名額未查到</b>。全線（棧橋＋鵝嶺公園＋二廠＋三層馬路＋李子壩）約 2.5 小時（本地寶，二手）。週一關閉（Wander in China 原文；另一篇只有摘要），12/10 是週四不受影響。出口在鵝嶺公園爬山廊旁。</p>
               <p>來源：<a href="http://cq.bendibao.com/tour/2026327/162627.shtm" target="_blank" rel="noopener">本地寶預約公告</a>、<a href="https://cq.news.cn/20251112/7564c5f41339477291a6f04a4fbb80db/c.html" target="_blank" rel="noopener">新華網</a>。</p>
             </div>
             <div class="tl-tips">
               <div class="tip book"><span class="tip-ico">🎫</span><span class="tip-body"><b>要先預約</b><br>出發前在「渝中公園」公眾號查台胞證的預約方式與名額。</span></div>
-              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>攻略：棧橋只能單向</b><br>佛圖關南門進 → 鵝嶺公園出 → 二廠（愛情天台）→ 北門下石階約 15 分到李子壩。格柵地面小心手機、零錢掉下去。<a href="../guide/eling.html">看完整路線與店家 →</a></span></div>
+              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>棧橋只能單向，之後一路下坡、石階多 ★</b><a href="../guide/eling.html">看園內路線地圖與照片 →</a></span></div>
             </div>
             <details class="alt-plan">
               <summary>
@@ -562,7 +566,7 @@
                 <span class="ap-arrow" aria-hidden="true">▾</span>
               </summary>
               <div class="ap-body">
-                <div class="plan-ref"><div class="pr-name">佛圖關公園 → 鵝嶺公園</div><div class="pr-feat">不走棧橋，改走公園步道</div><div class="pr-facts">🚶 佛圖關公園 → 鵝嶺公園步行約 15 分（OSRM 1175 m，不算爬坡）；鵝嶺公園 → 李子壩觀景台約 48 分（OSRM 3803 m）；佛圖關公園 → 李子壩觀景台約 33 分（OSRM 2628 m）。走計畫B 不用棧橋，純步行約 15＋48 分（不算爬坡，實際更久），比棧橋全線約 2.5 小時短，多出的空檔可在鵝嶺公園多逛（棧橋全線時間只有本地寶一說）<br>🕐 鵝嶺公園 7:00–22:00、免費（本地寶）；佛圖關公園去哪兒標 8:00–22:00（具體以公示為準）</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=鵝嶺公園 重慶" target="_blank" rel="noopener">鵝嶺公園</a><a class="pr-src" href="https://m.cq.bendibao.com/tour/159462.shtm" target="_blank" rel="noopener">查證來源</a></div></div>
+                <div class="plan-ref"><div class="pr-name">佛圖關公園 → 鵝嶺公園</div><div class="pr-feat">不走棧橋，改走公園步道</div><div class="pr-facts">🚶 佛圖關公園 → 鵝嶺公園步行約 36 分（高德 1.6 km，含坡）；鵝嶺公園 → 李子壩觀景台約 42 分（高德 1.9 km）；佛圖關公園直接 → 李子壩觀景台約 37 分（高德 1.7 km）。走計畫B 不用棧橋，純步行約 36＋42 分，比棧橋全線約 2.5 小時短，多出的空檔可在鵝嶺公園多逛（棧橋全線時間只有本地寶一說）<br>🕐 鵝嶺公園 7:00–22:00、免費（本地寶）；佛圖關公園去哪兒標 8:00–22:00（具體以公示為準）</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=鵝嶺公園 重慶" target="_blank" rel="noopener">鵝嶺公園</a><a class="pr-src" href="https://m.cq.bendibao.com/tour/159462.shtm" target="_blank" rel="noopener">查證來源</a></div></div>
               </div>
             </details>
             <a class="map-link" href="https://maps.google.com/maps?q=鵝嶺空中棧橋 重慶" target="_blank" rel="noopener">
@@ -583,11 +587,11 @@
                 <figure><img src="../spots/liziba/liziba1.jpg" alt="李子壩站穿樓輕軌" loading="lazy"><figcaption>李子壩站穿樓輕軌<small>TarnishedPath・<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>・<a href="https://commons.wikimedia.org/wiki/File:View_of_Liziba_Station_image_10.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
                 <figure><img src="../spots/liziba/liziba2.jpg" alt="李子壩站穿樓輕軌" loading="lazy"><figcaption>李子壩站穿樓輕軌<small>TarnishedPath・<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>・<a href="https://commons.wikimedia.org/wiki/File:View_of_Liziba_Station_image_7.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
               </div></div>
-              <p>免費；停留排 20～25 分（gochinatravel 2026 寫 20～40 分，因午餐與下一段時間縮短）；列車約 3 分一班（遊記）。官方開放時段未查到。拍攝時段沒有一致結論（有說清晨或傍晚人少，有說下午 3～5 點光線柔，10:00–15:00 人最多）。2 號線李子壩站 1 號出口 → 觀景台約 1 分。</p>
+              <p>免費；停留排 20～25 分（gochinatravel 2026 寫 20～40 分，因午餐與下一段時間縮短）；列車約 3 分一班（遊記）。官方開放時段未查到。拍攝時段沒有一致結論（有說清晨或傍晚人少，有說下午 3～5 點光線柔，10:00–15:00 人最多）。出站到觀景台約 1 分（出口兩說：1 號口／B 口）。</p>
               <p>來源：<a href="https://www.gochinatravel.org/en/chongqing/liziba-monorail" target="_blank" rel="noopener">gochinatravel</a>（二手）。</p>
             </div>
             <div class="tl-tips">
-              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>攻略：三個視角</b><br>先到平台拍列車穿出；13:30 進站在月台看軌道進樓，上車坐第一節窗邊。穿的是住宅樓，保持安靜。<a href="../guide/liziba.html">看完整攻略 →</a></span></div>
+              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>平台對準穿出的開口連拍；13:30 上車坐第一節車廂 ★</b><a href="../guide/liziba.html">看機位、時機與照片 →</a></span></div>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=李子壩站觀景平台 重慶" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -607,7 +611,7 @@
               <div class="plans-viewport">
                 <div class="plans-track">
                   <div class="plan is-active" data-i="0" data-icon="🍗" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>午餐｜李子坝梁山鸡(公园二鸡哥店)</span><div class="plan-head"><span class="plan-tag">A</span>梁山雞，李子壩站 1 號口對面</div><div class="plan-body"><div class="tl-detail">
-              <p>⭐ 攜程 <b>4.7</b>（178 則，2026/11 查；留言只到 2021-08，偏舊）；🏅 攜程必打卡榜 No.4；🕐 10:00-22:00；🎫 人均約 ¥86；📍 李子坝正街60号。⚠️ 有 8～10 人大桌與等位區；有「梁山鸡小锅」，一人可點（推測）；微辣未查到。午餐請在 13:25 前結束；店 → 李子壩站步行約 5 分（OSRM 368 m）。</p>
+              <p>⭐ 攜程 <b>4.7</b>（178 則，2026/11 查；留言只到 2021-08，偏舊）；🏅 攜程必打卡榜 No.4；🕐 10:00-22:00；🎫 人均約 ¥86；📍 李子坝正街60号。⚠️ 有 8～10 人大桌與等位區；有「梁山鸡小锅」，一人可點（推測）；微辣未查到。午餐請在 13:22 前結束；店 → 李子壩站步行約 8 分（高德 434 m）。</p>
               <p><a href="https://gs.ctrip.com/html5/you/foods/158/8630921.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
             </div></div></div>
                 </div>
@@ -629,10 +633,10 @@
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>李子壩站搭 2 號線往魚洞／天堂堡方向 2 站（佛圖關、大坪），在大坪換 1 號線。</li>
-                <li>1 號線往大學城／璧山方向 10 站到磁器口。</li>
-                <li>全程約 35 分＋換乘（估算：用遊記「14 站 40 分」換算每站約 2.9 分）；實際分鐘請用高德或重慶軌道 App 確認。</li>
-                <li>磁器口站 → 古鎮步行約 13 分（OSRM 1071 m）；所以約 14:20 才到古鎮。</li>
+                <li>午餐店走到李子壩站約 8 分（高德 434 m），13:22 離開店、13:30 前到站。</li>
+                <li>2 號線往魚洞方向 2 站（佛圖關、大坪），大坪站內換乘約 3 分，換 1 號線往璧山方向 10 站到磁器口。共 12 站、¥5（高德）。</li>
+                <li>車上加轉乘約 38 分（高德門到門 1 小時 12 分，扣掉兩端步行 10 分、24 分，自己算），約 14:08 到磁器口站。</li>
+                <li>磁器口站 1 號口出，先到後街（吊腳樓廣場，離車站比古鎮中心近）；14:20 從後街開始逛。</li>
               </ol>
             </div>
           </div>
@@ -649,11 +653,11 @@
                 <figure><img src="../spots/ciqikou/ciqikou1.jpg" alt="磁器口古鎮" loading="lazy"><figcaption>磁器口古鎮<small>TarnishedPath・<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>・<a href="https://commons.wikimedia.org/wiki/File:Ciqikou_image_4.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
                 <figure><img src="../spots/ciqikou/ciqikou2.jpg" alt="磁器口古鎮" loading="lazy"><figcaption>磁器口古鎮<small>TarnishedPath・<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>・<a href="https://commons.wikimedia.org/wiki/File:Ciqikou_image_26.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
               </div></div>
-              <p>街區免費；內部個別景點另收（鍾家大院、寶輪寺各約 ¥5，舊資料）。開放時間兩說：全天／10:00–20:00（去哪兒、大河票務摘要）；各店約 10:00 後營業（推論）。建議停留 3～6 小時（攜程）。遊記說 12 點後團客變多，下午會擠：<b>日落 17:55 前先拍正街</b>。</p>
+              <p>街區免費；鐘家院暫停營業（攜程 2026/11）；寶輪寺門票兩說（無門票：本地寶 2025；約 ¥5：舊資料）。開放時間兩說：全天／10:00–20:00（去哪兒、大河票務摘要）；各店約 10:00 後營業（推論）。建議停留 3～6 小時（攜程）。遊記說 12 點後團客變多，下午會擠：<b>日落 17:55 前先拍正街</b>。</p>
               <p>來源：<a href="https://touch.travel.qunar.com/poi/702769" target="_blank" rel="noopener">去哪兒磁器口</a>（二手）。</p>
             </div>
             <div class="tl-tips">
-              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>攻略：認招牌買麻花</b><br>1 號口出；下午人多，先走後街再接河街，日落前拍正街；寶輪寺、迎龍門、江邊碼頭。麻花認「陳昌銀」或「陳建平」（有好幾家「陳麻花」）；迎龍門茶館蓋碗茶約 5 元。<a href="../guide/ciqikou.html">看完整路線與店家 →</a></span></div>
+              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>後街進 → 寶輪寺 → 江邊迎龍門 → 正街走到晚餐店 ★</b><a href="../guide/ciqikou.html">看園內路線地圖與照片 →</a></span></div>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=磁器口古鎮 重慶" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -673,7 +677,7 @@
               <div class="plans-viewport">
                 <div class="plans-track">
                   <div class="plan is-active" data-i="0" data-icon="🍲" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>晚餐｜千年古镇鸡杂(磁器口总店)</span><div class="plan-head"><span class="plan-tag">A</span>鸡杂鍋，有鴛鴦鍋小鍋</div><div class="plan-body"><div class="tl-detail">
-              <p>⭐ 攜程 <b>4.6</b>（24 則，2026/11 查，則數少）；🕐 09:00-22:00；🎫 人均約 ¥38；📍 磁器口正街69号。推薦菜有「鸳鸯锅小锅」，一人可點小鍋（推測）；有留言點「微微微微辣」的鸡杂火锅（留言 2020～2024 混雜）；也有人說微辣對少吃辣的人仍偏辣。千年古镇鸡杂 → 磁器口站步行約 12 分（OSRM 965 m）。</p>
+              <p>⭐ 攜程 <b>4.6</b>（24 則，2026/11 查，則數少）；🕐 09:00-22:00；🎫 人均約 ¥38；📍 磁器口正街69号。推薦菜有「鸳鸯锅小锅」，一人可點小鍋（推測）；有留言點「微微微微辣」的鸡杂火锅（留言 2020～2024 混雜）；也有人說微辣對少吃辣的人仍偏辣。千年古镇鸡杂 → 磁器口站步行約 19 分（高德 867 m，含坡、梯）。</p>
               <p><a href="https://gs.ctrip.com/html5/you/foods/158/5418342.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
             </div></div></div>
                   <div class="plan" data-i="1" data-icon="🍲" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜茂庄古镇鸡杂(磁器口总店)</span><div class="plan-head"><span class="plan-tag">B</span>鸡杂，同在磁器口正街</div><div class="plan-body"><p>同在磁器口正街，評論數比 A 多。</p><div class="plan-ref"><div class="pr-name">茂庄古镇鸡杂(磁器口总店)</div><div class="pr-feat">鸡杂（干锅／鍋）</div><div class="pr-facts">⭐ 攜程 <b>4.7</b>（157 則，2026/11 查）<br>🕐 09:30-21:30<br>🎫 人均約 ¥44<br>📍 磁器口正街78号<br>⚠️ 微辣選項、排隊未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=茂庄古镇鸡杂(磁器口总店) 重慶" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/158/5415340.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
@@ -690,19 +694,20 @@
             <div class="tl-header">
               <span class="tl-time">18:45</span>
               <span class="tl-icon">🚇</span>
-              <span class="tl-title">重慶軌道 1 號線｜磁器口 → 較場口 → 重慶住宿</span>
+              <span class="tl-title">重慶軌道 1 號線｜磁器口 → 較場口 → 飯店</span>
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>磁器口站搭 1 號線往朝天門方向，14 站到較場口，約 40 分（遊記實測，年份不明），免換乘。</li>
-                <li>較場口 → 解放碑住宿步行約 10 分（OSRM 814 m）。</li>
+                <li>古鎮走到磁器口站約 24 分（高德，從古鎮中心 1018 m；OSRM 從店家算 965 m、12 分，不算坡、梯）。</li>
+                <li>1 號線往朝天門方向 14 站到較場口，免換乘、¥5；車上約 37～40 分（高德反方向扣步行約 37 分；遊記 40 分，年份不明）。</li>
+                <li>較場口出站走回飯店（約 350 m，攜程）。高德古鎮 → 飯店門到門約 1 小時 15 分（磁器口 1 號口進站、¥5、步行合計約 2 km），18:45 出發約 20:00 到飯店；計程車約 ¥44、約 36 分（高德 2026-11-25 週三 19:12 查；11-20 週五傍晚尖峰約 55 分）。</li>
               </ol>
             </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=解放碑 重慶" target="_blank" rel="noopener">
+            <a class="map-link" href="https://maps.google.com/maps?q=重庆国贸格兰大酒店 重慶" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              重慶住宿（終點）
+              重慶國貿格蘭大酒店（終點）
             </a>
           </div>
 
@@ -746,7 +751,7 @@
               <div class="plans-viewport">
                 <div class="plans-track">
                   <div class="plan is-active" data-i="0" data-icon="🍜" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>早餐｜花市豌杂面(民生路店)</span><div class="plan-head"><span class="plan-tag">A</span>豌雜面、小面、抄手</div><div class="plan-body"><div class="tl-detail">
-              <p>⭐ 攜程 <b>4.3</b>（677 則，2026/11 查）；🏅 攜程「重庆美食必打卡榜」入選；🕐 07:00-20:00；🎫 人均約 ¥17；📍 民生路85号。⚠️ 同頁有評價兩極（口味一般）的說法（摘要）；一人可。</p>
+              <p>⭐ 攜程 <b>4.3</b>（677 則，2026/11 查）；🏅 攜程「重庆美食必打卡榜」入選；🕐 07:00-20:00；🎫 人均約 ¥17；📍 民生路85号，飯店旁步行約 1 分（高德 68 m）。飯店早餐另付 ¥119（攜程）。⚠️ 同頁有評價兩極（口味一般）的說法（摘要）；一人可。</p>
               <p><a href="https://gs.ctrip.com/html5/you/foods/158/344272.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
             </div></div></div>
                   <div class="plan" data-i="1" data-icon="🥟" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>早餐｜酱老麻抄手重庆小面馆（解放碑总店）</span><div class="plan-head"><span class="plan-tag">B</span>抄手、小面</div><div class="plan-body"><p>同在民生路，離較場口近。</p><div class="plan-ref"><div class="pr-name">酱老麻抄手重庆小面馆（解放碑总店）</div><div class="pr-feat">抄手／小面／豌雜面</div><div class="pr-facts">⭐ 攜程 <b>5.0</b>（僅 8 則，2026/11 查，則數太少）<br>🕐 07:00-次日00:00<br>🎫 人均約 ¥19<br>📍 解放碑民生路250号（海航保利国际中心正对面）<br>⚠️ 留言 2026-04 說中午一兩點還在排隊；可點少辣（泛指，新華網 2026-11-09）</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=酱老麻抄手重庆小面馆(解放碑总店) 重慶" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/158/5422700.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
@@ -763,15 +768,15 @@
             <div class="tl-header">
               <span class="tl-time">08:30</span>
               <span class="tl-icon">🧳</span>
-              <span class="tl-title">退房｜重慶住宿</span>
+              <span class="tl-title">退房｜重慶國貿格蘭大酒店</span>
               <span class="tl-kind main">主行程</span>
             </div>
             <div class="tl-detail">
-              <p>退房時間視住宿而定（住宿未定）。</p>
+              <p>退房時間未查到（看訂房訊息）。</p>
             </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=解放碑 重慶" target="_blank" rel="noopener">
+            <a class="map-link" href="https://maps.google.com/maps?q=重庆国贸格兰大酒店 重慶" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              重慶住宿（解放碑附近）
+              重慶國貿格蘭大酒店
             </a>
           </div>
 
@@ -785,10 +790,10 @@
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>解放碑住宿步行約 10 分到較場口站（OSRM 814 m）。</li>
-                <li>1 號線往大學城／璧山方向 11 站到沙坪壩，約 31 分（估算，2.9 分／站）。</li>
-                <li>沙坪壩地鐵站與高鐵站同一樞紐；站內走到閘機的時間未查到，建議提早 60～90 分到站（含閘機與早高峰）。</li>
-                <li>備案：計程車解放碑 → 沙坪壩站 OSRM 15.3 km、17 分（無車流），車資未查到。</li>
+                <li>從飯店走到較場口站 1 號口進站（約 350 m，攜程）。</li>
+                <li>1 號線往璧山方向 11 站到沙坪壩、¥5；沙坪壩站走到高鐵站約 7 分（高德 403 m）。高德飯店 → 沙坪壩站門到門約 53 分（步行合計約 1.2 km），08:40 出發約 09:33 到高鐵站。</li>
+                <li>沙坪壩地鐵站與高鐵站同一樞紐；進站過閘機的時間未查到，到站後還有約 50 分。</li>
+                <li>備案：計程車飯店 → 沙坪壩站約 ¥34、約 30 分（高德 2026-11-25 週三 19:12 查；解放碑出發週五傍晚尖峰約 57 分）。</li>
               </ol>
             </div>
           </div>
@@ -818,16 +823,16 @@
             <div class="tl-header">
               <span class="tl-time">11:32</span>
               <span class="tl-icon">🚇</span>
-              <span class="tl-title">成都地鐵 7 號線 → 1 號線｜成都東 → 倪家橋（8 站）</span>
+              <span class="tl-title">成都地鐵 2 號線 → 8 號線｜成都東 → 東大路 → 倪家橋（7 站）</span>
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>成都東站（地鐵站名「成都東客站」）與鐵路出站層共構，下到地鐵層搭 7 號線 6 站到火車南站。</li>
-                <li>火車南站換 1 號線往北（五根松反方向，往韋家碾方向）2 站（桐梓林、倪家橋）。共 8 站、1 次轉乘，<b>分鐘與票價未查到</b>，約 40 分（估算，不含出站）；<b>另加出站約 10 分（估算）</b>；實際請用高德確認。</li>
-                <li>倪家橋站走到盧記約 6 分（510 m，倪家橋 E 口，1214 筆記）；約 12:30 到站，午餐排 12:45。</li>
-                <li>備案：計程車成都東 → 飯店 OSRM 8.8 km、約 11 分（無路況），車資未查到。</li>
+                <li>出高鐵站後走到地鐵「成都東客站」入口約 7 分（高德 346 m；出站本身的時間未查到，估算約 10 分）。</li>
+                <li>2 號線往犀浦方向 2 站到東大路，站內換乘約 3 分，換 8 號線往龍港方向 5 站到倪家橋。共 7 站、¥4（高德）。</li>
+                <li>倪家橋站走到盧記約 12 分（高德 723 m；1214 筆記從 E 口算 510 m、6 分）。高德門到門約 43 分，加出站約 12:25 到店，午餐排 12:45。</li>
+                <li>備案：計程車成都東 → 盧記約 ¥35、約 35 分（高德 2026-11-20 週五傍晚尖峰查；OSRM 無路況約 11 分）。</li>
               </ol>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=成都東站 成都" target="_blank" rel="noopener">
@@ -848,7 +853,7 @@
               <div class="plans-viewport">
                 <div class="plans-track">
                   <div class="plan is-active" data-i="0" data-icon="🥢" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>午餐｜卢记正街饭店·川湘菜</span><div class="plan-head"><span class="plan-tag">A</span>川湘菜老店，飯店步行 15 分</div><div class="plan-body"><div class="tl-detail">
-              <p>⭐ 大眾點評 <b>4.4</b>（24,370 則，2026/11 查）；🏅 玉林／芳草街美食熱門榜第 1 名；🕐 11:00-23:30；🎫 人均約 ¥82；📍 玉洁巷1号（倪家桥站 E 口步行 510 m）。飯店 → 此店步行 15 分（OSRM）。⚠️ 菜單偏大盤，單點可（推測）；公休、預約未查到。<b>行李隨身</b>（14:00 前能否寄放未查到）；飯店 → 此店步行 15 分，午餐後走回飯店約 14:00 入住。</p>
+              <p>⭐ 大眾點評 <b>4.4</b>（24,370 則，2026/11 查）；🏅 玉林／芳草街美食熱門榜第 1 名；🕐 11:00-23:30；🎫 人均約 ¥82；📍 玉洁巷1号（倪家桥站 E 口步行 510 m）。飯店 → 此店步行約 19 分（高德 1.2 km）。⚠️ 菜單偏大盤，單點可（推測）；公休、預約未查到。<b>行李隨身</b>（14:00 前能否寄放未查到）；此店 → 飯店步行約 19 分，13:40 前吃完走回飯店，約 14:00 入住。</p>
               <p><a href="https://www.dianping.com/shop/k5KW5uE8N9CTVPJe" target="_blank" rel="noopener">查證來源（大眾點評）</a></p>
             </div></div></div>
                 </div>
@@ -879,7 +884,7 @@
 
           <div class="timeline-item is-move transport">
             <div class="tl-header">
-              <span class="tl-time">14:40</span>
+              <span class="tl-time">14:30</span>
               <span class="tl-icon">🚕</span>
               <span class="tl-title">計程車｜飯店 → 杜甫草堂</span>
               <span class="tl-kind move">交通</span>
@@ -887,8 +892,8 @@
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>飯店門口叫滴滴或計程車，到杜甫草堂約 8.6 km、約 10 分（OSRM 開車，無路況）；車資未查到。</li>
-                <li>地鐵走法與分鐘未查到。</li>
+                <li>飯店門口叫滴滴或計程車，到杜甫草堂約 ¥18、約 27 分（高德 2026-11-20 週五傍晚尖峰查；OSRM 無路況約 10 分）。</li>
+                <li>大眾運輸要約 50 分：K1 快速公交（人南立交東站上車，6 站，¥2）或 1 號線 → 13 號線（倪家橋 B 口，6 站，¥3）（高德）。</li>
               </ol>
             </div>
           </div>
@@ -905,12 +910,12 @@
                 <figure><img src="../spots/dufu/dufu1.jpg" alt="杜甫草堂" loading="lazy"><figcaption>杜甫草堂<small>Kcx36・<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>・<a href="https://commons.wikimedia.org/wiki/File:%E6%9D%9C%E7%94%AB%E8%8D%89%E5%A0%82%E8%A5%BF%E9%97%A8%EF%BC%88%E6%AD%A3%E9%97%A8%EF%BC%89_01.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
                 <figure><img src="../spots/dufu/dufu2.jpg" alt="杜甫草堂" loading="lazy"><figcaption>杜甫草堂<small>Kcx36・<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>・<a href="https://commons.wikimedia.org/wiki/File:%E6%9D%9C%E7%94%AB%E8%8D%89%E5%A0%82-%E6%9F%B4%E9%97%A8.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
               </div></div>
-              <p>杜甫故居復建，茅屋、花徑、盆景園（使用者指定想去）。攜程：09:00～18:00、<b>17:00 停止售票</b>；¥50 起；攜程 4.7（9,157 則，2026/11 查）。地址：青華路 37 號。官方開放時間未取得（官網網域已失效），另一說 08:30～18:30 是 2026 中秋國慶的延時，不是冬季。</p>
+              <p>杜甫故居復建，茅屋、花徑、盆景園。攜程：09:00～18:00、<b>17:00 停止售票</b>；成人 ¥50；攜程 4.7（9,157 則，2026/11 查）。<b>北門進（青華路 37 號）、南門出（草堂路 2 號）</b>。官方開放時間未取得（官網網域已失效），另一說 08:30～18:30 是 2026 中秋國慶的延時，不是冬季。</p>
             </div>
             <div class="tl-tips">
               <div class="tip book"><span class="tip-ico">🎫</span><span class="tip-body"><b>預約</b><br>官方微信服務號預約；現場可憑港澳台通行證到服務窗口購票（搜尋摘要），台胞證條款未明寫。出發前看官方公眾號。</span></div>
               <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>17:00 停止售票</b><br>15:00 到可以逛約 2 小時；12/11 的日落 18:02。</span></div>
-              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>攻略：北門進</b><br>茅屋 → 花徑紅牆 → 大雅堂 → 中軸線工部祠。附近有米其林必比登的陈麻婆豆腐(旗舰店)。<a href="../guide/dufu.html">看完整路線與店家 →</a></span></div>
+              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>北門進 → 茅屋 → 中軸線往南 → 花徑紅牆 → 大雅堂 → 南門出</b><a href="../guide/dufu.html">看園內路線地圖與照片 →</a></span></div>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=杜甫草堂 成都" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -928,14 +933,15 @@
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>杜甫草堂 → 飯店一帶約 7.3 km、約 10 分（OSRM 開車，無路況）；車資未查到。</li>
+                <li>南門（草堂路 2 號）外上車，16:50 先叫車。杜甫草堂 → 玉林路約 ¥18、約 30 分（高德 2026-11-20 週五 17:00 前後查，含尖峰路況）。</li>
+                <li>地鐵：杜甫草堂站 C1 口 13 號線 → 3 號線，7 站、¥3，門到門約 52 分（高德）。</li>
               </ol>
             </div>
           </div>
 
           <div class="timeline-item is-flex">
             <div class="tl-header">
-              <span class="tl-time">17:30</span>
+              <span class="tl-time">17:45</span>
               <span class="tl-icon">🚶</span>
               <span class="tl-title">自由時間｜玉林四巷散步</span>
               <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
@@ -945,7 +951,7 @@
               <div class="plans-viewport">
                 <div class="plans-track">
                   <div class="plan is-active" data-i="0" data-icon="🚶" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>自由時間｜玉林四巷散步</span><div class="plan-head"><span class="plan-tag">A</span>玉林四巷</div><div class="plan-body"><div class="tl-detail">
-              <p>全年全天開放（去哪兒，4.7 分但只有 7 則，摘要）。從飯店的步行時間未算。</p>
+              <p>全年全天開放（去哪兒，4.7 分但只有 7 則，摘要）。往西走到小酒馆（玉林西路，約 10 分、高德 559 m，約 17:55 到），18:12 離開再往南走到 18:30 的谭家（約 18 分、高德 1 km）。</p>
               <p><a href="https://touch.travel.qunar.com/poi/27372318" target="_blank" rel="noopener">查證來源（去哪兒）</a></p>
             </div></div></div>
                   <div class="plan" data-i="1" data-icon="🌉" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>自由時間｜九眼橋</span><div class="plan-head"><span class="plan-tag">B</span>九眼橋，夜景與酒吧街</div><div class="plan-body"><p>離飯店約 3 km 以上（未算），建議地鐵或計程車。</p><div class="plan-ref"><div class="pr-name">九眼橋</div><div class="pr-feat">安順廊橋一帶夜景、酒吧街</div><div class="pr-facts">⭐ 攜程 <b>4.6</b>（406 則，2026/11 查）<br>🕐 全年全天開放<br>🎫 免費<br>📍 成都錦江區濱江東路</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=九眼橋 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/sight/104/1713566.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
@@ -954,7 +960,7 @@
               </div>
             </div>
             <div class="tl-tips">
-              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>攻略</b><br>玉林西路的小酒馆（1997 年老店，駐唱）。近五年攻略很少。<a href="../guide/yulin.html">看玉林一帶的店 →</a></span></div>
+              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>玉林四巷 → 小酒馆 → 谭家，單向約 18 分</b><a href="../guide/yulin.html">看路線地圖與店家 →</a></span></div>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=玉林四巷 成都" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -1025,10 +1031,11 @@
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>飯店步行約 8 分到倪家橋站（OSRM 669 m，座標待高德核對）。</li>
-                <li>1 號線往南 2 站到火車南站換 7 號線 6 站到成都東客站（共 8 站、1 次轉乘）；總時間未查到，約 45 分（估算）。地鐵首班時間未查到。</li>
-                <li>備案：計程車飯店 → 成都東 OSRM 13.3 km、約 13 分（無路況），車資未查到。</li>
-                <li>約 08:33 到成都東，留約 30 分進站過閘機；45 分是估算（8 站 10.7 km＋1 次轉乘＋候車）。</li>
+                <li>飯店步行約 13 分到倪家橋站 B 口（高德 824 m）。</li>
+                <li>1 號線往南 2 站到火車南站換 7 號線外環 6 站到成都東客站（共 8 站、1 次轉乘、¥4）；高德門到門約 47 分。地鐵首班時間未查到。</li>
+                <li>更快：飯店旁人南立交東站搭 K4／K2A 快速公交到牛市口換 2 號線，¥4，門到門約 32～37 分（高德）。</li>
+                <li>備案：計程車飯店 → 成都東約 ¥26、約 30 分（高德 2026-11-20 週五傍晚尖峰查；OSRM 無路況約 13 分）。</li>
+                <li>約 08:27 到成都東，留約 35 分進站過閘機。</li>
               </ol>
             </div>
           </div>
@@ -1064,8 +1071,8 @@
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>計程車：OSRM 7.5 km、約 10 分（無路況）；遊記說打車約 15 分（單一來源）；車資未查到。成都 → 廣漢全程計程車（約 40 km）車資與時間未查到，不建議。</li>
-                <li>13 路公交：官網寫全程 38 分（站數 13 與 10 兩說）；首末班、票價、班距未查到，出發前用高德查「廣漢13路」。<b>搭 13 路約 10:10 進館</b>。</li>
+                <li>計程車：高德開車約 18 分（8.3 km，2026-11-20 晚上查）；遊記說打車約 15 分（單一來源）；車資未查到（高德沒給廣漢的估價）。成都 → 廣漢全程計程車（約 40 km）車資與時間未查到，不建議。</li>
+                <li>13 路公交：官網寫全程 38 分（站數 13 與 10 兩說）。高德：<b>上車點是「三星堆客運站（高鐵路）」，不在高鐵站門口</b>，8 站、¥2，門到門約 58 分（含步行 1.5 km）；高鐵站門口能搭的是 16 路（17 站、¥2、門到門約 1 小時 9 分）。首末班、班距未查到。<b>搭公車約 10:25 進館</b>。高德沒有給廣漢的計程車估價。</li>
               </ol>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=廣漢北站 廣漢" target="_blank" rel="noopener">
@@ -1086,7 +1093,7 @@
                 <figure><img src="../spots/sanxingdui/sanxingdui1.jpg" alt="三星堆博物館" loading="lazy"><figcaption>三星堆博物館<small>Suicasmo・<a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>・<a href="https://commons.wikimedia.org/wiki/File:Sanxingdui_Museum_20260512-1.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
                 <figure><img src="../spots/sanxingdui/sanxingdui2.jpg" alt="三星堆博物館" loading="lazy"><figcaption>三星堆博物館<small>STW932・<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>・<a href="https://commons.wikimedia.org/wiki/File:New_Sandingdui_Museum_02.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>
               </div></div>
-              <p><b>先在 12/7 20:00 約館票，約到再買高鐵票（或確認車票可退）。</b>搭計程車約 09:45 進館、搭 13 路約 10:10 進館。陳列館（新館）08:30–18:00，17:00 停止入館；12/12 非延時開放期（推論）。普通票 ¥72（官網）。<b>實名預約</b>：官網、微信公眾號或「三星堆博物館」小程序；每晚 20:00 放 5 天後的票（二手），12/12 的票約 12/7 20:00 開放；無現場散客售票窗口，線上售罄就沒票。園內約 3.5 小時：新館約 2 小時 20 分（估算；單一地接文章寫新館 2～2.5 小時）＋修復館、綜合館，13:15 出館；老館不排（現況兩說）。</p>
+              <p><b>先在 12/7 20:00 約館票，約到再買高鐵票（或確認車票可退）。</b>搭計程車約 09:45 進館、搭公車約 10:25 進館（高德，13 路上車點在客運站；搭公車的話回程也要提早，見 14:30 卡）。陳列館（新館）08:30–18:00，17:00 停止入館；12/12 非延時開放期（推論）。普通票 ¥72（官網）。<b>實名預約</b>：官網、微信公眾號或「三星堆博物館」小程序；每晚 20:00 放 5 天後的票（二手），12/12 的票約 12/7 20:00 開放；無現場散客售票窗口，線上售罄就沒票。園內約 3.5 小時：新館約 2 小時 20 分（估算；單一地接文章寫新館 2～2.5 小時）＋修復館、綜合館，13:15 出館；老館不排（現況兩說）。</p>
               <p><b>台胞證能否線上預約未查到</b>：中文官網寫先線上預約再帶證件換票；英文官網寫外國人帶護照到遊客中心現場買，兩說矛盾（discrepancies #8）。館方電話 0838-5651526（2025 英文介紹頁，未核實）。老館 2026-04 部分維修（單一來源，待證實）。發掘現場暫未開放（官網）。</p>
               <p>來源：<a href="https://www.sxd.cn/" target="_blank" rel="noopener">三星堆博物館官網</a>。</p>
             </div>
@@ -1127,15 +1134,15 @@
             <div class="tl-header">
               <span class="tl-time">14:30</span>
               <span class="tl-icon">🚄</span>
-              <span class="tl-title">回程｜計程車或 13 路 → 廣漢北 → 高鐵 G2241 15:13 → 成都東 → 飯店</span>
+              <span class="tl-title">回程｜計程車 → 廣漢北 → 高鐵 G2241 15:13 → 成都東 → 飯店</span>
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>博物館 → 廣漢北站：計程車 10～30 分（OSRM 10 分；遊記約 30 分、車難叫）；13 路 38 分。</li>
+                <li>博物館 → 廣漢北站：計程車約 16～19 分（高德開車 8.8～12.8 km；遊記約 30 分、車難叫）。公車門到門約 1 小時：16 路 16 站約 1 小時 1 分、13 路 11 站約 1 小時 10 分，都是 ¥2（高德），14:30 出發來不及，<b>回程搭計程車</b>。遊記說計程車難叫：14:15 就開始叫車；叫不到就改搭 D1931 16:09。</li>
                 <li>廣漢北 → 成都東高鐵 18～19 分（11/28 代查）。<b>一定要搭 G2241 15:13 → 15:31，錯過搭 D1931 16:09 → 16:27</b>（晚 56 分）；再下一班 G1833 16:56 → 17:14。末班 G3441 21:12 → 21:30（其次 D1903 20:59、G3781 20:31），時間很寬。</li>
-                <li>成都東 → 飯店同去程（地鐵約 45 分估算，計程車約 13 分）。</li>
+                <li>成都東 → 飯店同去程反方向（地鐵約 47 分、快速公交約 35 分、計程車約 30 分，高德去程方向的數字）。</li>
               </ol>
             </div>
           </div>
@@ -1217,7 +1224,7 @@
 
           <div class="timeline-item is-move transport">
             <div class="tl-header">
-              <span class="tl-time">06:50</span>
+              <span class="tl-time">06:25</span>
               <span class="tl-icon">🚇</span>
               <span class="tl-title">成都地鐵 1 號線 → 3 號線｜飯店 → 倪家橋 → 省體育館 → 熊貓大道</span>
               <span class="tl-kind move">交通</span>
@@ -1225,10 +1232,12 @@
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>飯店步行約 8 分到倪家橋站（OSRM，座標待高德核對）。</li>
-                <li>1 號線往北 1 站到省體育館，換 3 號線往北 11 站到熊貓大道（共 12 站，站序見 OSM 站表）；首班與每站分鐘未查到，全程約 40 分（估算，wanderinchina 寫市區出發約 40 分，起點不明）。06:50 出發約 07:38 到熊貓大道，目標約 08:00 到南門。</li>
-                <li>熊貓大道站 <b>A 口</b>出站，換 <b>408 路擺渡車</b>到南門（官網；wanderinchina 寫 D025，以官網為準）；首末班、班距、票價未查到（wanderinchina 摘要 ¥2），<b>錯過或等太久就改計程車</b>（OSRM 約 27 分）。</li>
-                <li>備案：計程車飯店 → 基地 OSRM 20.4 km、約 27 分（無路況），車資未查到（官網：春熙路 → 基地約 ¥40、25～35 分）。</li>
+                <li>飯店步行約 13 分到倪家橋站 B 口（高德 824 m）。</li>
+                <li>1 號線往北 1 站到省體育館，換 3 號線往北 11 站到熊貓大道（共 12 站，站序見 OSM 站表）；<b>高德門到門約 1 小時 32 分（含 408 路）、¥7，06:25 出發約 07:57 到南門</b>；高德把這條標「可能存在風險」（原因沒寫）。</li>
+                <li>較快的走法：1 號線往韋家碾方向 10 站到韋家碾，步行約 5 分到青岡北路，換 655 路 12 站到熊貓基地，¥6，門到門約 1 小時 21 分（06:25 出發約 07:46 到）。655 路班次未查到（高德）。</li>
+                <li><b>1 號線首班未查到</b>：06:38 前後要在倪家橋站上車，出發前一晚用高德 App 確認首班；首班晚於這個時間就改搭計程車。</li>
+                <li>熊貓大道站 <b>A 口</b>出站，換 <b>408 路擺渡車</b>到南門（官網；wanderinchina 寫 D025，以官網為準）；首末班、班距、票價未查到（wanderinchina 摘要 ¥2），<b>錯過或等太久就改計程車</b>（熊貓大道站 → 南門高德開車約 20 分、約 ¥27）。</li>
+                <li>計程車飯店 → 基地：OSRM 20.4 km、約 27 分（無路況）；高德約 ¥56、約 56 分（2026-11-20 週五傍晚尖峰查，週日清晨應接近 OSRM）；官網：春熙路 → 基地約 ¥40、25～35 分。</li>
               </ol>
             </div>
           </div>
@@ -1270,7 +1279,8 @@
               <p>導遊型交通指引：</p>
               <ol>
                 <li>南門搭 408 路擺渡車回熊貓大道站。</li>
-                <li>3 號線往南 8 站到春熙路（動物園、昭覺寺南路、駟馬橋、李家沱、前鋒路、紅星橋、市二醫院、春熙路）；<b>分鐘未查到，估算約 27 分</b>：用 12 站約 40 分（每站約 3.3 分）× 8 站，再加擺渡車與走到站的時間，12:15 前後到春熙路。</li>
+                <li>3 號線往南 8 站到春熙路（動物園、昭覺寺南路、駟馬橋、李家沱、前鋒路、紅星橋、市二醫院、春熙路）。高德：南門 → 夫妻肺片（408 路＋3 號線）¥5，<b>門到門約 59 分，約 12:30 到店</b>（週五傍晚查，週日中午可能不同）。</li>
+                <li>計程車南門 → 夫妻肺片約 ¥33、約 37 分（高德 2026-11-20 週五傍晚尖峰查）。</li>
               </ol>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=熊貓大道站 成都" target="_blank" rel="noopener">
@@ -1281,7 +1291,7 @@
 
           <div class="timeline-item is-flex">
             <div class="tl-header">
-              <span class="tl-time">12:15</span>
+              <span class="tl-time">12:30</span>
               <span class="tl-icon">🍽️</span>
               <span class="tl-title">午餐｜夫妻肺片·老字號</span>
               <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
@@ -1290,9 +1300,9 @@
               <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
               <div class="plans-viewport">
                 <div class="plans-track">
-                  <div class="plan is-active" data-i="0" data-icon="🥢" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>午餐｜夫妻肺片·老字號</span><div class="plan-head"><span class="plan-tag">A</span>使用者想吃的夫妻肺片</div><div class="plan-body"><div class="tl-detail">
+                  <div class="plan is-active" data-i="0" data-icon="🥢" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>午餐｜夫妻肺片·老字號</span><div class="plan-head"><span class="plan-tag">A</span>想吃的夫妻肺片</div><div class="plan-body"><div class="tl-detail">
               <p>川菜老字號冷盤。攜程 4.1（192 則，2026/11 查）；10:30～21:30；人均 ¥55；總府路 23 號 1～2 層。12/13（日）公休未查到。</p>
-              <p>春熙路站走到店約 3 分（OSRM foot 239 m；起點是 Nominatim 的春熙路點，不是出口）。<b>13:15 前離開</b>。</p>
+              <p>春熙路站走到店約 14 分（高德 780 m，從車站中心點算，出口未定；上一張卡的門到門時間已含這段）。<b>13:15 前離開</b>。</p>
               <p><a href="https://gs.ctrip.com/html5/you/foods/fooddetail/104/4926096.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
             </div></div></div>
                 </div>
@@ -1314,8 +1324,8 @@
             <div class="tl-detail">
               <p>導遊型交通指引：</p>
               <ol>
-                <li>往西步行約 25 分（OSRM foot 2035 m）。</li>
-                <li>不想走：計程車約 1.7 km、約 2 分（OSRM 開車，無路況）；地鐵走法未查到。</li>
+                <li>往西步行約 27 分（高德 1.5 km），13:15 出發約 13:42 到。</li>
+                <li>不想走：計程車約 ¥8、約 11 分（高德 2026-11-20 傍晚查）。地鐵春熙路 D 口 2 號線 1 站、¥2，門到門約 28 分，比走路還久（高德）。</li>
               </ol>
             </div>
           </div>
@@ -1328,12 +1338,12 @@
               <span class="tl-kind main">主行程</span>
             </div>
             <div class="tl-detail">
-              <p>成都的城市歷史，藏品近 20 萬件（使用者指定想去）。<b>週日 09:00～17:00、16:30 停止入館</b>（官網；到 20:30 只有週五、六）；<b>免費、要提前預約</b>；攜程 4.8（5,479 則，2026/11 查）。地址：青羊區小河街 1 號。這裡排約 2 小時（建議停留未查到）。</p>
+              <p>成都的城市歷史，藏品 20 餘萬件（博物館章程）。<b>週日 09:00～17:00、16:30 停止入館</b>（官網；到 20:30 只有週五、六）；<b>免費、要提前預約</b>；攜程 4.8（5,479 則，2026/11 查）。地址：青羊區小河街 1 號。這裡排約 2 小時（建議停留未查到），<b>15:35 出館</b>，走到小名堂約 6 分。</p>
             </div>
             <div class="tl-tips">
               <div class="tip book"><span class="tip-ico">🎫</span><span class="tip-body"><b>要預約</b><br>台胞證能不能線上預約未查到，出發前看官方公眾號。</span></div>
               <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>週一休館</b><br>2026 暑期公告寫週一固定閉館（冬季常規未取得）；12/13 是週日，有開。</span></div>
-              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>攻略：先看 2～3 樓</b><br>古代篇有鎮館之寶石犀、經穴漆人；14:30 免費講解約 1.5 小時（單一來源），參加會接不上 15:45 的小名堂，可改聽公眾號免費語音。附近酥小蒙牛肉餅（¥9）。<a href="../guide/cdmuseum.html">看樓層與店家 →</a></span></div>
+              <div class="tip near"><span class="tip-ico">🧭</span><span class="tip-body"><b>先上 2 樓看鎮館之寶石犀、經穴漆人 ★，再往上到 5 樓皮影</b><a href="../guide/cdmuseum.html">看樓層順序與照片 →</a></span></div>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=成都博物館 成都" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -1352,9 +1362,9 @@
               <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
               <div class="plans-viewport">
                 <div class="plans-track">
-                  <div class="plan is-active" data-i="0" data-icon="🍜" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>點心｜小名堂擔擔甜水麵</span><div class="plan-head"><span class="plan-tag">A</span>甜水麵＋擔擔麵（使用者想吃）</div><div class="plan-body"><div class="tl-detail">
+                  <div class="plan is-active" data-i="0" data-icon="🍜" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>點心｜小名堂擔擔甜水麵</span><div class="plan-head"><span class="plan-tag">A</span>甜水麵＋擔擔麵</div><div class="plan-body"><div class="tl-detail">
               <p>甜水麵（粗麵拌甜辣醬汁）、擔擔麵這家都有。攜程 4.5（295 則，2026/11 查）；09:00～20:00；人均 ¥21；東城根上街 13 號。</p>
-              <p>成都博物館走過來約 6 分（OSRM foot 440 m）。</p>
+              <p>成都博物館走過來約 7 分（高德 433 m）。</p>
               <p><a href="https://gs.ctrip.com/html5/you/foods/fooddetail/104/352677.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
             </div></div></div>
                 </div>
@@ -1377,8 +1387,8 @@
               <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
               <div class="plans-viewport">
                 <div class="plans-track">
-                  <div class="plan is-active" data-i="0" data-icon="🍵" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>傍晚｜人民公園 鶴鳴茶社</span><div class="plan-head"><span class="plan-tag">A</span>坐茶館</div><div class="plan-body"><p>小名堂走過去約 6 分（OSRM foot 471 m）。遊記說下午約 16:00 後常沒座位，現場看。</p><div class="plan-ref"><div class="pr-name">人民公園 鶴鳴茶社</div><div class="pr-feat">老成都茶館</div><div class="pr-facts">🎫 最低消費 ¥16 起、18:00 後 ¥18（攜程點評 2026-04）<br>🕐 07:00～22:00（遊記）／9am～9pm（英文介紹），兩說不一致<br>⚠️ 公園營業時間、票價未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=人民公園 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://touch.travel.qunar.com/youji/7791863" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
-                  <div class="plan" data-i="1" data-icon="🛋️" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>傍晚｜回飯店休息</span><div class="plan-head"><span class="plan-tag">B</span>休息</div><div class="plan-body"><p>回飯店休息或用健身室。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">小名堂 → 飯店：計程車約 7 分（人民公園 → 飯店 OSRM 5.3 km，無路況）；地鐵走法未查到。</p></div><div class="plan-ref"><div class="pr-name">匯航岷源酒店</div><div class="pr-feat">休息、健身室</div><div class="pr-facts">📍 武侯區二環路南二段21號</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=匯航岷源酒店 成都" target="_blank" rel="noopener">在地圖開啟</a></div></div></div></div>
+                  <div class="plan is-active" data-i="0" data-icon="🍵" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>傍晚｜人民公園 鶴鳴茶社</span><div class="plan-head"><span class="plan-tag">A</span>坐茶館</div><div class="plan-body"><p>小名堂走過去約 9 分（高德 474 m）。遊記說下午約 16:00 後常沒座位，現場看。</p><div class="plan-ref"><div class="pr-name">人民公園 鶴鳴茶社</div><div class="pr-feat">老成都茶館</div><div class="pr-facts">🎫 最低消費 ¥16 起、18:00 後 ¥18（攜程點評 2026-04）<br>🕐 07:00～22:00（遊記）／9am～9pm（英文介紹），兩說不一致<br>⚠️ 公園營業時間、票價未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=人民公園 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://touch.travel.qunar.com/youji/7791863" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🛋️" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>傍晚｜回飯店休息</span><div class="plan-head"><span class="plan-tag">B</span>休息</div><div class="plan-body"><p>回飯店休息或用健身室。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">小名堂 → 飯店：計程車約 ¥16、約 20 分；地鐵：走到天府廣場西1北口，1 號線往南 4 站到倪家橋，¥2，門到門約 35 分（高德 2026-11-20 晚上查）。</p></div><div class="plan-ref"><div class="pr-name">匯航岷源酒店</div><div class="pr-feat">休息、健身室</div><div class="pr-facts">📍 武侯區二環路南二段21號</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=匯航岷源酒店 成都" target="_blank" rel="noopener">在地圖開啟</a></div></div></div></div>
                 </div>
               </div>
             </div>
@@ -1399,7 +1409,7 @@
               <span class="tl-kind move">交通</span>
             </div>
             <div class="tl-detail">
-              <p>計程車約 7 分（OSRM 5.3 km，無路況）；步行要 62 分（OSRM foot 4929 m），不建議；地鐵走法未查到。選 B 已在飯店就略過。日落 18:02～18:03。</p>
+              <p>計程車約 ¥16、約 22 分（高德 2026-11-20 週五晚上查），17:45 出發約 18:07 到飯店。地鐵：人民公園 B 口 2 號線 1 站到天府廣場，換 1 號線往南 4 站到倪家橋，¥3，門到門約 38 分。步行要 1 小時 22 分（高德 5.1 km），不建議。<b>晚餐串串從飯店走約 26 分</b>（借用座標），18:30 要準時就從人民公園直接叫車去玉林。選 B 已在飯店就略過。日落 18:02～18:03。</p>
             </div>
             <a class="map-link" href="https://maps.google.com/maps?q=匯航岷源酒店 成都" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -1418,9 +1428,9 @@
               <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
               <div class="plans-viewport">
                 <div class="plans-track">
-                  <div class="plan is-active" data-i="0" data-icon="🍢" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>晚餐｜馬路邊邊串串香（玉林店）</span><div class="plan-head"><span class="plan-tag">A</span>使用者想吃的串串</div><div class="plan-body"><div class="tl-detail">
+                  <div class="plan is-active" data-i="0" data-icon="🍢" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>晚餐｜馬路邊邊串串香（玉林店）</span><div class="plan-head"><span class="plan-tag">A</span>想吃的串串</div><div class="plan-body"><div class="tl-detail">
               <p>串串是小份的火鍋，竹籤串回桌燙，一個人好點。大眾點評 4.2（11,708 則，2026/11 查）；口味 4.1、環境 4.1、服務 4.2；玉林／芳草街串串香回頭客榜第 2 名；11:00～次日 01:00；人均 ¥71；玉洁西街 2 號附 2 號（7天優品酒店樓下）。12/13 公休、微辣鍋底未查到。</p>
-              <p>從飯店的步行時間未算（店家座標未查到；借用玉林四巷座標約 20 分，OSRM 1573 m）。</p>
+              <p>從飯店步行約 26 分（高德 1.7 km；店家座標未查到，借用玉林四巷座標）。</p>
               <p><a href="https://www.dianping.com/shop/G5V49WBzzqauy6Uq" target="_blank" rel="noopener">查證來源（大眾點評）</a></p>
             </div></div></div>
                 </div>
@@ -1438,6 +1448,667 @@
           <h4>📍 今日相關地圖</h4>
           <div class="map-list">
             <a class="map-chip map-chip-primary" href="../map/index.html?day=6">🗺️ 在地圖上看這天</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 7 ====== -->
+    <section class="day-section" id="day-7" data-date="2026-12-14">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">7</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 7｜12月14日（一）</h2>
+            <p class="date-str">出差（白天）；晚上武侯祠大街晚餐＋錦里古街</p>
+          </div>
+        </div>
+        <div class="kind-legend"><span><b style="color:var(--primary)">▌</b>主行程＝已訂或非去不可</span><span><b style="color:var(--on-surface-muted)">┆</b>交通＝移動，不算在行程裡</span><span><b style="color:var(--secondary)">┊</b>彈性＝可左右滑動換方案</span></div>
+
+        <div class="timeline">
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">09:00</span>
+              <span class="tl-icon">💼</span>
+              <span class="tl-title">出差（白天）</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>白天上班（上下班時間依公司安排；09:00 只是排序用）。晚上以 18:30 從飯店出發來排，下班比較晚就整段往後挪；23:00 前回飯店。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">18:30</span>
+              <span class="tl-icon">🚕</span>
+              <span class="tl-title">計程車｜飯店 → 武侯祠大街 約 18:55</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>高德開車約 12～13 分（4.8～5.8 km）、打車約 ¥15，但這是深夜查的路況；18:30 下班尖峰沒有實測，抓約 25 分（深夜的約 2 倍）、約 18:55 到（估算）。選 B、C 的話請司機直接開到店（鐘水餃在武侯祠大街東頭，離 A 約 1.5 km）。地鐵走法未查到；10 號線武侯祠（錦里）站 A2 口離武侯祠博物館步行 3 分（武侯祠官網），到錦里的步行時間未查到。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">19:00</span>
+              <span class="tl-icon">🥢</span>
+              <span class="tl-title">晚餐｜钦善斋·养生膳食(武侯祠店)</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🥢" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>晚餐｜钦善斋·养生膳食(武侯祠店)</span><div class="plan-head"><span class="plan-tag">A</span>藥膳養生川菜，錦里旁</div><div class="plan-body"><div class="tl-detail">
+              <p>⭐ 攜程 <b>4.5</b>（79 則，2026/11 查；近五年有 2022-06、2024-07、2024-12 的評論）；🕐 11:00-14:00、17:00-21:00（攜程，沒寫公休，單一來源）；🎫 人均約 ¥93；📍 武侯祠大街247号（武侯祠博物館西南約 80 m）；電話 +86-28-85053333（Trip.com）。熱門菜雞雜涼麵；單人能不能點、能不能做微辣未查到，麵、飯、湯單點應該一個人吃得完（推測）。</p>
+              <p><b>19:50 前吃完</b>，往東走約 9 分到錦里（高德 597 m）。</p>
+              <p><a href="https://gs.ctrip.com/html5/you/foods/fooddetail/104/5233565.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
+            </div></div></div>
+                  <div class="plan" data-i="1" data-icon="🥟" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜鐘水餃(武侯店)</span><div class="plan-head"><span class="plan-tag">B</span>老字號小吃，便宜快速</div><div class="plan-body"><p>在武侯祠大街東頭，離錦里約 11 分。</p><div class="plan-ref"><div class="pr-name">鐘水餃(武侯店)</div><div class="pr-feat">鐘水餃（甜紅油蒜泥乾拌）、龍抄手等成都小吃</div><div class="pr-facts">⭐ 攜程看得到的評論多在 2021 年以前，評分不採用<br>🕐 07:00-21:00（攜程）<br>🎫 人均約 ¥25<br>📍 武侯祠大街2号；到錦里步行約 11 分（OSRM 859 m）</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=鐘水餃(武侯店) 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/fooddetail/104/4926167.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🐇" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>晚餐｜紅星兔丁(武侯祠店)</span><div class="plan-head"><span class="plan-tag">C</span>兔丁、肥腸粉小吃</div><div class="plan-body"><div class="plan-ref"><div class="pr-name">红星兔丁(武侯祠店)</div><div class="pr-feat">兔丁、肥腸粉</div><div class="pr-facts">⭐ 攜程看得到的評論多在 2021 年以前，評分不採用<br>🕐 09:30-20:30（攜程）<br>🎫 人均約 ¥37<br>📍 武侯祠大街180号附4号；到錦里步行約 5 分（OSRM 420 m）<br>⚠️ 20:30 就關，要早點到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=红星兔丁(武侯祠店) 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/fooddetail/104/4926032.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=钦善斋·养生膳食(武侯祠店) 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              钦善斋·养生膳食(武侯祠店)
+            </a>
+          </div>
+
+          <div class="timeline-item is-flex">
+            <div class="tl-header">
+              <span class="tl-time">20:00</span>
+              <span class="tl-icon">🏮</span>
+              <span class="tl-title">散步｜錦里古街</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🏮" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>散步｜錦里古街</span><div class="plan-head"><span class="plan-tag">A</span>武侯祠旁的仿古街，晚上掛燈籠</div><div class="plan-body"><div class="tl-detail">
+              <p>免費；攜程寫全年全天開放、本地寶寫 05:00～23:00；攜程 <b>4.6</b>（16,224 則，2026/11 查）。亮燈時間三說：約 18:00（去哪兒遊記 2026-04）、19:00 全亮（攜程貼文，約 2026-11）、20:00（大河票務網 2025-03，摘要）；冬天平日確切時間未查到。商店約 22:00 關（攜程貼文，約 2026-11）。小吃按「克」「兩」計價的先問價（武侯祠官網）。逛約 1 小時（攜程遊記 2023-03，單一來源）。</p>
+            </div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=錦里古街 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              錦里古街
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">21:15</span>
+              <span class="tl-icon">🚕</span>
+              <span class="tl-title">計程車｜錦里 → 飯店 約 21:40</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>高德開車約 13～14 分（6.2～6.8 km）、打車約 ¥19（深夜查的路況與價錢）；加上路邊叫車等候抓 25 分，約 21:40 到飯店（估算）。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=匯航岷源酒店 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              匯航岷源酒店（終點）
+            </a>
+          </div>
+
+        </div>
+
+        <div class="day-maps">
+          <h4>📍 今日相關地圖</h4>
+          <div class="map-list">
+            <a class="map-chip map-chip-primary" href="../map/index.html?day=7">🗺️ 在地圖上看這天</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 8 ====== -->
+    <section class="day-section" id="day-8" data-date="2026-12-15">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">8</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 8｜12月15日（二）</h2>
+            <p class="date-str">出差（白天）；晚上川劇變臉《芙蓉國粹》</p>
+          </div>
+        </div>
+        <div class="kind-legend"><span><b style="color:var(--primary)">▌</b>主行程＝已訂或非去不可</span><span><b style="color:var(--on-surface-muted)">┆</b>交通＝移動，不算在行程裡</span><span><b style="color:var(--secondary)">┊</b>彈性＝可左右滑動換方案</span></div>
+
+        <div class="timeline">
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">09:00</span>
+              <span class="tl-icon">💼</span>
+              <span class="tl-title">出差（白天）</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>白天上班（上下班時間依公司安排；09:00 只是排序用）。晚上 20:00 開演，最晚 18:30 要出門。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">18:30</span>
+              <span class="tl-icon">🚇</span>
+              <span class="tl-title">成都地鐵 1 號線｜倪家橋 → 錦江賓館 約 18:57（估算）</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>導遊型交通指引：</p>
+              <ol>
+                <li>飯店步行約 13 分到倪家橋站 B 口（高德 824 m）。</li>
+                <li>1 號線往北 3 站到錦江賓館（倪家橋 → 省體育館 → 華西壩 → 錦江賓館），¥2，隨到隨搭（班距未查到）；高德飯店到餐廳門到門約 25 分（步行合計 1.1 km，深夜查、沒算等車）。18:43 到站、進站等車加 3 站，約 18:57 到錦江賓館（估算）。</li>
+                <li>出站走到岷山飯店（人民南路二段 55 號）；攜程寫餐廳離錦江賓館站 C1 口 248 m，約 19:00～19:03 到餐廳（估算）。</li>
+                <li>備案：計程車約 ¥12、開車約 8 分（3.4 km；深夜查，尖峰會更久）。</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">19:00</span>
+              <span class="tl-icon">🥢</span>
+              <span class="tl-title">晚餐｜岷轩中餐厅（岷山飯店）</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🥢" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>晚餐｜岷轩中餐厅（岷山飯店）</span><div class="plan-head"><span class="plan-tag">A</span>飯店中餐廳，離劇院最近</div><div class="plan-body"><div class="tl-detail">
+              <p>⭐ 攜程 <b>4.2</b>（35 則，2026/11 查；近五年有 2025-01、2026-08 的評論）；🕐 11:30-14:00、17:30-21:00（攜程；週二公休未查到）；🎫 人均約 ¥86；📍 人民南路二段55号 岷山饭店二楼。單人、微辣未查到；飯店中餐廳一盤可能偏大（推測）。</p>
+              <p><b>19:35 前吃完</b>（點菜時先說趕時間），走約 7 分到劇院（高德 455 m），約 19:42 到，先取票再去喝茶。</p>
+              <p><a href="https://gs.ctrip.com/html5/you/foods/fooddetail/104/6936233.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
+            </div></div></div>
+                  <div class="plan" data-i="1" data-icon="🥢" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜饕林餐厅(春熙路店)</span><div class="plan-head"><span class="plan-tag">B</span>川菜，評分最高</div><div class="plan-body"><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">照上一張交通卡到錦江賓館站，往東北走約 14 分（OSRM 1.1 km），約 19:10 進店；<b>最晚 19:40 離店</b>，再走約 9 分到劇院。比 A 多走約 1.1 km（劇院在車站和店中間，等於走過頭再回來）。</p></div><div class="plan-ref"><div class="pr-name">饕林餐厅(春熙路店)</div><div class="pr-feat">川菜（評論提到宮保雞丁可以做到「微微辣」）</div><div class="pr-facts">⭐ 攜程 <b>4.7</b>（30 則，2026/11 查；近五年有 2022-02、2023-09、2024-11 的評論）<br>🕐 10:30-22:00（攜程）<br>🎫 人均約 ¥65<br>📍 学道街81号中电大厦1楼；到劇院步行約 9 分（OSRM 744 m）<br>⚠️ 評論說要排隊，排隊就會趕不上 20:00 開演；單人、週二公休未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=饕林餐厅(春熙路店) 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/fooddetail/104/16580692.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🦆" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>晚餐｜張烤鴨（青石橋店）</span><div class="plan-head"><span class="plan-tag">C</span>非遺冒烤鴨</div><div class="plan-body"><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">照上一張交通卡到錦江賓館站，往東北走約 11 分（OSRM 895 m），約 19:08 進店；<b>最晚 19:45 離店</b>，再走約 6 分到劇院。</p></div><div class="plan-ref"><div class="pr-name">张烤鸭·川菜·非遗冒烤鸭(青石桥店)</div><div class="pr-feat">冒烤鴨（偏整隻），也有擔擔麵、鐘水餃等小份（評論）</div><div class="pr-facts">⭐ 攜程 <b>4.3</b>（76 則，2026/11 查；近五年有 2024-08 的評論）<br>🕐 11:00-22:30（攜程）<br>🎫 人均約 ¥65<br>📍 古卧龙桥街 青石桥室内农贸市场3楼1号；到劇院步行約 6 分（OSRM 474 m）<br>⚠️ 單人、微辣、週二公休未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=张烤鸭·川菜·非遗冒烤鸭(青石桥店) 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/fooddetail/104/5233576.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=岷山饭店 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              岷轩中餐厅（岷山飯店二樓）
+            </a>
+          </div>
+
+          <div class="timeline-item is-flex">
+            <div class="tl-header">
+              <span class="tl-time">20:00</span>
+              <span class="tl-icon">🎭</span>
+              <span class="tl-title">川劇變臉｜《芙蓉國粹》</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🎭" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>川劇變臉｜《芙蓉國粹》</span><div class="plan-head"><span class="plan-tag">A</span>四川省川劇院，變臉、吐火</div><div class="plan-body"><div class="tl-detail">
+              <p>🕐 <b>20:00 開演</b>（貓眼轉載、去哪兒售票頁都只有 20:00 場；攜程另一頁寫 20:30-21:40，兩說），約 80 分，約 21:10～21:20 結束（推算）。開演前 1 小時內到售票廳取票；送的蓋碗茶要在開演前到大門左邊的芙蓉茶館喝（貓眼轉載）。</p>
+              <p>🎫 丙 ¥80、乙 ¥130、甲 ¥180、VIP ¥280（去哪兒、eastchinatrip 價格月曆，二手）。⭐ 攜程 <b>4.7</b>（6,743 則，2026/11 查）。📍 錦江區指揮街108号。</p>
+              <p>買票：攜程、貓眼、Trip.com、Klook、KKday 都有；不用實名，憑預留手機號取票（台灣手機號能不能取票未查到）；當天 12:00 前可退改。12/15 的場次以官方為準，票務電話 028-86620019（Wander in China，二手）。</p>
+              <p><a href="https://www.douban.com/event/35011789/" target="_blank" rel="noopener">查證來源（貓眼轉載）</a>・<a href="https://touch.piao.qunar.com/touch/detail_3070619670.html" target="_blank" rel="noopener">去哪兒售票頁</a></p>
+            </div></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="tl-tips">
+              <div class="tip book"><span class="tip-ico">🎫</span><span class="tip-body"><b>先上網買票</b><br>線上最晚前一天訂（去哪兒標「可訂明日」）；現場能不能買、會不會賣完未查到。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=四川省川剧院 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              四川省川劇院
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">21:20</span>
+              <span class="tl-icon">🚇</span>
+              <span class="tl-title">成都地鐵 1 號線｜錦江賓館 → 倪家橋 約 21:37（估算）</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>走到錦江賓館站（劇院到車站中心約 5 分，OSRM 421 m；最近的出口未查到），1 號線往南 3 站到倪家橋，¥2，再走約 13 分回飯店，約 21:50 到（估算）。計程車：約 ¥15、開車約 9 分（深夜查）。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=匯航岷源酒店 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              匯航岷源酒店（終點）
+            </a>
+          </div>
+
+        </div>
+
+        <div class="day-maps">
+          <h4>📍 今日相關地圖</h4>
+          <div class="map-list">
+            <a class="map-chip map-chip-primary" href="../map/index.html?day=8">🗺️ 在地圖上看這天</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 9 ====== -->
+    <section class="day-section" id="day-9" data-date="2026-12-16">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">9</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 9｜12月16日（三）</h2>
+            <p class="date-str">出差（白天）；晚上九眼橋晚餐＋安順廊橋夜景</p>
+          </div>
+        </div>
+        <div class="kind-legend"><span><b style="color:var(--primary)">▌</b>主行程＝已訂或非去不可</span><span><b style="color:var(--on-surface-muted)">┆</b>交通＝移動，不算在行程裡</span><span><b style="color:var(--secondary)">┊</b>彈性＝可左右滑動換方案</span></div>
+
+        <div class="timeline">
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">09:00</span>
+              <span class="tl-icon">💼</span>
+              <span class="tl-title">出差（白天）</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>白天上班（上下班時間依公司安排；09:00 只是排序用）。晚上以 18:30 從飯店出發來排，23:00 前回飯店。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">18:30</span>
+              <span class="tl-icon">🚕</span>
+              <span class="tl-title">計程車｜飯店 → 九眼橋 約 18:55</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>高德開車約 11～12 分（4.9～5.8 km）、打車約 ¥15（深夜查）；18:30 下班尖峰沒有實測，抓約 25 分（深夜的約 2 倍，叫車等候沒算）、約 18:55 到（估算），晚到幾分就單點小吃。地鐵走法未查到。選 B 許家菜：目的地改望江路 1 號格林威治廣場；選 C THE BRIDGE：濱江東路 66 號（安順廊橋）；這兩段車程未查到。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">19:00</span>
+              <span class="tl-icon">🥢</span>
+              <span class="tl-title">晚餐｜天府掌柜(九眼桥店)</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🥢" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>晚餐｜天府掌柜(九眼桥店)</span><div class="plan-head"><span class="plan-tag">A</span>川味小吃＋川菜，可以單點</div><div class="plan-body"><div class="tl-detail">
+              <p>天府擔擔麵、肥腸粉、紅油餃、蛋烘糕這類小吃都能單點。攜程看得到的評論都是 2019 年，近況未查到；🕐 11:00-22:00（攜程；週三公休未查到）；🎫 人均約 ¥95；📍 锦官驿街1号水锦界8栋1号（香格里拉酒店旁）。單人座位、微辣未查到。</p>
+              <p>吃完走約 8 分到安順廊橋（高德 415 m）。</p>
+              <p><a href="https://gs.ctrip.com/html5/you/foods/104/7072880.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
+            </div></div></div>
+                  <div class="plan" data-i="1" data-icon="🍽️" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜許家菜（望江店）</span><div class="plan-head"><span class="plan-tag">B</span>高檔川菜，要訂位</div><div class="plan-body"><div class="plan-ref"><div class="pr-name">许家菜(望江店)</div><div class="pr-feat">高檔川菜（攜程高端餐廳榜）</div><div class="pr-facts">⭐ 攜程 <b>4.3</b>（53 則，2026/11 查；近五年有 2024-07、2026-04 的評論）<br>🕐 11:00-14:00、17:30-21:00（攜程；週三公休未查到）<br>🎫 人均約 ¥358<br>📍 望江路1号格林威治广场8幢附1号；到安順廊橋步行約 9 分（OSRM 740 m）<br>⚠️ 要訂位；一個人能不能訂、微辣未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=许家菜(望江店) 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/104/5237694.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🌉" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>晚餐｜THE BRIDGE 廊橋</span><div class="plan-head"><span class="plan-tag">C</span>就在安順廊橋上</div><div class="plan-body"><div class="plan-ref"><div class="pr-name">THE BRIDGE 廊桥</div><div class="pr-feat">廊橋上的高檔川菜</div><div class="pr-facts">⭐ 攜程看得到的評論是 2020～2023 年，評分不採用<br>🕐 11:30-14:00、17:30-21:00（攜程；週三公休未查到）<br>🎫 人均約 ¥450<br>📍 滨江东路66号（安順廊橋上）<br>⚠️ 單人、微辣未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=THE BRIDGE廊桥 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/104/5233825.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=天府掌柜(九眼桥店) 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              天府掌柜(九眼桥店)
+            </a>
+          </div>
+
+          <div class="timeline-item is-flex">
+            <div class="tl-header">
+              <span class="tl-time">20:00</span>
+              <span class="tl-icon">🌉</span>
+              <span class="tl-title">夜景｜安順廊橋、九眼橋</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🌉" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>夜景｜安順廊橋、九眼橋</span><div class="plan-head"><span class="plan-tag">A</span>錦江邊散步</div><div class="plan-body"><div class="tl-detail">
+              <p>錦江上的廊橋，晚上亮燈；全年全天、免費；攜程 <b>4.6</b>（110 則，2026/11 查）。冬天亮燈時間未查到（遊記寫約 19:30～21:30，季節沒寫）。沿江走到九眼橋約 8 分（OSRM 648 m）；九眼橋一帶有酒吧街。12/11 如果已經選了九眼橋，這晚可以改搭船（B）。</p>
+              <p><a href="https://gs.ctrip.com/html5/you/sight/chengdu104/1713571.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
+            </div></div></div>
+                  <div class="plan" data-i="1" data-icon="⛴️" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>夜遊｜錦江遊船（班次未查到）</span><div class="plan-head"><span class="plan-tag">B</span>30 分遊船看兩岸夜景</div><div class="plan-body"><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從天府掌柜直接往北走約 12 分到東門碼頭（OSRM 947 m），不必先去廊橋；從安順廊橋走是約 19 分（高德 1.1 km）。</p><p class="plan-route-note">現場等船約 15 分內、航程約 30 分（二手），約 21:05～21:10 上岸（估算）；21:15 的車在船上先叫。</p></div><div class="plan-ref"><div class="pr-name">錦江夜遊（東門碼頭上船）</div><div class="pr-feat">30 分航線經合江亭、安順廊橋（官方 2024 公告的遊線）</div><div class="pr-facts">🕐 夜場時間各說不一：攜程 20:00-22:10、官方 2024 公告 18:00-22:00、Pelago 入場 19:00-21:50；<b>12/16 週三有沒有開、班距都未查到</b><br>🎫 ¥118 起（30 分）；攜程 4.3（816 則，2026/11 查）<br>📍 東門碼頭（天仙橋濱河路）<br>⚠️ 台胞證能不能買票、上船未查到；暴雨、閘壩檢修會停航（2024-12 曾停）。先打 028-84542250 問</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=东门码头 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/sight/chengdu104/5701315.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=安顺廊桥 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              安順廊橋
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">21:15</span>
+              <span class="tl-icon">🚕</span>
+              <span class="tl-title">計程車｜安順廊橋 → 飯店 約 21:40</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>高德開車約 10～11 分（4.2～5.2 km）、打車約 ¥14（深夜查）；加上叫車等候抓 25 分，約 21:40 到飯店（估算）。走到九眼橋的話就在九眼橋叫車（車程是從廊橋算的，九眼橋未查）。搭船（B）的話從東門碼頭叫車，時間未查。公交：九眼橋南站 92 路 7 站、¥2、門到門約 34 分（高德；末班未查到）。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=匯航岷源酒店 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              匯航岷源酒店（終點）
+            </a>
+          </div>
+
+        </div>
+
+        <div class="day-maps">
+          <h4>📍 今日相關地圖</h4>
+          <div class="map-list">
+            <a class="map-chip map-chip-primary" href="../map/index.html?day=9">🗺️ 在地圖上看這天</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 10 ====== -->
+    <section class="day-section" id="day-10" data-date="2026-12-17">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">10</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 10｜12月17日（四）</h2>
+            <p class="date-str">出差（白天）；晚上飯店附近吃成都火鍋</p>
+          </div>
+        </div>
+        <div class="kind-legend"><span><b style="color:var(--primary)">▌</b>主行程＝已訂或非去不可</span><span><b style="color:var(--on-surface-muted)">┆</b>交通＝移動，不算在行程裡</span><span><b style="color:var(--secondary)">┊</b>彈性＝可左右滑動換方案</span></div>
+
+        <div class="timeline">
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">09:00</span>
+              <span class="tl-icon">💼</span>
+              <span class="tl-title">出差（白天）</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>白天上班（上下班時間依公司安排；09:00 只是排序用）。晚上走路去吃火鍋。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">18:30</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜飯店 → 科院街 約 18:45</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>步行約 14 分（OSRM 1.1 km，算到科院街中段；店門座標未查到）。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">18:45</span>
+              <span class="tl-icon">🍲</span>
+              <span class="tl-title">晚餐｜大龙燚火锅(科华总店)</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🍲" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>晚餐｜大龙燚火锅(科华总店)</span><div class="plan-head"><span class="plan-tag">A</span>成都火鍋品牌的總店</div><div class="plan-body"><div class="tl-detail">
+              <p>大眾點評上成都只有兩家（科華總店、太古里店）。大眾點評 10,915 則、🎫 人均約 ¥86（2026/11 查；分數沒記到）；📍 玉林街道科院街5号（點評，摘要）。🕐 <b>營業時間、12/17 有沒有開未查到</b>。微辣鍋底兩說：攜程點評寫有微辣、可配菌湯成鴛鴦鍋（但那是另一頁的「玉林總店」，是不是同一家未查證）；另一說只有全紅油鍋、沒有鴛鴦（搜尋摘要，來源不明）。單人鍋、排隊、預約未查到。</p>
+              <p>⚠️ 前一晚用高德確認有開；沒開就改 B 或 C。</p>
+              <p><a href="https://www.dianping.com/shop/k9JYRTo8sEluOIRA" target="_blank" rel="noopener">查證來源（大眾點評）</a></p>
+            </div></div></div>
+                  <div class="plan" data-i="1" data-icon="🍲" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜錦城印象火鍋（玉林店）</span><div class="plan-head"><span class="plan-tag">B</span>玉林的火鍋店</div><div class="plan-body"><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">不走上一張交通卡：從飯店往西走約 18 分（OSRM 1.5 km）。</p></div><div class="plan-ref"><div class="pr-name">锦城印象火锅(玉林店)</div><div class="pr-feat">成都火鍋；有等位區</div><div class="pr-facts">⭐ 攜程看得到的評論都在 2022 年以前，評分不採用<br>🕐 11:00-次日01:00（攜程）<br>🎫 人均約 ¥119<br>📍 倪家桥路9号(九和楼下)；從飯店步行約 18 分（OSRM 1.5 km）<br>⚠️ 現在還有沒有營業未查證（沒有近五年的評論），出發前用高德確認；微辣、單人鍋未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=锦城印象火锅(玉林店) 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/104/342409.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🍲" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>晚餐｜老碼頭火鍋（玉林店）</span><div class="plan-head"><span class="plan-tag">C</span>玉林生活廣場旁</div><div class="plan-body"><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">不走上一張交通卡：從飯店往西走約 22 分（OSRM 1.8 km）。</p></div><div class="plan-ref"><div class="pr-name">老码头火锅(玉林店)</div><div class="pr-feat">成都火鍋</div><div class="pr-facts">⭐ 攜程看得到的評論都在 2022 年以前，評分不採用<br>🕐 10:00-次日02:00（攜程）<br>🎫 人均約 ¥76<br>📍 玉林中路29号（近倪家桥站、玉林生活广场）；從飯店步行約 22 分（OSRM 1.8 km）<br>⚠️ 現在還有沒有營業未查證（沒有近五年的評論），出發前用高德確認；飯點要排隊（點評，摘要）；微辣、單人鍋未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=老码头火锅(玉林店) 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/104/5283834.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=大龙燚火锅(科华总店) 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              大龙燚火锅(科华总店)
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">20:30</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜回飯店 約 20:45</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>原路走回飯店約 14 分（B、C 約 18～22 分）。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=匯航岷源酒店 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              匯航岷源酒店（終點）
+            </a>
+          </div>
+
+        </div>
+
+        <div class="day-maps">
+          <h4>📍 今日相關地圖</h4>
+          <div class="map-list">
+            <a class="map-chip map-chip-primary" href="../map/index.html?day=10">🗺️ 在地圖上看這天</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 11 ====== -->
+    <section class="day-section" id="day-11" data-date="2026-12-18">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">11</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 11｜12月18日（五）</h2>
+            <p class="date-str">出差（白天）；晚上飯店附近吃完早點休息（隔天 05:00 出發）</p>
+          </div>
+        </div>
+        <div class="kind-legend"><span><b style="color:var(--primary)">▌</b>主行程＝已訂或非去不可</span><span><b style="color:var(--on-surface-muted)">┆</b>交通＝移動，不算在行程裡</span><span><b style="color:var(--secondary)">┊</b>彈性＝可左右滑動換方案</span></div>
+
+        <div class="timeline">
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">09:00</span>
+              <span class="tl-icon">💼</span>
+              <span class="tl-title">出差（白天）</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>白天上班（上下班時間依公司安排；09:00 只是排序用）。晚上在飯店附近吃，早點回去收行李。</p>
+            </div>
+            <div class="tl-tips">
+              <div class="tip book"><span class="tip-ico">🚕</span><span class="tip-body"><b>今晚先約好明天 05:00 的車</b><br>網約車預約，或請飯店櫃檯叫車；去天府機場 T2 約 44～50 分（高德）。</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">18:30</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜飯店 → 航空美食城 約 18:42</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>步行約 12 分（高德 755 m），航空路 3 號。選 C 王二娃是往西走約 14 分，約 18:44 到；沒有訂位，晚幾分沒關係。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">18:45</span>
+              <span class="tl-icon">🍲</span>
+              <span class="tl-title">晚餐｜韩小小乐山跷脚牛肉(航空美食城店)</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🍲" role="tabpanel" aria-label="原訂行程"><span class="plan-title" hidden>晚餐｜韩小小乐山跷脚牛肉(航空美食城店)</span><div class="plan-head"><span class="plan-tag">A</span>樂山蹺腳牛肉，一人套餐</div><div class="plan-body"><div class="tl-detail">
+              <p>牛雜清湯、現點現煮，在航空美食城一樓。⭐ 攜程 <b>3.8</b>（5 則，2026/11 查；評論 2025-06、2025-10、2026-05，樣本很少）；🕐 10:00-22:00（攜程、Trip.com，同一批資料）；🎫 人均約 ¥25；📍 航空路3号航空美食城一楼。</p>
+              <p>一個人：評論寫 24 元一葷一素套餐、豆花拌飯（2026-05）。辣度：湯底清淡，辣椒麵是另外加的蘸料（Trip.com 評論、攜程遊記 2024-02），點餐時說不要辣椒麵；這家有沒有不辣的蘸料未查到。</p>
+              <p><a href="https://gs.ctrip.com/html5/you/foods/104/133752951.html" target="_blank" rel="noopener">查證來源（攜程）</a></p>
+            </div></div></div>
+                  <div class="plan" data-i="1" data-icon="🥘" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜江油肥腸（航空美食城店）</span><div class="plan-head"><span class="plan-tag">B</span>同一個美食城的肥腸川菜</div><div class="plan-body"><div class="plan-ref"><div class="pr-name">江油肥腸（航空美食城店）</div><div class="pr-feat">水煮肥腸、火爆肥腸、工作餐</div><div class="pr-facts">⭐ Trip.com 評論沒標日期，評分不採用<br>🕐 10:00-20:30（Trip.com，單一來源）<br>🎫 工作餐二十多元（評論）<br>📍 航空路3号1层C-004号（航空美食城）；從飯店步行約 12 分（高德 787 m）<br>⚠️ 20:30 關，20:00 前吃完；肥腸偏重口味，能不能少辣未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=江油肥肠(航空美食城店) 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://tw.trip.com/restaurant/china/chengdu/detail/restaurant-42266196/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🍲" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>晚餐｜王二娃蹺腳牛肉（玉林店）</span><div class="plan-head"><span class="plan-tag">C</span>蹺腳牛肉＋鉢鉢雞</div><div class="plan-body"><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">不走上一張交通卡：從飯店往西走約 14 分（高德 917 m）。</p></div><div class="plan-ref"><div class="pr-name">王二娃跷脚牛肉(玉林店)</div><div class="pr-feat">蹺腳牛肉、鉢鉢雞、爆炒，可以單點</div><div class="pr-facts">⭐ 攜程 <b>4.6</b>（5 則，2026/11 查；評論 2025-07、2026-01、2026-04，部分文字像範本，參考就好）<br>🕐 09:00-21:00（攜程、Trip.com，同一批資料）<br>🎫 人均約 ¥31<br>📍 玉林南街12号附23号<br>⚠️ 不辣的蘸料未查到</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=王二娃跷脚牛肉(玉林店) 成都" target="_blank" rel="noopener">在地圖開啟</a><a class="pr-src" href="https://gs.ctrip.com/html5/you/foods/104/130132184.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=韩小小乐山跷脚牛肉(航空美食城店) 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              韩小小乐山跷脚牛肉(航空美食城店)
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">19:30</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜回飯店 約 19:42</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>原路走回飯店約 12 分（C 約 14 分）。回去<b>先約好明天 05:00 的車</b>（網約車預約，或請櫃檯叫車），再收行李、早點睡；明天 04:50 退房。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=匯航岷源酒店 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              匯航岷源酒店（終點）
+            </a>
+          </div>
+
+        </div>
+
+        <div class="day-maps">
+          <h4>📍 今日相關地圖</h4>
+          <div class="map-list">
+            <a class="map-chip map-chip-primary" href="../map/index.html?day=11">🗺️ 在地圖上看這天</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====== DAY 12 ====== -->
+    <section class="day-section" id="day-12" data-date="2026-12-19">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">12</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 12｜12月19日（六）</h2>
+            <p class="date-str">成都 → 上海浦東轉機 → 台北（05:00 叫車去機場）</p>
+          </div>
+        </div>
+        <div class="kind-legend"><span><b style="color:var(--primary)">▌</b>主行程＝已訂或非去不可</span><span><b style="color:var(--on-surface-muted)">┆</b>交通＝移動，不算在行程裡</span><span><b style="color:var(--secondary)">┊</b>彈性＝可左右滑動換方案</span></div>
+
+        <div class="timeline">
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">04:50</span>
+              <span class="tl-icon">🧳</span>
+              <span class="tl-title">退房｜匯航岷源酒店</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>櫃檯 24 小時。05:00 的車要前一晚先約好（網約車預約，或請飯店叫車）。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">05:00</span>
+              <span class="tl-icon">🚕</span>
+              <span class="tl-title">計程車／網約車｜飯店 → 天府機場 T2 約 05:50</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>導遊型交通指引：</p>
+              <ol>
+                <li>高德：計程車約 ¥167、約 44 分；開車 43 分（60.4 km）或 50 分（68.3 km）（週二晚上查的路況，週六清晨未查）。05:00 出發約 05:45～05:50 到 T2（估算）。</li>
+                <li>地鐵趕不上：倪家橋往南首班 06:10，門到門約 1 小時 16 分，最早約 07:25 才到 T2（推算），比起飛晚。</li>
+              </ol>
+            </div>
+            <div class="tl-tips">
+              <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>06:10 前辦完報到</b><br>東航天府機場：值機截止國內航班起飛前 40 分、國際 50 分（MU5442 適用哪個未查到，以 50 分算）；登機口起飛前 15 分（06:45）關（東航官網）。</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">07:00</span>
+              <span class="tl-icon">✈️</span>
+              <span class="tl-title">東航 MU5442｜天府 T2 → 上海浦東 T1 09:50</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>MU5442 天府 T2 07:00 → 浦東 T1 09:50，2 小時 50 分（A320，經濟艙 T）。整張票到桃園，行李直掛。回程託運、手提額度未查到。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=成都天府国际机场T2航站楼 成都" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              天府國際機場 T2
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">09:50</span>
+              <span class="tl-icon">🔁</span>
+              <span class="tl-title">浦東 T1 轉機｜國內 → 國際</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>轉機 2 小時 20 分，行李直掛，不用自己領。浦東 T1 東航值機截止國內航班起飛前 40 分、國際 50 分（11:30／11:20），登機口起飛前 20 分（11:50）關（東航官網）；以 <b>11:20 前辦完</b>算，實際可用約 1 小時 30 分。國內轉國際的出境、安檢在哪辦未查到，出發前問東航。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">12:10</span>
+              <span class="tl-icon">✈️</span>
+              <span class="tl-title">東航 MU5007｜浦東 T1 → 桃園 T2 14:00</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>MU5007 浦東 T1 12:10 → 桃園 T2 14:00，1 小時 50 分（經濟艙 T）。</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="day-maps">
+          <h4>📍 今日相關地圖</h4>
+          <div class="map-list">
+            <a class="map-chip map-chip-primary" href="../map/index.html?day=12">🗺️ 在地圖上看這天</a>
           </div>
         </div>
       </div>

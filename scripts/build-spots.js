@@ -57,7 +57,7 @@ async function walk(a, b) {
   const straight = haversine(a, b);
   let leg;
   if (r.distance > straight * DETOUR_MAX && straight > 50) {
-    leg = { meters: Math.round(straight), minutes: Math.round(straight / 1.25 / 60), coords: [a, b], straight: true };
+    leg = { meters: Math.round(straight), minutes: Math.round(straight / 80), coords: [a, b], straight: true };
   } else {
     // 分鐘照 planning.md 的規則：距離 ÷ 80 m／分（不用 OSRM 的 duration，兩者會差 1～2 分）
     leg = { meters: Math.round(r.distance), minutes: Math.round(r.distance / 80),

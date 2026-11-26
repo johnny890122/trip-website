@@ -1,3 +1,13 @@
-{"photoNote":"2026-11-19 Category:Huangguan Escalator 沒有合格照片；Escalators in Chongqing 只有 3 張合格，都不是皇冠大扶梯（觀音橋公園、歇台子、紅岩村出口），故不放。","stops":[],"photos":[
+{"id":"escalator","title":"皇冠大扶梯","day":3,"date":"2026-12-10","sunset":"17:55",
+"gate":"上端（兩路口站 3／4 號口旁）搭下去、在菜園壩端搭上來，回兩路口站搭 1 號線",
+"stops":[
+{"name":"高胖妹小面(两路口总店)","ja":"高胖妹小面(两路口总店)","time":"09:15","lat":29.556928,"lon":106.545554,"desc":"吃完沿中山三路往南走到扶梯上端（座標為攜程 GCJ-02 換算，非 OSM）"},
+{"name":"皇冠大扶梯 上端（兩路口）","ja":"皇冠大扶梯","time":"09:19","lat":29.5551306,"lon":106.5454946,"desc":"在兩路口站 3／4 號口旁；付費後搭下行梯，約 2 分 30 秒","must":true},
+{"name":"皇冠大扶梯 下端（菜園壩）","ja":"皇冠大扶梯","time":"09:22","lat":29.5540072,"lon":106.5452615,"desc":"菜園壩端；換搭上行梯回兩路口（再付一次）"},
+{"name":"兩路口站 4 號口","ja":"两路口站4号口","time":"09:35","lat":29.555308,"lon":106.545296,"desc":"進站搭 1 號線往沙坪壩方向（09:40）"}
+],
+"stopsNote":"扶梯是單程設施，要回兩路口站搭 1 號線只能原路搭上來（上端→下端→上端），這段折返無法避免",
+"photoNote":"2026-11-20 重跑候選：Category:Huangguan Escalator 沒有合格照片；Escalators in Chongqing 只有 3 張合格，都不是皇冠大扶梯（觀音橋公園、歇台子、紅岩村出口），故不放。",
+"photos":[
 {"id":"escalator1","label":"皇冠大扶梯","cat":["Category:Huangguan Escalator","Category:Escalators in Chongqing"],"q":["Crown Escalator Chongqing","皇冠大扶梯 重庆"]}
 ]}

@@ -1,4 +1,9 @@
-{"stops":[],"photos":[
+{"id":"liziba","title":"李子壩站穿樓觀景平台","day":3,"date":"2026-12-10","sunset":"17:55",
+"gate":"從三層馬路下到李子坝正街，進觀景平台；12:55 往對面梁山雞午餐",
+"stops":[],
+"stopsNote":"只有觀景平台一個戶外點（OSM node 6874556537）；車站出入口 OSM 沒有標，不做路線地圖",
+"photos":[
 {"id":"liziba1","pick":"File:View of Liziba Station image 10.jpg","label":"李子壩站穿樓輕軌","cat":["Category:Liziba Station"],"q":["Liziba station Chongqing monorail","Chongqing Rail Transit Line 2 through building"]},
-{"id":"liziba2","pick":"File:View of Liziba Station image 7.jpg","label":"李子壩站穿樓輕軌","cat":["Category:Liziba Station"],"q":["Liziba station Chongqing monorail"]}
+{"id":"liziba2","pick":"File:View of Liziba Station image 7.jpg","label":"李子壩站穿樓輕軌","cat":["Category:Liziba Station"],"q":["Liziba station Chongqing monorail"]},
+{"id":"liziba-deck","pick":"File:View of Liziba Station image 12.jpg","label":"列車從住宅樓穿出","cat":["Category:Liziba Station"],"q":["Liziba Station viewing platform","李子坝 观景平台","Liziba monorail building"]}
 ]}

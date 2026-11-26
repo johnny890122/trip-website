@@ -72,7 +72,7 @@
 </main>
 
 <footer class="site-footer">
-  <p>2026 年 12 月 8 日～19 日｜每人｜人民幣｜已排 12/8～12/13，12/14 起出差日之後再排</p>
+  <p>2026 年 12 月 8 日～19 日｜每人｜人民幣｜已排 12/8～12/19（12/14～18 白天出差，只排晚上）</p>
 </footer>
 
 <script src="../hero/hero.js"></script>
@@ -81,11 +81,11 @@
 window.BUDGET = {
   title: '成都之旅',
   shared: [
-    { key: 'flight',   label: '✈️ 機票', sub: '暫定未訂：國航去程＋東航回程，一人來回 NT$15,835 起（2026-11-20 截圖，含稅與否未寫）；訂好後換算成人民幣填入' },
-    { key: 'hotel',    label: '🏨 住宿' },
+    { key: 'flight',   label: '✈️ 機票', sub: '國航 CA410 去程＋東航 MU5442／MU5007 回程；機票不是自己付，不用填' },
+    { key: 'hotel',    label: '🏨 住宿', sub: '自付：重慶國貿格蘭大酒店 12/8～11 3 晚 NT$5,152（Booking）；這格是人民幣，填 5,152 ÷ 上面的匯率；成都匯航岷源 8 晚公司負擔，不用填' },
     { key: 'pass',     label: '🎟️ 交通票券' },
     { key: 'insure',   label: '🛡️ 旅遊平安險' },
-    { key: 'esim',     label: '📶 網路（eSIM／WiFi 機）' },
+    { key: 'esim',     label: '📶 網路（eSIM／WiFi 機）', sub: '中國 eSIM 12 天吃到飽，公司付，不用填' },
   ],
   /* 每天一筆；行程排定後，把主行程已查證的門票與車票（每人・當地貨幣）填進 fixed，例：
      { name: '〇〇 入場', amount: 500 }。彈性方案不算 */
@@ -93,9 +93,15 @@ window.BUDGET = {
     { n: 1, date: '12/8（二）', title: '台北 → 重慶', fixed: [] },
     { n: 2, date: '12/9（三）', title: '渝中老街與階梯', fixed: [ { name: '湖廣會館 成人票', amount: 32 } ] },
     { n: 3, date: '12/10（四）', title: '兩路口・鵝嶺・李子壩・磁器口', fixed: [] },
-    { n: 4, date: '12/11（五）', title: '重慶 → 成都', fixed: [ { name: '高鐵 G8612 沙坪壩 → 成都東（二等座，2026-11-27 12306 代查）', amount: 164 } ] },
+    { n: 4, date: '12/11（五）', title: '重慶 → 成都', fixed: [ { name: '高鐵 G8612 沙坪壩 → 成都東（二等座，2026-11-27 12306 代查）', amount: 164 }, { name: '杜甫草堂博物館 門票', amount: 50 } ] },
     { n: 5, date: '12/12（六）', title: '三星堆一日', fixed: [ { name: '三星堆博物館 門票', amount: 72 }, { name: '高鐵 成都東 ⇄ 廣漢北（二等座約 ¥20×2，多數班次）', amount: 40 } ] },
     { n: 6, date: '12/13（日）', title: '熊貓基地＋市區', fixed: [ { name: '成都大熊貓繁育研究基地 成人票', amount: 55 } ] },
+    { n: 7, date: '12/14（一）', title: '出差；晚上錦里', fixed: [] },
+    { n: 8, date: '12/15（二）', title: '出差；晚上川劇變臉', fixed: [] },
+    { n: 9, date: '12/16（三）', title: '出差；晚上九眼橋', fixed: [] },
+    { n: 10, date: '12/17（四）', title: '出差；晚上火鍋', fixed: [] },
+    { n: 11, date: '12/18（五）', title: '出差；早點回飯店', fixed: [] },
+    { n: 12, date: '12/19（六）', title: '成都 → 浦東 → 台北', fixed: [] },
   ],
 };
 </script>

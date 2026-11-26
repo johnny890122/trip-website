@@ -24,5 +24,31 @@
     "width": 960,
     "height": 640,
     "bytes": 197564
+  },
+  {
+    "id": "cqk-river",
+    "label": "迎龍門",
+    "file": "磁器口古镇-迎龙门.jpg",
+    "author": "Xiumuzidiao",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "taken": "2024-05-02",
+    "source": "https://commons.wikimedia.org/wiki/File:%E7%A3%81%E5%99%A8%E5%8F%A3%E5%8F%A4%E9%95%87-%E8%BF%8E%E9%BE%99%E9%97%A8.jpg",
+    "width": 960,
+    "height": 720,
+    "bytes": 208672
+  },
+  {
+    "id": "cqk-street",
+    "label": "磁器口老街（照片沒標是哪條街）",
+    "file": "Ciqikou image 9.jpg",
+    "author": "TarnishedPath",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2025-09-11",
+    "source": "https://commons.wikimedia.org/wiki/File:Ciqikou_image_9.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 221850
   }
 ]

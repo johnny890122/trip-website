@@ -24,5 +24,70 @@
     "width": 960,
     "height": 721,
     "bytes": 258115
+  },
+  {
+    "id": "dufu-maowu",
+    "label": "茅屋故居（廚房）",
+    "file": "杜甫草堂 - 茅屋 - 厨房 - 2024-10-20.jpg",
+    "author": "瑞丽江的河水",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2024-10-20",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%9D%9C%E7%94%AB%E8%8D%89%E5%A0%82_-_%E8%8C%85%E5%B1%8B_-_%E5%8E%A8%E6%88%BF_-_2024-10-20.jpg",
+    "width": 960,
+    "height": 720,
+    "bytes": 200363
+  },
+  {
+    "id": "dufu-gongbu",
+    "label": "工部祠",
+    "file": "杜甫草堂-工部祠 02.jpg",
+    "author": "Kcx36",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-04-05",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%9D%9C%E7%94%AB%E8%8D%89%E5%A0%82-%E5%B7%A5%E9%83%A8%E7%A5%A0_02.jpg",
+    "width": 960,
+    "height": 721,
+    "bytes": 172545
+  },
+  {
+    "id": "dufu-shishi",
+    "label": "詩史堂",
+    "file": "杜甫草堂-诗史堂.jpg",
+    "author": "Kcx36",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-04-05",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%9D%9C%E7%94%AB%E8%8D%89%E5%A0%82-%E8%AF%97%E5%8F%B2%E5%A0%82.jpg",
+    "width": 960,
+    "height": 721,
+    "bytes": 298769
+  },
+  {
+    "id": "dufu-yingbi",
+    "label": "「草堂」影壁",
+    "file": "杜甫草堂-“草堂”照壁.jpg",
+    "author": "Kcx36",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-04-05",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%9D%9C%E7%94%AB%E8%8D%89%E5%A0%82-%E2%80%9C%E8%8D%89%E5%A0%82%E2%80%9D%E7%85%A7%E5%A3%81.jpg",
+    "width": 960,
+    "height": 721,
+    "bytes": 219151
+  },
+  {
+    "id": "dufu-south",
+    "label": "南門",
+    "file": "杜甫草堂南门.jpg",
+    "author": "Kcx36",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-04-05",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%9D%9C%E7%94%AB%E8%8D%89%E5%A0%82%E5%8D%97%E9%97%A8.jpg",
+    "width": 960,
+    "height": 721,
+    "bytes": 175455
   }
 ]

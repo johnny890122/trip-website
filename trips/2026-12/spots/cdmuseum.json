@@ -1,0 +1,9 @@
+{"id":"cdmuseum","title":"成都博物館","day":6,"date":"2026-12-13","sunset":"18:03",
+"gate":"1 樓博物館出入口進出（官方導覽手冊只標一個出入口）",
+"parkMap":{"url":"https://cdmuseum.com/daolan/202404/3619.html","label":"官網 導覽手冊（各樓層平面圖）","note":"官網圖檔，轉載授權未查到；副本不放 docs，只放連結"},
+"stops":[],
+"stopsNote":"整趟在一棟建築裡；OSM 的成都博物馆（way 929666443）範圍內沒有任何有名字的點或 entrance 節點，戶外點只有入口一個（進出同一處），少於 2 個，不做路線地圖",
+"photos":[
+{"id":"cdm-rhino","pick":"File:20250515 Large stone rhinoceros sculpture in the Chengdu Museum.jpg","label":"石犀（2 樓 2 號展廳）","cat":["Category:Collections of the Chengdu Museum"],"q":["Chengdu Museum stone rhinoceros","石犀 成都博物馆"]},
+{"id":"cdm-acu","label":"經穴漆人（2 樓 2 號展廳）","cat":["Category:Collections of the Chengdu Museum"],"q":["经穴漆人 成都博物馆","Laoguanshan acupuncture figurine"],"photoNote":"沒有合格照片：Commons 只有兩張，2018-06 拍的太舊、2025-02 拍的是直式（2252×3005）"}
+]}

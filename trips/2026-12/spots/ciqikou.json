@@ -1,4 +1,18 @@
-{"stops":[],"photos":[
+{"id":"ciqikou","title":"磁器口古鎮","day":3,"date":"2026-12-10","sunset":"17:55",
+"gate":"後街（地鐵站這側）進、正街出（晚餐在正街；飯後走正街南段、磁童路回磁器口站）",
+"stops":[
+{"name":"後街 吊腳樓廣場","ja":"磁器口后街吊脚楼广场","time":"14:20","lat":29.581419,"lon":106.443081,"desc":"磁器口站出來先到後街（人較少、像文創園）","photo":"cqk-houjie"},
+{"name":"寶輪寺","ja":"宝轮寺","time":"14:55","lat":29.584385,"lon":106.447924,"desc":"古鎮最高處的寺；免費蓋章","must":true,"photo":"cqk-baolun"},
+{"name":"磁器口橫街","ja":"磁器口横街","time":"15:40","lat":29.584942,"lon":106.447954,"desc":"「慢生活一條街」，咖啡、茶館，可坐下休息"},
+{"name":"正街北端（江邊，迎龍門方向）","ja":"磁器口正街","time":"16:20","lat":29.585168,"lon":106.449697,"desc":"迎龍門、河街碼頭在江邊（OSM 沒有標，位置研判）","must":true,"photo":"cqk-river"},
+{"name":"磁器口正街（往回走）","ja":"磁器口正街","time":"16:55","lat":29.58398,"lon":106.448379,"desc":"青石板老街，日落 17:55 前拍；麻花店在正街","must":true,"photo":"cqk-street"},
+{"name":"千年古鎮鷄雜（正街 69 號）","ja":"千年古镇鸡杂(磁器口总店)","time":"17:30","lat":29.583126,"lon":106.447963,"desc":"晚餐；茂莊（正街 78 號）在旁邊"}
+],
+"photos":[
 {"id":"ciqikou1","pick":"File:Ciqikou image 4.jpg","label":"磁器口古鎮","cat":["Category:Ciqikou"],"q":["Ciqikou Chongqing"]},
-{"id":"ciqikou2","pick":"File:Ciqikou image 26.jpg","label":"磁器口古鎮","cat":["Category:Ciqikou"],"q":["Ciqikou Chongqing"]}
+{"id":"ciqikou2","pick":"File:Ciqikou image 26.jpg","label":"磁器口古鎮","cat":["Category:Ciqikou"],"q":["Ciqikou Chongqing"]},
+{"id":"cqk-baolun","label":"寶輪寺","cat":["Category:Baolun Temple, Chongqing"],"q":["Baolun Temple Ciqikou","宝轮寺 磁器口"],"photoNote":"Commons 的寶輪寺（重慶）照片都是 2014 年拍，超過五年；沒有合格照片"},
+{"id":"cqk-river","pick":"File:磁器口古镇-迎龙门.jpg","label":"迎龍門","cat":["Category:Ciqikou"],"q":["Ciqikou Jialing River","Ciqikou gate river","迎龙门 磁器口"]},
+{"id":"cqk-street","pick":"File:Ciqikou image 9.jpg","label":"磁器口老街（照片沒標是哪條街）","cat":["Category:Ciqikou"],"q":["Ciqikou street","Ciqikou old street"]},
+{"id":"cqk-houjie","label":"磁器口後街","q":["Ciqikou back street","磁器口后街"],"photoNote":"沒有標明是後街的合格照片"}
 ]}

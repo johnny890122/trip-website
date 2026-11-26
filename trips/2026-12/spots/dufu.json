@@ -1,4 +1,27 @@
-{"stops":[],"photos":[
+{"id":"dufu","title":"杜甫草堂博物館","day":4,"date":"2026-12-11","sunset":"18:02",
+"gate":"北門進、南門出",
+"parkMap":{"url":"https://commons.wikimedia.org/wiki/File:%E6%9D%9C%E7%94%AB%E8%8D%89%E5%A0%82%E5%B9%B3%E9%9D%A2%E5%9B%BE_01.jpg","label":"園內全景導覽圖（Commons 照片，Kcx36 2023-04，CC BY-SA 4.0）","note":"官網未取得，沒有官方地圖檔；只放連結"},
+"stops":[
+{"name":"北門","ja":"杜甫草堂北门（青华路37号）","time":"15:00","lat":30.66442,"lon":104.02502,"desc":"計程車在青華路 37 號下車；門口有廁所（OSM）"},
+{"name":"茅屋故居","ja":"茅屋故居","time":"15:05","lat":30.66325,"lon":104.02529,"desc":"茅屋景區","must":true,"photo":"dufu-maowu"},
+{"name":"盆景園（杜詩書法木刻廊）","ja":"盆景园","time":"15:20","lat":30.66288,"lon":104.02576,"desc":"木刻廊在盆景園內","must":true,"photo":"dufu-muke"},
+{"name":"少陵草堂碑亭","ja":"少陵草堂碑亭","time":"15:35","lat":30.66289,"lon":104.02511,"desc":"工部祠東側（OSM）","photo":"dufu-beiting"},
+{"name":"工部祠","ja":"工部祠","time":"15:45","lat":30.66300,"lon":104.02486,"desc":"中軸線最北端；從這裡往南走","must":true,"photo":"dufu-gongbu"},
+{"name":"柴門","ja":"柴门","time":"15:55","lat":30.66282,"lon":104.02475,"desc":"中軸線"},
+{"name":"詩史堂・大廨","ja":"诗史堂・大廨","time":"16:05","lat":30.66260,"lon":104.02458,"desc":"中軸線往南：詩史堂 → 大廨（相距約 30 m）；東側有廁所（OSM）","must":true,"photo":"dufu-shishi"},
+{"name":"草堂影壁","ja":"草堂影壁","time":"16:25","lat":30.66191,"lon":104.02405,"desc":"碎瓷鑲嵌的「草堂」影壁；從這裡沿花徑（紅牆）往東","must":true,"photo":"dufu-yingbi"},
+{"name":"大雅堂","ja":"大雅堂","time":"16:30","lat":30.66218,"lon":104.02633,"desc":"彩釉鑲嵌磨漆壁畫、12 尊歷代詩人雕塑","must":true,"photo":"dufu-daya"},
+{"name":"南門","ja":"杜甫草堂南门（草堂路2号）","time":"17:00","lat":30.66111,"lon":104.02642,"desc":"17:00 在南門外搭計程車去玉林；門內有廁所（OSM）","photo":"dufu-south"}
+],
+"photos":[
 {"id":"dufu1","pick":"File:杜甫草堂西门（正门） 01.jpg","label":"杜甫草堂","cat":["Category:Du Fu Thatched Cottage"],"q":["Du Fu Thatched Cottage Chengdu"]},
-{"id":"dufu2","pick":"File:杜甫草堂-柴门.jpg","label":"杜甫草堂","cat":["Category:Du Fu Thatched Cottage"],"q":["Du Fu Thatched Cottage Chengdu"]}
+{"id":"dufu2","pick":"File:杜甫草堂-柴门.jpg","label":"杜甫草堂","cat":["Category:Du Fu Thatched Cottage"],"q":["Du Fu Thatched Cottage Chengdu"]},
+{"id":"dufu-maowu","pick":"File:杜甫草堂 - 茅屋 - 厨房 - 2024-10-20.jpg","label":"茅屋故居（廚房）","cat":["Category:Du Fu Thatched Cottage"],"q":["杜甫草堂 茅屋","Du Fu Thatched Cottage thatched hut"]},
+{"id":"dufu-muke","label":"杜詩書法木刻廊","cat":["Category:Du Fu Thatched Cottage"],"q":["杜甫草堂 盆景园","杜甫草堂 木刻"],"photoNote":"Commons 沒有盆景園、木刻廊的照片"},
+{"id":"dufu-beiting","label":"少陵草堂碑亭","cat":["Category:Du Fu Thatched Cottage"],"q":["少陵草堂","杜甫草堂 碑亭"],"photoNote":"Commons 只有工部祠內的清代石刻「少陵草堂圖」，不是碑亭本身"},
+{"id":"dufu-gongbu","pick":"File:杜甫草堂-工部祠 02.jpg","label":"工部祠","cat":["Category:Du Fu Thatched Cottage"],"q":["杜甫草堂 工部祠"]},
+{"id":"dufu-shishi","pick":"File:杜甫草堂-诗史堂.jpg","label":"詩史堂","cat":["Category:Du Fu Thatched Cottage"],"q":["杜甫草堂 诗史堂"]},
+{"id":"dufu-yingbi","pick":"File:杜甫草堂-“草堂”照壁.jpg","label":"「草堂」影壁","cat":["Category:Du Fu Thatched Cottage"],"q":["杜甫草堂 影壁","杜甫草堂 花径"]},
+{"id":"dufu-daya","label":"大雅堂","cat":["Category:Du Fu Thatched Cottage"],"q":["杜甫草堂 大雅堂"],"photoNote":"Commons 沒有大雅堂的照片"},
+{"id":"dufu-south","pick":"File:杜甫草堂南门.jpg","label":"南門","cat":["Category:Du Fu Thatched Cottage"],"q":["杜甫草堂南门"]}
 ]}

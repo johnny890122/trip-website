@@ -1,4 +1,16 @@
-{"photoNote":"2026-11-19 Category:Eling Park 只有 2 張合格候選：一張是極寬全景（非 4:3 可用）、一張是導覽牌，都不是景點照，故不放。","stops":[],"photos":[
-{"id":"eling1","label":"鵝嶺公園","cat":["Category:Eling Park"],"q":["Eling Park Chongqing","Eling Flying Bridge Chongqing"]},
-{"id":"eling2","label":"鵝嶺公園","cat":["Category:Eling Park"],"q":["Eling Park Chongqing"]}
+{"id":"eling","title":"鵝嶺空中棧橋 → 鵝嶺公園 → 二廠 → 三層馬路 → 李子壩","day":3,"date":"2026-12-10","sunset":"17:55",
+"gate":"佛圖關公園南門旁棧橋入口進（單向）、鵝嶺公園爬山廊旁出；二廠北門下石階到李子壩",
+"stops":[
+{"name":"鵝嶺站 1 號口","ja":"鹅岭站 1号口","time":"09:55","lat":29.5509351,"lon":106.5293488,"desc":"1 號線鵝嶺站出站，往西走到佛圖關公園南門"},
+{"name":"鵝嶺空中棧橋入口（佛圖關公園南門旁）","ja":"鹅岭栈桥 入口","time":"10:00","lat":29.5513656,"lon":106.5276307,"desc":"排隊登記入場；棧橋單向，從這裡往東走","must":true,"photo":"eling-bridge"},
+{"name":"棧橋出口（鵝嶺公園爬山廊旁）","ja":"鹅岭栈桥 出口","time":"10:40","lat":29.5523177,"lon":106.5314576,"desc":"出棧橋就是鵝嶺公園"},
+{"name":"瞰勝樓（兩江樓）","ja":"瞰胜楼","time":"10:50","lat":29.552778,"lon":106.534553,"desc":"登樓看兩江；登樓費 5～10 元（兩說）","must":true,"photo":"eling-tower"},
+{"name":"鵝嶺二廠文創公園","ja":"鹅岭二厂文创公园","time":"11:20","lat":29.553765,"lon":106.536177,"desc":"愛情天台（City Radio）；12:05 從北門出","must":true,"photo":"eling-erchang"},
+{"name":"三層馬路（嘉陵新路）","ja":"嘉陵新路","time":"12:10","lat":29.5550263,"lon":106.5350246,"desc":"二廠北門下石階到這一層，再往下到李子壩正街"},
+{"name":"李子壩站觀景平台入口","ja":"李子坝站观景平台","time":"12:25","lat":29.556673,"lon":106.53441,"desc":"接下一張卡：穿樓觀景平台"}
+],
+"photos":[
+{"id":"eling-bridge","label":"鵝嶺空中棧橋","cat":["Category:Eling Park"],"q":["Eling cliff walkway Chongqing","鹅岭栈桥","Eling Park skywalk"],"photoNote":"沒有合格照片：Commons 搜不到棧橋（2025-11 才開放），Category:Eling Park 只有瞰勝樓全景與 2024-05 的導覽牌"},
+{"id":"eling-tower","pick":"File:Panorama of Chongqing from tower in Eling park.jpg","label":"從瞰勝樓看出去的渝中半島（2025-12，研判是瞰勝樓）","cat":["Category:Eling Park"],"q":["Kansheng Tower Eling","瞰胜楼","Liangjiang Pavilion Eling Park"]},
+{"id":"eling-erchang","label":"鵝嶺二廠文創公園","q":["Eling Erchang","Testbed 2 Chongqing","鹅岭二厂","Eling No. 2 Factory"],"photoNote":"沒有合格照片：Commons 搜「鹅岭二厂」「Erchang」「Testbed 2」都沒有二廠的照片"}
 ]}

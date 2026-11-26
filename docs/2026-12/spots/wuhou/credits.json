@@ -1,0 +1,41 @@
+[
+  {
+    "id": "wuhou-liubei",
+    "label": "劉備殿",
+    "file": "武侯祠刘备殿.jpg",
+    "author": "Kcx36",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-08-30",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%AD%A6%E4%BE%AF%E7%A5%A0%E5%88%98%E5%A4%87%E6%AE%BF.jpg",
+    "width": 960,
+    "height": 721,
+    "bytes": 259982
+  },
+  {
+    "id": "wuhou-zhuge",
+    "label": "諸葛亮殿",
+    "file": "武侯祠诸葛亮殿.jpg",
+    "author": "Kcx36",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-08-30",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%AD%A6%E4%BE%AF%E7%A5%A0%E8%AF%B8%E8%91%9B%E4%BA%AE%E6%AE%BF.jpg",
+    "width": 960,
+    "height": 721,
+    "bytes": 188608
+  },
+  {
+    "id": "wuhou-huiling",
+    "label": "惠陵山門",
+    "file": "武侯祠-惠陵山门.jpg",
+    "author": "Kcx36",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2023-08-30",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%AD%A6%E4%BE%AF%E7%A5%A0-%E6%83%A0%E9%99%B5%E5%B1%B1%E9%97%A8.jpg",
+    "width": 960,
+    "height": 721,
+    "bytes": 190385
+  }
+]

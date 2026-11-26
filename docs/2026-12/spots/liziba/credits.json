@@ -24,5 +24,18 @@
     "width": 960,
     "height": 640,
     "bytes": 161463
+  },
+  {
+    "id": "liziba-deck",
+    "label": "列車從住宅樓穿出",
+    "file": "View of Liziba Station image 12.jpg",
+    "author": "TarnishedPath",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taken": "2025-09-11",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Liziba_Station_image_12.jpg",
+    "width": 960,
+    "height": 640,
+    "bytes": 167992
   }
 ]

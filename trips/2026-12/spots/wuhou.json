@@ -1,0 +1,20 @@
+{"id":"wuhou","title":"武侯祠＋錦里","day":null,"date":null,"sunset":null,
+"gate":"文物區大門進，出館後左轉到錦里大門",
+"parkMap":{"url":"https://wuhouci.net.cn/cgxz","label":"官網 參觀須知（服務設施圖）","note":"授權未說明，不存副本、只放連結；參觀路線圖在 https://wuhouci.net.cn/map"},
+"stops":[
+{"name":"文物區大門","ja":"成都武侯祠博物馆文物区大门","time":"+0:00","lat":30.64708,"lon":104.04687,"desc":"漢昭烈廟大門；09:00 開館就進人少"},
+{"name":"唐碑（三絕碑）","ja":"唐碑","time":"+0:05","lat":30.64739,"lon":104.04712,"desc":"大門進去右手邊，蜀丞相諸葛武侯祠堂碑"},
+{"name":"劉備殿","ja":"刘备殿","time":"+0:15","lat":30.64812,"lon":104.04694,"desc":"刘备金身坐像；兩側文臣廊、武將廊 28 尊","must":true,"photo":"wuhou-liubei"},
+{"name":"諸葛亮殿","ja":"诸葛亮殿","time":"+0:45","lat":30.64861,"lon":104.04696,"desc":"諸葛亮像（羽扇綸巾）、靜遠堂匾","must":true,"photo":"wuhou-zhuge"},
+{"name":"三義廟","ja":"三义庙","time":"+1:05","lat":30.64925,"lon":104.04700,"desc":"劉關張桃園結義像"},
+{"name":"惠陵（劉備墓）","ja":"惠陵","time":"+1:20","lat":30.64830,"lon":104.04584,"desc":"封土高 12 m，繞陵一圈","must":true,"photo":"wuhou-huiling"},
+{"name":"紅牆夾道","ja":"红墙夹道（惠陵大门）","time":"+1:35","lat":30.64769,"lon":104.04581,"desc":"惠陵門前兩側的紅牆竹影","must":true,"photo":"wuhou-redwall"},
+{"name":"三國文化陳列室","ja":"三国文化陈列馆","time":"+1:45","lat":30.64731,"lon":104.04591,"desc":"官方路線一的最後一站；旁邊有廁所"},
+{"name":"錦里大門","ja":"锦里","time":"+2:00","lat":30.64705,"lon":104.04757,"desc":"出館左轉；錦里古街往北走"}
+],
+"photos":[
+{"id":"wuhou-liubei","pick":"File:武侯祠刘备殿.jpg","label":"劉備殿","cat":["Category:Zhao Lie Temple","Category:Statues in the Temple of Marquis Wu, Chengdu"],"q":["Liu Bei hall Wuhou Shrine Chengdu"]},
+{"id":"wuhou-zhuge","pick":"File:武侯祠诸葛亮殿.jpg","label":"諸葛亮殿","cat":["Category:Statues in the Temple of Marquis Wu, Chengdu","Category:Temple of Marquis Wu, Chengdu"],"q":["Zhuge Liang hall Wuhou Shrine Chengdu","诸葛亮殿"]},
+{"id":"wuhou-huiling","pick":"File:武侯祠-惠陵山门.jpg","label":"惠陵山門","cat":["Category:Huiling (Shu Han)"],"q":["Huiling tomb Liu Bei Chengdu"]},
+{"id":"wuhou-redwall","label":"紅牆夾道","cat":["Category:Corridor in the Temple of Marquis Wu, Chengdu"],"q":["red wall bamboo Wuhou Shrine Chengdu","武侯祠 红墙"],"photoNote":"Commons 只有 2017、2019 年拍的（超過五年），沒有合格照片"}
+]}

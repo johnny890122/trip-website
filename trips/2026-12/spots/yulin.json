@@ -1,0 +1,11 @@
+{"id":"yulin","title":"玉林路一帶","day":4,"date":"2026-12-11","sunset":"18:02",
+"gate":"玉林四巷起、谭家(玉林一店)終",
+"stops":[
+{"name":"玉林四巷","ja":"玉林四巷","time":"17:45","lat":30.63133,"lon":104.05900,"desc":"計程車下車；玉林東路街區的特色小巷","must":true,"photo":"yulin-4xiang"},
+{"name":"小酒馆（玉林西路店）","ja":"小酒馆（玉林西路55号）","time":"17:55","lat":30.63201,"lon":104.05380,"desc":"1997 年老店，酒吧＋駐唱；營業時間未查到","must":true,"photo":"yulin-bar"},
+{"name":"谭家(玉林一店)","ja":"谭家（玉林南路70号附1号）","time":"18:30","lat":30.62593,"lon":104.05511,"desc":"18:30 晚餐；座標取自 Michelin 頁面（研判是店址）"}
+],
+"photos":[
+{"id":"yulin-4xiang","label":"玉林四巷","q":["Yulin Chengdu alley","玉林四巷","Yulin Road Chengdu"],"photoNote":"Commons 合格照片只有玉林東路、玉林西路路口的街景（2024-10），沒有玉林四巷本身，沒有合格照片"},
+{"id":"yulin-bar","label":"小酒馆（玉林西路店）","q":["Little Bar Chengdu","小酒馆 成都","Yulin West Road Chengdu"],"photoNote":"Commons 只有玉林西路－玉林北路路口街景（2024-10），拍不到小酒馆，沒有合格照片"}
+]}

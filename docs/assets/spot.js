@@ -21,9 +21,10 @@
 
   function draw(spot) {
     document.title = spot.title + '｜' + ((window.TRIP && window.TRIP.name) || '大阪・京都之旅');
-    document.getElementById('title').textContent = spot.title + '（Day ' + spot.day + '）';
-    document.getElementById('dayLink').href = '../final/index.html#day-' + spot.day;
-    document.getElementById('mapLink').href = './index.html?day=' + spot.day;
+    // 沒排進行程的景點（例：攻略頁的武侯祠）day 是 null：不寫 Day、連到整份行程表與地圖
+    document.getElementById('title').textContent = spot.title + (spot.day ? '（Day ' + spot.day + '）' : '');
+    document.getElementById('dayLink').href = '../final/index.html' + (spot.day ? '#day-' + spot.day : '');
+    document.getElementById('mapLink').href = './index.html' + (spot.day ? '?day=' + spot.day : '');
 
     var map = L.map(mapEl, { scrollWheelZoom: !document.body.classList.contains('embed') });
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
