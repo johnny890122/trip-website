@@ -9,7 +9,7 @@
  * 改版時把 CACHE 的版本號 +1，舊快取會在 activate 時清掉。
  * hero 照片（約 11 MB）不預先快取，看過的才存。
  */
-const CACHE = 'site-v120';
+const CACHE = 'site-v121';
 
 const PRECACHE = [
   './',
@@ -35,6 +35,16 @@ const PRECACHE = [
   './assets/intro.css',
   './assets/intro.js',
   // 每一趟：首頁、各頁、地圖資料、頁首照片清單（加一趟時照這一段複製一份）
+  './2027-02/index.html',
+  './2027-02/hero/hero.js',
+  './2027-02/trip.js',
+  './2027-02/final/index.html',
+  './2027-02/map/index.html',
+  './2027-02/map/spot.html',
+  './2027-02/map/places.json',
+  './2027-02/map/routes.json',
+  './2027-02/checklist/index.html',
+  './2027-02/budget/index.html',
   './2026-12/index.html',
   './2026-12/hero/hero.js',
   './2026-12/trip.js',

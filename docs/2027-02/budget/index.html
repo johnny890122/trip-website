@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>預算追蹤｜關西之旅</title>
+<meta name="description" content="關西之旅〔日期〕">
+<meta name="theme-color" content="#B5451B">
+<link rel="stylesheet" href="../../assets/base.css">
+<link rel="stylesheet" href="../../assets/budget.css">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="〔短名稱〕">
+<script src="../../assets/offline.js" defer></script>
+</head>
+<body>
+
+<header class="site-header" data-hero>
+  <div class="container">
+    <h1>💴 預算追蹤</h1>
+    <p class="sub">〔YYYY 年 M 月 D 日～D 日〕｜〔N 天 N 夜〕｜每人</p>
+    <div class="toolbar">
+      <a class="tb-link" href="../index.html">← 回首頁</a>
+      <a class="tb-link" href="../final/index.html">📅 行程表</a>
+      <a class="tb-link" href="../map/index.html">🗺️ 地圖</a>
+      <button type="button" id="expandBtn" onclick="toggleAll()">展開全部</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <p class="hint">
+      填入實際花費，資料只存在這台裝置的瀏覽器裡，重開頁面不會消失。
+      標示「已確認」的門票金額取自行程表中已查證的票價，會自動計入。
+    </p>
+
+    <h3 class="section-title">共同支出（不分日）</h3>
+    <div class="panel">
+      <div class="panel-body" id="sharedBody"></div>
+    </div>
+
+    <h3 class="section-title">每日花費</h3>
+    <div id="days"></div>
+
+    <div class="total-card">
+      <div class="total-row">
+        <span class="t-label">整趟總計</span>
+        <span>
+          <span class="t-jpy" id="grandJpy">¥0</span>
+          <span class="t-twd" id="grandTwd"></span>
+        </span>
+      </div>
+      <div class="breakdown" id="breakdown"></div>
+      <div class="rate-row">
+        <span>匯率 1 JPY =</span>
+        <input type="number" id="rate" min="0" step="0.001" placeholder="0.21">
+        <span>TWD</span>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn" type="button" onclick="copySummary()" id="copyBtn">📋 複製明細</button>
+      <button class="btn" type="button" onclick="resetAll()">🗑️ 清空重填</button>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>〔YYYY 年 M 月 D 日～D 日〕｜每人｜門票金額待行程排定後查證</p>
+</footer>
+
+<script src="../hero/hero.js"></script>
+<script>
+/* 這趟的預算設定，畫面與計算在 ../../assets/budget.js */
+window.BUDGET = {
+  title: '關西之旅',
+  shared: [
+    { key: 'flight',   label: '✈️ 機票' },
+    { key: 'hotel',    label: '🏨 住宿' },
+    { key: 'pass',     label: '🎟️ 交通票券' },
+    { key: 'insure',   label: '🛡️ 旅遊平安險' },
+    { key: 'esim',     label: '📶 網路（eSIM／WiFi 機）' },
+  ],
+  /* 每天一筆；行程排定後，把主行程已查證的門票與車票（每人・當地貨幣）填進 fixed，例：
+     { name: '〇〇 入場', amount: 500 }。彈性方案不算 */
+  days: [
+    { n: 1, date: '〔M/D（○）〕', title: '〔這天的主題〕', fixed: [] },
+  ],
+};
+</script>
+<script src="../trip.js"></script>
+<script src="../../assets/budget.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關西之旅｜〔M/D - M/D〕</title>
+  <meta name="description" content="關西之旅行程表（〔YYYY 年 M 月 D 日～D 日〕）">
+  <meta name="theme-color" content="#B5451B">
+  <link rel="stylesheet" href="../../assets/itinerary.css?v=20261113b">
+  <!-- 字體非阻塞載入：CDN 連不上（例如在日本沒網路）時直接用系統內建中日文字型 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="〔短名稱〕">
+<script src="../../assets/offline.js" defer></script>
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header" data-hero>
+    <div class="container">
+      <h1>關西之旅</h1>
+      <p class="trip-dates">〔YYYY年 M月D日（○）→ M月D日（○）｜N天N夜・N 人〕</p>
+      <div class="toolbar">
+        <a class="tb-link" href="../index.html">← 回首頁</a>
+        <a class="tb-link" href="../map/index.html">🗺️ 地圖</a>
+        <button id="jaToggle" type="button" aria-pressed="false" onclick="toggleJa()">🇯🇵 顯示日文地名</button>
+        <button id="themeToggle" type="button" onclick="cycleTheme()">🌗 主題</button>
+        <button id="copyDayBtn" type="button" onclick="copyDay()">📋 複製這天行程</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== FLIGHT BANNER ======
+  航班訂好後再加（格式見 docs/2026-11/final/index.html 的 .flight-banner）：
+  <div class="flight-banner"><div class="flight-row">
+    <div class="flight-item"><span>🛫</span><span><strong>去程</strong> 〔HH:MM〕<span class="fb-ap"> 〔TPE〕</span> → 〔HH:MM〕<span class="fb-ap"> 〔XXX〕</span></span></div>
+  </div></div>
+  -->
+
+  <!-- ====== STICKY DAY NAV ====== 一天一個按鈕，格式見 trips/_template/itinerary-snippets.html -->
+  <nav class="day-nav" id="dayNav" aria-label="日期切換">
+    <div class="day-nav-inner" role="tablist">
+      <button role="tab" aria-selected="true"  aria-controls="day-1" onclick="showDay(1)" id="nav-1" class="active">DAY 1<br><small>〔M/D (○)〕</small></button>
+    </div>
+  </nav>
+
+  <!-- ====== MAIN ====== -->
+  <main>
+
+    <!-- ====== DAY 1 ====== 天、時間軸項目的 HTML 從 trips/_template/itinerary-snippets.html 複製 -->
+    <section class="day-section active" id="day-1" data-date="〔YYYY-MM-DD〕">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">1</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 1｜〔M月D日（○）〕</h2>
+            <p class="date-str">〔還沒排：先收集候選景點、美食、活動，日期與航班確定後再排時間表〕</p>
+          </div>
+        </div>
+        <div class="kind-legend"><span><b style="color:var(--primary)">▌</b>主行程＝已訂或非去不可</span><span><b style="color:var(--on-surface-muted)">┆</b>交通＝移動，不算在行程裡</span><span><b style="color:var(--secondary)">┊</b>彈性＝可左右滑動換方案</span></div>
+
+        <div class="timeline">
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== 延伸連結 ====== -->
+  <div class="container">
+    <div class="more-links">
+      <a href="../budget/index.html">💴 預算追蹤<small>依每日記帳，換算台幣</small></a>
+      <a href="../checklist/index.html">✅ 行前 Check List<small>出發前逐項確認</small></a>
+      <a href="../map/index.html">🗺️ 行程地圖<small>看整趟移動路線</small></a>
+    </div>
+  </div>
+
+  <!-- ====== 離線提示 ====== -->
+  <div class="offline-badge" role="status">📴 目前離線 — 行程內容仍可正常閱讀</div>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>關西之旅｜〔M/D - M/D〕</p>
+      <p><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></p>
+    </div>
+  </footer>
+
+  <!-- ====== 雨天備案（浮動按鈕） ====== -->
+
+  <!-- ====== BACK TO TOP ====== -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
+
+  <!-- ====== JAVASCRIPT ====== -->
+  <script src="../hero/hero.js"></script>
+  <script>
+    // 隨機挑一張風景照當頁首底圖
+    if (window.applyHero) window.applyHero();
+  </script>
+  <script src="../trip.js"></script>
+  <script src="../../assets/itinerary.js?v=20261113b"></script>
+
+</body>
+</html>
